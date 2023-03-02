@@ -27,22 +27,23 @@ void CGameStateRun::OnBeginState()
 
 void CGameStateRun::OnMove()							// 移動遊戲元素
 {
-	if (phase == 3 && sub_phase == 1) {
-		if ((character.Left() < chest_and_key.Left() + chest_and_key.Height()) && (character.Left() > chest_and_key.Left() - chest_and_key.Height()) &&
-			(character.Top() < chest_and_key.Top() + chest_and_key.Width()) && (character.Top() > chest_and_key.Top() - chest_and_key.Width())) {
-			chest_and_key.LoadBitmapByString({ "resources/chest.bmp", "resources/chest_ignore.bmp" }, RGB(255, 255, 255));
-			chest_and_key.SelectShowBitmap(1);
-		}
+	if (character.Left() <= chest_and_key.Left() + chest_and_key.Width() && character.Top() <= chest_and_key.Top() + chest_and_key.Height()
+		&& character.Left() >= chest_and_key.Left() - chest_and_key.Width() && character.Top() >= chest_and_key.Top() - chest_and_key.Height())
+
+	{
+		chest_and_key.SelectShowBitmap(1);
 	}
-	else if (phase == 5 && sub_phase == 1) {
-		for (int i = 0; i < 3; i++) {
-			if ((character.Left() < door[i].Left() + door[i].Height()) && (character.Left() > door[i].Left() - door[i].Height()) &&
-				(character.Top() < door[i].Top() + door[i].Width()) && (character.Top() > door[i].Top() - door[i].Width())) {
+	if (phase == 5)
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			if (character.Left() <= door[i].Left() + (door[i].Width() / 2) && character.Top() <= door[i].Top() + (door[i].Height() / 2)
+				&& character.Left() >= door[i].Left() - (door[i].Width() / 2) && character.Top() >= door[i].Top() - (door[i].Height() / 2))
+			{
 				door[i].SelectShowBitmap(1);
 			}
 		}
 	}
-	
 }
 
 void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
@@ -71,19 +72,16 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 
 	bee.LoadBitmapByString({ "resources/bee_1.bmp", "resources/bee_2.bmp" });
 	bee.SetTopLeft(462, 265);
-	bee.SetAnimation(50, FALSE);
-	bee.ToggleAnimation();
+	bee.SetAnimation(200, false);
 
 	ball.LoadBitmapByString({ "resources/ball-3.bmp", "resources/ball-2.bmp", "resources/ball-1.bmp", "resources/ball-ok.bmp" });
-	ball.SetTopLeft(150, 430);
-	ball.SetAnimation(200, TRUE);
+	ball.SetAnimation(200, true);
 	ball.ToggleAnimation();
-
+	ball.SetTopLeft(150, 430);
 
 	for (int i = 0; i < 3; i++) {
 		door[i].LoadBitmapByString({ "resources/door_close.bmp", "resources/door_open.bmp" }, RGB(255, 255, 255));
 		door[i].SetTopLeft(462 - 100 * i, 265);
-		
 	}
 }
 
@@ -141,22 +139,24 @@ void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 			}
 		}
 	}
-	else {
-		int x = character.Left();
-		int y = character.Top();
-		if (nChar == VK_RIGHT) {
-			x += 10;
-		}
-		else if (nChar == VK_LEFT) {
-			x -= 10;
-		}
-		else if (nChar == VK_UP) {
-			y -= 10;
-		}
-		else if (nChar == VK_DOWN) {
-			y += 10;
-		}
-		character.SetTopLeft(x, y);
+	if (nChar == VK_UP)
+	{
+		character.SetTopLeft(character.Left(),character.Top()-20);
+	}
+
+	if (nChar == VK_DOWN)
+	{
+		character.SetTopLeft(character.Left(),character.Top()+20);
+	}
+
+	if (nChar == VK_RIGHT)
+	{
+		character.SetTopLeft(character.Left()+20,character.Top());
+	}
+
+	if (nChar == VK_LEFT)
+	{
+		character.SetTopLeft(character.Left()-20, character.Top());
 	}
 }
 
