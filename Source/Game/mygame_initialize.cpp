@@ -66,11 +66,11 @@ void CGameStateInit::draw_text() {
 
 	/* Print title */
 	CTextDraw::ChangeFontLog(pDC, fp, 36, "微軟正黑體", RGB(255, 255, 255));
-	CTextDraw::Print(pDC, 79, 228, "Game Framework Practice");
+	//CTextDraw::Print(pDC, 79, 228, "Game Framework Practice");
 
 	/* Print info */
 	CTextDraw::ChangeFontLog(pDC, fp, 24, "微軟正黑體", RGB(255, 255, 255));
-	CTextDraw::Print(pDC, 182, 431, "Press any key to start");
+	//CTextDraw::Print(pDC, 182, 431, "Press any key to start");
 
 	CDDraw::ReleaseBackCDC();
 }
