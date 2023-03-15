@@ -6,16 +6,16 @@
 #include "../Library/gameutil.h"
 #include "../Library/gamecore.h"
 #include "mygame.h"
-
-
+#include <windows.h>
 using namespace game_framework;
-
+bool flag = false;
 /////////////////////////////////////////////////////////////////////////////
 // 這個class為遊戲的遊戲執行物件，主要的遊戲程式都在這裡
 /////////////////////////////////////////////////////////////////////////////
 
 CGameStateRun::CGameStateRun(CGame *g) : CGameState(g)
 {
+
 }
 
 CGameStateRun::~CGameStateRun()
@@ -24,6 +24,7 @@ CGameStateRun::~CGameStateRun()
 
 void CGameStateRun::OnBeginState()
 {
+	
 }
 
 void CGameStateRun::OnMove()							// 移動遊戲元素
@@ -44,11 +45,24 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			{
 				door[i].SelectShowBitmap(1);
 			}
+			
 		}
 	}
 	*/
+	if (!flag) {
+		character[0].SetAnimation(100, false);
+		character[0].SetTopLeft(character[0].Left() - 1, character[0].Top());
+		if (character[0].Left() == 300) flag = true;
+	}
+	if (flag) {
+		character[0].SetAnimation(135, true);
+		character[1].SetTopLeft(300, 265);
+		character[1].SetAnimation(135, false);
+	}
 	
-
+	
+	
+	
 }
 
 void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
@@ -68,6 +82,8 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 		"resources/phase62_background.bmp",
 	});
 	background.SetTopLeft(0, 0);
+
+	
 	
 	/*    太陽
 	character.LoadBitmapByString({ "resources/sun_0.bmp", "resources/sun_1.bmp", "resources/sun_2.bmp", "resources/sun_3.bmp", "resources/sun_4.bmp", "resources/sun_5.bmp", "resources/sun_6.bmp", "resources/sun_7.bmp", "resources/sun_8.bmp", "resources/sun_9.bmp", "resources/sun_10.bmp", "resources/sun_11.bmp", "resources/sun_12.bmp", "resources/sun_13.bmp", "resources/sun_14.bmp", "resources/sun_15.bmp", "resources/sun_16.bmp", "resources/sun_17.bmp", "resources/sun_18.bmp" , "resources/sun_19.bmp", "resources/sun_20.bmp" , "resources/sun_21.bmp" },RGB(255, 255, 255));
@@ -101,21 +117,22 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	character.LoadBitmapByString({ "resources/sunflower_getsun_0.bmp", "resources/sunflower_getsun_1.bmp", "resources/sunflower_getsun_2.bmp", "resources/sunflower_getsun_3.bmp", "resources/sunflower_getsun_4.bmp", "resources/sunflower_getsun_5.bmp", "resources/sunflower_getsun_6.bmp", "resources/sunflower_getsun_7.bmp", "resources/sunflower_getsun_8.bmp", "resources/sunflower_getsun_9.bmp", "resources/sunflower_getsun_10.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_12.bmp", "resources/sunflower_getsun_13.bmp", "resources/sunflower_getsun_14.bmp", "resources/sunflower_getsun_15.bmp", "resources/sunflower_getsun_16.bmp", "resources/sunflower_getsun_17.bmp" }, RGB(255, 255, 255));
 	character.SetTopLeft(150, 265);
 	character.SetAnimation(135, false);
-	/*
-
-
-	/*    一般殭屍
-	character.LoadBitmapByString({ "resources/zom_0.bmp", "resources/zom_1.bmp", "resources/zom_2.bmp", "resources/zom_3.bmp", "resources/zom_4.bmp", "resources/zom_5.bmp", "resources/zom_6.bmp", "resources/zom_7.bmp", "resources/zom_8.bmp", "resources/zom_9.bmp", "resources/zom_10.bmp" ,"resources/zom_11.bmp","resources/zom_12.bmp","resources/zom_13.bmp","resources/zom_14.bmp","resources/zom_15.bmp","resources/zom_16.bmp","resources/zom_17.bmp","resources/zom_18.bmp","resources/zom_19.bmp","resources/zom_20.bmp","resources/zom_21.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
 	*/
 
 
-	/*    一般殭屍吃東西
-	character.LoadBitmapByString({ "resources/zom_eat_0.bmp", "resources/zom_eat_1.bmp", "resources/zom_eat_2.bmp", "resources/zom_eat_3.bmp", "resources/zom_eat_4.bmp", "resources/zom_eat_5.bmp", "resources/zom_eat_6.bmp", "resources/zom_eat_7.bmp", "resources/zom_eat_8.bmp", "resources/zom_eat_9.bmp", "resources/zom_eat_10.bmp" ,"resources/zom_eat_11.bmp","resources/zom_eat_12.bmp","resources/zom_eat_13.bmp","resources/zom_eat_14.bmp","resources/zom_eat_15.bmp","resources/zom_eat_16.bmp","resources/zom_eat_17.bmp","resources/zom_eat_18.bmp","resources/zom_eat_19.bmp","resources/zom_eat_20.bmp"}, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
+	///*    一般殭屍
+	character[0].LoadBitmapByString({ "resources/zom_0.bmp", "resources/zom_1.bmp", "resources/zom_2.bmp", "resources/zom_3.bmp", "resources/zom_4.bmp", "resources/zom_5.bmp", "resources/zom_6.bmp", "resources/zom_7.bmp", "resources/zom_8.bmp", "resources/zom_9.bmp", "resources/zom_10.bmp" ,"resources/zom_11.bmp","resources/zom_12.bmp","resources/zom_13.bmp","resources/zom_14.bmp","resources/zom_15.bmp","resources/zom_16.bmp","resources/zom_17.bmp","resources/zom_18.bmp","resources/zom_19.bmp","resources/zom_20.bmp","resources/zom_21.bmp" }, RGB(255, 255, 255));
+	character[0].SetTopLeft(800, 265);
+	
+	
+	//*/
+
+
+	///*    一般殭屍吃東西
+	character[1].LoadBitmapByString({ "resources/zom_eat_0.bmp", "resources/zom_eat_1.bmp", "resources/zom_eat_2.bmp", "resources/zom_eat_3.bmp", "resources/zom_eat_4.bmp", "resources/zom_eat_5.bmp", "resources/zom_eat_6.bmp", "resources/zom_eat_7.bmp", "resources/zom_eat_8.bmp", "resources/zom_eat_9.bmp", "resources/zom_eat_10.bmp" ,"resources/zom_eat_11.bmp","resources/zom_eat_12.bmp","resources/zom_eat_13.bmp","resources/zom_eat_14.bmp","resources/zom_eat_15.bmp","resources/zom_eat_16.bmp","resources/zom_eat_17.bmp","resources/zom_eat_18.bmp","resources/zom_eat_19.bmp","resources/zom_eat_20.bmp"}, RGB(255, 255, 255));
+	//character.SetTopLeft(150, 265);
+	//character.SetAnimation(135, false);
+	//*/
 
 
 	/*    三角錐殭屍
@@ -296,32 +313,33 @@ void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	}
 	if (nChar == VK_UP)
 	{
-		character.SetTopLeft(character.Left(),character.Top()-20);
+		//character.SetTopLeft(character.Left(),character.Top()-20);
 	}
 
 	if (nChar == VK_DOWN)
 	{
-		character.SetTopLeft(character.Left(),character.Top()+20);
+		//character.SetTopLeft(character.Left(),character.Top()+20);
 	}
 
 	if (nChar == VK_RIGHT)
 	{
-		character.SetTopLeft(character.Left()+20,character.Top());
+		//character.SetTopLeft(character.Left()+20,character.Top());
 	}
 
 	if (nChar == VK_LEFT)
 	{
-		character.SetTopLeft(character.Left()-20, character.Top());
+		//character.SetTopLeft(character.Left()-20, character.Top());
 	}
 }
 
 void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
-	
+
 }
 
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
 {
+
 }
 
 void CGameStateRun::OnLButtonUp(UINT nFlags, CPoint point)	// 處理滑鼠的動作
@@ -350,7 +368,14 @@ void CGameStateRun::show_image_by_phase() {
 	if (phase <= 6) {
 		background.SelectShowBitmap((phase - 1) * 2 + (sub_phase - 1));
 		background.ShowBitmap();
-		character.ShowBitmap();
+		for(int i = 0 ;i < 2 ; i++)
+			//角色消失
+			if (!flag) {
+				character[0].ShowBitmap();
+			}
+			else {
+				character[1].ShowBitmap();
+			}
 		if (phase == 3 && sub_phase == 1) {
 			chest_and_key.ShowBitmap();
 		}
@@ -412,17 +437,17 @@ void CGameStateRun::show_text_by_phase() {
 
 
 bool CGameStateRun::validate_phase_1() {
-	return character.GetImageFilename() == "resources/giraffe.bmp";
+	return character[0].GetImageFilename() == "resources/giraffe.bmp";
 }
 
 bool CGameStateRun::validate_phase_2() {
-	return character.Top() > 204 && character.Top() < 325 && character.Left() > 339 && character.Left() < 459;
+	return character[0].Top() > 204 && character[0].Top() < 325 && character[0].Left() > 339 && character[0].Left() < 459;
 }
 
 bool CGameStateRun::validate_phase_3() {
 	return (
-		character.Top() + character.Height() >= chest_and_key.Top()
-		&& character.Left() + character.Width() >= chest_and_key.Left()
+		character[0].Top() + character[0].Height() >= chest_and_key.Top()
+		&& character[0].Left() + character[0].Width() >= chest_and_key.Left()
 		&& chest_and_key.GetSelectShowBitmap() == 1
 		&& chest_and_key.GetFilterColor() == RGB(255, 255, 255)
 	);

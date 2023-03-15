@@ -107,6 +107,7 @@ namespace game_framework {
 		GAME_ASSERT(isBitmapLoaded, "A bitmap must be loaded before SetTopLeft() is called !!!");
 		isAnimation = false;
 		this->ShowBitmap(0);
+		
 	}
 
 	void CMovingBitmap::SetTopLeft(int x, int y)
