@@ -9,6 +9,9 @@
 #include <windows.h>
 using namespace game_framework;
 bool flag = false;
+bool flag1 = false;
+//int count = 0;
+
 /////////////////////////////////////////////////////////////////////////////
 // 這個class為遊戲的遊戲執行物件，主要的遊戲程式都在這裡
 /////////////////////////////////////////////////////////////////////////////
@@ -55,10 +58,28 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		if (character[0].Left() == 300) flag = true;
 	}
 	if (flag) {
-		character[0].SetAnimation(135, true);
 		character[1].SetTopLeft(300, 265);
 		character[1].SetAnimation(135, false);
 	}
+	
+	
+	count += 1;
+	if (count == 300)
+	{
+		flag1 = true;
+		count = 0;
+	}
+	if (count == 150)flag1 = false;
+
+	
+	if (!flag1) {
+		character[3].SetAnimation(100, false);
+	}
+	if (flag1) {
+		character[4].SetTopLeft(310, 335);
+		character[4].SetAnimation(100, false);
+	}
+	
 	
 	
 	
@@ -85,10 +106,10 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 
 	
 	
-	/*    太陽
-	character.LoadBitmapByString({ "resources/sun_0.bmp", "resources/sun_1.bmp", "resources/sun_2.bmp", "resources/sun_3.bmp", "resources/sun_4.bmp", "resources/sun_5.bmp", "resources/sun_6.bmp", "resources/sun_7.bmp", "resources/sun_8.bmp", "resources/sun_9.bmp", "resources/sun_10.bmp", "resources/sun_11.bmp", "resources/sun_12.bmp", "resources/sun_13.bmp", "resources/sun_14.bmp", "resources/sun_15.bmp", "resources/sun_16.bmp", "resources/sun_17.bmp", "resources/sun_18.bmp" , "resources/sun_19.bmp", "resources/sun_20.bmp" , "resources/sun_21.bmp" },RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(100, false);
+	/*   太陽
+	character[].LoadBitmapByString({ "resources/sun_0.bmp", "resources/sun_1.bmp", "resources/sun_2.bmp", "resources/sun_3.bmp", "resources/sun_4.bmp", "resources/sun_5.bmp", "resources/sun_6.bmp", "resources/sun_7.bmp", "resources/sun_8.bmp", "resources/sun_9.bmp", "resources/sun_10.bmp", "resources/sun_11.bmp", "resources/sun_12.bmp", "resources/sun_13.bmp", "resources/sun_14.bmp", "resources/sun_15.bmp", "resources/sun_16.bmp", "resources/sun_17.bmp", "resources/sun_18.bmp" , "resources/sun_19.bmp", "resources/sun_20.bmp" , "resources/sun_21.bmp" },RGB(255, 255, 255));
+	character[].SetTopLeft(270, 265);
+	character[].SetAnimation(100, false);
 	*/
 	
 	
@@ -106,18 +127,18 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	*/
 
 
-	/*    太陽花
-	character.LoadBitmapByString({ "resources/sunflower_0.bmp", "resources/sunflower_1.bmp", "resources/sunflower_2.bmp", "resources/sunflower_3.bmp", "resources/sunflower_4.bmp", "resources/sunflower_5.bmp", "resources/sunflower_6.bmp", "resources/sunflower_7.bmp", "resources/sunflower_8.bmp", "resources/sunflower_9.bmp", "resources/sunflower_10.bmp", "resources/sunflower_11.bmp", "resources/sunflower_12.bmp", "resources/sunflower_13.bmp", "resources/sunflower_14.bmp", "resources/sunflower_15.bmp", "resources/sunflower_16.bmp", "resources/sunflower_17.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
+	///*    太陽花
+	character[3].LoadBitmapByString({ "resources/sunflower_0.bmp", "resources/sunflower_1.bmp", "resources/sunflower_2.bmp", "resources/sunflower_3.bmp", "resources/sunflower_4.bmp", "resources/sunflower_5.bmp", "resources/sunflower_6.bmp", "resources/sunflower_7.bmp", "resources/sunflower_8.bmp", "resources/sunflower_9.bmp", "resources/sunflower_10.bmp", "resources/sunflower_11.bmp", "resources/sunflower_12.bmp", "resources/sunflower_13.bmp", "resources/sunflower_14.bmp", "resources/sunflower_15.bmp", "resources/sunflower_16.bmp", "resources/sunflower_17.bmp" }, RGB(255, 255, 255));
+	character[3].SetTopLeft(310, 335);
+	character[3].SetAnimation(135, false);
+	//*/
 
 
-	/*    太陽花(要產太陽前)
-	character.LoadBitmapByString({ "resources/sunflower_getsun_0.bmp", "resources/sunflower_getsun_1.bmp", "resources/sunflower_getsun_2.bmp", "resources/sunflower_getsun_3.bmp", "resources/sunflower_getsun_4.bmp", "resources/sunflower_getsun_5.bmp", "resources/sunflower_getsun_6.bmp", "resources/sunflower_getsun_7.bmp", "resources/sunflower_getsun_8.bmp", "resources/sunflower_getsun_9.bmp", "resources/sunflower_getsun_10.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_12.bmp", "resources/sunflower_getsun_13.bmp", "resources/sunflower_getsun_14.bmp", "resources/sunflower_getsun_15.bmp", "resources/sunflower_getsun_16.bmp", "resources/sunflower_getsun_17.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
+	///*    太陽花(要產太陽前)
+	character[4].LoadBitmapByString({ "resources/sunflower_getsun_0.bmp", "resources/sunflower_getsun_1.bmp", "resources/sunflower_getsun_2.bmp", "resources/sunflower_getsun_3.bmp", "resources/sunflower_getsun_4.bmp", "resources/sunflower_getsun_5.bmp", "resources/sunflower_getsun_6.bmp", "resources/sunflower_getsun_7.bmp", "resources/sunflower_getsun_8.bmp", "resources/sunflower_getsun_9.bmp", "resources/sunflower_getsun_10.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_12.bmp", "resources/sunflower_getsun_13.bmp", "resources/sunflower_getsun_14.bmp", "resources/sunflower_getsun_15.bmp", "resources/sunflower_getsun_16.bmp", "resources/sunflower_getsun_17.bmp" }, RGB(255, 255, 255));
+	//character[4].SetTopLeft(310, 335);
+	//character[4].SetAnimation(135, false);
+	//*/
 
 
 	///*    一般殭屍
@@ -368,14 +389,21 @@ void CGameStateRun::show_image_by_phase() {
 	if (phase <= 6) {
 		background.SelectShowBitmap((phase - 1) * 2 + (sub_phase - 1));
 		background.ShowBitmap();
-		for(int i = 0 ;i < 2 ; i++)
-			//角色消失
+			//殭屍消失
 			if (!flag) {
 				character[0].ShowBitmap();
 			}
 			else {
 				character[1].ShowBitmap();
 			}
+			//太陽花變色
+			if (!flag1) {
+				character[3].ShowBitmap();
+			}
+			else {
+				character[4].ShowBitmap();
+			}
+
 		if (phase == 3 && sub_phase == 1) {
 			chest_and_key.ShowBitmap();
 		}
