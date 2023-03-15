@@ -6,6 +6,7 @@
 #include "../Library/gameutil.h"
 #include "../Library/gamecore.h"
 #include "mygame.h"
+#include <string>
 
 using namespace game_framework;
 
@@ -27,21 +28,36 @@ void CGameStateRun::OnBeginState()
 
 void CGameStateRun::OnMove()							// 移動遊戲元素
 {
+	if ((phase==1)&&(MouseIsOverlap(one[0]))) {
+		one[0].SetAnimation(10, TRUE);
+		one[0].ToggleAnimation();
+	}
+	else if (phase==2) {
+		
+	}
+	
 	
 }
 
 void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 {
 	
+	background.LoadBitmapByString({ 
+		"resources/menu_background.bmp",
+		"resources/phase2_background_1.bmp",
+	});
+	background.SetTopLeft(0, 0);
+
+	one[0].LoadBitmapByString({ "resources/menu_title1_1.bmp","resources/menu_title1.bmp" }, RGB(0, 0, 0));
+	one[0].SetTopLeft(520, 60);
+	
+
+	
 }
 
 void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
-	if (nChar == VK_LBUTTON) {
-		if (phase == 1) {
-			phase += 1;
-		}
-	}
+	
 }
 
 void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
@@ -51,6 +67,9 @@ void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
 {
+	if ((nFlags == VK_LBUTTON)&&(MouseIsOverlap(one[0]))&&(phase==1)) {
+		phase += 1;
+	}
 }
 
 void CGameStateRun::OnLButtonUp(UINT nFlags, CPoint point)	// 處理滑鼠的動作
@@ -59,6 +78,9 @@ void CGameStateRun::OnLButtonUp(UINT nFlags, CPoint point)	// 處理滑鼠的動
 
 void CGameStateRun::OnMouseMove(UINT nFlags, CPoint point)	// 處理滑鼠的動作
 {
+	mouse_x = point.x;
+	mouse_y = point.y;
+
 }
 
 void CGameStateRun::OnRButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
@@ -69,42 +91,59 @@ void CGameStateRun::OnRButtonUp(UINT nFlags, CPoint point)	// 處理滑鼠的動
 {
 }
 
+
+bool CGameStateRun::MouseIsOverlap(CMovingBitmap bmp1) { //判斷滑鼠是否在物件範圍內
+	
+	if ((mouse_x < bmp1.GetLeft() + bmp1.GetWidth()) && (mouse_x > bmp1.GetLeft()) &&
+		(mouse_y < bmp1.GetTop() + bmp1.GetHeight()) && (mouse_y > bmp1.GetTop())) {
+		return TRUE;
+	}
+	return FALSE;
+}
+
 void CGameStateRun::OnShow()
 {
 	show_image_by_phase();
-	//show_text_by_phase();
+	show_text_by_phase();
 }
 
+void CGameStateRun::show_text_by_phase() {
+	CDC *pDC = CDDraw::GetBackCDC();
+	CTextDraw::ChangeFontLog(pDC, 21, "微軟正黑體", RGB(0, 0, 0), 800);
+
+	CTextDraw::Print(pDC, 0, 0, to_string(mouse_x));
+	CTextDraw::Print(pDC, 50, 0, to_string(mouse_y));
+	//CTextDraw::Print(pDC, 100, 0, to_string(one[0].GetLeft()));
+	//CTextDraw::Print(pDC, 150, 0, to_string(one[0].GetLeft()+one[0].GetWidth()));
+	//CTextDraw::Print(pDC, 200, 0, to_string(one[0].GetTop()));
+	//CTextDraw::Print(pDC, 250, 0, to_string(one[0].GetTop() + one[0].GetHeight()));
+	CDDraw::ReleaseBackCDC();
+}
+
+
+	
 void CGameStateRun::show_image_by_phase() {
 	if (phase <= 6) {
-		//background.SelectShowBitmap((phase - 1) * 2 + (sub_phase - 1));
-		background.ShowBitmap();/*
-								
+		background.SetFrameIndexOfBitmap(phase-1);
+		background.ShowBitmap();					
 		if (phase == 1) {
-			for (int i = 0; i < 5; i++) {
-				character[i].ShowBitmap();
+			for (int i = 0; i < 1; i++) {
+				one[i].ShowBitmap();
 			}
 		}
-
-
-
-		if (phase == 3 && sub_phase == 1) {
-			for (int j = 5; j < 8; j++) {
-				character[j].ShowBitmap();
+		else if (phase == 2) {
+			
+			for (int i = 0; i < 1000; i=i+100) {
+				background.SetTopLeft(i, 80);
+				Sleep(10);
 			}
 		}
-		*/
-		/*
-		if (phase == 4 && sub_phase == 1) {
-			bee.ShowBitmap();
-		}
-		if (phase == 5 && sub_phase == 1) {
-			for (int i = 0; i < 3; i++) {
-				door[i].ShowBitmap();
-			}
-		}
-		if (phase == 6 && sub_phase == 1) {
-			ball.ShowBitmap();
-		}*/
+		
+		
 	}
+}
+
+bool CGameStateRun::validate_phase_1() {
+	//return character.GetImageFilename() == "resources/giraffe.bmp";
+	return 1;
 }

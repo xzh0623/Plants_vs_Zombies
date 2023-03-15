@@ -87,14 +87,19 @@ namespace game_framework {
 		void OnMouseMove(UINT nFlags, CPoint point);	// 處理滑鼠的動作 
 		void OnRButtonDown(UINT nFlags, CPoint point);  // 處理滑鼠的動作
 		void OnRButtonUp(UINT nFlags, CPoint point);	// 處理滑鼠的動作
+		bool MouseIsOverlap(CMovingBitmap bmp1);
 	protected:
 		void OnMove();									// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
 		int phase = 1;
+		int mouse_x, mouse_y;
 		CMovingBitmap background;
+		CMovingBitmap one[1];
+
+		bool validate_phase_1();
 		void show_image_by_phase();
-		//void show_text_by_phase();
+		void show_text_by_phase();
 	};
 
 	/////////////////////////////////////////////////////////////////////////////
