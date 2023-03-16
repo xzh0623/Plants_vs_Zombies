@@ -133,9 +133,9 @@ void CGameStateRun::show_image_by_phase() {
 		}
 		else if (phase == 2) {
 			
-			for (int i = 0; i < 1000; i=i+100) {
+			for (int i = 0; i < 1000; i=i+10) {
 				background.SetTopLeft(i, 80);
-				Sleep(10);
+				Sleep(1000);
 			}
 		}
 		
