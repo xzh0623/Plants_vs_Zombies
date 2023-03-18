@@ -95,6 +95,8 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		else
 		{
 			one[4].SetTopLeft(one[4].GetLeft() + 10, one[4].GetTop());
+			
+
 		}
 	}
 	
@@ -159,6 +161,12 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	// 鐵桶殭屍走路
 	one[11].LoadBitmapByString({ "resources/bucket_zom_0.bmp", "resources/bucket_zom_1.bmp", "resources/bucket_zom_2.bmp", "resources/bucket_zom_3.bmp", "resources/bucket_zom_4.bmp", "resources/bucket_zom_5.bmp", "resources/bucket_zom_6.bmp", "resources/bucket_zom_7.bmp", "resources/bucket_zom_8.bmp", "resources/bucket_zom_9.bmp", "resources/bucket_zom_10.bmp", "resources/bucket_zom_11.bmp", "resources/bucket_zom_12.bmp", "resources/bucket_zom_13.bmp", "resources/bucket_zom_14.bmp" }, RGB(255, 255, 255));
 	one[11].SetTopLeft(1000, 300);
+
+	// 掉頭
+	one[12].LoadBitmapByString({ "resources/headfall_0.bmp", "resources/headfall_1.bmp", "resources/headfall_2.bmp", "resources/headfall_3.bmp", "resources/headfall_4.bmp", "resources/headfall_5.bmp", "resources/headfall_6.bmp", "resources/headfall_7.bmp", "resources/headfall_8.bmp", "resources/headfall_9.bmp", "resources/headfall_10.bmp", "resources/headfall_11.bmp" }, RGB(255, 255, 255));
+	one[12].SetTopLeft(230, 305);
+	one[12].SetAnimation(135, true);
+	one[12].ToggleAnimation();
 
 }
 
@@ -258,10 +266,18 @@ void CGameStateRun::show_image_by_phase() {
 				one[7].ShowBitmap();
 			}
 
+			// 殭屍被車輾消失並掉頭
 			if (!flag1)
 			{
 				one[11].ShowBitmap(); 
 			}
+			else 
+
+			{
+				if (!(one[12].IsAnimationDone())) one[12].ShowBitmap();
+			}
+				
+			
 			
 			
 			//background.SetTopLeft(background.GetLeft() + 1, 80);
