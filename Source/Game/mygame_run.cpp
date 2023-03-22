@@ -7,11 +7,26 @@
 #include "../Library/gamecore.h"
 #include "mygame.h"
 #include <string>
+#include <random>
+#include <iostream>
+
 
 using namespace game_framework;
 bool backgroundmove = false;
 bool flag = false;
 bool flag1 = false;
+
+std::random_device rd;
+std::mt19937 gen(rd());
+
+
+//  隨機生成數字
+int random(int low, int high) 
+{
+	std::uniform_int_distribution<> dist(low, high);
+	return dist(gen);
+}
+
 /////////////////////////////////////////////////////////////////////////////
 // 這個class為遊戲的遊戲執行物件，主要的遊戲程式都在這裡
 /////////////////////////////////////////////////////////////////////////////
@@ -65,9 +80,13 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		}
 		
 	}
-	//殭屍移動code，定點吃東西
+	
 	if (phase == 2 && background.GetLeft() == -9)
 	{
+		// 太陽掉落
+		if(one[14].GetTop() < 500) one[14].SetTopLeft(one[14].GetLeft(), one[14].GetTop() + 1);
+		
+		// 殭屍移動code，定點吃東西
 		if (!flag)
 		{
 			one[6].SetAnimation(100, false);
@@ -77,18 +96,17 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		}
 		if (flag)
 		{
-			//要改寫碰撞
 			one[7].SetTopLeft(one[13].GetLeft(), one[6].GetTop());
 			one[7].SetAnimation(135, false);
 		}
 
+		// 車子撞鐵桶殭屍
 		if (!flag1)
 		{
 			one[11].SetAnimation(100, false);
 			one[11].SetTopLeft(one[11].GetLeft() - 1, one[11].GetTop());
 			if (CMovingBitmap::IsOverlap(one[11], one[4])) flag1 = true;
 		}
-		
 		else
 		{
 			one[4].SetTopLeft(one[4].GetLeft() + 10, one[4].GetTop());
@@ -164,11 +182,11 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	one[13].SetTopLeft(410, 470);
 	one[13].SetAnimation(135, false);
 
-	/*   太陽
-	character[].LoadBitmapByString({ "resources/sun_0.bmp", "resources/sun_1.bmp", "resources/sun_2.bmp", "resources/sun_3.bmp", "resources/sun_4.bmp", "resources/sun_5.bmp", "resources/sun_6.bmp", "resources/sun_7.bmp", "resources/sun_8.bmp", "resources/sun_9.bmp", "resources/sun_10.bmp", "resources/sun_11.bmp", "resources/sun_12.bmp", "resources/sun_13.bmp", "resources/sun_14.bmp", "resources/sun_15.bmp", "resources/sun_16.bmp", "resources/sun_17.bmp", "resources/sun_18.bmp" , "resources/sun_19.bmp", "resources/sun_20.bmp" , "resources/sun_21.bmp" },RGB(255, 255, 255));
-	character[].SetTopLeft(270, 265);
-	character[].SetAnimation(100, false);
-	*/
+	//   太陽
+	one[14].LoadBitmapByString({ "resources/sun_0.bmp", "resources/sun_1.bmp", "resources/sun_2.bmp", "resources/sun_3.bmp", "resources/sun_4.bmp", "resources/sun_5.bmp", "resources/sun_6.bmp", "resources/sun_7.bmp", "resources/sun_8.bmp", "resources/sun_9.bmp", "resources/sun_10.bmp", "resources/sun_11.bmp", "resources/sun_12.bmp", "resources/sun_13.bmp", "resources/sun_14.bmp", "resources/sun_15.bmp", "resources/sun_16.bmp", "resources/sun_17.bmp", "resources/sun_18.bmp" , "resources/sun_19.bmp", "resources/sun_20.bmp" , "resources/sun_21.bmp" },RGB(255, 255, 255));
+	one[14].SetTopLeft(random(250,900), 0);
+	one[14].SetAnimation(100, false);
+	
 
 
 	/*    豌豆
@@ -406,6 +424,7 @@ void CGameStateRun::show_image_by_phase() {
 		background.SetFrameIndexOfBitmap(phase-1);
 		background.ShowBitmap();					
 		if (phase == 1) {
+			
 			for (int i = 0; i < 1; i++) {
 				one[i].ShowBitmap();
 			}
@@ -452,7 +471,11 @@ void CGameStateRun::show_image_by_phase() {
 			for (int i = 13; i < 14; i++) {
 				one[i].ShowBitmap();
 			}
+			
 
+			//寫滑鼠點擊消失的flag，我相信庠姊你可以的!!!
+			one[14].ShowBitmap();
+			
 		}
 		
 		
