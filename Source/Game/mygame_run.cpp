@@ -9,7 +9,7 @@
 #include <string>
 #include <random>
 #include <iostream>
-
+#include <ctime> 
 
 using namespace game_framework;
 bool backgroundmove = false;
@@ -25,6 +25,13 @@ int random(int low, int high)
 {
 	std::uniform_int_distribution<> dist(low, high);
 	return dist(gen);
+}
+
+void   Delay(int   time)//time*1000為秒數 
+{
+	clock_t now = clock();
+
+	while (clock() - now < time);
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -85,7 +92,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 	{
 		// 太陽掉落
 		if(one[14].GetTop() < 500) one[14].SetTopLeft(one[14].GetLeft(), one[14].GetTop() + 1);
-		
+
 		// 殭屍移動code，定點吃東西
 		if (!flag)
 		{
