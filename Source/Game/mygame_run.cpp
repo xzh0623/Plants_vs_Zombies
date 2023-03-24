@@ -10,12 +10,13 @@
 #include <random>
 #include <iostream>
 #include <ctime> 
+#include <Windows.h>
 
 using namespace game_framework;
 bool backgroundmove = false;
 bool flag = false;
 bool flag1 = false;
-
+bool flag_delay = false;
 std::random_device rd;
 std::mt19937 gen(rd());
 
@@ -27,12 +28,15 @@ int random(int low, int high)
 	return dist(gen);
 }
 
+/*
 void   Delay(int   time)//time*1000為秒數 
 {
 	clock_t now = clock();
-
 	while (clock() - now < time);
 }
+*/
+
+
 
 /////////////////////////////////////////////////////////////////////////////
 // 這個class為遊戲的遊戲執行物件，主要的遊戲程式都在這裡
@@ -53,6 +57,9 @@ void CGameStateRun::OnBeginState()
 
 void CGameStateRun::OnMove()							// 移動遊戲元素
 {
+	if (count > 240) count = 0;
+	count += 1;
+	
 	//判斷第一關且滑鼠是否碰到圖片
 	if ((phase==1)&&(MouseIsOverlap(one[0]))) {
 		one[0].SetAnimation(10, TRUE);
@@ -84,6 +91,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			if (background.GetLeft() < -300) {
 				backgroundmove = true;
 			}
+			
 		}
 		
 	}
@@ -117,8 +125,14 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		else
 		{
 			one[4].SetTopLeft(one[4].GetLeft() + 10, one[4].GetTop());
+			//Delay(5000);
+			
 		}
+		
+		
 	}
+
+	
 	
 }
 
@@ -189,12 +203,18 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	one[13].SetTopLeft(410, 470);
 	one[13].SetAnimation(135, false);
 
+	//    太陽花(要產太陽前)
+	one[15].LoadBitmapByString({ "resources/sunflower_getsun_0.bmp", "resources/sunflower_getsun_1.bmp", "resources/sunflower_getsun_2.bmp", "resources/sunflower_getsun_3.bmp", "resources/sunflower_getsun_4.bmp", "resources/sunflower_getsun_5.bmp", "resources/sunflower_getsun_6.bmp", "resources/sunflower_getsun_7.bmp", "resources/sunflower_getsun_8.bmp", "resources/sunflower_getsun_9.bmp", "resources/sunflower_getsun_10.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_12.bmp", "resources/sunflower_getsun_13.bmp", "resources/sunflower_getsun_14.bmp", "resources/sunflower_getsun_15.bmp", "resources/sunflower_getsun_16.bmp", "resources/sunflower_getsun_17.bmp" }, RGB(255, 255, 255));
+	one[15].SetTopLeft(410, 470);
+	one[15].SetAnimation(135, false);
+
 	//   太陽
 	one[14].LoadBitmapByString({ "resources/sun_0.bmp", "resources/sun_1.bmp", "resources/sun_2.bmp", "resources/sun_3.bmp", "resources/sun_4.bmp", "resources/sun_5.bmp", "resources/sun_6.bmp", "resources/sun_7.bmp", "resources/sun_8.bmp", "resources/sun_9.bmp", "resources/sun_10.bmp", "resources/sun_11.bmp", "resources/sun_12.bmp", "resources/sun_13.bmp", "resources/sun_14.bmp", "resources/sun_15.bmp", "resources/sun_16.bmp", "resources/sun_17.bmp", "resources/sun_18.bmp" , "resources/sun_19.bmp", "resources/sun_20.bmp" , "resources/sun_21.bmp" },RGB(255, 255, 255));
 	one[14].SetTopLeft(random(250,900), 0);
 	one[14].SetAnimation(100, false);
 	
-
+	
+	
 
 	/*    豌豆
 	character.LoadBitmapByString({ "resources/bean_0.bmp", "resources/bean_1.bmp", "resources/bean_2.bmp", "resources/bean_3.bmp", "resources/bean_4.bmp", "resources/bean_5.bmp", "resources/bean_6.bmp", "resources/bean_7.bmp", "resources/bean_8.bmp", "resources/bean_9.bmp", "resources/bean_10.bmp", "resources/bean_11.bmp", "resources/bean_12.bmp" },RGB(255, 255, 255));
@@ -207,16 +227,6 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	character.LoadBitmapByString({ "resources/double_bean_0.bmp", "resources/double_bean_1.bmp", "resources/double_bean_2.bmp", "resources/double_bean_3.bmp", "resources/double_bean_4.bmp", "resources/double_bean_5.bmp", "resources/double_bean_6.bmp", "resources/double_bean_7.bmp", "resources/double_bean_8.bmp", "resources/double_bean_9.bmp", "resources/double_bean_10.bmp" ,"resources/double_bean_11.bmp","resources/double_bean_12.bmp","resources/double_bean_13.bmp","resources/double_bean_14.bmp" }, RGB(255, 255, 255));
 	character.SetTopLeft(150, 265);
 	character.SetAnimation(135, false);
-	*/
-
-	
-	
-
-
-	/*    太陽花(要產太陽前)
-	character[4].LoadBitmapByString({ "resources/sunflower_getsun_0.bmp", "resources/sunflower_getsun_1.bmp", "resources/sunflower_getsun_2.bmp", "resources/sunflower_getsun_3.bmp", "resources/sunflower_getsun_4.bmp", "resources/sunflower_getsun_5.bmp", "resources/sunflower_getsun_6.bmp", "resources/sunflower_getsun_7.bmp", "resources/sunflower_getsun_8.bmp", "resources/sunflower_getsun_9.bmp", "resources/sunflower_getsun_10.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_12.bmp", "resources/sunflower_getsun_13.bmp", "resources/sunflower_getsun_14.bmp", "resources/sunflower_getsun_15.bmp", "resources/sunflower_getsun_16.bmp", "resources/sunflower_getsun_17.bmp" }, RGB(255, 255, 255));
-	//character[4].SetTopLeft(310, 335);
-	//character[4].SetAnimation(135, false);
 	*/
 
 
@@ -475,9 +485,16 @@ void CGameStateRun::show_image_by_phase() {
 				if (!(one[12].IsAnimationDone())) one[12].ShowBitmap();
 			}
 
-			for (int i = 13; i < 14; i++) {
-				one[i].ShowBitmap();
+			//太陽花變色
+			if (count < 151)
+			{
+				one[13].ShowBitmap();
 			}
+			else if(count > 150 && count < 240)
+			{
+				one[15].ShowBitmap();
+			}
+			
 			
 
 			//寫滑鼠點擊消失的flag，我相信庠姊你可以的!!!
