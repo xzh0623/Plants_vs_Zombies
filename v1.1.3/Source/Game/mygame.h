@@ -95,11 +95,13 @@ namespace game_framework {
 	private:
 		int phase = 1;
 		int mouse_x, mouse_y;
-		
+		int count = 0 ;
+		int score = 50;
 		CMovingBitmap background;
 		CMovingBitmap one[20];
 		CMovingBitmap PlantsCard[4];
 		CMovingBitmap SunCard[1];
+
 		bool validate_phase_1();
 		void show_image_by_phase();
 		void show_text_by_phase();
