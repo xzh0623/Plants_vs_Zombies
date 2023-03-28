@@ -38,7 +38,7 @@
  *      3. Use ShowInitProgress(percent) to display loading progress.
 */
 
-
+#include "Zombie.h"
 namespace game_framework {
 	/////////////////////////////////////////////////////////////////////////////
 	// Constants
@@ -105,6 +105,9 @@ namespace game_framework {
 		bool validate_phase_1();
 		void show_image_by_phase();
 		void show_text_by_phase();
+
+		Zombie z;
+
 	};
 
 	/////////////////////////////////////////////////////////////////////////////
