@@ -41,6 +41,9 @@
 #include "Zombie.h"
 #include "Car.h"
 #include "Sun.h"
+#include "Plants.h"
+#include "PlantsCard.h"
+#include "SunCard.h"
 namespace game_framework {
 	/////////////////////////////////////////////////////////////////////////////
 	// Constants
@@ -97,12 +100,10 @@ namespace game_framework {
 	private:
 		int phase = 1;
 		int mouse_x, mouse_y;
-		int count = 0 ;
-		int score = 50;
 		CMovingBitmap background;
-		CMovingBitmap one[20];
-		CMovingBitmap PlantsCard[4];
-		CMovingBitmap SunCard[1];
+		CMovingBitmap one[1];
+		//CMovingBitmap PlantsCard[4];
+		//CMovingBitmap SunCard[1];
 
 		//bool validate_phase_1();
 		void show_image_by_phase();
@@ -111,7 +112,9 @@ namespace game_framework {
 		Zombie z;
 		Car c;
 		Sun s;
-
+		Plants p;
+		PlantsCard p_c;
+		SunCard s_c;
 		bool backgroundmove = false;
 		bool flag_delay = false;
 	};

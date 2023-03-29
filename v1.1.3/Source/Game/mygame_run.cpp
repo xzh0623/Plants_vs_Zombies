@@ -85,13 +85,12 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 	
 	if (phase == 2 && background.GetLeft() == -9)
 	{
-//這個count是給太陽花變橘色然後產太陽的計時器
-		if (count > 600) count = 0;
-		count += 1;
-		
 		s.OnMove();
 		z.OnMove();
-
+		p_c.OnMove(0,50);
+		p_c.OnMove(1, 100);
+		p_c.OnMove(2, 50);
+		p_c.OnMove(3, 200);
 // 車子撞鐵桶殭屍
 		if (!z._flag1)
 		{
@@ -104,12 +103,8 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			//Delay(5000);
 			
 		}
-		
-		
 	}
 
-	
-	
 }
 
 void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
@@ -128,55 +123,10 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	c.OnInit();
 	z.OnInit();
 	s.OnInit();
-	
-
-	/*    豌豆
-	character.LoadBitmapByString({ "resources/bean_0.bmp", "resources/bean_1.bmp", "resources/bean_2.bmp", "resources/bean_3.bmp", "resources/bean_4.bmp", "resources/bean_5.bmp", "resources/bean_6.bmp", "resources/bean_7.bmp", "resources/bean_8.bmp", "resources/bean_9.bmp", "resources/bean_10.bmp", "resources/bean_11.bmp", "resources/bean_12.bmp" },RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(125, false);
-	*/
-
-
-	/*    二連發豌豆
-	character.LoadBitmapByString({ "resources/double_bean_0.bmp", "resources/double_bean_1.bmp", "resources/double_bean_2.bmp", "resources/double_bean_3.bmp", "resources/double_bean_4.bmp", "resources/double_bean_5.bmp", "resources/double_bean_6.bmp", "resources/double_bean_7.bmp", "resources/double_bean_8.bmp", "resources/double_bean_9.bmp", "resources/double_bean_10.bmp" ,"resources/double_bean_11.bmp","resources/double_bean_12.bmp","resources/double_bean_13.bmp","resources/double_bean_14.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-
-	/*     堅果牆(未傷)
-	character.LoadBitmapByString({ "resources/nut_one_0.bmp", "resources/nut_one_1.bmp", "resources/nut_one_2.bmp", "resources/nut_one_3.bmp", "resources/nut_one_4.bmp", "resources/nut_one_5.bmp", "resources/nut_one_6.bmp", "resources/nut_one_7.bmp", "resources/nut_one_8.bmp", "resources/nut_one_9.bmp", "resources/nut_one_10.bmp", "resources/nut_one_11.bmp", "resources/nut_one_12.bmp", "resources/nut_one_13.bmp", "resources/nut_one_14.bmp", "resources/nut_one_15.bmp" }, RGB(0, 0, 0));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*     堅果牆(小傷)
-	character.LoadBitmapByString({ "resources/nut_two_0.bmp", "resources/nut_two_1.bmp", "resources/nut_two_2.bmp", "resources/nut_two_3.bmp", "resources/nut_two_4.bmp", "resources/nut_two_5.bmp", "resources/nut_two_6.bmp", "resources/nut_two_7.bmp", "resources/nut_two_8.bmp", "resources/nut_two_9.bmp", "resources/nut_two_10.bmp"}, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*     堅果牆(大傷)
-	character.LoadBitmapByString({ "resources/nut_three_0.bmp", "resources/nut_three_1.bmp", "resources/nut_three_2.bmp", "resources/nut_three_3.bmp", "resources/nut_three_4.bmp", "resources/nut_three_5.bmp", "resources/nut_three_6.bmp", "resources/nut_three_7.bmp", "resources/nut_three_8.bmp", "resources/nut_three_9.bmp", "resources/nut_three_10.bmp", "resources/nut_three_11.bmp", "resources/nut_three_12.bmp", "resources/nut_three_13.bmp", "resources/nut_three_14.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
+	p.OnInit();
 	//////////////////////////////////
-	
-	PlantsCard[0].LoadBitmapByString({ "card/SunFlower_1.bmp","card/SunFlower_2.bmp","card/SunFlower_1.bmp" }, RGB(182, 185, 184));
-	PlantsCard[1].LoadBitmapByString({ "card/PlantsCard_1.bmp","card/PlantsCard_2.bmp","card/PlantsCard_1.bmp" }, RGB(182, 185, 184));
-	PlantsCard[2].LoadBitmapByString({ "card/WallNut_1.bmp","card/WallNut_2.bmp","card/WallNut_1.bmp" }, RGB(182, 185, 184));
-	PlantsCard[3].LoadBitmapByString({ "card/Repeater_1.bmp","card/Repeater_2.bmp","card/Repeater_1.bmp" }, RGB(182, 185, 184));
-
-	for (int i = 0; i < 4; i++) {
-		PlantsCard[i].SetTopLeft(0, 65 * i);
-	}
-
-	SunCard[0].LoadBitmapByString({ "resources/Sun.bmp" }, RGB(182, 185, 184));
-	SunCard[0].SetTopLeft(112, 11);
+	p_c.OnInit();
+	s_c.OnInit();
 
 	
 }
@@ -199,31 +149,26 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 	}
 	if (phase == 2) {
 		if (nFlags == VK_LBUTTON) {
-			if (MouseIsOverlap(PlantsCard[0])) {
-				PlantsCard[0].SetAnimation(20000, TRUE);
-				PlantsCard[0].ToggleAnimation();
-				PlantsCard[0].SetFrameIndexOfBitmap(1);
+			if (MouseIsOverlap(p_c.plantscard[0])) {
+				p_c.OnLButtonDown(0,50);
 			}
 			
-			
-			if (MouseIsOverlap(PlantsCard[1])) {
-				PlantsCard[1].SetAnimation(20000, TRUE);
-				PlantsCard[1].ToggleAnimation();
-				PlantsCard[1].SetFrameIndexOfBitmap(1);
+			if (MouseIsOverlap(p_c.plantscard[1])) {
+				p_c.OnLButtonDown(1,100);
 			}
-			if (MouseIsOverlap(PlantsCard[2])) {
-				PlantsCard[2].SetAnimation(60000, TRUE);
-				PlantsCard[2].ToggleAnimation();
-				PlantsCard[2].SetFrameIndexOfBitmap(1);
+			if (MouseIsOverlap(p_c.plantscard[2])) {
+				p_c.OnLButtonDown(2,50);
 			}
-			if (MouseIsOverlap(PlantsCard[3])) {
-				PlantsCard[3].SetAnimation(20000, TRUE);
-				PlantsCard[3].ToggleAnimation();
-				PlantsCard[3].SetFrameIndexOfBitmap(1);
+			if (MouseIsOverlap(p_c.plantscard[3])) {
+				p_c.OnLButtonDown(3,200);
 			}
 			if (MouseIsOverlap(s.sun[0])) {
 				s.flag2 = TRUE;
-				score += 50;
+				p_c.score += 50;
+			}
+			if (MouseIsOverlap(s.sun[2])&&(s.IsShowBitmap)) {
+				s.flag_sun = TRUE;
+				p_c.score += 50;
 			}
 			
 		}
@@ -279,8 +224,12 @@ void CGameStateRun::show_text_by_phase() {
 	//CTextDraw::Print(pDC, 200, 0, to_string(one[0].GetTop()));
 	//CTextDraw::Print(pDC, 250, 0, to_string(one[0].GetTop() + one[0].GetHeight()));
 	if ((phase == 2)&&(background.GetLeft() == -9)) {
-		CTextDraw::Print(pDC, 185, 19, to_string(score));
-		//CTextDraw::Print(pDC, 180, 19, to_string(delay2));
+		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
+		//CTextDraw::Print(pDC, 500, 19, to_string(count));
+		CTextDraw::Print(pDC, 700, 19, to_string(p_c.count[0]));
+		CTextDraw::Print(pDC, 700, 50, to_string(p_c.count[1]));
+		CTextDraw::Print(pDC, 700, 100, to_string(p_c.count[2]));
+		CTextDraw::Print(pDC, 700, 150, to_string(p_c.count[3]));
 	}
 	CDDraw::ReleaseBackCDC();
 }
@@ -299,36 +248,27 @@ void CGameStateRun::show_image_by_phase() {
 		}
 		else if ((phase == 2) && (background.GetLeft() == -9)) {
 			Sleep(1);
-			for (int i = 0; i < 4; i++) {
-				PlantsCard[i].ShowBitmap();
-			}
-			for (int i = 0; i < 1; i++) {
-				SunCard[i].ShowBitmap();
-			}
-
+			p_c.OnShow();
+			s_c.OnShow();
 			c.OnShow();
 			z.OnShow2();
-
-
 			//太陽花起始顏色，過幾秒太陽花變色，再過幾秒太陽花產太陽，同時變回起始顏色
-			if (count >= 0 && count <= 210)
+			if (s.delay1 >= 0 && s.delay1 <= 210)
 			{
 				z.zombie[7].ShowBitmap();
 			}
-			else if (count > 210 && count <= 420)
+			else if (s.delay1 > 210 && s.delay1 <= 420)
 			{
 				s.Onshow1();
+				//s.OnShow3();
 			}
-			else if (count > 420 && count <= 600)
+			else if (s.delay1 > 420 &&	s.delay1 <= 600)
 			{
-				s.flag_sun = true;
 				z.zombie[7].ShowBitmap();
 			}
-
 			s.OnShow2();
-
+			s.OnShow3();
 		}
-		s.OnShow3();
 	}
 }
 /*

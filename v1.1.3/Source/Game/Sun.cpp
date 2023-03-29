@@ -31,21 +31,24 @@ namespace game_framework {
 
 	void Sun::Onshow1() {
 		sun[1].ShowBitmap();
-		sun[2].SetTopLeft(sun[1].GetLeft() + 5, sun[1].GetTop() + 7);
 	}
 
 	void Sun::OnShow2() {
-//寫滑鼠點擊消失的flag，我相信庠姊你可以的!!!
 		if (!flag2) {
 			sun[0].ShowBitmap();
 		}
+		
 	}
-
 	void Sun::OnShow3() {
-//庠姊幫我寫程式，使滑鼠點擊讓flag_sun變false		
-		if (flag_sun) sun[2].ShowBitmap();
-
+		if ((!flag_sun)) {
+			sun[2].ShowBitmap();
+			IsShowBitmap = true;
+		}
+		else {
+			IsShowBitmap = false;
+		}
 	}
+
 
 	void Sun::OnMove() {
 // 天空的太陽掉落
@@ -59,6 +62,14 @@ namespace game_framework {
 				delay = 0;
 				sun[0].SetTopLeft(random(250, 900), 0);
 			}
+		}
+		sun[2].SetTopLeft(sun[1].GetLeft() + 5, sun[1].GetTop() + 7);
+		if (flag_sun) {
+			delay1 += 1;
+			if (delay1 == 420) {
+				flag_sun = false;
+			}
+			if (delay1 ==600) delay1 = 0;
 		}
 	}
 

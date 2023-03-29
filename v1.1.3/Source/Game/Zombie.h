@@ -19,7 +19,7 @@ namespace game_framework {
 			CMovingBitmap zombie[8];
 		protected:
 		private:
-
+			
 
 	};
 }
