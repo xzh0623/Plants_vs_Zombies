@@ -92,17 +92,33 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		s.OnMove();
 		z.OnMove();
 
-// 車子撞鐵桶殭屍
-		if (!z._flag1)
+// 第四台車子撞鐵桶殭屍
+		if (!z._flag_car_3)
 		{
-			z.zombie[5].SetTopLeft(z.zombie[5].GetLeft() - 1, z.zombie[5].GetTop());
-			if (CMovingBitmap::IsOverlap(z.zombie[5], c.car[3])) z._flag1 = true;
+			if (CMovingBitmap::IsOverlap(z.zombie[5], c.car[3]))
+			{
+				z._flag_car_3 = true;
+				z.zombie[6].SetTopLeft(z.zombie[5].GetLeft(), z.zombie[5].GetTop());
+			}
 		}
 		else
 		{
 			c.car[3].SetTopLeft(c.car[3].GetLeft() + 10, c.car[3].GetTop());
-			//Delay(5000);
-			
+		}
+
+// 第5台車子撞一般殭屍
+		if (!z._flag_car_5)
+		{
+			if (CMovingBitmap::IsOverlap(z.zombie[0], c.car[4]))
+			{
+				z._flag_car_5 = true;
+				z.zombie[6].SetTopLeft(z.zombie[0].GetLeft(), z.zombie[0].GetTop());
+			}
+		}
+		else
+		{
+			c.car[4].SetTopLeft(c.car[4].GetLeft() + 10, c.car[4].GetTop());
+			//z.zombie[6].IsOnceAnimation()
 		}
 		
 		
