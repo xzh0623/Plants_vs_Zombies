@@ -42,7 +42,7 @@ namespace game_framework {
 		zombie[10].SetAnimation(135, false);
 
 // 掉頭
-		zombie[6].LoadBitmapByString({ "resources/headfall_0.bmp", "resources/headfall_1.bmp", "resources/headfall_2.bmp", "resources/headfall_3.bmp", "resources/headfall_4.bmp", "resources/headfall_5.bmp", "resources/headfall_6.bmp", "resources/headfall_7.bmp", "resources/headfall_8.bmp", "resources/headfall_9.bmp", "resources/headfall_10.bmp", "resources/headfall_11.bmp" }, RGB(255, 255, 255));
+		zombie[6].LoadBitmapByString({ "resources/headfall_0.bmp", "resources/headfall_1.bmp", "resources/headfall_2.bmp", "resources/headfall_3.bmp", "resources/headfall_4.bmp", "resources/headfall_5.bmp", "resources/headfall_6.bmp", "resources/headfall_7.bmp", "resources/headfall_8.bmp", "resources/headfall_9.bmp", "resources/headfall_10.bmp", "resources/headfall_11.bmp" , "resources/headfall_0.bmp" }, RGB(255, 255, 255));
 		//zombie[6].SetTopLeft(230, 305);
 		zombie[6].SetAnimation(135, true);
 		zombie[6].ToggleAnimation();
@@ -119,7 +119,7 @@ namespace game_framework {
 //太陽花跟一般殭屍碰撞
 		if (!_flag)
 		{
-			if (!_flag_car_4)zombie[0].SetTopLeft(zombie[0].GetLeft() - 1, zombie[0].GetTop());
+			if (!_flag_car_5)zombie[0].SetTopLeft(zombie[0].GetLeft() - 1, zombie[0].GetTop());
 			if (CMovingBitmap::IsOverlap(zombie[7], zombie[0]) && (zombie[0].GetTop() < zombie[7].GetTop())) _flag = true;
 		}
 		if (_flag)
@@ -130,7 +130,7 @@ namespace game_framework {
 //太陽花跟三角錐殭屍碰撞
 		if (!_flag1)
 		{
-			zombie[8].SetTopLeft(zombie[8].GetLeft() - 1, zombie[8].GetTop());
+			if (!_flag_car_3)zombie[8].SetTopLeft(zombie[8].GetLeft() - 1, zombie[8].GetTop());
 			if (CMovingBitmap::IsOverlap(zombie[7], zombie[8]) && (zombie[8].GetTop() < zombie[7].GetTop())) _flag1 = true;
 		}
 		if (_flag1)
@@ -141,7 +141,7 @@ namespace game_framework {
 //太陽花跟鐵桶殭屍碰撞
 		if (!_flag2)
 		{
-			if (!_flag_car_3)zombie[5].SetTopLeft(zombie[5].GetLeft() - 1, zombie[5].GetTop());
+			if (!_flag_car_4)zombie[5].SetTopLeft(zombie[5].GetLeft() - 1, zombie[5].GetTop());
 			if (CMovingBitmap::IsOverlap(zombie[7], zombie[5])&& (zombie[5].GetTop() < zombie[7].GetTop())) _flag2 = true;
 		}
 		if (_flag2)
@@ -176,22 +176,22 @@ namespace game_framework {
 		}
 
 		if (!_flag2) {
-			if (!_flag_car_3) zombie[5].ShowBitmap();
+			if (!_flag_car_4) zombie[5].ShowBitmap();
 		}
 		else {
 			zombie[10].ShowBitmap();
 		}
 
 // 鐵桶殭屍被車輾過，殭屍消失並掉頭
-		if (!_flag_car_3)
+		if (!_flag_car_4)
 		{
 			if(!_flag2)	zombie[5].ShowBitmap();
 		}
 		else
 		{
 			zombie[6].SetTopLeft(zombie[5].GetLeft(), zombie[5].GetTop());
-			if (!(zombie[6].IsAnimationDone())) zombie[6].ShowBitmap();
-			
+			//if (!(zombie[6].IsAnimationDone())) zombie[6].ShowBitmap();
+			if (zombie[6].GetFrameIndexOfBitmap() < 12) zombie[6].ShowBitmap();
 		}
 
 // 一般殭屍被車輾過，殭屍消失並掉頭
@@ -202,8 +202,7 @@ namespace game_framework {
 		else
 		{
 			zombie[6].SetTopLeft(zombie[0].GetLeft(), zombie[0].GetTop());
-			if (!(zombie[6].IsAnimationDone())) zombie[6].ShowBitmap();
-			
+			if (zombie[6].GetFrameIndexOfBitmap() < 12) zombie[6].ShowBitmap();
 		}
 
 		
