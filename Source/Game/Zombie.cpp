@@ -191,7 +191,8 @@ namespace game_framework {
 		{
 			zombie[6].SetTopLeft(zombie[5].GetLeft(), zombie[5].GetTop());
 			//if (!(zombie[6].IsAnimationDone())) zombie[6].ShowBitmap();
-			if (zombie[6].GetFrameIndexOfBitmap() < 12) zombie[6].ShowBitmap();
+			if (zombie[6].GetFrameIndexOfBitmap() < 12 && flag_headfall_0) zombie[6].ShowBitmap();
+			
 		}
 
 // 一般殭屍被車輾過，殭屍消失並掉頭
@@ -201,6 +202,7 @@ namespace game_framework {
 		}
 		else
 		{
+			flag_headfall_0 = false;
 			zombie[6].SetTopLeft(zombie[0].GetLeft(), zombie[0].GetTop());
 			if (zombie[6].GetFrameIndexOfBitmap() < 12) zombie[6].ShowBitmap();
 		}

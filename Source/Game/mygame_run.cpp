@@ -98,6 +98,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			if (CMovingBitmap::IsOverlap(z.zombie[5], c.car[3]))
 			{
 				z._flag_car_4 = true;
+				z.flag_headfall_0 = true;
 				z.zombie[6].SetTopLeft(z.zombie[5].GetLeft(), z.zombie[5].GetTop());
 				z.zombie[6].SetFrameIndexOfBitmap(0);
 			}
