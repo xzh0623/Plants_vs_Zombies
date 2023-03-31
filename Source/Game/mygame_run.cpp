@@ -98,7 +98,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			if (CMovingBitmap::IsOverlap(z.zombie[5], c.car[3]))
 			{
 				z._flag_car_4 = true;
-				z.flag_headfall_0 = true;
+				z.flag_headfall_bucket = true;
 				z.zombie[6].SetTopLeft(z.zombie[5].GetLeft(), z.zombie[5].GetTop());
 				z.zombie[6].SetFrameIndexOfBitmap(0);
 			}
@@ -115,6 +115,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			if (CMovingBitmap::IsOverlap(z.zombie[0], c.car[4]))
 			{
 				z._flag_car_5 = true;
+				//z.flag_headfall_tri = true;
 				z.zombie[6].SetTopLeft(z.zombie[0].GetLeft(), z.zombie[0].GetTop());
 				z.zombie[6].SetFrameIndexOfBitmap(0);
 			}
@@ -122,6 +123,22 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		else
 		{
 			c.car[4].SetTopLeft(c.car[4].GetLeft() + 10, c.car[4].GetTop());
+		}
+
+// 第3台車子撞三角錐殭屍
+		if (!z._flag_car_3)
+		{
+			if (CMovingBitmap::IsOverlap(z.zombie[8], c.car[2]))
+			{
+				z._flag_car_3 = true;
+				z.flag_headfall_tri = true;
+				z.zombie[6].SetTopLeft(z.zombie[8].GetLeft(), z.zombie[8].GetTop());
+				z.zombie[6].SetFrameIndexOfBitmap(0);
+			}
+		}
+		else
+		{
+			c.car[2].SetTopLeft(c.car[2].GetLeft() + 10, c.car[2].GetTop());
 		}
 		
 		

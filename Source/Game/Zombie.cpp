@@ -48,7 +48,7 @@ namespace game_framework {
 		zombie[6].ToggleAnimation();
 // 太陽花
 		zombie[7].LoadBitmapByString({ "resources/sunflower_0.bmp", "resources/sunflower_1.bmp", "resources/sunflower_2.bmp", "resources/sunflower_3.bmp", "resources/sunflower_4.bmp", "resources/sunflower_5.bmp", "resources/sunflower_6.bmp", "resources/sunflower_7.bmp", "resources/sunflower_8.bmp", "resources/sunflower_9.bmp", "resources/sunflower_10.bmp", "resources/sunflower_11.bmp", "resources/sunflower_12.bmp", "resources/sunflower_13.bmp", "resources/sunflower_14.bmp", "resources/sunflower_15.bmp", "resources/sunflower_16.bmp", "resources/sunflower_17.bmp" }, RGB(255, 255, 255));
-		zombie[7].SetTopLeft(410, 280);
+		zombie[7].SetTopLeft(410, 470);
 		zombie[7].SetAnimation(135, false);
 
 // 三角錐殭屍
@@ -169,7 +169,7 @@ namespace game_framework {
 		}
 
 		if (!_flag1) {
-			zombie[8].ShowBitmap();
+			if(!_flag_car_3) zombie[8].ShowBitmap();
 		}
 		else {
 			zombie[9].ShowBitmap();
@@ -189,9 +189,10 @@ namespace game_framework {
 		}
 		else
 		{
+			flag_headfall_tri = false;
 			zombie[6].SetTopLeft(zombie[5].GetLeft(), zombie[5].GetTop());
 			//if (!(zombie[6].IsAnimationDone())) zombie[6].ShowBitmap();
-			if (zombie[6].GetFrameIndexOfBitmap() < 12 && flag_headfall_0) zombie[6].ShowBitmap();
+			if (zombie[6].GetFrameIndexOfBitmap() < 12 && flag_headfall_bucket) zombie[6].ShowBitmap();
 			
 		}
 
@@ -202,8 +203,22 @@ namespace game_framework {
 		}
 		else
 		{
-			flag_headfall_0 = false;
+			flag_headfall_bucket = false;
+			flag_headfall_tri = false;
 			zombie[6].SetTopLeft(zombie[0].GetLeft(), zombie[0].GetTop());
+			if (zombie[6].GetFrameIndexOfBitmap() < 12) zombie[6].ShowBitmap();
+		}
+
+// 三角錐殭屍被車輾過，殭屍消失並掉頭
+		if (!_flag_car_3)
+		{
+			if (!_flag1)	zombie[8].ShowBitmap();
+		}
+		else
+		{
+			flag_headfall_bucket = false;
+			
+			zombie[6].SetTopLeft(zombie[8].GetLeft(), zombie[8].GetTop());
 			if (zombie[6].GetFrameIndexOfBitmap() < 12) zombie[6].ShowBitmap();
 		}
 

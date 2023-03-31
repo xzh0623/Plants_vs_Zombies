@@ -16,7 +16,8 @@ namespace game_framework {
 				_flag = false;
 				_flag1 = false;
 				_flag2 = false;
-				flag_headfall_0 = false;
+				flag_headfall_bucket = false;
+				flag_headfall_tri = false;
 				flag_headfall_1 = false;
 				flag_headfall_2 = false;
 			}
@@ -30,7 +31,8 @@ namespace game_framework {
 			bool _flag_car_3;
 			bool _flag_car_4;
 			bool _flag_car_5;
-			bool flag_headfall_0;
+			bool flag_headfall_bucket;
+			bool flag_headfall_tri;
 			bool flag_headfall_1;
 			bool flag_headfall_2;
 
