@@ -21,7 +21,7 @@ namespace game_framework {
 		sun[0].SetAnimation(100, false);
 		//    太陽花(要產太陽前)
 		sun[1].LoadBitmapByString({ "resources/sunflower_getsun_0.bmp", "resources/sunflower_getsun_1.bmp", "resources/sunflower_getsun_2.bmp", "resources/sunflower_getsun_3.bmp", "resources/sunflower_getsun_4.bmp", "resources/sunflower_getsun_5.bmp", "resources/sunflower_getsun_6.bmp", "resources/sunflower_getsun_7.bmp", "resources/sunflower_getsun_8.bmp", "resources/sunflower_getsun_9.bmp", "resources/sunflower_getsun_10.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_12.bmp", "resources/sunflower_getsun_13.bmp", "resources/sunflower_getsun_14.bmp", "resources/sunflower_getsun_15.bmp", "resources/sunflower_getsun_16.bmp", "resources/sunflower_getsun_17.bmp" }, RGB(255, 255, 255));
-		sun[1].SetTopLeft(410, 470);
+		//sun[1].SetTopLeft(410, 470);
 		sun[1].SetAnimation(135, false);
 
 		//   花的太陽
@@ -64,14 +64,9 @@ namespace game_framework {
 			}
 		}
 		sun[2].SetTopLeft(sun[1].GetLeft() + 5, sun[1].GetTop() + 7);
-		if (flag_sun) {
-			delay1 += 1;
-			if (delay1 == 420) {
-				flag_sun = false;
-			}
-			if (delay1 ==600) delay1 = 0;
-		}
+		
 	}
+
 
 //  隨機生成數字
 	int Sun::random(int low, int high){

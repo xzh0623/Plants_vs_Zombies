@@ -43,7 +43,7 @@ namespace game_framework {
 		zombie[6].ToggleAnimation();
 //  ¤Ó¶§ªá
 		zombie[7].LoadBitmapByString({ "resources/sunflower_0.bmp", "resources/sunflower_1.bmp", "resources/sunflower_2.bmp", "resources/sunflower_3.bmp", "resources/sunflower_4.bmp", "resources/sunflower_5.bmp", "resources/sunflower_6.bmp", "resources/sunflower_7.bmp", "resources/sunflower_8.bmp", "resources/sunflower_9.bmp", "resources/sunflower_10.bmp", "resources/sunflower_11.bmp", "resources/sunflower_12.bmp", "resources/sunflower_13.bmp", "resources/sunflower_14.bmp", "resources/sunflower_15.bmp", "resources/sunflower_16.bmp", "resources/sunflower_17.bmp" }, RGB(255, 255, 255));
-		zombie[7].SetTopLeft(410, 470);
+		//zombie[7].SetTopLeft(410, 470);
 		zombie[7].SetAnimation(135, false);
 
 /*    ¤T¨¤À@íL«Í

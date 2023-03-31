@@ -117,6 +117,8 @@ namespace game_framework {
 		SunCard s_c;
 		bool backgroundmove = false;
 		bool flag_delay = false;
+
+		
 	};
 
 	/////////////////////////////////////////////////////////////////////////////

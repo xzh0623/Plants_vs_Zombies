@@ -86,8 +86,19 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 	if (phase == 2 && background.GetLeft() == -9)
 	{
 		s.OnMove();
+		if ((s.flag_sun) && (p.twiceflag)) {
+			s.delay1 += 1;
+			if (s.delay1 == 420) {//當到420秒時太陽出現
+				s.flag_sun = false;
+			}
+			if (s.delay1 == 600) {
+				s.delay1 = 0;
+			}
+			//殭屍碰撞+過幾秒後歸0消失
+		}
 		z.OnMove();
 		p_c.OnMove(0,50);
+		
 		p_c.OnMove(1, 100);
 		p_c.OnMove(2, 50);
 		p_c.OnMove(3, 200);
@@ -170,7 +181,16 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 				s.flag_sun = TRUE;
 				p_c.score += 50;
 			}
-			
+			if (p_c.scorecost[0]) {
+				if ((nFlags == VK_LBUTTON)&& ((MouseIsOverlap(p_c.plantscard[0])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 74) && ((mouse_y) <= 564)))) {
+					p.isflag += 1;
+					if (p.isflag == 2) {
+						p.twiceflag = true;
+						p.isflag = 0;
+						p_c.scorecost[0] = false;
+					}
+				}
+			}
 		}
 	}
 	
@@ -185,6 +205,7 @@ void CGameStateRun::OnMouseMove(UINT nFlags, CPoint point)	// 處理滑鼠的動
 {
 	mouse_x = point.x;
 	mouse_y = point.y;
+
 
 }
 
@@ -225,11 +246,15 @@ void CGameStateRun::show_text_by_phase() {
 	//CTextDraw::Print(pDC, 250, 0, to_string(one[0].GetTop() + one[0].GetHeight()));
 	if ((phase == 2)&&(background.GetLeft() == -9)) {
 		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
-		//CTextDraw::Print(pDC, 500, 19, to_string(count));
 		CTextDraw::Print(pDC, 700, 19, to_string(p_c.count[0]));
 		CTextDraw::Print(pDC, 700, 50, to_string(p_c.count[1]));
 		CTextDraw::Print(pDC, 700, 100, to_string(p_c.count[2]));
 		CTextDraw::Print(pDC, 700, 150, to_string(p_c.count[3]));
+		CTextDraw::Print(pDC, 700, 200, to_string(z.zombie[7].GetLeft()));
+		CTextDraw::Print(pDC, 700, 250, to_string(z.zombie[7].GetTop()));
+		CTextDraw::Print(pDC, 700, 300, to_string(s.delay1));
+		CTextDraw::Print(pDC, 700, 350, to_string(p.isflag));
+
 	}
 	CDDraw::ReleaseBackCDC();
 }
@@ -252,17 +277,35 @@ void CGameStateRun::show_image_by_phase() {
 			s_c.OnShow();
 			c.OnShow();
 			z.OnShow2();
-			//太陽花起始顏色，過幾秒太陽花變色，再過幾秒太陽花產太陽，同時變回起始顏色
-			if (s.delay1 >= 0 && s.delay1 <= 210)
+			for (int i = 0; i < 1; i++) {
+				
+				if (p.twiceflag){
+					if (((mouse_x) >= 246) && ((mouse_x) <= 314) && ((mouse_y) >= 84) && ((mouse_y) <= 161)) {
+						z.zombie[7].SetTopLeft(249, 87);
+						s.sun[1].SetTopLeft(249, 87);
+					}
+					if (((mouse_x) >= 243) && ((mouse_x) <= 317) && ((mouse_y) >= 185) && ((mouse_y) <= 268)) {
+						z.zombie[7].SetTopLeft(255, 181);
+						s.sun[1].SetTopLeft(255, 181);
+					}
+				}
+				if (p_c.scorecost[i]&&(p.isflag==1)) {
+					p.plants[i].SetTopLeft(mouse_x - 30, mouse_y - 30);
+					p.OnShow(i);
+				}
+			}
+			//太陽花起始顏色，過幾秒太陽花變色，再過幾秒太陽花產太陽，同時變回起始顏色//OnMove2
+			if (s.delay1 > 0 && s.delay1 <= 210)
 			{
 				z.zombie[7].ShowBitmap();
 			}
 			else if (s.delay1 > 210 && s.delay1 <= 420)
 			{
+				
 				s.Onshow1();
-				//s.OnShow3();
+				s.OnShow3();
 			}
-			else if (s.delay1 > 420 &&	s.delay1 <= 600)
+			else if (s.delay1 > 420)
 			{
 				z.zombie[7].ShowBitmap();
 			}

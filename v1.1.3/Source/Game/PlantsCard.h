@@ -2,12 +2,13 @@
 #define PLANTSCARD_H
 #pragma once
 namespace game_framework {
-	class PlantsCard {
+	class PlantsCard{
 	public:
 		PlantsCard(){
 			for (int i = 0; i < 4; i++) {
 				count[i] = 0;
 				iscount[i] = false;
+				scorecost[i] = false;
 			}
 			score = 50;
 		};
@@ -20,6 +21,7 @@ namespace game_framework {
 		int count[4];
 		bool iscount[4];
 		int score;
+		bool scorecost[4];
 	protected:
 
 	private:

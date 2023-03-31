@@ -12,6 +12,7 @@
 #include <Windows.h>
 #include "PlantsCard.h"
 
+
 namespace game_framework {
 	void PlantsCard::OnInit() {
 		plantscard[0].LoadBitmapByString({ "card/SunFlower_1.bmp","card/SunFlower_2.bmp" }, RGB(182, 185, 184));
@@ -46,6 +47,7 @@ namespace game_framework {
 			iscount[index] = true;
 			plantscard[index].SetFrameIndexOfBitmap(1);
 			score -= scorelimit;
+			scorecost[index] = true;
 		}
 		
 	}
