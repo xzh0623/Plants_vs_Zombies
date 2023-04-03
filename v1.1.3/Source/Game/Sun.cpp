@@ -25,8 +25,8 @@ namespace game_framework {
 		sun[1].SetAnimation(135, false);
 
 		//   ªáªº¤Ó¶§
-		sun[2].LoadBitmapByString({ "resources/sun_0.bmp", "resources/sun_1.bmp", "resources/sun_2.bmp", "resources/sun_3.bmp", "resources/sun_4.bmp", "resources/sun_5.bmp", "resources/sun_6.bmp", "resources/sun_7.bmp", "resources/sun_8.bmp", "resources/sun_9.bmp", "resources/sun_10.bmp", "resources/sun_11.bmp", "resources/sun_12.bmp", "resources/sun_13.bmp", "resources/sun_14.bmp", "resources/sun_15.bmp", "resources/sun_16.bmp", "resources/sun_17.bmp", "resources/sun_18.bmp" , "resources/sun_19.bmp", "resources/sun_20.bmp" , "resources/sun_21.bmp" }, RGB(255, 255, 255));
-		sun[2].SetAnimation(100, false);
+		/*sun[2].LoadBitmapByString({ "resources/sun_0.bmp", "resources/sun_1.bmp", "resources/sun_2.bmp", "resources/sun_3.bmp", "resources/sun_4.bmp", "resources/sun_5.bmp", "resources/sun_6.bmp", "resources/sun_7.bmp", "resources/sun_8.bmp", "resources/sun_9.bmp", "resources/sun_10.bmp", "resources/sun_11.bmp", "resources/sun_12.bmp", "resources/sun_13.bmp", "resources/sun_14.bmp", "resources/sun_15.bmp", "resources/sun_16.bmp", "resources/sun_17.bmp", "resources/sun_18.bmp" , "resources/sun_19.bmp", "resources/sun_20.bmp" , "resources/sun_21.bmp" }, RGB(255, 255, 255));
+		sun[2].SetAnimation(100, false);*/
 	}
 
 	void Sun::Onshow1() {
@@ -38,15 +38,6 @@ namespace game_framework {
 			sun[0].ShowBitmap();
 		}
 		
-	}
-	void Sun::OnShow3() {
-		if ((!flag_sun)) {
-			sun[2].ShowBitmap();
-			IsShowBitmap = true;
-		}
-		else {
-			IsShowBitmap = false;
-		}
 	}
 
 
@@ -63,7 +54,7 @@ namespace game_framework {
 				sun[0].SetTopLeft(random(250, 900), 0);
 			}
 		}
-		sun[2].SetTopLeft(sun[1].GetLeft() + 5, sun[1].GetTop() + 7);
+		//sun[2].SetTopLeft(sun[1].GetLeft() + 5, sun[1].GetTop() + 7);
 		
 	}
 

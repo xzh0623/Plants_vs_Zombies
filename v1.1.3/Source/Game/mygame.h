@@ -112,11 +112,16 @@ namespace game_framework {
 		Zombie z;
 		Car c;
 		Sun s;
-		Plants p;
+		Plants p0;
+		Plants p1;
+		Plants p2;
+		Plants p3;
+		Plants* p = new Plants[100]();
 		PlantsCard p_c;
 		SunCard s_c;
 		bool backgroundmove = false;
 		bool flag_delay = false;
+		
 
 		
 	};
