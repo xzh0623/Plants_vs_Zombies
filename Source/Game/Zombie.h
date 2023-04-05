@@ -7,6 +7,9 @@ namespace game_framework {
 		public:
 			Zombie() {
 				_flag = false;
+				_flag1 = false;
+				_flag2 = false;
+				_flag_car_2 = false;
 				_flag_car_3 = false;
 				_flag_car_4 = false;
 			}
@@ -15,8 +18,12 @@ namespace game_framework {
 			void OnMove();								// 移動
 			void OnShow1();								// 將圖形貼到畫面
 			void OnShow2();
-			bool _flag_car_3;
+			
 			bool _flag;
+			bool _flag1;
+			bool _flag2;
+			bool _flag_car_2;
+			bool _flag_car_3;
 			bool _flag_car_4;
 			CMovingBitmap zombie[20];
 		protected:
