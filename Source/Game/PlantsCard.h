@@ -10,7 +10,7 @@ namespace game_framework {
 				iscount[i] = false;
 				scorecost[i] = false;
 			}
-			score = 50;
+			score = 500;
 		};
 		~PlantsCard(){}
 		void OnInit();  							// 遊戲的初值及圖形設定

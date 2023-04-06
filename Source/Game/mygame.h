@@ -93,7 +93,9 @@ namespace game_framework {
 		void OnRButtonDown(UINT nFlags, CPoint point);  // 處理滑鼠的動作
 		void OnRButtonUp(UINT nFlags, CPoint point);	// 處理滑鼠的動作
 		bool MouseIsOverlap(CMovingBitmap bmp1);
-
+		bool IsOverlap(bool flag_1, bool flag_2, int zombie_num, int i);
+		int Distance(CMovingBitmap bmp1, CMovingBitmap bmp2);
+		void SetBean(int i, int bean_index);
 	protected:
 		void OnMove();									// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面

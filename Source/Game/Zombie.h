@@ -12,6 +12,7 @@ namespace game_framework {
 				_flag_car_2 = false;
 				_flag_car_3 = false;
 				_flag_car_4 = false;
+				ZombieGotBean1 = false;
 			}
 			~Zombie() {}
 			void OnInit();  								// 遊戲的初值及圖形設定
@@ -25,7 +26,10 @@ namespace game_framework {
 			bool _flag_car_2;
 			bool _flag_car_3;
 			bool _flag_car_4;
+
+			bool ZombieGotBean1;
 			CMovingBitmap zombie[20];
+			CMovingBitmap zombiegotbean[2];
 		protected:
 		private:
 			
