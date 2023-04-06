@@ -274,7 +274,7 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 	if (bean_index == 1) {
 		for (int k = 0; k < 11; k = k + 5) {
 			if ((Distance(p[i].plants[1], z.zombie[k]) < 600) && (p[i].delay1 >= 0)) {
-				p[i].bean1_delay += 5;
+				p[i].bean1_delay += 10;
 				p[i].plants[7].SetTopLeft(p[i].plants[1].GetLeft() + 40 + p[i].bean1_delay, p[i].plants[1].GetTop() + 2);
 				if (!p[i].bean1_isoverlap) {
 					p[i].bean1_show = true;
@@ -297,7 +297,7 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 	if (bean_index == 3) {
 		for (int k = 0; k < 11; k = k + 5) {
 			if ((Distance(p[i].plants[3], z.zombie[k]) < 600) && (p[i].delay1 >= 0)) {
-				p[i].bean2_delay += 5;
+				p[i].bean2_delay += 10;
 				p[i].plants[8].SetTopLeft(p[i].plants[3].GetLeft() + 40 + p[i].bean2_delay, p[i].plants[3].GetTop() + 2);
 				p[i].plants[9].SetTopLeft(p[i].plants[8].GetLeft() - 50, p[i].plants[8].GetTop());
 				if (!p[i].bean2_isoverlap) {
