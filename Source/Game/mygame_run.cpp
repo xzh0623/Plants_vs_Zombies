@@ -456,19 +456,19 @@ void CGameStateRun::show_text_by_phase() {
 	//CTextDraw::Print(pDC, 250, 0, to_string(one[0].GetTop() + one[0].GetHeight()));
 	if ((phase == 2)&&(background.GetLeft() == -9)) {
 		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
-		CTextDraw::Print(pDC, 700, 19, to_string(p_c.count[0]));
-		CTextDraw::Print(pDC, 700, 50, to_string(p_c.count[1]));
-		CTextDraw::Print(pDC, 700, 100, to_string(p_c.count[2]));
-		CTextDraw::Print(pDC, 700, 150, to_string(p_c.count[3]));
+		//CTextDraw::Print(pDC, 700, 19, to_string(p_c.count[0]));
+		//CTextDraw::Print(pDC, 700, 50, to_string(p_c.count[1]));
+		//CTextDraw::Print(pDC, 700, 100, to_string(p_c.count[2]));
+		//CTextDraw::Print(pDC, 700, 150, to_string(p_c.count[3]));
 		//CTextDraw::Print(pDC, 700, 200, to_string(z.zombie[7].GetLeft()));
 		//CTextDraw::Print(pDC, 700, 250, to_string(z.zombie[7].GetTop()));
-		CTextDraw::Print(pDC, 700, 300, to_string(p[0].delay1));
-		CTextDraw::Print(pDC, 700, 350, to_string(p[1].delay1));
+		//CTextDraw::Print(pDC, 700, 300, to_string(p[0].delay1));
+		//CTextDraw::Print(pDC, 700, 350, to_string(p[1].delay1));
 		//CTextDraw::Print(pDC, 700, 350, to_string(p[0].isflag));
-		CTextDraw::Print(pDC, 700, 400, to_string(p[2].delay1));
-		CTextDraw::Print(pDC, 700, 450, to_string(p[3].delay1));
+		//CTextDraw::Print(pDC, 700, 400, to_string(p[2].delay1));
+		//CTextDraw::Print(pDC, 700, 450, to_string(p[3].delay1));
 		//CTextDraw::Print(pDC, 700, 450, to_string(p[1].isflag));
-		CTextDraw::Print(pDC, 700, 500, to_string(index));
+		//CTextDraw::Print(pDC, 700, 500, to_string(index));
 
 	}
 	CDDraw::ReleaseBackCDC();
