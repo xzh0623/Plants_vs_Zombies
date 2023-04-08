@@ -18,7 +18,7 @@ namespace game_framework {
 	{
 //  一般殭屍走路
 		zombie[0].LoadBitmapByString({ "resources/zom_0.bmp", "resources/zom_1.bmp", "resources/zom_2.bmp", "resources/zom_3.bmp", "resources/zom_4.bmp", "resources/zom_5.bmp", "resources/zom_6.bmp", "resources/zom_7.bmp", "resources/zom_8.bmp", "resources/zom_9.bmp", "resources/zom_10.bmp" ,"resources/zom_11.bmp","resources/zom_12.bmp","resources/zom_13.bmp","resources/zom_14.bmp","resources/zom_15.bmp","resources/zom_16.bmp","resources/zom_17.bmp","resources/zom_18.bmp","resources/zom_19.bmp","resources/zom_20.bmp","resources/zom_21.bmp" }, RGB(255, 255, 255));
-		zombie[0].SetTopLeft(1200, 30);
+		zombie[0].SetTopLeft(1200, 420);
 		zombie[0].SetAnimation(100, false);
 
 //  一般殭屍吃
@@ -126,6 +126,11 @@ namespace game_framework {
 
 	void Zombie::OnMove()
 	{
+		
+		for (int i = 0; i < 5000; i++)
+		{
+			for (int j = 0; j < 5000; j++) {}
+		}
 // 一般殭屍換狀態
 		if ((!_flag) && (!_flag_car_4))
 		{
