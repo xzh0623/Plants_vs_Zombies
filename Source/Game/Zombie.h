@@ -13,6 +13,9 @@ namespace game_framework {
 				_flag_car_3 = false;
 				_flag_car_4 = false;
 				ZombieGotBean1 = false;
+				hit_count_normal = 0;
+				hit_count_bucket = 0;
+				hit_count_tri = 0;
 			}
 			~Zombie() {}
 			void OnInit();  								// 遊戲的初值及圖形設定
@@ -26,6 +29,9 @@ namespace game_framework {
 			bool _flag_car_2;
 			bool _flag_car_3;
 			bool _flag_car_4;
+			int hit_count_normal;
+			int hit_count_bucket;
+			int hit_count_tri;
 
 			bool ZombieGotBean1;
 			CMovingBitmap zombie[20];
