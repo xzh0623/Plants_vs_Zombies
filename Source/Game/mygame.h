@@ -126,6 +126,7 @@ namespace game_framework {
 		Plants* p = new Plants[100]();
 		PlantsCard p_c;
 		SunCard s_c;
+		int map[45];
 		bool backgroundmove = false;
 		bool flag_delay = false;
 		
