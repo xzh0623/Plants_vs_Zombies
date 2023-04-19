@@ -476,7 +476,11 @@ void CGameStateRun::show_text_by_phase() {
 		CTextDraw::Print(pDC, 700, 150, to_string(p_c.count[3]));
 		//CTextDraw::Print(pDC, 700, 200, to_string(z.zombie[7].GetLeft()));
 		//CTextDraw::Print(pDC, 700, 250, to_string(z.zombie[7].GetTop()));
+		
 		CTextDraw::Print(pDC, 250, 90, to_string(z.hit_count_normal));
+		CTextDraw::Print(pDC, 250, 120, to_string(z.hit_count_bucket));
+		CTextDraw::Print(pDC, 250, 150, to_string(z.hit_count_tri));
+
 		CTextDraw::Print(pDC, 700, 300, to_string(p[0].delay1));
 		CTextDraw::Print(pDC, 700, 350, to_string(p[1].delay1));
 		//CTextDraw::Print(pDC, 700, 350, to_string(p[0].isflag));
