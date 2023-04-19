@@ -153,7 +153,7 @@ namespace game_framework {
 			}
 			zombie[6].SetTopLeft(zombie[0].GetLeft() +20 , zombie[0].GetTop() - 25);
 
-			if(zombie[13].IsAnimationDone() && zombie[6].IsAnimationDone())zombie[0].SetTopLeft(1500, 1500);
+			if(zombie[6].IsAnimationDone())zombie[0].SetTopLeft(1500, 1500);
 		}
 		
 //ÅK±ííL«Í´«ª¬ºA
@@ -173,7 +173,7 @@ namespace game_framework {
 			}
 			zombie[7].SetTopLeft(zombie[5].GetLeft()+20, zombie[5].GetTop()-25);
 
-			if (zombie[14].IsAnimationDone() && zombie[7].IsAnimationDone())zombie[5].SetTopLeft(1500, 1500);
+			if (zombie[7].IsAnimationDone())zombie[5].SetTopLeft(1500, 1500);
 		}
 
 
