@@ -66,7 +66,7 @@ namespace game_framework {
 		zombie[7].ToggleAnimation();
 
 //  掉頭(三角錐)
-		zombie[8].LoadBitmapByString({ "resources/headfall_0.bmp", "resources/headfall_1.bmp", "resources/headfall_2.bmp", "resources/headfall_3.bmp", "resources/headfall_4.bmp", "resources/headfall_5.bmp", "resources/headfall_6.bmp", "resources/headfall_7.bmp", "resources/headfall_8.bmp", "resources/headfall_9.bmp", "resources/headfall_10.bmp", "resources/headfall_11.bmp" , "resources/headfall_11.bmp" }, RGB(255, 255, 255));
+		zombie[8].LoadBitmapByString({ "resources/headfall_0.bmp", "resources/headfall_1.bmp", "resources/headfall_2.bmp", "resources/headfall_3.bmp", "resources/headfall_4.bmp", "resources/headfall_5.bmp", "resources/headfall_6.bmp", "resources/headfall_7.bmp", "resources/headfall_8.bmp", "resources/headfall_9.bmp", "resources/headfall_10.bmp", "resources/headfall_11.bmp"}, RGB(255, 255, 255));
 		zombie[8].SetAnimation(80, true);
 		zombie[8].ToggleAnimation();
 
@@ -79,6 +79,11 @@ namespace game_framework {
 		zombie[14].LoadBitmapByString({ "resources/falldown_0.bmp", "resources/falldown_1.bmp", "resources/falldown_2.bmp", "resources/falldown_3.bmp", "resources/falldown_4.bmp", "resources/falldown_5.bmp", "resources/falldown_6.bmp", "resources/falldown_7.bmp", "resources/falldown_8.bmp", "resources/falldown_9.bmp"/*, "resources/falldown_9.bmp"*/ }, RGB(255, 255, 255));
 		zombie[14].SetAnimation(90, true);
 		zombie[14].ToggleAnimation();
+
+//  殭屍倒下(三角)
+		zombie[16].LoadBitmapByString({ "resources/falldown_0.bmp", "resources/falldown_1.bmp", "resources/falldown_2.bmp", "resources/falldown_3.bmp", "resources/falldown_4.bmp", "resources/falldown_5.bmp", "resources/falldown_6.bmp", "resources/falldown_7.bmp", "resources/falldown_8.bmp", "resources/falldown_9.bmp"/*, "resources/falldown_9.bmp"*/ }, RGB(255, 255, 255));
+		zombie[16].SetAnimation(90, true);
+		zombie[16].ToggleAnimation();
 
     /* 沒頭殭屍(一般)
 	zombie[12].LoadBitmapByString({ "resources/nohead_zom_0.bmp", "resources/nohead_zom_1.bmp", "resources/nohead_zom_2.bmp", "resources/nohead_zom_3.bmp", "resources/nohead_zom_4.bmp", "resources/nohead_zom_5.bmp", "resources/nohead_zom_6.bmp", "resources/nohead_zom_7.bmp", "resources/nohead_zom_8.bmp", "resources/nohead_zom_9.bmp", "resources/nohead_zom_10.bmp", "resources/nohead_zom_11.bmp", "resources/nohead_zom_12.bmp", "resources/nohead_zom_13.bmp", "resources/nohead_zom_14.bmp", "resources/nohead_zom_15.bmp", "resources/nohead_zom_16.bmp", "resources/nohead_zom_17.bmp" }, RGB(255, 255, 255));
@@ -178,16 +183,20 @@ namespace game_framework {
 
 
 //三角錐殭屍換狀態
-		if ((!_flag2) && (!_flag_car_2))
+		if ((!_flag2) && (!_flag_car_2) && hit_count_tri < 42)
 		{
 			zombie[10].SetTopLeft(zombie[10].GetLeft() - 1, zombie[10].GetTop());
 		}
-		else if (_flag2)
+		else if (_flag2 && hit_count_tri < 42)
 		{
 			zombie[11].SetTopLeft(zombie[10].GetLeft() - 80, zombie[10].GetTop());
 		}
-		else if (_flag_car_2)
+		else if (_flag_car_2 || hit_count_tri >= 42)
 		{
+			if ((!_flag_car_2) && hit_count_tri >= 42)
+			{
+				zombie[16].SetTopLeft(zombie[10].GetLeft() - 25, zombie[10].GetTop());
+			}
 			zombie[8].SetTopLeft(zombie[10].GetLeft(), zombie[10].GetTop());
 			if (zombie[8].IsAnimationDone())zombie[10].SetTopLeft(1500, 1500);
 		}
@@ -241,15 +250,19 @@ namespace game_framework {
 
 
 // 三角錐殭屍走路換吃東西的動畫，碰到車掉頭
-		if ((!_flag2) && (!_flag_car_2)) {
+		if ((!_flag2) && (!_flag_car_2) && hit_count_tri < 42) {
 			zombie[10].ShowBitmap();
 		}
-		else if (_flag2)
+		else if (_flag2 && hit_count_tri < 42)
 		{
 			zombie[11].ShowBitmap();
 		}
-		else if (_flag_car_2 && zombie[8].GetFrameIndexOfBitmap() < 12)
+		else if (_flag_car_2 || hit_count_tri >= 42)
 		{
+			if ((!_flag_car_2) && hit_count_tri >= 42)
+			{
+				zombie[16].ShowBitmap();
+			}
 			zombie[8].ShowBitmap();
 		}
 
