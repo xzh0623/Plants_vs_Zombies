@@ -78,7 +78,10 @@ namespace game_framework {
 		CMovingBitmap background1;
 		int mouse_x, mouse_y;
 		int phase = 1;
-		CMovingBitmap one[1];
+		bool help_show = false;
+		bool option_show = false;
+		CMovingBitmap one[20];
+		CMovingBitmap menu[10];
 		
 	};
 
