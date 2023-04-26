@@ -83,11 +83,13 @@ namespace game_framework {
 		bool picture_show = false;
 		bool plant_picture_show = false;
 		bool plantIntro[10];
+		bool zombie_picture_show = false;
 		CMovingBitmap one[20];
 		CMovingBitmap menu[10];
 		CMovingBitmap picture[10];
 		CMovingBitmap plant_picture[10];
 		CMovingBitmap plant_intro[10];
+		CMovingBitmap zombie_picture[10];
 		
 	};
 

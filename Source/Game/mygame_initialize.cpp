@@ -74,13 +74,15 @@ void CGameStateInit::OnInit()
 	picture[3].LoadBitmapByString({ "resources/option1_3_4.bmp" }, RGB(128, 128, 128));
 	picture[3].SetTopLeft(625, 505);
 	//植物圖鑑
-	plant_picture[0].LoadBitmapByString({ "resources/option1_3_5.bmp" }, RGB(128, 128, 128));
+	plant_picture[0].LoadBitmapByString({ "resources/option1_3_5.bmp" }, RGB(256, 256, 256));
 	plant_picture[0].SetTopLeft(10, 10);
 	plant_picture[1].LoadBitmapByString({ "resources/option1_3_6.bmp" }, RGB(212, 161, 116));
-	plant_picture[1].SetTopLeft(30, 546);
+	plant_picture[1].SetTopLeft(30, 540);
 	plant_picture[2].LoadBitmapByString({ "resources/option1_3_7.bmp" }, RGB(212, 161, 116));
-	plant_picture[2].SetTopLeft(640, 546);
-
+	plant_picture[2].SetTopLeft(640, 540);
+	//殭屍圖鑑
+	zombie_picture[0].LoadBitmapByString({ "resources/option1_3_8.bmp" }, RGB(256, 256, 256));
+	zombie_picture[0].SetTopLeft(10, 10);
 	//植物介紹
 	plant_intro[0].LoadBitmapByString({ "card/SunFlower_1.bmp" }, RGB(182, 185, 184));
 	plant_intro[0].SetTopLeft(80, 100);
@@ -89,12 +91,16 @@ void CGameStateInit::OnInit()
 	plant_intro[2].LoadBitmapByString({ "card/WallNut_1.bmp"}, RGB(182, 185, 184));
 	plant_intro[2].SetTopLeft(280, 100);
 	plant_intro[3].LoadBitmapByString({ "card/Repeater_1.bmp"}, RGB(182, 185, 184));
-	plant_intro[3].SetTopLeft(80, 160);
+	plant_intro[3].SetTopLeft(80, 170);
 	//介紹卡
 	plant_intro[4].LoadBitmapByString({ "resources/plant_intro1.bmp" }, RGB(182, 185, 184));
-	plant_intro[4].SetTopLeft(450, 96);
+	plant_intro[4].SetTopLeft(450, 91);
 	plant_intro[5].LoadBitmapByString({ "resources/plant_intro2.bmp" }, RGB(182, 185, 184));
-	plant_intro[5].SetTopLeft(447, 94);
+	plant_intro[5].SetTopLeft(452, 96);
+	plant_intro[6].LoadBitmapByString({ "resources/plant_intro3.bmp" }, RGB(182, 185, 184));
+	plant_intro[6].SetTopLeft(450, 96);
+	plant_intro[7].LoadBitmapByString({ "resources/plant_intro4.bmp" }, RGB(182, 185, 184));
+	plant_intro[7].SetTopLeft(450, 95);
 
 	for (int i = 0; i < 10; i++) plantIntro[i] = false;
 }
@@ -147,14 +153,15 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 			if ((MouseIsOverlap(plant_picture[2])) && (plant_picture_show)) {
 				plant_picture_show = !plant_picture_show;
 			}
-			for (int i = 0; i < 2; i++) {
+			for (int i = 0; i < 4; i++) {
 				if ((MouseIsOverlap(plant_intro[i])) && (plant_picture_show)) {
 					plantIntro[i] = true;
-					for (int j = 0; j < 2; j++) {
+					for (int j = 0; j < 4; j++) {
 						if (j!=i) plantIntro[j] = false;
 					}
 				}
 			}
+			if (((MouseIsOverlap(picture[2])) && (picture_show))) zombie_picture_show = !zombie_picture_show;
 			
 			
 		}
@@ -213,7 +220,19 @@ void CGameStateInit::OnShow()
 				plant_intro[5].ShowBitmap();
 				
 			}
+			if (plantIntro[2]) {
+				plant_intro[6].ShowBitmap();
+
+			}
+			if (plantIntro[3]) {
+				plant_intro[7].ShowBitmap();
+
+			}
 		}
+		if (zombie_picture_show) {
+			zombie_picture[0].ShowBitmap();
+		}
+
 	}
 }
 
