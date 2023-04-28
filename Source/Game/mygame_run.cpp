@@ -107,13 +107,9 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 {
 
 
-	//判斷第一關且滑鼠是否碰到圖片
-	if ((phase == 1) && (MouseIsOverlap(one[0]))) {
-		one[0].SetAnimation(10, TRUE);
-		one[0].ToggleAnimation();
-	}
+	
 	//第二關遊戲背景移動
-	else if (phase == 2) {
+	if (phase == 1) {
 		if (backgroundmove) {
 
 			if (background.GetLeft() > -10) {
@@ -143,10 +139,10 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 
 	}
 
-	if (phase == 2 && background.GetLeft() == -9)
+	if (phase == 1 && background.GetLeft() == -9)
 	{
 		s.OnMove();
-		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		for (int i = 0; i < 100; i++) {
 			//殭屍碰撞
 			if (p[i].SetPosDone) {
@@ -171,11 +167,26 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			}
 			if (p[i].delay1 >= 1000) {
 				p[i].delay1 += 1;
+				if ((p[i].delay1 == 1420) || (p[i].delay1 == 1840)) {//當到1420秒時太陽出現
+					p[i].flag_sun = false;
+				}
 			}
 			else if (((p[i].flag_sun) && (p[i].twiceflag) || (p[i].turnToplant[1]) || (p[i].turnToplant[2]) || (p[i].turnToplant[3]))&&(p[i].delay1!=-1)) {
 				p[i].delay1 += 1;
-				if ((p[i].delay1 == 420)||(p[i].delay1 == 1420) || (p[i].delay1 == 1840)) {//當到420秒時太陽出現
+				if ((p[i].delay1 == 420)) {//當到420秒時太陽出現
 					p[i].flag_sun = false;
+					
+					// 一般殭屍與植物相撞
+					z._flag = IsOverlap(z._flag, z._flag_car_4, 0, i);
+					// 鐵桶殭屍與植物相撞
+					z._flag1 = IsOverlap(z._flag1, z._flag_car_3, 5, i);
+					// 三角錐殭屍與植物相撞
+					z._flag2 = (IsOverlap(z._flag2, z._flag_car_2, 10, i));
+					if ((z._flag) || (z._flag1) || (z._flag2)) {
+						p[i].vanish = true;
+					}
+
+					
 				}
 				if (p[i].delay1 == 600) {
 					p[i].delay1 = 0;
@@ -215,12 +226,6 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		p_c.OnMove(1, 100);
 		p_c.OnMove(2, 50);
 		p_c.OnMove(3, 200);
-		
-
-
-
-
-
 	}
 
 }
@@ -233,18 +238,25 @@ bool CGameStateRun::IsOverlap(bool flag_1,bool flag_2,int zombie_num,int i) {
 		{
 			if (p[i].turnToplant[j])
 			{
-				if (CMovingBitmap::IsOverlap(p[i].plants[j], z.zombie[zombie_num]) && z.zombie[zombie_num].GetTop() < p[i].plants[j].GetTop() && (p[i].plants[j].GetTop() + p[i].plants[j].GetHeight()) <= (z.zombie[zombie_num].GetTop() + z.zombie[zombie_num].GetHeight()))
+				if (CMovingBitmap::IsOverlap(p[i].plants[j], z.zombie[zombie_num]) && z.zombie[zombie_num].GetTop() < p[i].plants[j].GetTop()&& (p[i].plants[j].GetTop()+ p[i].plants[j].GetHeight()) <= (z.zombie[zombie_num].GetTop() + z.zombie[zombie_num].GetHeight()))
 				{
 					p[i].delay1 = 1000;
 					return true;
 				}
 				
 				/*
-				for (int k = 0; k < 45; k++) {
-					if (map[k]==i) 
+				if (!CMovingBitmap::IsOverlap(p[i].plants[j], z.zombie[zombie_num]))
+				{
+					return false;
 				}
 				*/
-				
+
+				/*
+				for (int k = 0; k < 45; k++) {
+					if (map[k]==i)
+				}
+				*/
+
 				/*
 				for (int k = 0, k < 45, k++)
 				{
@@ -252,9 +264,8 @@ bool CGameStateRun::IsOverlap(bool flag_1,bool flag_2,int zombie_num,int i) {
 				}
 				*/
 				
-			
-
 			}
+		
 		}
 	}
 	return flag_1;
@@ -309,8 +320,7 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 					z.zombiegotbean[0].SetTopLeft(z.zombie[k].GetLeft() + 10, z.zombie[k].GetTop() + 70);
 					z.ZombieGotBean1 = true;
 				}
-				
-				//if (CMovingBitmap::IsOverlap(p[i].plants[7], z.zombie[5]) && z.zombie[5].GetTop() < p[i].plants[7].GetTop()) z.hit_count_normal += 1;
+
 			}
 
 		}
@@ -318,7 +328,7 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 	if (bean_index == 3) {
 		for (int k = 0; k < 11; k = k + 5) {
 			if ((Distance(p[i].plants[3], z.zombie[k]) < 600) && (p[i].delay1 >= 0)) {
-				p[i].bean2_delay += 8;
+				p[i].bean2_delay += 10;
 				p[i].plants[8].SetTopLeft(p[i].plants[3].GetLeft() + 40 + p[i].bean2_delay, p[i].plants[3].GetTop() + 2);
 				p[i].plants[9].SetTopLeft(p[i].plants[8].GetLeft() - 50, p[i].plants[8].GetTop());
 				if (!p[i].bean2_isoverlap) {
@@ -347,20 +357,17 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 {
 	//載入遊戲背景
-	background.LoadBitmapByString({ 
-		"resources/menu_background.bmp",
+	background.LoadBitmapByString({
 		"resources/phase2_background_1.bmp",
 	});
 	background.SetTopLeft(0, 0);
 
-	//載入遊戲圖片
-	one[0].LoadBitmapByString({ "resources/menu_title1_1.bmp","resources/menu_title1.bmp" }, RGB(0, 0, 0));
-	one[0].SetTopLeft(520, 60);
 	//////////////////////////////////
 	c.OnInit();
 	z.OnInit();
 	s.OnInit();
 	for(int i=0;i<100;i++) p[i].OnInit();
+	for (int i = 0; i < 45; i++) map[i] = -1;
 	//////////////////////////////////
 	p_c.OnInit();
 	s_c.OnInit();
@@ -380,11 +387,7 @@ void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
 {
-	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
-	if ((nFlags == VK_LBUTTON)&&(MouseIsOverlap(one[0]))&&(phase==1)) {
-		phase += 1;
-	}
-	if (phase == 2) {
+	if (phase == 1) {
 		if (nFlags == VK_LBUTTON) {
 			if (MouseIsOverlap(p_c.plantscard[0])) {
 				p_c.OnLButtonDown(0,50);
@@ -478,7 +481,7 @@ void CGameStateRun::show_text_by_phase() {
 	//CTextDraw::Print(pDC, 150, 0, to_string(one[0].GetLeft()+one[0].GetWidth()));
 	//CTextDraw::Print(pDC, 200, 0, to_string(one[0].GetTop()));
 	//CTextDraw::Print(pDC, 250, 0, to_string(one[0].GetTop() + one[0].GetHeight()));
-	if ((phase == 2)&&(background.GetLeft() == -9)) {
+	if ((phase == 1)&&(background.GetLeft() == -9)) {
 		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
 		CTextDraw::Print(pDC, 700, 19, to_string(p_c.count[0]));
 		CTextDraw::Print(pDC, 700, 50, to_string(p_c.count[1]));
@@ -486,20 +489,15 @@ void CGameStateRun::show_text_by_phase() {
 		CTextDraw::Print(pDC, 700, 150, to_string(p_c.count[3]));
 		//CTextDraw::Print(pDC, 700, 200, to_string(z.zombie[7].GetLeft()));
 		//CTextDraw::Print(pDC, 700, 250, to_string(z.zombie[7].GetTop()));
-		
-		//CTextDraw::Print(pDC, 250, 180, to_string(CMovingBitmap::IsOverlap(p[0].plants[0], z.zombie[0])));
-
-		CTextDraw::Print(pDC, 250, 90, to_string(z.hit_count_normal));
-		CTextDraw::Print(pDC, 250, 120, to_string(z.hit_count_bucket));
-		CTextDraw::Print(pDC, 250, 150, to_string(z.hit_count_tri));
-
 		CTextDraw::Print(pDC, 700, 300, to_string(p[0].delay1));
-		CTextDraw::Print(pDC, 700, 350, to_string(p[1].delay1));
+		CTextDraw::Print(pDC, 700, 350, to_string(p[0].isflag));
 		//CTextDraw::Print(pDC, 700, 350, to_string(p[0].isflag));
-		CTextDraw::Print(pDC, 700, 400, to_string(p[2].delay1));
-		CTextDraw::Print(pDC, 700, 450, to_string(p[3].delay1));
+		CTextDraw::Print(pDC, 700, 400, to_string(index));
+		CTextDraw::Print(pDC, 700, 450, to_string(map[0]));
 		//CTextDraw::Print(pDC, 700, 450, to_string(p[1].isflag));
-		CTextDraw::Print(pDC, 700, 500, to_string(index));
+		CTextDraw::Print(pDC, 700, 500, to_string(map[1]));
+
+		CTextDraw::Print(pDC, 300, 200, to_string(z._flag));
 
 	}
 	CDDraw::ReleaseBackCDC();
@@ -511,13 +509,10 @@ void CGameStateRun::show_image_by_phase() {
 	if (phase <= 6) {
 		background.SetFrameIndexOfBitmap(phase - 1);
 		background.ShowBitmap();
-		if (phase == 1) {
-			one[0].ShowBitmap();
-		}
-		else if (phase == 2 && background.GetLeft() != -9) {
+		if (phase == 1 && background.GetLeft() != -9) {
 			z.OnShow1();
 		}
-		else if ((phase == 2) && (background.GetLeft() == -9)) {
+		else if ((phase == 1) && (background.GetLeft() == -9)) {
 			Sleep(1);
 			p_c.OnShow();
 			s_c.OnShow();
@@ -529,24 +524,55 @@ void CGameStateRun::show_image_by_phase() {
 					if (p[index].turnToplant[0]) {
 						for (int j = 0; j < 45; j++) {
 							if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
-								p[index].plants[4].SetTopLeft(x[j], y[j]);
+								if (map[j] == -1) {
+									p[index].plants[4].SetTopLeft(x[j], y[j]);
+									p[index].plants[5].SetTopLeft(p[index].plants[4].GetLeft(), p[index].plants[4].GetTop());
+									p[index].plants[6].SetTopLeft(p[index].plants[4].GetLeft() + 5, p[index].plants[4].GetTop() + 7);
+									map[j] = index;
+									p[index].SetPosDone = true;
+									index += 1;
+									
+								}
+								else {
+									p[index].twiceflag = false;
+									p[index].isflag = 1;
+									p_c.scorecost[0] = true;
+									p[index].delay1 = 0;
+								}
+								
+								
 							}
+							
 						}
-						p[index].plants[5].SetTopLeft(p[index].plants[4].GetLeft(), p[index].plants[4].GetTop());
-						p[index].plants[6].SetTopLeft(p[index].plants[4].GetLeft() + 5, p[index].plants[4].GetTop() + 7);
+						
 					}
 					for (int i = 1; i < 4; i++) {
 						if (p[index].turnToplant[i]) {
 							for (int j = 0; j < 45; j++) {
 								if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
-									p[index].plants[i].SetTopLeft(x[j], y[j]);
+									if (map[j] == -1) {
+										p[index].plants[i].SetTopLeft(x[j], y[j]);
+										if (i != 2) p[index].plants[7].SetTopLeft(p[index].plants[1].GetLeft() + 60, p[index].plants[1].GetTop() + 2);//豆豆位置//顯示時間用殭屍判斷
+										map[j] = index;
+										p[index].SetPosDone = true;
+										index += 1;
+									}
+									else {
+										p[index].twiceflag = false;
+										p[index].isflag = 1;
+										p_c.scorecost[i] = true;
+										p[index].delay1 = 0;
+									}
+									
 								}
+								
+								
 							}
-							if(i!=2) p[index].plants[7].SetTopLeft(p[index].plants[1].GetLeft() + 60, p[index].plants[1].GetTop() + 2);//豆豆位置//顯示時間用殭屍判斷
+							
+							
 						}
 					}
-					p[index].SetPosDone = true;
-					index += 1;
+					
 				}
 				if (p_c.scorecost[k] && (p[index].isflag == 1)) {
 					p[index].plants[k].SetTopLeft(mouse_x - 30, mouse_y - 30);
@@ -586,6 +612,9 @@ void CGameStateRun::show_image_by_phase() {
 							p[i].plants[4].SetTopLeft(1000,1000);
 							p[i].plants[5].SetTopLeft(1000,1000);
 							p[i].plants[6].SetTopLeft(1000,1000);
+							for (int j = 0; j < 45; j++) {
+								if (map[j] == i) map[j] = -1;
+							}
 							//p[i].vanish = false;
 						}
 					}
@@ -620,6 +649,9 @@ void CGameStateRun::show_image_by_phase() {
 								if (x == 3) {
 									p[i].plants[8].SetTopLeft(1000, 1000);
 									p[i].plants[9].SetTopLeft(1000, 1000);
+								}
+								for (int j = 0; j < 45; j++) {
+									if (map[j] == i) map[j] = -1;
 								}
 								//p[i].vanish = false;
 							}
