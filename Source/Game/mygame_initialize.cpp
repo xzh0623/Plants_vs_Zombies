@@ -25,6 +25,18 @@ void CGameStateInit::OnMove()							// 移動遊戲元素
 	else {
 		one[0].SetFrameIndexOfBitmap(0);
 	}
+	if ((phase == 2) && (MouseIsOverlap(one[1]))) {
+		one[1].SetFrameIndexOfBitmap(1);
+	}
+	else {
+		one[1].SetFrameIndexOfBitmap(0);
+	}
+	if ((phase == 2) && (MouseIsOverlap(one[9]))) {
+		one[9].SetFrameIndexOfBitmap(1);
+	}
+	else {
+		one[9].SetFrameIndexOfBitmap(0);
+	}
 
 }
 void CGameStateInit::OnInit()
@@ -39,8 +51,10 @@ void CGameStateInit::OnInit()
 	background1.SetTopLeft(0, 0);
 
 	//載入遊戲圖片
-	one[0].LoadBitmapByString({ "resources/menu_title1_1.bmp","resources/menu_title1.bmp" }, RGB(0, 0, 0));
+	one[0].LoadBitmapByString({ "resources/menu_title1.bmp","resources/menu_title1_1.bmp" }, RGB(0, 0, 0));
 	one[0].SetTopLeft(520, 60);
+	one[1].LoadBitmapByString({ "resources/menu_title2.bmp","resources/menu_title2_1.bmp" }, RGB(0, 0, 0));
+	one[1].SetTopLeft(520, 100);
 	one[3].LoadBitmapByString({ "resources/option.bmp" }, RGB(128, 128, 128));
 	one[3].SetTopLeft(730, 490);
 	one[4].LoadBitmapByString({ "resources/help.bmp" }, RGB(182, 185, 184));
@@ -53,6 +67,8 @@ void CGameStateInit::OnInit()
 	one[7].SetTopLeft(200, 10);
 	one[8].LoadBitmapByString({ "resources/option2.bmp" }, RGB(128, 128, 128));
 	one[8].SetTopLeft(300, 460);
+	one[9].LoadBitmapByString({ "resources/book1.bmp","resources/book2.bmp" }, RGB(128, 128, 128));
+	one[9].SetTopLeft(420, 400);
 	//菜單
 	menu[0].LoadBitmapByString({ "resources/option1_1.bmp" }, RGB(128, 128, 128));
 	menu[0].SetTopLeft(405, 230);
@@ -64,6 +80,11 @@ void CGameStateInit::OnInit()
 	menu[3].SetTopLeft(405, 350);
 	menu[4].LoadBitmapByString({ "resources/option1_5.bmp" }, RGB(128, 128, 128));
 	menu[4].SetTopLeft(405, 390);
+	//選關
+	level_select[0].LoadBitmapByString({ "resources/option1_1_1.bmp" }, RGB(128, 128, 128));
+	level_select[0].SetTopLeft(10, 10);
+	level_select[1].LoadBitmapByString({ "resources/option1_3_7.bmp" }, RGB(212, 161, 116));
+	level_select[1].SetTopLeft(620, 542);
 	//圖鑑
 	picture[0].LoadBitmapByString({ "resources/option1_3_1.bmp" }, RGB(128, 128, 128));
 	picture[0].SetTopLeft(10, 10);
@@ -83,6 +104,10 @@ void CGameStateInit::OnInit()
 	//殭屍圖鑑
 	zombie_picture[0].LoadBitmapByString({ "resources/option1_3_8.bmp" }, RGB(256, 256, 256));
 	zombie_picture[0].SetTopLeft(10, 10);
+	zombie_picture[1].LoadBitmapByString({ "resources/option1_3_6.bmp" }, RGB(212, 161, 116));
+	zombie_picture[1].SetTopLeft(30, 542);
+	zombie_picture[2].LoadBitmapByString({ "resources/option1_3_7.bmp" }, RGB(212, 161, 116));
+	zombie_picture[2].SetTopLeft(640, 542);
 	//植物介紹
 	plant_intro[0].LoadBitmapByString({ "card/SunFlower_1.bmp" }, RGB(182, 185, 184));
 	plant_intro[0].SetTopLeft(80, 100);
@@ -92,6 +117,15 @@ void CGameStateInit::OnInit()
 	plant_intro[2].SetTopLeft(280, 100);
 	plant_intro[3].LoadBitmapByString({ "card/Repeater_1.bmp"}, RGB(182, 185, 184));
 	plant_intro[3].SetTopLeft(80, 170);
+	//殭屍介紹
+	zombie_intro[0].LoadBitmapByString({ "zombiecard/zombie1.bmp" }, RGB(128, 128, 128));
+	zombie_intro[0].SetTopLeft(80, 100);
+	zombie_intro[1].LoadBitmapByString({ "zombiecard/zombie2.bmp" }, RGB(128, 128, 128));
+	zombie_intro[1].SetTopLeft(180, 102);
+	zombie_intro[2].LoadBitmapByString({ "zombiecard/zombie3.bmp" }, RGB(128, 128, 128));
+	zombie_intro[2].SetTopLeft(280, 103);
+	zombie_intro[3].LoadBitmapByString({ "zombiecard/zombie4.bmp" }, RGB(128, 128, 128));
+	zombie_intro[3].SetTopLeft(80, 170);
 	//介紹卡
 	plant_intro[4].LoadBitmapByString({ "resources/plant_intro1.bmp" }, RGB(182, 185, 184));
 	plant_intro[4].SetTopLeft(450, 91);
@@ -101,8 +135,19 @@ void CGameStateInit::OnInit()
 	plant_intro[6].SetTopLeft(450, 96);
 	plant_intro[7].LoadBitmapByString({ "resources/plant_intro4.bmp" }, RGB(182, 185, 184));
 	plant_intro[7].SetTopLeft(450, 95);
-
-	for (int i = 0; i < 10; i++) plantIntro[i] = false;
+	//介紹卡(殭屍)
+	zombie_intro[4].LoadBitmapByString({ "zombiecard/zombie1_1.bmp" }, RGB(128, 128, 128));
+	zombie_intro[4].SetTopLeft(450,110);
+	zombie_intro[5].LoadBitmapByString({ "zombiecard/zombie2_1.bmp" }, RGB(128, 128, 128));
+	zombie_intro[5].SetTopLeft(450, 111);
+	zombie_intro[6].LoadBitmapByString({ "zombiecard/zombie3_1.bmp" }, RGB(128, 128, 128));
+	zombie_intro[6].SetTopLeft(450, 113);
+	zombie_intro[7].LoadBitmapByString({ "zombiecard/zombie4_1.bmp" }, RGB(128, 128, 128));
+	zombie_intro[7].SetTopLeft(449, 111);
+	for (int i = 0; i < 10; i++) {
+		plantIntro[i] = false;
+		zombieIntro[i] = false;
+	}
 }
 
 void CGameStateInit::OnBeginState()
@@ -137,9 +182,20 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 			if ((MouseIsOverlap(one[5])) || ((MouseIsOverlap(menu[3])) && (option_show))|| ((MouseIsOverlap(menu[4])) && (option_show))) {
 				option_show = false;
 				phase = 1;
+				help_show = false;
+				picture_show = false;
+				plant_picture_show = false;
+				zombie_picture_show = false;
+				for (int i = 0; i < 10; i++) {
+					plantIntro[i] = false;
+					zombieIntro[i] = false;
+				}
 			}
 			if ((MouseIsOverlap(one[3]))||(MouseIsOverlap(one[8])&&(option_show))) {
 				option_show = !option_show;
+			}
+			if (MouseIsOverlap(one[9])) {
+				picture_show = !picture_show;
 			}
 			if (MouseIsOverlap(menu[2]) && (option_show)) {
 				option_show = !option_show;
@@ -161,8 +217,27 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 					}
 				}
 			}
-			if (((MouseIsOverlap(picture[2])) && (picture_show))) zombie_picture_show = !zombie_picture_show;
-			
+			if (((MouseIsOverlap(picture[2])) && (picture_show)) || ((MouseIsOverlap(zombie_picture[1]) && (zombie_picture_show)))) zombie_picture_show = !zombie_picture_show;
+			if ((MouseIsOverlap(zombie_picture[2])) && (zombie_picture_show)) {
+				zombie_picture_show = !zombie_picture_show;
+				picture_show = !picture_show;
+			}
+			for (int i = 0; i < 4; i++) {
+				if ((MouseIsOverlap(zombie_intro[i])) && (zombie_picture_show)) {
+					zombieIntro[i] = true;
+					for (int j = 0; j < 4; j++) {
+						if (j != i) zombieIntro[j] = false;
+					}
+				}
+			}
+			//////////////選關
+			if (MouseIsOverlap(menu[0]) && (option_show)) {
+				option_show = !option_show;
+				level_show = !level_show;
+			}
+			if ((MouseIsOverlap(level_select[1])) && (level_show)) {
+				level_show = !level_show;
+			}
 			
 		}
 	}
@@ -183,9 +258,11 @@ void CGameStateInit::OnShow()
 	if (phase == 2) {
 		background1.ShowBitmap();
 		one[0].ShowBitmap();
+		one[1].ShowBitmap();
 		one[3].ShowBitmap();
 		one[4].ShowBitmap();
 		one[5].ShowBitmap();
+		one[9].ShowBitmap();
 		
 		if (option_show) {
 			one[7].ShowBitmap();
@@ -197,6 +274,10 @@ void CGameStateInit::OnShow()
 			menu[4].ShowBitmap();
 		}
 		if (help_show) one[6].ShowBitmap();
+		if (level_show) {
+			level_select[0].ShowBitmap();
+			level_select[1].ShowBitmap();
+		}
 		if (picture_show) {
 			picture[0].ShowBitmap();
 			picture[1].ShowBitmap();
@@ -231,6 +312,28 @@ void CGameStateInit::OnShow()
 		}
 		if (zombie_picture_show) {
 			zombie_picture[0].ShowBitmap();
+			zombie_picture[1].ShowBitmap();
+			zombie_picture[2].ShowBitmap();
+			zombie_intro[0].ShowBitmap();
+			zombie_intro[1].ShowBitmap();
+			zombie_intro[2].ShowBitmap();
+			zombie_intro[3].ShowBitmap();
+			if (zombieIntro[0]) {
+				zombie_intro[4].ShowBitmap();
+
+			}
+			if (zombieIntro[1]) {
+				zombie_intro[5].ShowBitmap();
+
+			}
+			if (zombieIntro[2]) {
+				zombie_intro[6].ShowBitmap();
+
+			}
+			if (zombieIntro[3]) {
+				zombie_intro[7].ShowBitmap();
+
+			}
 		}
 
 	}

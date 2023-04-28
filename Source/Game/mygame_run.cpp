@@ -247,6 +247,7 @@ bool CGameStateRun::IsOverlap(bool flag_1,bool flag_2,int zombie_num,int i) {
 				{
 					return false;
 				}
+				
 			}
 		
 		}
