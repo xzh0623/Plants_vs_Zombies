@@ -238,12 +238,22 @@ bool CGameStateRun::IsOverlap(bool flag_1,bool flag_2,int zombie_num,int i) {
 					p[i].delay1 = 1000;
 					return true;
 				}
+				
 				/*
-				if (!CMovingBitmap::IsOverlap(p[i].plants[j], z.zombie[zombie_num]))
-				{
-					return false;
+				for (int k = 0; k < 45; k++) {
+					if (map[k]==i) 
 				}
 				*/
+				
+				/*
+				for (int k = 0, k < 45, k++)
+				{
+					if(map[k] == -1 )
+				}
+				*/
+				
+			
+
 			}
 		}
 	}
@@ -477,6 +487,8 @@ void CGameStateRun::show_text_by_phase() {
 		//CTextDraw::Print(pDC, 700, 200, to_string(z.zombie[7].GetLeft()));
 		//CTextDraw::Print(pDC, 700, 250, to_string(z.zombie[7].GetTop()));
 		
+		//CTextDraw::Print(pDC, 250, 180, to_string(CMovingBitmap::IsOverlap(p[0].plants[0], z.zombie[0])));
+
 		CTextDraw::Print(pDC, 250, 90, to_string(z.hit_count_normal));
 		CTextDraw::Print(pDC, 250, 120, to_string(z.hit_count_bucket));
 		CTextDraw::Print(pDC, 250, 150, to_string(z.hit_count_tri));
@@ -600,7 +612,7 @@ void CGameStateRun::show_image_by_phase() {
 							}
 						}
 						if (p[i].vanish) {//不顯示//秒數也要暫停
-							if (p[i].delay1 > 1500) {
+							if (p[i].delay1 > 2000) {
 								p[i].turnToplant[x] = false;
 								p[i].delay1 = -1;
 								p[i].plants[x].SetTopLeft(1000, 1000);
