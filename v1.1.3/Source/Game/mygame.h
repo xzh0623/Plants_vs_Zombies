@@ -38,7 +38,12 @@
  *      3. Use ShowInitProgress(percent) to display loading progress.
 */
 
-
+#include "Zombie.h"
+#include "Car.h"
+#include "Sun.h"
+#include "Plants.h"
+#include "PlantsCard.h"
+#include "SunCard.h"
 namespace game_framework {
 	/////////////////////////////////////////////////////////////////////////////
 	// Constants
@@ -61,11 +66,34 @@ namespace game_framework {
 		void OnInit();  								// 遊戲的初值及圖形設定
 		void OnBeginState();							// 設定每次重玩所需的變數
 		void OnKeyUp(UINT, UINT, UINT); 				// 處理鍵盤Up的動作
+		void OnMouseMove(UINT nFlags, CPoint point);	// 處理滑鼠的動作
 		void OnLButtonDown(UINT nFlags, CPoint point);  // 處理滑鼠的動作
+		bool MouseIsOverlap(CMovingBitmap bmp1);
+
 	protected:
+		void OnMove();
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
 		CMovingBitmap background;
+		CMovingBitmap background1;
+		int mouse_x, mouse_y;
+		int phase = 1;
+		bool help_show = false;
+		bool option_show = false;
+		bool picture_show = false;
+		bool plant_picture_show = false;
+		bool plantIntro[10];
+		bool zombie_picture_show = false;
+		bool zombieIntro[10];
+		CMovingBitmap one[20];
+		CMovingBitmap menu[10];
+		CMovingBitmap picture[10];
+		CMovingBitmap plant_picture[10];
+		CMovingBitmap plant_intro[10];
+		CMovingBitmap zombie_picture[10];
+		CMovingBitmap zombie_intro[10];
+		bool level_show=false;
+		CMovingBitmap level_select[10];
 		
 	};
 
@@ -88,23 +116,37 @@ namespace game_framework {
 		void OnRButtonDown(UINT nFlags, CPoint point);  // 處理滑鼠的動作
 		void OnRButtonUp(UINT nFlags, CPoint point);	// 處理滑鼠的動作
 		bool MouseIsOverlap(CMovingBitmap bmp1);
-		
+		bool IsOverlap(bool flag_1, bool flag_2, int zombie_num, int i);
+		int Distance(CMovingBitmap bmp1, CMovingBitmap bmp2);
+		void SetBean(int i, int bean_index);
 	protected:
 		void OnMove();									// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
 		int phase = 1;
 		int mouse_x, mouse_y;
-		int count = 0 ;
-		int score = 50;
 		CMovingBitmap background;
-		CMovingBitmap one[20];
-		CMovingBitmap PlantsCard[4];
-		CMovingBitmap SunCard[1];
-
-		bool validate_phase_1();
+		
+		//bool validate_phase_1();
 		void show_image_by_phase();
 		void show_text_by_phase();
+
+		Zombie z;
+		Car c;
+		Sun s;
+		Plants p0;
+		Plants p1;
+		Plants p2;
+		Plants p3;
+		Plants* p = new Plants[100]();
+		PlantsCard p_c;
+		SunCard s_c;
+		int map[45];
+		bool backgroundmove = false;
+		bool flag_delay = false;
+		
+
+		
 	};
 
 	/////////////////////////////////////////////////////////////////////////////

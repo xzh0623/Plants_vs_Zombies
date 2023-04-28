@@ -13,26 +13,71 @@
 #include <Windows.h>
 
 using namespace game_framework;
-bool backgroundmove = false;
-bool flag = false;
-bool flag1 = false;
-bool flag2 = false;
-bool flag_sun = false;
-int delay2 = 0;
-bool flag_delay = false;
-std::random_device rd;
-std::mt19937 gen(rd());
-
-
-//  隨機生成數字
-int random(int low, int high) 
-{
-	std::uniform_int_distribution<> dist(low, high);
-	return dist(gen);
-}
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+int index=0;
+int mouse_x1[45] =
+{ 246,243,240,240,230,
+ 327,324,329,327,328,
+ 408,401,400,405,406,
+ 488,485,488,490,492,
+ 565,567,571,571,568,
+ 651,648,645,647,654,
+ 731,730,732,729,730,
+ 811,802,805,801,807,
+ 888,885,893,890,890 };
+int mouse_x2[45] =
+{ 314,317,317,317,321,
+ 387,389,392,394,395,
+ 477,476,478,480,485,
+ 559,556,559,556,560,
+ 641,635,636,638,644,
+ 718,719,723,718,722,
+ 794,790,795,799,801,
+ 872,872,880,878,880,
+ 962,972,972,975,984 };
+int mouse_y1[45] =
+{ 84,185,267,374,469,
+ 70,180,279,379,467,
+ 68,178,276,383,472,
+ 62,177,274,383,474,
+ 62,182,279,386,471,
+ 63,175,278,385,471,
+ 68,182,227,382,471,
+ 72,179,281,382,470,
+ 83,183,283,385,470 };
+int mouse_y2[45] =
+{ 161,268,365,463,562,
+ 166,267,365,454,564,
+ 165,264,374,460,564,
+ 169,263,372,463,563,
+ 165,268,371,460,559,
+ 166,267,376,460,559,
+ 171,268,376,460,562,
+ 168,267,373,458,561,
+ 175,267,372,462,564 };
+int x[45] = {
+249,249,249,249,249,
+327,327,327,327,327,
+404,404,404,404,404,
+492,492,492,492,492,
+568,568,568,568,568,
+655,655,655,655,655,
+732,732,732,732,732,
+811,811,811,811,811,
+893,893,893,893,893 };
+int y[45] = {
+87,181,296,380,483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483 };
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*
-void   Delay(int   time)//time*1000為秒數 
+void   Delay(int   time)//time*1000為秒數
 {
 	clock_t now = clock();
 	while (clock() - now < time);
@@ -55,297 +100,277 @@ CGameStateRun::~CGameStateRun()
 
 void CGameStateRun::OnBeginState()
 {
-	
+
 }
 
 void CGameStateRun::OnMove()							// 移動遊戲元素
 {
+
+
 	
-	
-	//判斷第一關且滑鼠是否碰到圖片
-	if ((phase==1)&&(MouseIsOverlap(one[0]))) {
-		one[0].SetAnimation(10, TRUE);
-		one[0].ToggleAnimation();
-	}
 	//第二關遊戲背景移動
-	else if (phase==2) {
+	if (phase == 1) {
 		if (backgroundmove) {
-			
+
 			if (background.GetLeft() > -10) {
 				background.SetTopLeft(background.GetLeft(), 0);
-				one[8].SetTopLeft(background.GetLeft() + 1100, 100);
-				one[9].SetTopLeft(background.GetLeft() + 1000, 200);
-				one[10].SetTopLeft(background.GetLeft() + 1050, 300);
+				z.zombie[2].SetTopLeft(background.GetLeft() + 1100, 100);
+				z.zombie[3].SetTopLeft(background.GetLeft() + 1000, 200);
+				z.zombie[4].SetTopLeft(background.GetLeft() + 1050, 300);
 			}
 			else {
 				background.SetTopLeft(background.GetLeft() + 3, 0);
-				one[8].SetTopLeft(background.GetLeft() + 1100, 100);
-				one[9].SetTopLeft(background.GetLeft() + 1000, 200);
-				one[10].SetTopLeft(background.GetLeft() + 1050, 300);
+				z.zombie[2].SetTopLeft(background.GetLeft() + 1100, 100);
+				z.zombie[3].SetTopLeft(background.GetLeft() + 1000, 200);
+				z.zombie[4].SetTopLeft(background.GetLeft() + 1050, 300);
 			}
 		}
 		else {
 			background.SetTopLeft(background.GetLeft() - 3, 0);
-			one[8].SetTopLeft(background.GetLeft() + 1100, 100);
-			one[9].SetTopLeft(background.GetLeft() + 1000, 200);
-			one[10].SetTopLeft(background.GetLeft() + 1050, 300);
+			z.zombie[2].SetTopLeft(background.GetLeft() + 1100, 100);
+			z.zombie[3].SetTopLeft(background.GetLeft() + 1000, 200);
+			z.zombie[4].SetTopLeft(background.GetLeft() + 1050, 300);
 
 			if (background.GetLeft() < -300) {
 				backgroundmove = true;
 			}
-			
+
 		}
-		
+
 	}
-	
-	if (phase == 2 && background.GetLeft() == -9)
+
+	if (phase == 1 && background.GetLeft() == -9)
 	{
-//這個count是給太陽花變橘色然後產太陽的計時器
-		if (count > 600) count = 0;
-		count += 1;
-		
-// 天空的太陽掉落
-		if ((one[14].GetTop() < 500)) {
-			one[14].SetTopLeft(one[14].GetLeft(), one[14].GetTop() + 1);
-		}
-		if (flag2) {
-			delay2 += 1;
-			if (delay2 > 300) {
-				flag2 = false;
-				delay2 = 0;
-				one[14].SetTopLeft(random(250, 900), 0);
+		s.OnMove();
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		for (int i = 0; i < 100; i++) {
+			//殭屍碰撞
+			if (p[i].SetPosDone) {
+				// 一般殭屍與植物相撞
+				z._flag = IsOverlap(z._flag, z._flag_car_4, 0, i);
+				// 鐵桶殭屍與植物相撞
+				z._flag1 = IsOverlap(z._flag1, z._flag_car_3, 5, i);
+				// 三角錐殭屍與植物相撞
+				z._flag2 = (IsOverlap(z._flag2, z._flag_car_2, 10, i));
+				if ((z._flag) || (z._flag1) || (z._flag2)) {
+					p[i].vanish = true;
+				}
+				//設定植物1子彈
+				if (p[i].turnToplant[1]) {
+					SetBean(i, 1);
+				}
+				//設定植物3子彈
+				if (p[i].turnToplant[3]) {
+					SetBean(i, 3);
+				}
+
+			}
+			if (p[i].delay1 >= 1000) {
+				p[i].delay1 += 1;
+				if ((p[i].delay1 == 1420) || (p[i].delay1 == 1840)) {//當到1420秒時太陽出現
+					p[i].flag_sun = false;
+				}
+			}
+			else if (((p[i].flag_sun) && (p[i].twiceflag) || (p[i].turnToplant[1]) || (p[i].turnToplant[2]) || (p[i].turnToplant[3]))&&(p[i].delay1!=-1)) {
+				p[i].delay1 += 1;
+				if ((p[i].delay1 == 420)) {//當到420秒時太陽出現
+					p[i].flag_sun = false;
+					
+					// 一般殭屍與植物相撞
+					z._flag = IsOverlap(z._flag, z._flag_car_4, 0, i);
+					// 鐵桶殭屍與植物相撞
+					z._flag1 = IsOverlap(z._flag1, z._flag_car_3, 5, i);
+					// 三角錐殭屍與植物相撞
+					z._flag2 = (IsOverlap(z._flag2, z._flag_car_2, 10, i));
+					if ((z._flag) || (z._flag1) || (z._flag2)) {
+						p[i].vanish = true;
+					}
+
+					
+				}
+				if (p[i].delay1 == 600) {
+					p[i].delay1 = 0;
+				}
+				
+
 			}
 		}
-// 殭屍移動code，定點吃東西
-		if (!flag)
-		{
-			one[6].SetTopLeft(one[6].GetLeft() - 1, one[6].GetTop());
-			if (CMovingBitmap::IsOverlap(one[13], one[6])) flag = true;
-		}
-		if (flag)
-		{
-			one[7].SetTopLeft(one[13].GetLeft(), one[6].GetTop());
-		}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// 車子撞鐵桶殭屍
-		if (!flag1)
+//一般殭屍與index 4 車相撞，車前進
+		if (!z._flag && !z._flag_car_4)
 		{
-			one[11].SetTopLeft(one[11].GetLeft() - 1, one[11].GetTop());
-			if (CMovingBitmap::IsOverlap(one[11], one[4])) flag1 = true;
+			if (CMovingBitmap::IsOverlap(c.car[4], z.zombie[0])) z._flag_car_4 = true;
 		}
-		else
+		if (z._flag_car_4) c.car[4].SetTopLeft(c.car[4].GetLeft() + 20, c.car[4].GetTop());
+		
+
+//鐵桶殭屍與index 3 車相撞，車前進
+		if (!z._flag1 && !z._flag_car_3)
 		{
-			one[4].SetTopLeft(one[4].GetLeft() + 10, one[4].GetTop());
-			//Delay(5000);
-			
+			if (CMovingBitmap::IsOverlap(c.car[3], z.zombie[5])) z._flag_car_3 = true;
 		}
+		if (z._flag_car_3) c.car[3].SetTopLeft(c.car[3].GetLeft() + 20, c.car[3].GetTop());
 		
+//三角錐殭屍與index 2 車相撞，車前進
+		if (!z._flag2 && !z._flag_car_2)
+		{
+			if (CMovingBitmap::IsOverlap(c.car[2], z.zombie[10])) z._flag_car_2 = true;
+		}
+		if (z._flag_car_2) c.car[2].SetTopLeft(c.car[2].GetLeft() + 20, c.car[2].GetTop());
+
+
+		z.OnMove();
+		p_c.OnMove(0,50);
 		
+		p_c.OnMove(1, 100);
+		p_c.OnMove(2, 50);
+		p_c.OnMove(3, 200);
 	}
 
-	
-	
 }
 
+//植物跟殭屍碰撞
+bool CGameStateRun::IsOverlap(bool flag_1,bool flag_2,int zombie_num,int i) {
+	if (!flag_1 && !flag_2)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			if (p[i].turnToplant[j])
+			{
+				if (CMovingBitmap::IsOverlap(p[i].plants[j], z.zombie[zombie_num]) && z.zombie[zombie_num].GetTop() < p[i].plants[j].GetTop()&& (p[i].plants[j].GetTop()+ p[i].plants[j].GetHeight()) <= (z.zombie[zombie_num].GetTop() + z.zombie[zombie_num].GetHeight()))
+				{
+					p[i].delay1 = 1000;
+					return true;
+				}
+				
+				/*
+				if (!CMovingBitmap::IsOverlap(p[i].plants[j], z.zombie[zombie_num]))
+				{
+					return false;
+				}
+				*/
+
+				/*
+				for (int k = 0; k < 45; k++) {
+					if (map[k]==i)
+				}
+				*/
+
+				/*
+				for (int k = 0, k < 45, k++)
+				{
+					if(map[k] == -1 )
+				}
+				*/
+				
+			}
+		
+		}
+	}
+	return flag_1;
+}
+//兩物件平行距離
+int CGameStateRun::Distance(CMovingBitmap bmp1, CMovingBitmap bmp2) {
+	if ((bmp2.GetTop() == 30) && (bmp1.GetTop() == 87)) {
+		if (bmp1.GetLeft() > bmp2.GetLeft()) return 1000;
+		return bmp2.GetLeft() - bmp1.GetLeft();
+	}
+	else if ((bmp2.GetTop() == 120) && (bmp1.GetTop() == 181)) {
+		if (bmp1.GetLeft() > bmp2.GetLeft()) return 1000;
+		return bmp2.GetLeft() - bmp1.GetLeft();
+	}
+	else if ((bmp2.GetTop() == 230) && (bmp1.GetTop() == 296)) {
+		if (bmp1.GetLeft() > bmp2.GetLeft()) return 1000;
+		return bmp2.GetLeft() - bmp1.GetLeft();
+	}
+	else if ((bmp2.GetTop() == 320) && (bmp1.GetTop() == 380)) {
+		if (bmp1.GetLeft() > bmp2.GetLeft()) return 1000;
+		return bmp2.GetLeft() - bmp1.GetLeft();
+	}
+	else if ((bmp2.GetTop() == 420) && (bmp1.GetTop() == 483)) {
+		if (bmp1.GetLeft() > bmp2.GetLeft()) return 1000;
+		return bmp2.GetLeft() - bmp1.GetLeft();
+	}
+	
+
+	
+
+}
+//子彈設定
+void CGameStateRun::SetBean(int i,int bean_index) {
+	if (bean_index == 1) {
+		for (int k = 0; k < 11; k = k + 5) {
+			if ((Distance(p[i].plants[1], z.zombie[k]) < 600) && (p[i].delay1 >= 0)) {
+				p[i].bean1_delay += 10;
+				p[i].plants[7].SetTopLeft(p[i].plants[1].GetLeft() + 40 + p[i].bean1_delay, p[i].plants[1].GetTop() + 2);
+				if (!p[i].bean1_isoverlap) {
+					p[i].bean1_show = true;
+				}
+				if (p[i].bean1_delay >= 700) {
+					p[i].bean1_delay = 0;
+					p[i].bean1_show = true;
+				}
+				if (CMovingBitmap::IsOverlap(p[i].plants[7], z.zombie[k]) && z.zombie[k].GetTop() < p[i].plants[7].GetTop()) {
+					p[i].bean1_isoverlap = true;
+					p[i].bean1_show = false;
+					if ((!p[i].bean1_show) && k == 0) z.hit_count_normal += 1;
+					if ((!p[i].bean1_show) && k == 5) z.hit_count_bucket += 1;
+					if ((!p[i].bean1_show) && k == 10) z.hit_count_tri += 1;
+					z.zombiegotbean[0].SetTopLeft(z.zombie[k].GetLeft() + 10, z.zombie[k].GetTop() + 70);
+					z.ZombieGotBean1 = true;
+				}
+
+			}
+
+		}
+	}
+	if (bean_index == 3) {
+		for (int k = 0; k < 11; k = k + 5) {
+			if ((Distance(p[i].plants[3], z.zombie[k]) < 600) && (p[i].delay1 >= 0)) {
+				p[i].bean2_delay += 10;
+				p[i].plants[8].SetTopLeft(p[i].plants[3].GetLeft() + 40 + p[i].bean2_delay, p[i].plants[3].GetTop() + 2);
+				p[i].plants[9].SetTopLeft(p[i].plants[8].GetLeft() - 50, p[i].plants[8].GetTop());
+				if (!p[i].bean2_isoverlap) {
+					p[i].bean2_show = true;
+				}
+				if (p[i].bean2_delay >= 700) {
+					p[i].bean2_delay = 0;
+					p[i].bean2_show = true;
+				}
+				if (CMovingBitmap::IsOverlap(p[i].plants[8], z.zombie[k]) && z.zombie[k].GetTop() < p[i].plants[8].GetTop()) {
+					p[i].bean2_isoverlap = true;
+					p[i].bean2_show = false;
+					if ((!p[i].bean2_show) && k == 0) z.hit_count_normal += 2;
+					if ((!p[i].bean2_show) && k == 5) z.hit_count_bucket += 2;
+					if ((!p[i].bean2_show) && k == 10) z.hit_count_tri += 2;
+					z.zombiegotbean[0].SetTopLeft(z.zombie[k].GetLeft() + 10, z.zombie[k].GetTop() + 70);
+					z.ZombieGotBean1 = true;
+				}
+
+			}
+
+		}
+	}
+
+}
 void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 {
 	//載入遊戲背景
-	background.LoadBitmapByString({ 
-		"resources/menu_background.bmp",
+	background.LoadBitmapByString({
 		"resources/phase2_background_1.bmp",
 	});
 	background.SetTopLeft(0, 0);
 
-	//載入遊戲圖片
-	one[0].LoadBitmapByString({ "resources/menu_title1_1.bmp","resources/menu_title1.bmp" }, RGB(0, 0, 0));
-	one[0].SetTopLeft(520, 60);
 	//////////////////////////////////
-	// 第一輛車
-	one[1].LoadBitmapByString({ "resources/car.bmp" }, RGB(255, 255, 255));
-	one[1].SetTopLeft(170, 90);
-
-	// 第二輛車
-	one[2].LoadBitmapByString({ "resources/car.bmp" }, RGB(255, 255, 255));
-	one[2].SetTopLeft(170, 180);
-
-	// 第三輛車
-	one[3].LoadBitmapByString({ "resources/car.bmp" }, RGB(255, 255, 255));
-	one[3].SetTopLeft(170, 280);
-
-	// 第四輛車
-	one[4].LoadBitmapByString({ "resources/car.bmp" }, RGB(255, 255, 255));
-	one[4].SetTopLeft(170, 390);
-
-	// 第五輛車
-	one[5].LoadBitmapByString({ "resources/car.bmp" }, RGB(255, 255, 255));
-	one[5].SetTopLeft(160, 490);
-
-	// 一般殭屍走路
-	one[6].LoadBitmapByString({ "resources/zom_0.bmp", "resources/zom_1.bmp", "resources/zom_2.bmp", "resources/zom_3.bmp", "resources/zom_4.bmp", "resources/zom_5.bmp", "resources/zom_6.bmp", "resources/zom_7.bmp", "resources/zom_8.bmp", "resources/zom_9.bmp", "resources/zom_10.bmp" ,"resources/zom_11.bmp","resources/zom_12.bmp","resources/zom_13.bmp","resources/zom_14.bmp","resources/zom_15.bmp","resources/zom_16.bmp","resources/zom_17.bmp","resources/zom_18.bmp","resources/zom_19.bmp","resources/zom_20.bmp","resources/zom_21.bmp" }, RGB(255, 255, 255));
-	one[6].SetTopLeft(1200, 400);
-	one[6].SetAnimation(100, false);
-
-	// 一般殭屍吃
-	one[7].LoadBitmapByString({ "resources/zom_eat_0.bmp", "resources/zom_eat_1.bmp", "resources/zom_eat_2.bmp", "resources/zom_eat_3.bmp", "resources/zom_eat_4.bmp", "resources/zom_eat_5.bmp", "resources/zom_eat_6.bmp", "resources/zom_eat_7.bmp", "resources/zom_eat_8.bmp", "resources/zom_eat_9.bmp", "resources/zom_eat_10.bmp" ,"resources/zom_eat_11.bmp","resources/zom_eat_12.bmp","resources/zom_eat_13.bmp","resources/zom_eat_14.bmp","resources/zom_eat_15.bmp","resources/zom_eat_16.bmp","resources/zom_eat_17.bmp","resources/zom_eat_18.bmp","resources/zom_eat_19.bmp","resources/zom_eat_20.bmp" }, RGB(255, 255, 255));
-	one[7].SetAnimation(135, false);
-	// 一般殭屍休息
-	one[8].LoadBitmapByString({ "resources/zom_relax_0.bmp","resources/zom_relax_1.bmp","resources/zom_relax_2.bmp","resources/zom_relax_3.bmp","resources/zom_relax_4.bmp","resources/zom_relax_5.bmp","resources/zom_relax_6.bmp","resources/zom_relax_7.bmp","resources/zom_relax_8.bmp","resources/zom_relax_9.bmp","resources/zom_relax_10.bmp" }, RGB(255, 255, 255));
-	one[8].SetAnimation(135, false);
-
-	// 鐵桶殭屍休息
-	one[9].LoadBitmapByString({ "resources/bucket_zom_relax_0.bmp","resources/bucket_zom_relax_1.bmp","resources/bucket_zom_relax_2.bmp","resources/bucket_zom_relax_3.bmp","resources/bucket_zom_relax_4.bmp","resources/bucket_zom_relax_5.bmp" }, RGB(255, 255, 255));
-	one[9].SetAnimation(135, false);
-
-	// 三角錐殭屍休息
-	one[10].LoadBitmapByString({ "resources/tri_zom_relax_0.bmp","resources/tri_zom_relax_1.bmp","resources/tri_zom_relax_2.bmp","resources/tri_zom_relax_3.bmp","resources/tri_zom_relax_4.bmp","resources/tri_zom_relax_5.bmp","resources/tri_zom_relax_6.bmp","resources/tri_zom_relax_7.bmp" }, RGB(255, 255, 255));
-	one[10].SetAnimation(135, false);
-
-	// 鐵桶殭屍走路
-	one[11].LoadBitmapByString({ "resources/bucket_zom_0.bmp", "resources/bucket_zom_1.bmp", "resources/bucket_zom_2.bmp", "resources/bucket_zom_3.bmp", "resources/bucket_zom_4.bmp", "resources/bucket_zom_5.bmp", "resources/bucket_zom_6.bmp", "resources/bucket_zom_7.bmp", "resources/bucket_zom_8.bmp", "resources/bucket_zom_9.bmp", "resources/bucket_zom_10.bmp", "resources/bucket_zom_11.bmp", "resources/bucket_zom_12.bmp", "resources/bucket_zom_13.bmp", "resources/bucket_zom_14.bmp" }, RGB(255, 255, 255));
-	one[11].SetTopLeft(1000, 300);
-	one[11].SetAnimation(100, false);
-
-	// 掉頭
-	one[12].LoadBitmapByString({ "resources/headfall_0.bmp", "resources/headfall_1.bmp", "resources/headfall_2.bmp", "resources/headfall_3.bmp", "resources/headfall_4.bmp", "resources/headfall_5.bmp", "resources/headfall_6.bmp", "resources/headfall_7.bmp", "resources/headfall_8.bmp", "resources/headfall_9.bmp", "resources/headfall_10.bmp", "resources/headfall_11.bmp" }, RGB(255, 255, 255));
-	one[12].SetTopLeft(230, 305);
-	one[12].SetAnimation(135, true);
-	one[12].ToggleAnimation();
-
-	//  太陽花
-	one[13].LoadBitmapByString({ "resources/sunflower_0.bmp", "resources/sunflower_1.bmp", "resources/sunflower_2.bmp", "resources/sunflower_3.bmp", "resources/sunflower_4.bmp", "resources/sunflower_5.bmp", "resources/sunflower_6.bmp", "resources/sunflower_7.bmp", "resources/sunflower_8.bmp", "resources/sunflower_9.bmp", "resources/sunflower_10.bmp", "resources/sunflower_11.bmp", "resources/sunflower_12.bmp", "resources/sunflower_13.bmp", "resources/sunflower_14.bmp", "resources/sunflower_15.bmp", "resources/sunflower_16.bmp", "resources/sunflower_17.bmp" }, RGB(255, 255, 255));
-	one[13].SetTopLeft(410, 470);
-	one[13].SetAnimation(135, false);
-
-	//    太陽花(要產太陽前)
-	one[15].LoadBitmapByString({ "resources/sunflower_getsun_0.bmp", "resources/sunflower_getsun_1.bmp", "resources/sunflower_getsun_2.bmp", "resources/sunflower_getsun_3.bmp", "resources/sunflower_getsun_4.bmp", "resources/sunflower_getsun_5.bmp", "resources/sunflower_getsun_6.bmp", "resources/sunflower_getsun_7.bmp", "resources/sunflower_getsun_8.bmp", "resources/sunflower_getsun_9.bmp", "resources/sunflower_getsun_10.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_11.bmp", "resources/sunflower_getsun_12.bmp", "resources/sunflower_getsun_13.bmp", "resources/sunflower_getsun_14.bmp", "resources/sunflower_getsun_15.bmp", "resources/sunflower_getsun_16.bmp", "resources/sunflower_getsun_17.bmp" }, RGB(255, 255, 255));
-	one[15].SetTopLeft(410, 470);
-	one[15].SetAnimation(135, false);
-
-	//   太陽
-	one[14].LoadBitmapByString({ "resources/sun_0.bmp", "resources/sun_1.bmp", "resources/sun_2.bmp", "resources/sun_3.bmp", "resources/sun_4.bmp", "resources/sun_5.bmp", "resources/sun_6.bmp", "resources/sun_7.bmp", "resources/sun_8.bmp", "resources/sun_9.bmp", "resources/sun_10.bmp", "resources/sun_11.bmp", "resources/sun_12.bmp", "resources/sun_13.bmp", "resources/sun_14.bmp", "resources/sun_15.bmp", "resources/sun_16.bmp", "resources/sun_17.bmp", "resources/sun_18.bmp" , "resources/sun_19.bmp", "resources/sun_20.bmp" , "resources/sun_21.bmp" },RGB(255, 255, 255));
-	one[14].SetTopLeft(random(250,900), 0);
-	one[14].SetAnimation(100, false);
-	
-	//   花的太陽
-	one[16].LoadBitmapByString({ "resources/sun_0.bmp", "resources/sun_1.bmp", "resources/sun_2.bmp", "resources/sun_3.bmp", "resources/sun_4.bmp", "resources/sun_5.bmp", "resources/sun_6.bmp", "resources/sun_7.bmp", "resources/sun_8.bmp", "resources/sun_9.bmp", "resources/sun_10.bmp", "resources/sun_11.bmp", "resources/sun_12.bmp", "resources/sun_13.bmp", "resources/sun_14.bmp", "resources/sun_15.bmp", "resources/sun_16.bmp", "resources/sun_17.bmp", "resources/sun_18.bmp" , "resources/sun_19.bmp", "resources/sun_20.bmp" , "resources/sun_21.bmp" }, RGB(255, 255, 255));
-	one[16].SetAnimation(100, false);
-	
-
-	/*    豌豆
-	character.LoadBitmapByString({ "resources/bean_0.bmp", "resources/bean_1.bmp", "resources/bean_2.bmp", "resources/bean_3.bmp", "resources/bean_4.bmp", "resources/bean_5.bmp", "resources/bean_6.bmp", "resources/bean_7.bmp", "resources/bean_8.bmp", "resources/bean_9.bmp", "resources/bean_10.bmp", "resources/bean_11.bmp", "resources/bean_12.bmp" },RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(125, false);
-	*/
-
-
-	/*    二連發豌豆
-	character.LoadBitmapByString({ "resources/double_bean_0.bmp", "resources/double_bean_1.bmp", "resources/double_bean_2.bmp", "resources/double_bean_3.bmp", "resources/double_bean_4.bmp", "resources/double_bean_5.bmp", "resources/double_bean_6.bmp", "resources/double_bean_7.bmp", "resources/double_bean_8.bmp", "resources/double_bean_9.bmp", "resources/double_bean_10.bmp" ,"resources/double_bean_11.bmp","resources/double_bean_12.bmp","resources/double_bean_13.bmp","resources/double_bean_14.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*    三角錐殭屍
-	character.LoadBitmapByString({ "resources/tri_zom_0.bmp", "resources/tri_zom_1.bmp", "resources/tri_zom_2.bmp", "resources/tri_zom_3.bmp", "resources/tri_zom_4.bmp", "resources/tri_zom_5.bmp", "resources/tri_zom_6.bmp", "resources/tri_zom_7.bmp", "resources/tri_zom_8.bmp", "resources/tri_zom_9.bmp", "resources/tri_zom_10.bmp", "resources/tri_zom_11.bmp", "resources/tri_zom_12.bmp", "resources/tri_zom_13.bmp", "resources/tri_zom_14.bmp", "resources/tri_zom_15.bmp", "resources/tri_zom_16.bmp", "resources/tri_zom_17.bmp", "resources/tri_zom_18.bmp", "resources/tri_zom_19.bmp", "resources/tri_zom_20.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*    三角錐殭屍吃東西
-	character.LoadBitmapByString({ "resources/tri_zom_eat_0.bmp", "resources/tri_zom_eat_1.bmp", "resources/tri_zom_eat_2.bmp", "resources/tri_zom_eat_3.bmp", "resources/tri_zom_eat_4.bmp", "resources/tri_zom_eat_5.bmp", "resources/tri_zom_eat_6.bmp", "resources/tri_zom_eat_7.bmp", "resources/tri_zom_eat_8.bmp", "resources/tri_zom_eat_9.bmp", "resources/tri_zom_eat_10.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*     鐵桶殭屍吃東西
-	character.LoadBitmapByString({ "resources/bucket_zom_eat_0.bmp", "resources/bucket_zom_eat_1.bmp", "resources/bucket_zom_eat_2.bmp", "resources/bucket_zom_eat_3.bmp", "resources/bucket_zom_eat_4.bmp", "resources/bucket_zom_eat_5.bmp", "resources/bucket_zom_eat_6.bmp", "resources/bucket_zom_eat_7.bmp", "resources/bucket_zom_eat_8.bmp", "resources/bucket_zom_eat_9.bmp", "resources/bucket_zom_eat_10.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*     沒頭殭屍
-	character.LoadBitmapByString({ "resources/nohead_zom_0.bmp", "resources/nohead_zom_1.bmp", "resources/nohead_zom_2.bmp", "resources/nohead_zom_3.bmp", "resources/nohead_zom_4.bmp", "resources/nohead_zom_5.bmp", "resources/nohead_zom_6.bmp", "resources/nohead_zom_7.bmp", "resources/nohead_zom_8.bmp", "resources/nohead_zom_9.bmp", "resources/nohead_zom_10.bmp", "resources/nohead_zom_11.bmp", "resources/nohead_zom_12.bmp", "resources/nohead_zom_13.bmp", "resources/nohead_zom_14.bmp", "resources/nohead_zom_15.bmp", "resources/nohead_zom_16.bmp", "resources/nohead_zom_17.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*     沒頭殭屍吃東西
-	character.LoadBitmapByString({ "resources/nohead_zom_eat_0.bmp", "resources/nohead_zom_eat_1.bmp", "resources/nohead_zom_eat_2.bmp", "resources/nohead_zom_eat_3.bmp", "resources/nohead_zom_eat_4.bmp", "resources/nohead_zom_eat_5.bmp", "resources/nohead_zom_eat_6.bmp", "resources/nohead_zom_eat_7.bmp", "resources/nohead_zom_eat_8.bmp", "resources/nohead_zom_eat_9.bmp", "resources/nohead_zom_eat_10.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*    旗幟殭屍
-	character.LoadBitmapByString({ "resources/flag_zom_0.bmp", "resources/flag_zom_1.bmp", "resources/flag_zom_2.bmp", "resources/flag_zom_3.bmp", "resources/flag_zom_4.bmp", "resources/flag_zom_5.bmp", "resources/flag_zom_6.bmp", "resources/flag_zom_7.bmp", "resources/flag_zom_8.bmp", "resources/flag_zom_9.bmp", "resources/flag_zom_10.bmp" ,"resources/flag_zom_11.bmp"}, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*    旗幟殭屍吃東西
-	character.LoadBitmapByString({ "resources/flag_zom_eat_0.bmp", "resources/flag_zom_eat_1.bmp", "resources/flag_zom_eat_2.bmp", "resources/flag_zom_eat_3.bmp", "resources/flag_zom_eat_4.bmp", "resources/flag_zom_eat_5.bmp", "resources/flag_zom_eat_6.bmp", "resources/flag_zom_eat_7.bmp", "resources/flag_zom_eat_8.bmp", "resources/flag_zom_eat_9.bmp", "resources/flag_zom_eat_10.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-	/*    旗幟殭屍沒頭
-	character.LoadBitmapByString({ "resources/flag_zom_nohead_0.bmp", "resources/flag_zom_nohead_1.bmp", "resources/flag_zom_nohead_2.bmp", "resources/flag_zom_nohead_3.bmp", "resources/flag_zom_nohead_4.bmp", "resources/flag_zom_nohead_5.bmp", "resources/flag_zom_nohead_6.bmp", "resources/flag_zom_nohead_7.bmp", "resources/flag_zom_nohead_8.bmp", "resources/flag_zom_nohead_9.bmp", "resources/flag_zom_nohead_10.bmp", "resources/flag_zom_nohead_11.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*    旗幟殭屍沒頭吃東西
-	character.LoadBitmapByString({ "resources/flag_zom_nohead_eat_0.bmp", "resources/flag_zom_nohead_eat_1.bmp", "resources/flag_zom_nohead_eat_2.bmp", "resources/flag_zom_nohead_eat_3.bmp", "resources/flag_zom_nohead_eat_4.bmp", "resources/flag_zom_nohead_eat_5.bmp", "resources/flag_zom_nohead_eat_6.bmp", "resources/flag_zom_nohead_eat_7.bmp", "resources/flag_zom_nohead_eat_8.bmp", "resources/flag_zom_nohead_eat_9.bmp", "resources/flag_zom_nohead_eat_10.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*     殭屍倒下
-	character.LoadBitmapByString({ "resources/falldown_0.bmp", "resources/falldown_1.bmp", "resources/falldown_2.bmp", "resources/falldown_3.bmp", "resources/falldown_4.bmp", "resources/falldown_5.bmp", "resources/falldown_6.bmp", "resources/falldown_7.bmp", "resources/falldown_8.bmp", "resources/falldown_9.bmp"}, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*     堅果牆(未傷)
-	character.LoadBitmapByString({ "resources/nut_one_0.bmp", "resources/nut_one_1.bmp", "resources/nut_one_2.bmp", "resources/nut_one_3.bmp", "resources/nut_one_4.bmp", "resources/nut_one_5.bmp", "resources/nut_one_6.bmp", "resources/nut_one_7.bmp", "resources/nut_one_8.bmp", "resources/nut_one_9.bmp", "resources/nut_one_10.bmp", "resources/nut_one_11.bmp", "resources/nut_one_12.bmp", "resources/nut_one_13.bmp", "resources/nut_one_14.bmp", "resources/nut_one_15.bmp" }, RGB(0, 0, 0));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*     堅果牆(小傷)
-	character.LoadBitmapByString({ "resources/nut_two_0.bmp", "resources/nut_two_1.bmp", "resources/nut_two_2.bmp", "resources/nut_two_3.bmp", "resources/nut_two_4.bmp", "resources/nut_two_5.bmp", "resources/nut_two_6.bmp", "resources/nut_two_7.bmp", "resources/nut_two_8.bmp", "resources/nut_two_9.bmp", "resources/nut_two_10.bmp"}, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
-
-
-	/*     堅果牆(大傷)
-	character.LoadBitmapByString({ "resources/nut_three_0.bmp", "resources/nut_three_1.bmp", "resources/nut_three_2.bmp", "resources/nut_three_3.bmp", "resources/nut_three_4.bmp", "resources/nut_three_5.bmp", "resources/nut_three_6.bmp", "resources/nut_three_7.bmp", "resources/nut_three_8.bmp", "resources/nut_three_9.bmp", "resources/nut_three_10.bmp", "resources/nut_three_11.bmp", "resources/nut_three_12.bmp", "resources/nut_three_13.bmp", "resources/nut_three_14.bmp" }, RGB(255, 255, 255));
-	character.SetTopLeft(150, 265);
-	character.SetAnimation(135, false);
-	*/
+	c.OnInit();
+	z.OnInit();
+	s.OnInit();
+	for(int i=0;i<100;i++) p[i].OnInit();
+	for (int i = 0; i < 45; i++) map[i] = -1;
 	//////////////////////////////////
-	
-	PlantsCard[0].LoadBitmapByString({ "card/SunFlower_1.bmp","card/SunFlower_2.bmp","card/SunFlower_1.bmp" }, RGB(182, 185, 184));
-	PlantsCard[1].LoadBitmapByString({ "card/PlantsCard_1.bmp","card/PlantsCard_2.bmp","card/PlantsCard_1.bmp" }, RGB(182, 185, 184));
-	PlantsCard[2].LoadBitmapByString({ "card/WallNut_1.bmp","card/WallNut_2.bmp","card/WallNut_1.bmp" }, RGB(182, 185, 184));
-	PlantsCard[3].LoadBitmapByString({ "card/Repeater_1.bmp","card/Repeater_2.bmp","card/Repeater_1.bmp" }, RGB(182, 185, 184));
-
-	for (int i = 0; i < 4; i++) {
-		PlantsCard[i].SetTopLeft(0, 65 * i);
-	}
-
-	SunCard[0].LoadBitmapByString({ "resources/Sun.bmp" }, RGB(182, 185, 184));
-	SunCard[0].SetTopLeft(112, 11);
+	p_c.OnInit();
+	s_c.OnInit();
 
 	
 }
@@ -362,39 +387,47 @@ void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
 {
-	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
-	if ((nFlags == VK_LBUTTON)&&(MouseIsOverlap(one[0]))&&(phase==1)) {
-		phase += 1;
-	}
-	if (phase == 2) {
+	if (phase == 1) {
 		if (nFlags == VK_LBUTTON) {
-			if (MouseIsOverlap(PlantsCard[0])) {
-				PlantsCard[0].SetAnimation(20000, TRUE);
-				PlantsCard[0].ToggleAnimation();
-				PlantsCard[0].SetFrameIndexOfBitmap(1);
+			if (MouseIsOverlap(p_c.plantscard[0])) {
+				p_c.OnLButtonDown(0,50);
 			}
 			
-			
-			if (MouseIsOverlap(PlantsCard[1])) {
-				PlantsCard[1].SetAnimation(20000, TRUE);
-				PlantsCard[1].ToggleAnimation();
-				PlantsCard[1].SetFrameIndexOfBitmap(1);
+			if (MouseIsOverlap(p_c.plantscard[1])) {
+				p_c.OnLButtonDown(1,100);
 			}
-			if (MouseIsOverlap(PlantsCard[2])) {
-				PlantsCard[2].SetAnimation(60000, TRUE);
-				PlantsCard[2].ToggleAnimation();
-				PlantsCard[2].SetFrameIndexOfBitmap(1);
+			if (MouseIsOverlap(p_c.plantscard[2])) {
+				p_c.OnLButtonDown(2,50);
 			}
-			if (MouseIsOverlap(PlantsCard[3])) {
-				PlantsCard[3].SetAnimation(20000, TRUE);
-				PlantsCard[3].ToggleAnimation();
-				PlantsCard[3].SetFrameIndexOfBitmap(1);
+			if (MouseIsOverlap(p_c.plantscard[3])) {
+				p_c.OnLButtonDown(3,200);
 			}
-			if (MouseIsOverlap(one[14])) {
-				flag2 = TRUE;
-				score += 50;
+			if (MouseIsOverlap(s.sun[0])) {
+				s.flag2 = TRUE;
+				p_c.score += 50;
 			}
-			
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			for (int i = 0; i < 100; i++) {
+				if (MouseIsOverlap(p[i].plants[6]) && (p[i].IsShowBitmap)) {
+					p[i].flag_sun = TRUE;
+					p_c.score += 50;
+				}
+			}
+			for (int i = 0; i < 4; i++) {
+				if (p_c.scorecost[i]) {
+					p[index].turnToplant[i] = true;
+					if ((nFlags == VK_LBUTTON) && ((MouseIsOverlap(p_c.plantscard[i])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 74) && ((mouse_y) <= 564)))) {
+						p[index].isflag += 1;
+						if (p[index].isflag == 2) {
+							p[index].twiceflag = true;
+							p[index].isflag = 0;
+							p_c.scorecost[i] = false;
+
+						}
+					}
+				}
+			}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		}
 	}
 	
@@ -409,6 +442,7 @@ void CGameStateRun::OnMouseMove(UINT nFlags, CPoint point)	// 處理滑鼠的動
 {
 	mouse_x = point.x;
 	mouse_y = point.y;
+
 
 }
 
@@ -447,9 +481,24 @@ void CGameStateRun::show_text_by_phase() {
 	//CTextDraw::Print(pDC, 150, 0, to_string(one[0].GetLeft()+one[0].GetWidth()));
 	//CTextDraw::Print(pDC, 200, 0, to_string(one[0].GetTop()));
 	//CTextDraw::Print(pDC, 250, 0, to_string(one[0].GetTop() + one[0].GetHeight()));
-	if ((phase == 2)&&(background.GetLeft() == -9)) {
-		CTextDraw::Print(pDC, 185, 19, to_string(score));
-		//CTextDraw::Print(pDC, 180, 19, to_string(delay2));
+	if ((phase == 1)&&(background.GetLeft() == -9)) {
+		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
+		CTextDraw::Print(pDC, 700, 19, to_string(p_c.count[0]));
+		CTextDraw::Print(pDC, 700, 50, to_string(p_c.count[1]));
+		CTextDraw::Print(pDC, 700, 100, to_string(p_c.count[2]));
+		CTextDraw::Print(pDC, 700, 150, to_string(p_c.count[3]));
+		//CTextDraw::Print(pDC, 700, 200, to_string(z.zombie[7].GetLeft()));
+		//CTextDraw::Print(pDC, 700, 250, to_string(z.zombie[7].GetTop()));
+		CTextDraw::Print(pDC, 700, 300, to_string(p[0].delay1));
+		CTextDraw::Print(pDC, 700, 350, to_string(p[0].isflag));
+		//CTextDraw::Print(pDC, 700, 350, to_string(p[0].isflag));
+		CTextDraw::Print(pDC, 700, 400, to_string(index));
+		CTextDraw::Print(pDC, 700, 450, to_string(map[0]));
+		//CTextDraw::Print(pDC, 700, 450, to_string(p[1].isflag));
+		CTextDraw::Print(pDC, 700, 500, to_string(map[1]));
+
+		CTextDraw::Print(pDC, 300, 200, to_string(z._flag));
+
 	}
 	CDDraw::ReleaseBackCDC();
 }
@@ -458,78 +507,162 @@ void CGameStateRun::show_text_by_phase() {
 	
 void CGameStateRun::show_image_by_phase() {
 	if (phase <= 6) {
-		background.SetFrameIndexOfBitmap(phase-1);
-		background.ShowBitmap();					
-		if (phase == 1) {
-			
-			for (int i = 0; i < 1; i++) {
-				one[i].ShowBitmap();
-			}
+		background.SetFrameIndexOfBitmap(phase - 1);
+		background.ShowBitmap();
+		if (phase == 1 && background.GetLeft() != -9) {
+			z.OnShow1();
 		}
-		else if (phase == 2 && background.GetLeft() != -9)
-		{
-			for (int i = 8; i < 11; i++) {
-				one[i].ShowBitmap();
-			}
-		}
-		else if ((phase == 2)&&(background.GetLeft()==-9)) {
+		else if ((phase == 1) && (background.GetLeft() == -9)) {
 			Sleep(1);
-			for (int i = 0; i < 4; i++) {
-				PlantsCard[i].ShowBitmap();
+			p_c.OnShow();
+			s_c.OnShow();
+			c.OnShow();
+			z.OnShow2();
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			for (int k = 0; k < 4; k++) {
+				if ((p[index].twiceflag)&&(!p[index].SetPosDone)) {
+					if (p[index].turnToplant[0]) {
+						for (int j = 0; j < 45; j++) {
+							if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
+								if (map[j] == -1) {
+									p[index].plants[4].SetTopLeft(x[j], y[j]);
+									p[index].plants[5].SetTopLeft(p[index].plants[4].GetLeft(), p[index].plants[4].GetTop());
+									p[index].plants[6].SetTopLeft(p[index].plants[4].GetLeft() + 5, p[index].plants[4].GetTop() + 7);
+									map[j] = index;
+									p[index].SetPosDone = true;
+									index += 1;
+									
+								}
+								else {
+									p[index].twiceflag = false;
+									p[index].isflag = 1;
+									p_c.scorecost[0] = true;
+									p[index].delay1 = 0;
+								}
+								
+								
+							}
+							
+						}
+						
+					}
+					for (int i = 1; i < 4; i++) {
+						if (p[index].turnToplant[i]) {
+							for (int j = 0; j < 45; j++) {
+								if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
+									if (map[j] == -1) {
+										p[index].plants[i].SetTopLeft(x[j], y[j]);
+										if (i != 2) p[index].plants[7].SetTopLeft(p[index].plants[1].GetLeft() + 60, p[index].plants[1].GetTop() + 2);//豆豆位置//顯示時間用殭屍判斷
+										map[j] = index;
+										p[index].SetPosDone = true;
+										index += 1;
+									}
+									else {
+										p[index].twiceflag = false;
+										p[index].isflag = 1;
+										p_c.scorecost[i] = true;
+										p[index].delay1 = 0;
+									}
+									
+								}
+								
+								
+							}
+							
+							
+						}
+					}
+					
+				}
+				if (p_c.scorecost[k] && (p[index].isflag == 1)) {
+					p[index].plants[k].SetTopLeft(mouse_x - 30, mouse_y - 30);
+					p[index].OnShow(k);
+				}
+					
 			}
-			for (int i = 0; i < 1; i++) {
-				SunCard[i].ShowBitmap();
-			}
-			
-// 車起始位置顯示
-			for (int i = 1; i < 6; i++)
-			{
-				one[i].ShowBitmap();
-			}
+			for (int i = 0; i < 100; i++) {
+				if (p[i].turnToplant[0]) {
+					//太陽花起始顏色，過幾秒太陽花變色，再過幾秒太陽花產太陽，同時變回起始顏色//OnMove2
+					if (p[i].delay1 > 0 && p[i].delay1 <= 210)
+					{
+						p[i].plants[4].ShowBitmap();
+						
+					}
+					else if ((p[i].delay1 > 210 && p[i].delay1 <= 420) || (p[i].delay1 > 1210 && p[i].delay1 < 1420) || (p[i].delay1 > 1630 && p[i].delay1 < 1840))
+					{
 
-// 殭屍從走路換吃東西的動畫
-			if (!flag) {
-				one[6].ShowBitmap();
+						//s.Onshow1();
+						p[i].plants[5].ShowBitmap();
+						if ((!p[i].flag_sun)) {
+							p[i].plants[6].ShowBitmap();
+							p[i].IsShowBitmap = true;
+						}
+						else {
+							p[i].IsShowBitmap = false;
+						}
+					}
+					else if (p[i].delay1 > 420)
+					{
+						p[i].plants[4].ShowBitmap();
+					}
+					if (p[i].vanish) {//不顯示//秒數也要暫停
+						if (p[i].delay1 > 2000) {
+							p[i].turnToplant[0] = false;
+							p[i].delay1 = -1;
+							p[i].plants[4].SetTopLeft(1000,1000);
+							p[i].plants[5].SetTopLeft(1000,1000);
+							p[i].plants[6].SetTopLeft(1000,1000);
+							for (int j = 0; j < 45; j++) {
+								if (map[j] == i) map[j] = -1;
+							}
+							//p[i].vanish = false;
+						}
+					}
+					if ((!p[i].flag_sun)) {
+						p[i].plants[6].ShowBitmap();
+						p[i].IsShowBitmap = true;
+					}
+					else {
+						p[i].IsShowBitmap = false;
+					}
+				}
+				for (int x = 1; x < 4; x++) {
+					if (p[i].turnToplant[x]) {
+						if (p[i].delay1 > 0) {
+							p[i].plants[x].ShowBitmap();
+							if((x==1)&&(p[i].bean1_show))p[i].plants[7].ShowBitmap();
+							if (z.ZombieGotBean1) {
+								z.zombiegotbean[0].ShowBitmap();
+								z.ZombieGotBean1 = false;
+							}
+							if ((x == 3) && (p[i].bean2_show)) {
+								p[i].plants[8].ShowBitmap();
+								if ((p[i].plants[9].GetLeft() > p[i].plants[3].GetLeft() + 60)) p[i].plants[9].ShowBitmap();
+							}
+						}
+						if (p[i].vanish) {//不顯示//秒數也要暫停
+							if (p[i].delay1 > 2000) {
+								p[i].turnToplant[x] = false;
+								p[i].delay1 = -1;
+								p[i].plants[x].SetTopLeft(1000, 1000);
+								if(x==1) p[i].plants[7].SetTopLeft(1000, 1000);
+								if (x == 3) {
+									p[i].plants[8].SetTopLeft(1000, 1000);
+									p[i].plants[9].SetTopLeft(1000, 1000);
+								}
+								for (int j = 0; j < 45; j++) {
+									if (map[j] == i) map[j] = -1;
+								}
+								//p[i].vanish = false;
+							}
+						}
+					}
+				}
+				
 			}
-			else {
-				one[7].ShowBitmap();
-			}
-
-// 殭屍被車輾過，殭屍消失並掉頭
-			if (!flag1)
-			{
-				one[11].ShowBitmap();
-			}
-			else
-			{
-				if (!(one[12].IsAnimationDone())) one[12].ShowBitmap();
-			}
-
-//太陽花起始顏色，過幾秒太陽花變色，再過幾秒太陽花產太陽，同時變回起始顏色
-			if (count >= 0 && count <= 210)
-			{
-				one[13].ShowBitmap();
-			}
-			else if (count > 210 && count <= 420)
-			{
-				one[15].ShowBitmap();
-				one[16].SetTopLeft(one[15].GetLeft() + 5, one[15].GetTop() + 7);
-			}
-			else if (count > 420 && count <= 600)
-			{
-				flag_sun = true;
-				one[13].ShowBitmap();
-			}
-			
-//寫滑鼠點擊消失的flag，我相信庠姊你可以的!!!
-			if (!flag2) {
-				one[14].ShowBitmap();
-			}
-			
+			s.OnShow2();
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		}
-//庠姊幫我寫程式，使滑鼠點擊讓flag_sun變false		
-		if (flag_sun) one[16].ShowBitmap();
-		
 	}
 }
 /*
