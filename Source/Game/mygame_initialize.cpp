@@ -31,6 +31,12 @@ void CGameStateInit::OnMove()							// 移動遊戲元素
 	else {
 		one[1].SetFrameIndexOfBitmap(0);
 	}
+	if ((phase == 2) && (MouseIsOverlap(one[2]))) {
+		one[2].SetFrameIndexOfBitmap(1);
+	}
+	else {
+		one[2].SetFrameIndexOfBitmap(0);
+	}
 	if ((phase == 2) && (MouseIsOverlap(one[9]))) {
 		one[9].SetFrameIndexOfBitmap(1);
 	}
@@ -53,8 +59,10 @@ void CGameStateInit::OnInit()
 	//載入遊戲圖片
 	one[0].LoadBitmapByString({ "resources/menu_title1.bmp","resources/menu_title1_1.bmp" }, RGB(0, 0, 0));
 	one[0].SetTopLeft(520, 60);
-	one[1].LoadBitmapByString({ "resources/menu_title2.bmp","resources/menu_title2_1.bmp" }, RGB(0, 0, 0));
-	one[1].SetTopLeft(520, 100);
+	one[1].LoadBitmapByString({ "resources/menu_title2.bmp","resources/menu_title2_1.bmp" }, RGB(128, 128, 128));
+	one[1].SetTopLeft(525, 200);
+	one[2].LoadBitmapByString({ "resources/menu_title3.bmp","resources/menu_title3_1.bmp" }, RGB(128, 128, 128));
+	one[2].SetTopLeft(530, 300);
 	one[3].LoadBitmapByString({ "resources/option.bmp" }, RGB(128, 128, 128));
 	one[3].SetTopLeft(730, 490);
 	one[4].LoadBitmapByString({ "resources/help.bmp" }, RGB(182, 185, 184));
@@ -170,16 +178,16 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 
 	if (nFlags == VK_LBUTTON) {
 		if (phase==1) phase += 1;
-		if (phase == 2) {
+		else if (phase == 2) {
 			if ((MouseIsOverlap(one[0]))) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
 				GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
 				phase += 1;
 			}
-			if ((MouseIsOverlap(one[4]))) {
+			else if ((MouseIsOverlap(one[4]))) {
 				help_show = !help_show;
 			}
 
-			if ((MouseIsOverlap(one[5])) || ((MouseIsOverlap(menu[3])) && (option_show))|| ((MouseIsOverlap(menu[4])) && (option_show))) {
+			else if ((MouseIsOverlap(one[5])) || ((MouseIsOverlap(menu[3])) && (option_show))|| ((MouseIsOverlap(menu[4])) && (option_show))) {
 				option_show = false;
 				phase = 1;
 				help_show = false;
@@ -190,23 +198,24 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 					plantIntro[i] = false;
 					zombieIntro[i] = false;
 				}
+				level_show = false;
 			}
-			if ((MouseIsOverlap(one[3]))||(MouseIsOverlap(one[8])&&(option_show))) {
+			else if ((MouseIsOverlap(one[3]))||((MouseIsOverlap(one[8]))&&(option_show))) {
 				option_show = !option_show;
 			}
-			if (MouseIsOverlap(one[9])) {
+			else if ((MouseIsOverlap(one[9]))&&(!picture_show)&&(!option_show)) {
 				picture_show = !picture_show;
 			}
-			if (MouseIsOverlap(menu[2]) && (option_show)) {
+			else if (MouseIsOverlap(menu[2]) && (option_show)) {
 				option_show = !option_show;
 				picture_show = !picture_show;
 			}
-			if (MouseIsOverlap(picture[3])&&(picture_show)) picture_show = !picture_show;
-			if (MouseIsOverlap(picture[1]) && (picture_show) || ((MouseIsOverlap(plant_picture[1]) && (plant_picture_show)))) {
+			else if (MouseIsOverlap(picture[3])&&(picture_show)) picture_show = !picture_show;
+			else if (MouseIsOverlap(picture[1]) && (picture_show) || ((MouseIsOverlap(plant_picture[1]) && (plant_picture_show)))) {
 				plant_picture_show = !plant_picture_show;
 				picture_show = !picture_show;
 			}
-			if ((MouseIsOverlap(plant_picture[2])) && (plant_picture_show)) {
+			else if ((MouseIsOverlap(plant_picture[2])) && (plant_picture_show)) {
 				plant_picture_show = !plant_picture_show;
 			}
 			for (int i = 0; i < 4; i++) {
@@ -259,6 +268,7 @@ void CGameStateInit::OnShow()
 		background1.ShowBitmap();
 		one[0].ShowBitmap();
 		one[1].ShowBitmap();
+		one[2].ShowBitmap();
 		one[3].ShowBitmap();
 		one[4].ShowBitmap();
 		one[5].ShowBitmap();

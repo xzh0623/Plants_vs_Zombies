@@ -243,10 +243,26 @@ bool CGameStateRun::IsOverlap(bool flag_1,bool flag_2,int zombie_num,int i) {
 					p[i].delay1 = 1000;
 					return true;
 				}
+				
+				/*
 				if (!CMovingBitmap::IsOverlap(p[i].plants[j], z.zombie[zombie_num]))
 				{
 					return false;
 				}
+				*/
+
+				/*
+				for (int k = 0; k < 45; k++) {
+					if (map[k]==i)
+				}
+				*/
+
+				/*
+				for (int k = 0, k < 45, k++)
+				{
+					if(map[k] == -1 )
+				}
+				*/
 				
 			}
 		
@@ -298,6 +314,9 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 				if (CMovingBitmap::IsOverlap(p[i].plants[7], z.zombie[k]) && z.zombie[k].GetTop() < p[i].plants[7].GetTop()) {
 					p[i].bean1_isoverlap = true;
 					p[i].bean1_show = false;
+					if ((!p[i].bean1_show) && k == 0) z.hit_count_normal += 1;
+					if ((!p[i].bean1_show) && k == 5) z.hit_count_bucket += 1;
+					if ((!p[i].bean1_show) && k == 10) z.hit_count_tri += 1;
 					z.zombiegotbean[0].SetTopLeft(z.zombie[k].GetLeft() + 10, z.zombie[k].GetTop() + 70);
 					z.ZombieGotBean1 = true;
 				}
@@ -322,6 +341,9 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 				if (CMovingBitmap::IsOverlap(p[i].plants[8], z.zombie[k]) && z.zombie[k].GetTop() < p[i].plants[8].GetTop()) {
 					p[i].bean2_isoverlap = true;
 					p[i].bean2_show = false;
+					if ((!p[i].bean2_show) && k == 0) z.hit_count_normal += 2;
+					if ((!p[i].bean2_show) && k == 5) z.hit_count_bucket += 2;
+					if ((!p[i].bean2_show) && k == 10) z.hit_count_tri += 2;
 					z.zombiegotbean[0].SetTopLeft(z.zombie[k].GetLeft() + 10, z.zombie[k].GetTop() + 70);
 					z.ZombieGotBean1 = true;
 				}
