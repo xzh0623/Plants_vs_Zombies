@@ -241,28 +241,16 @@ bool CGameStateRun::IsOverlap(bool flag_1,bool flag_2,int zombie_num,int i) {
 				if (CMovingBitmap::IsOverlap(p[i].plants[j], z.zombie[zombie_num]) && z.zombie[zombie_num].GetTop() < p[i].plants[j].GetTop()&& (p[i].plants[j].GetTop()+ p[i].plants[j].GetHeight()) <= (z.zombie[zombie_num].GetTop() + z.zombie[zombie_num].GetHeight()))
 				{
 					p[i].delay1 = 1000;
+					/*
+					for (int k = 0; k < 45; k++)
+					{
+						if (map[k] == i)touch_which_plant = k;
+					}
+					*/
 					return true;
 				}
 				
-				/*
-				if (!CMovingBitmap::IsOverlap(p[i].plants[j], z.zombie[zombie_num]))
-				{
-					return false;
-				}
-				*/
-
-				/*
-				for (int k = 0; k < 45; k++) {
-					if (map[k]==i)
-				}
-				*/
-
-				/*
-				for (int k = 0, k < 45, k++)
-				{
-					if(map[k] == -1 )
-				}
-				*/
+				// if(map[touch_which_plant] == -1) return false;
 				
 			}
 		
@@ -487,7 +475,7 @@ void CGameStateRun::show_text_by_phase() {
 		CTextDraw::Print(pDC, 700, 50, to_string(p_c.count[1]));
 		CTextDraw::Print(pDC, 700, 100, to_string(p_c.count[2]));
 		CTextDraw::Print(pDC, 700, 150, to_string(p_c.count[3]));
-		//CTextDraw::Print(pDC, 700, 200, to_string(z.zombie[7].GetLeft()));
+		CTextDraw::Print(pDC, 200, 200, to_string(touch_which_plant));
 		//CTextDraw::Print(pDC, 700, 250, to_string(z.zombie[7].GetTop()));
 		CTextDraw::Print(pDC, 700, 300, to_string(p[0].delay1));
 		CTextDraw::Print(pDC, 700, 350, to_string(p[0].isflag));
@@ -606,7 +594,7 @@ void CGameStateRun::show_image_by_phase() {
 						p[i].plants[4].ShowBitmap();
 					}
 					if (p[i].vanish) {//不顯示//秒數也要暫停
-						if (p[i].delay1 > 2000) {
+						if (p[i].delay1 > 1500) {
 							p[i].turnToplant[0] = false;
 							p[i].delay1 = -1;
 							p[i].plants[4].SetTopLeft(1000,1000);
@@ -641,7 +629,7 @@ void CGameStateRun::show_image_by_phase() {
 							}
 						}
 						if (p[i].vanish) {//不顯示//秒數也要暫停
-							if (p[i].delay1 > 2000) {
+							if (p[i].delay1 > 1500) {
 								p[i].turnToplant[x] = false;
 								p[i].delay1 = -1;
 								p[i].plants[x].SetTopLeft(1000, 1000);
