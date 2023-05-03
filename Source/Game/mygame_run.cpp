@@ -497,7 +497,7 @@ void CGameStateRun::show_text_by_phase() {
 		//CTextDraw::Print(pDC, 700, 450, to_string(p[1].isflag));
 		CTextDraw::Print(pDC, 700, 500, to_string(map[1]));
 
-		CTextDraw::Print(pDC, 300, 200, to_string(z._flag));
+		CTextDraw::Print(pDC, 0, 500, to_string(z.hit_count_normal));
 
 	}
 	CDDraw::ReleaseBackCDC();
@@ -606,7 +606,10 @@ void CGameStateRun::show_image_by_phase() {
 						p[i].plants[4].ShowBitmap();
 					}
 					if (p[i].vanish) {//不顯示//秒數也要暫停
-						if (p[i].delay1 > 2000) {
+						if (z.hit_count_normal >= 333) p[i].delay1 = 0;
+						if (z.hit_count_bucket >= 333) p[i].delay1 = 0;
+						if (z.hit_count_tri >= 333) p[i].delay1 = 0;
+						if (p[i].delay1 > 1500) {
 							p[i].turnToplant[0] = false;
 							p[i].delay1 = -1;
 							p[i].plants[4].SetTopLeft(1000,1000);
@@ -641,7 +644,10 @@ void CGameStateRun::show_image_by_phase() {
 							}
 						}
 						if (p[i].vanish) {//不顯示//秒數也要暫停
-							if (p[i].delay1 > 2000) {
+							if (z.hit_count_normal >= 333) p[i].delay1 = 0;
+							if (z.hit_count_bucket >= 333) p[i].delay1 = 0;
+							if (z.hit_count_tri >= 333) p[i].delay1 = 0;
+							if (p[i].delay1 > 1500) {
 								p[i].turnToplant[x] = false;
 								p[i].delay1 = -1;
 								p[i].plants[x].SetTopLeft(1000, 1000);
