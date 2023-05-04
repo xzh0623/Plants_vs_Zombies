@@ -51,6 +51,10 @@ namespace game_framework {
 		zombie[18].LoadBitmapByString({ "resources/zom_relax_0.bmp","resources/zom_relax_1.bmp","resources/zom_relax_2.bmp","resources/zom_relax_3.bmp","resources/zom_relax_4.bmp","resources/zom_relax_5.bmp","resources/zom_relax_6.bmp","resources/zom_relax_7.bmp","resources/zom_relax_8.bmp","resources/zom_relax_9.bmp","resources/zom_relax_10.bmp" }, RGB(255, 255, 255));
 		zombie[18].SetAnimation(135, false);
 
+		//  一般殭屍3休息
+		zombie[32].LoadBitmapByString({ "resources/zom_relax_0.bmp","resources/zom_relax_1.bmp","resources/zom_relax_2.bmp","resources/zom_relax_3.bmp","resources/zom_relax_4.bmp","resources/zom_relax_5.bmp","resources/zom_relax_6.bmp","resources/zom_relax_7.bmp","resources/zom_relax_8.bmp","resources/zom_relax_9.bmp","resources/zom_relax_10.bmp" }, RGB(255, 255, 255));
+		zombie[32].SetAnimation(135, false);
+
 		//  鐵桶殭屍休息
 		zombie[3].LoadBitmapByString({ "resources/bucket_zom_relax_0.bmp","resources/bucket_zom_relax_1.bmp","resources/bucket_zom_relax_2.bmp","resources/bucket_zom_relax_3.bmp","resources/bucket_zom_relax_4.bmp","resources/bucket_zom_relax_5.bmp" }, RGB(255, 255, 255));
 		zombie[3].SetAnimation(135, false);
@@ -63,7 +67,7 @@ namespace game_framework {
 		zombie[4].LoadBitmapByString({ "resources/tri_zom_relax_0.bmp","resources/tri_zom_relax_1.bmp","resources/tri_zom_relax_2.bmp","resources/tri_zom_relax_3.bmp","resources/tri_zom_relax_4.bmp","resources/tri_zom_relax_5.bmp","resources/tri_zom_relax_6.bmp","resources/tri_zom_relax_7.bmp" }, RGB(255, 255, 255));
 		zombie[4].SetAnimation(135, false);
 
-		//  三角錐殭屍休息
+		//  三角錐殭屍2休息
 		zombie[27].LoadBitmapByString({ "resources/tri_zom_relax_0.bmp","resources/tri_zom_relax_1.bmp","resources/tri_zom_relax_2.bmp","resources/tri_zom_relax_3.bmp","resources/tri_zom_relax_4.bmp","resources/tri_zom_relax_5.bmp","resources/tri_zom_relax_6.bmp","resources/tri_zom_relax_7.bmp" }, RGB(255, 255, 255));
 		zombie[27].SetAnimation(135, false);
 
@@ -81,9 +85,18 @@ namespace game_framework {
 		zombie[10].SetTopLeft(1200, 230);
 		zombie[10].SetAnimation(135, false);
 
+		//  三角錐殭屍2走路
+		zombie[25].LoadBitmapByString({ "resources/tri_zom_0.bmp", "resources/tri_zom_1.bmp", "resources/tri_zom_2.bmp", "resources/tri_zom_3.bmp", "resources/tri_zom_4.bmp", "resources/tri_zom_5.bmp", "resources/tri_zom_6.bmp", "resources/tri_zom_7.bmp", "resources/tri_zom_8.bmp", "resources/tri_zom_9.bmp", "resources/tri_zom_10.bmp", "resources/tri_zom_11.bmp", "resources/tri_zom_12.bmp", "resources/tri_zom_13.bmp", "resources/tri_zom_14.bmp", "resources/tri_zom_15.bmp", "resources/tri_zom_16.bmp", "resources/tri_zom_17.bmp", "resources/tri_zom_18.bmp", "resources/tri_zom_19.bmp", "resources/tri_zom_20.bmp" }, RGB(255, 255, 255));
+		zombie[25].SetTopLeft(1400, 320);
+		zombie[25].SetAnimation(135, false);
+
 		//  三角錐殭屍吃東西
 		zombie[11].LoadBitmapByString({ "resources/tri_zom_eat_0.bmp", "resources/tri_zom_eat_1.bmp", "resources/tri_zom_eat_2.bmp", "resources/tri_zom_eat_3.bmp", "resources/tri_zom_eat_4.bmp", "resources/tri_zom_eat_5.bmp", "resources/tri_zom_eat_6.bmp", "resources/tri_zom_eat_7.bmp", "resources/tri_zom_eat_8.bmp", "resources/tri_zom_eat_9.bmp", "resources/tri_zom_eat_10.bmp" }, RGB(255, 255, 255));
 		zombie[11].SetAnimation(135, false);
+
+		//  三角錐殭屍2吃東西
+		zombie[28].LoadBitmapByString({ "resources/tri_zom_eat_0.bmp", "resources/tri_zom_eat_1.bmp", "resources/tri_zom_eat_2.bmp", "resources/tri_zom_eat_3.bmp", "resources/tri_zom_eat_4.bmp", "resources/tri_zom_eat_5.bmp", "resources/tri_zom_eat_6.bmp", "resources/tri_zom_eat_7.bmp", "resources/tri_zom_eat_8.bmp", "resources/tri_zom_eat_9.bmp", "resources/tri_zom_eat_10.bmp" }, RGB(255, 255, 255));
+		zombie[28].SetAnimation(135, false);
 
 		//  掉頭(一般)
 		zombie[6].LoadBitmapByString({ "resources/headfall_0.bmp", "resources/headfall_1.bmp", "resources/headfall_2.bmp", "resources/headfall_3.bmp", "resources/headfall_4.bmp", "resources/headfall_5.bmp", "resources/headfall_6.bmp", "resources/headfall_7.bmp", "resources/headfall_8.bmp", "resources/headfall_9.bmp", "resources/headfall_10.bmp", "resources/headfall_11.bmp" }, RGB(255, 255, 255));
@@ -110,6 +123,11 @@ namespace game_framework {
 		zombie[8].SetAnimation(80, true);
 		zombie[8].ToggleAnimation();
 
+		//  掉頭(三角錐2)
+		zombie[29].LoadBitmapByString({ "resources/headfall_0.bmp", "resources/headfall_1.bmp", "resources/headfall_2.bmp", "resources/headfall_3.bmp", "resources/headfall_4.bmp", "resources/headfall_5.bmp", "resources/headfall_6.bmp", "resources/headfall_7.bmp", "resources/headfall_8.bmp", "resources/headfall_9.bmp", "resources/headfall_10.bmp", "resources/headfall_11.bmp" }, RGB(255, 255, 255));
+		zombie[29].SetAnimation(80, true);
+		zombie[29].ToggleAnimation();
+
 		//  殭屍倒下(一般)
 		zombie[13].LoadBitmapByString({ "resources/falldown_0.bmp", "resources/falldown_1.bmp", "resources/falldown_2.bmp", "resources/falldown_3.bmp", "resources/falldown_4.bmp", "resources/falldown_5.bmp", "resources/falldown_6.bmp", "resources/falldown_7.bmp", "resources/falldown_8.bmp", "resources/falldown_9.bmp"/*, "resources/falldown_9.bmp"*/ }, RGB(255, 255, 255));
 		zombie[13].SetAnimation(90, true);
@@ -134,6 +152,11 @@ namespace game_framework {
 		zombie[16].LoadBitmapByString({ "resources/falldown_0.bmp", "resources/falldown_1.bmp", "resources/falldown_2.bmp", "resources/falldown_3.bmp", "resources/falldown_4.bmp", "resources/falldown_5.bmp", "resources/falldown_6.bmp", "resources/falldown_7.bmp", "resources/falldown_8.bmp", "resources/falldown_9.bmp"/*, "resources/falldown_9.bmp"*/ }, RGB(255, 255, 255));
 		zombie[16].SetAnimation(90, true);
 		zombie[16].ToggleAnimation();
+
+		//  殭屍倒下(三角2)
+		zombie[31].LoadBitmapByString({ "resources/falldown_0.bmp", "resources/falldown_1.bmp", "resources/falldown_2.bmp", "resources/falldown_3.bmp", "resources/falldown_4.bmp", "resources/falldown_5.bmp", "resources/falldown_6.bmp", "resources/falldown_7.bmp", "resources/falldown_8.bmp", "resources/falldown_9.bmp"/*, "resources/falldown_9.bmp"*/ }, RGB(255, 255, 255));
+		zombie[31].SetAnimation(90, true);
+		zombie[31].ToggleAnimation();
 
 		/* 沒頭殭屍(一般)
 		zombie[12].LoadBitmapByString({ "resources/nohead_zom_0.bmp", "resources/nohead_zom_1.bmp", "resources/nohead_zom_2.bmp", "resources/nohead_zom_3.bmp", "resources/nohead_zom_4.bmp", "resources/nohead_zom_5.bmp", "resources/nohead_zom_6.bmp", "resources/nohead_zom_7.bmp", "resources/nohead_zom_8.bmp", "resources/nohead_zom_9.bmp", "resources/nohead_zom_10.bmp", "resources/nohead_zom_11.bmp", "resources/nohead_zom_12.bmp", "resources/nohead_zom_13.bmp", "resources/nohead_zom_14.bmp", "resources/nohead_zom_15.bmp", "resources/nohead_zom_16.bmp", "resources/nohead_zom_17.bmp" }, RGB(255, 255, 255));
@@ -264,7 +287,7 @@ namespace game_framework {
 		}
 		else if (_flag_car_3 || hit_count_bucket >= 112)
 		{
-			if ((!_flag_car_4) && hit_count_bucket >= 112)
+			if ((!_flag_car_3) && hit_count_bucket >= 112)
 			{
 				zombie[14].SetTopLeft(zombie[5].GetLeft() - 25, zombie[5].GetTop());
 			}
@@ -292,7 +315,25 @@ namespace game_framework {
 			if (zombie[8].IsAnimationDone())zombie[10].SetTopLeft(1500, 1500);
 		}
 
+		//三角錐殭屍2換狀態
+		if ((!_flag5) && (!_flag_car_3_1) && hit_count_tri_1 < 112)
+		{
+			zombie[25].SetTopLeft(zombie[25].GetLeft() - 1, zombie[25].GetTop());
+		}
+		else if (_flag5 &&  hit_count_tri_1 < 112)
+		{
+			zombie[28].SetTopLeft(zombie[25].GetLeft() - 80, zombie[25].GetTop());
+		}
+		else if (_flag_car_3_1 || hit_count_tri_1 >= 112)
+		{
+			if ((!_flag_car_3_1) && hit_count_tri_1 >= 112)
+			{
+				zombie[31].SetTopLeft(zombie[25].GetLeft() - 25, zombie[25].GetTop());
+			}
+			zombie[29].SetTopLeft(zombie[25].GetLeft() + 20, zombie[25].GetTop() - 25);
 
+			if (zombie[29].IsAnimationDone())zombie[25].SetTopLeft(1500, 1500);
+		}
 	}
 
 	void Zombie::OnShow1() {
@@ -302,7 +343,7 @@ namespace game_framework {
 		zombie[18].ShowBitmap();
 		zombie[26].ShowBitmap();
 		zombie[27].ShowBitmap();
-
+		zombie[32].ShowBitmap();
 	}
 
 	void Zombie::OnShow2() {
@@ -394,8 +435,22 @@ namespace game_framework {
 			zombie[8].ShowBitmap();
 		}
 
-
-
+		// 三角錐殭屍2走路換吃東西的動畫，碰到車掉頭
+		if ((!_flag5) && (!_flag_car_3_1) && hit_count_tri_1 < 112) {
+			zombie[25].ShowBitmap();
+		}
+		else if (_flag5 && hit_count_tri_1 < 112)
+		{
+			zombie[28].ShowBitmap();
+		}
+		else if (_flag_car_3_1 || hit_count_tri_1 >= 112)
+		{
+			if ((!_flag_car_3_1) && hit_count_tri_1 >= 112)
+			{
+				zombie[31].ShowBitmap();
+			}
+			zombie[29].ShowBitmap();
+		}
 
 	}
 }
