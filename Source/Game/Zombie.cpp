@@ -12,7 +12,7 @@
 #include <Windows.h>
 #include "Zombie.h"
 namespace game_framework {
-	
+
 
 	void Zombie::OnInit()
 	{
@@ -92,7 +92,7 @@ namespace game_framework {
 		zombie[13].LoadBitmapByString({ "resources/falldown_0.bmp", "resources/falldown_1.bmp", "resources/falldown_2.bmp", "resources/falldown_3.bmp", "resources/falldown_4.bmp", "resources/falldown_5.bmp", "resources/falldown_6.bmp", "resources/falldown_7.bmp", "resources/falldown_8.bmp", "resources/falldown_9.bmp"/*, "resources/falldown_9.bmp"*/ }, RGB(255, 255, 255));
 		zombie[13].SetAnimation(90, true);
 		zombie[13].ToggleAnimation();
-		
+
 		//  殭屍倒下(一般2)
 		zombie[19].LoadBitmapByString({ "resources/falldown_0.bmp", "resources/falldown_1.bmp", "resources/falldown_2.bmp", "resources/falldown_3.bmp", "resources/falldown_4.bmp", "resources/falldown_5.bmp", "resources/falldown_6.bmp", "resources/falldown_7.bmp", "resources/falldown_8.bmp", "resources/falldown_9.bmp"/*, "resources/falldown_9.bmp"*/ }, RGB(255, 255, 255));
 		zombie[19].SetAnimation(90, true);
@@ -159,12 +159,12 @@ namespace game_framework {
 
 	void Zombie::OnMove()
 	{
-		
+
 		for (int i = 0; i < 5000; i++)
 		{
 			for (int j = 0; j < 5000; j++) {}
 		}
-// 一般殭屍換狀態
+		// 一般殭屍換狀態
 		if ((!_flag) && (!_flag_car_4) && hit_count_normal < 112)
 		{
 			zombie[0].SetTopLeft(zombie[0].GetLeft() - 1, zombie[0].GetTop());
@@ -184,7 +184,7 @@ namespace game_framework {
 			if (zombie[6].IsAnimationDone())zombie[0].SetTopLeft(1500, 1500);
 		}
 
-		
+
 		// 一般殭屍2換狀態
 		if ((!_flag3) && (!_flag_car_0) && hit_count_normal_1 < 112)
 		{
@@ -204,9 +204,9 @@ namespace game_framework {
 
 			if (zombie[21].IsAnimationDone())zombie[15].SetTopLeft(1500, 1500);
 		}
-		
 
-//鐵桶殭屍換狀態
+
+		//鐵桶殭屍換狀態
 		if ((!_flag1) && (!_flag_car_3) && hit_count_bucket < 112)
 		{
 			zombie[5].SetTopLeft(zombie[5].GetLeft() - 1, zombie[5].GetTop());
@@ -226,7 +226,7 @@ namespace game_framework {
 			if (zombie[7].IsAnimationDone())zombie[5].SetTopLeft(1500, 1500);
 		}
 
-//三角錐殭屍換狀態
+		//三角錐殭屍換狀態
 		if ((!_flag2) && (!_flag_car_2) && hit_count_tri < 112)
 		{
 			zombie[10].SetTopLeft(zombie[10].GetLeft() - 1, zombie[10].GetTop());
@@ -256,7 +256,7 @@ namespace game_framework {
 
 	void Zombie::OnShow2() {
 
-// 一般殭屍走路換吃東西的動畫，碰到車掉頭
+		// 一般殭屍走路換吃東西的動畫，碰到車掉頭
 		if ((!_flag) && (!_flag_car_4) && hit_count_normal < 112) {
 			zombie[0].ShowBitmap();
 		}
@@ -273,7 +273,7 @@ namespace game_framework {
 			zombie[6].ShowBitmap();
 		}
 
-// 一般殭屍2走路換吃東西的動畫，碰到車掉頭
+		// 一般殭屍2走路換吃東西的動畫，碰到車掉頭
 		if ((!_flag3) && (!_flag_car_0) && hit_count_normal_1 < 112) {
 			zombie[15].ShowBitmap();
 		}
@@ -291,7 +291,7 @@ namespace game_framework {
 		}
 
 
-// 鐵桶殭屍走路換吃東西的動畫，碰到車掉頭
+		// 鐵桶殭屍走路換吃東西的動畫，碰到車掉頭
 		if ((!_flag1) && (!_flag_car_3) && hit_count_bucket < 112) {
 			zombie[5].ShowBitmap();
 		}
@@ -309,7 +309,7 @@ namespace game_framework {
 		}
 
 
-// 三角錐殭屍走路換吃東西的動畫，碰到車掉頭
+		// 三角錐殭屍走路換吃東西的動畫，碰到車掉頭
 		if ((!_flag2) && (!_flag_car_2) && hit_count_tri < 112) {
 			zombie[10].ShowBitmap();
 		}
@@ -326,8 +326,8 @@ namespace game_framework {
 			zombie[8].ShowBitmap();
 		}
 
-		
 
-		
+
+
 	}
 }

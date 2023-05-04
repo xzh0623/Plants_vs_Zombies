@@ -144,7 +144,6 @@ namespace game_framework {
 		int map[45];
 		bool backgroundmove = false;
 		bool flag_delay = false;
-		int touch_which_plant = -2;
 		
 
 		
