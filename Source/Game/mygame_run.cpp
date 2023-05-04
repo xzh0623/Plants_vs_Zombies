@@ -609,7 +609,7 @@ void CGameStateRun::show_image_by_phase() {
 						p[i].plants[4].ShowBitmap();
 					}
 					if (p[i].vanish) {//不顯示//秒數也要暫停
-						if (p[i].delay1 > 1500) {
+						if (p[i].delay1 > 2000) {
 							p[i].turnToplant[0] = false;
 							p[i].delay1 = -1;
 							p[i].plants[4].SetTopLeft(1000,1000);
@@ -644,7 +644,7 @@ void CGameStateRun::show_image_by_phase() {
 							}
 						}
 						if (p[i].vanish) {//不顯示//秒數也要暫停
-							if (p[i].delay1 > 1500) {
+							if (p[i].delay1 > 2000) {
 								p[i].turnToplant[x] = false;
 								p[i].delay1 = -1;
 								p[i].plants[x].SetTopLeft(1000, 1000);
