@@ -117,12 +117,14 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 				z.zombie[2].SetTopLeft(background.GetLeft() + 1100, 100);
 				z.zombie[3].SetTopLeft(background.GetLeft() + 1000, 200);
 				z.zombie[4].SetTopLeft(background.GetLeft() + 1050, 300);
+				z.zombie[18].SetTopLeft(background.GetLeft() + 1050, 400);
 			}
 			else {
 				background.SetTopLeft(background.GetLeft() + 3, 0);
 				z.zombie[2].SetTopLeft(background.GetLeft() + 1100, 100);
 				z.zombie[3].SetTopLeft(background.GetLeft() + 1000, 200);
 				z.zombie[4].SetTopLeft(background.GetLeft() + 1050, 300);
+				z.zombie[18].SetTopLeft(background.GetLeft() + 1050, 400);
 			}
 		}
 		else {
@@ -130,6 +132,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			z.zombie[2].SetTopLeft(background.GetLeft() + 1100, 100);
 			z.zombie[3].SetTopLeft(background.GetLeft() + 1000, 200);
 			z.zombie[4].SetTopLeft(background.GetLeft() + 1050, 300);
+			z.zombie[18].SetTopLeft(background.GetLeft() + 1050, 400);
 
 			if (background.GetLeft() < -300) {
 				backgroundmove = true;
