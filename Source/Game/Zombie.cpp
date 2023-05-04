@@ -21,14 +21,14 @@ namespace game_framework {
 		zombie[0].SetTopLeft(1200, 420);
 		zombie[0].SetAnimation(100, false);
 
-		//  一般殭屍2走路(第一排)
+		//  一般殭屍2走路
 		zombie[15].LoadBitmapByString({ "resources/zom_0.bmp", "resources/zom_1.bmp", "resources/zom_2.bmp", "resources/zom_3.bmp", "resources/zom_4.bmp", "resources/zom_5.bmp", "resources/zom_6.bmp", "resources/zom_7.bmp", "resources/zom_8.bmp", "resources/zom_9.bmp", "resources/zom_10.bmp" ,"resources/zom_11.bmp","resources/zom_12.bmp","resources/zom_13.bmp","resources/zom_14.bmp","resources/zom_15.bmp","resources/zom_16.bmp","resources/zom_17.bmp","resources/zom_18.bmp","resources/zom_19.bmp","resources/zom_20.bmp","resources/zom_21.bmp" }, RGB(255, 255, 255));
 		zombie[15].SetTopLeft(1100, 30);
 		zombie[15].SetAnimation(100, false);
 
-		//  一般殭屍3走路(第二排)
+		//  一般殭屍3走路
 		zombie[20].LoadBitmapByString({ "resources/zom_0.bmp", "resources/zom_1.bmp", "resources/zom_2.bmp", "resources/zom_3.bmp", "resources/zom_4.bmp", "resources/zom_5.bmp", "resources/zom_6.bmp", "resources/zom_7.bmp", "resources/zom_8.bmp", "resources/zom_9.bmp", "resources/zom_10.bmp" ,"resources/zom_11.bmp","resources/zom_12.bmp","resources/zom_13.bmp","resources/zom_14.bmp","resources/zom_15.bmp","resources/zom_16.bmp","resources/zom_17.bmp","resources/zom_18.bmp","resources/zom_19.bmp","resources/zom_20.bmp","resources/zom_21.bmp" }, RGB(255, 255, 255));
-		zombie[20].SetTopLeft(1100, 30);
+		zombie[20].SetTopLeft(1100, 120);
 		zombie[20].SetAnimation(100, false);
 
 		//  一般殭屍吃
@@ -224,6 +224,26 @@ namespace game_framework {
 			if (zombie[21].IsAnimationDone())zombie[15].SetTopLeft(1500, 1500);
 		}
 
+		// 一般殭屍3換狀態
+		if ((!_flag4) && (!_flag_car_1) && hit_count_normal_2 < 112)
+		{
+			zombie[20].SetTopLeft(zombie[20].GetLeft() - 1, zombie[20].GetTop());
+		}
+		else if (_flag4 && hit_count_normal_2 < 112)
+		{
+			zombie[22].SetTopLeft(zombie[20].GetLeft() - 80, zombie[20].GetTop());
+		}
+		else if (_flag_car_1 || hit_count_normal_2 >= 112)
+		{
+			if ((!_flag_car_1) && hit_count_normal_2 >= 112)
+			{
+				zombie[24].SetTopLeft(zombie[20].GetLeft() - 25, zombie[20].GetTop());
+			}
+			zombie[23].SetTopLeft(zombie[20].GetLeft() + 20, zombie[20].GetTop() - 25);
+
+			if (zombie[23].IsAnimationDone())zombie[20].SetTopLeft(1500, 1500);
+		}
+
 
 		//鐵桶殭屍換狀態
 		if ((!_flag1) && (!_flag_car_3) && hit_count_bucket < 112)
@@ -272,6 +292,7 @@ namespace game_framework {
 			zombie[i].ShowBitmap();
 		}
 		zombie[18].ShowBitmap();
+
 	}
 
 	void Zombie::OnShow2() {
@@ -308,6 +329,23 @@ namespace game_framework {
 				zombie[19].ShowBitmap();
 			}
 			zombie[21].ShowBitmap();
+		}
+
+		// 一般殭屍3走路換吃東西的動畫，碰到車掉頭
+		if ((!_flag4) && (!_flag_car_1) && hit_count_normal_2 < 112) {
+			zombie[20].ShowBitmap();
+		}
+		else if (_flag4 && hit_count_normal_2 < 112)
+		{
+			zombie[22].ShowBitmap();
+		}
+		else if ((_flag_car_1 || hit_count_normal_2 >= 112))
+		{
+			if ((!_flag_car_1) && hit_count_normal_2 >= 112)
+			{
+				zombie[24].ShowBitmap();
+			}
+			zombie[23].ShowBitmap();
 		}
 
 
