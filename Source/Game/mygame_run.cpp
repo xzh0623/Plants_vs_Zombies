@@ -295,12 +295,12 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		}
 		if (z._flag_car_2) c.car[2].SetTopLeft(c.car[2].GetLeft() + 20, c.car[2].GetTop());
 
-//三角錐殭屍與index 2 車相撞，車前進
+//三角錐殭屍2與index 0 車相撞，車前進
 		if (!z._flag5 && !z._flag_car_0_1)
 		{
-			if (CMovingBitmap::IsOverlap(c.car[3], z.zombie[25])) z._flag_car_0_1 = true;
+			if (CMovingBitmap::IsOverlap(c.car[0], z.zombie[25])) z._flag_car_0_1 = true;
 		}
-		if (z._flag_car_0 && !z._flag_car_0_1) c.car[3].SetTopLeft(c.car[3].GetLeft() + 20, c.car[3].GetTop());
+		if (!z._flag_car_0 && z._flag_car_0_1) c.car[0].SetTopLeft(c.car[0].GetLeft() + 20, c.car[0].GetTop());
 
 
 		z.OnMove();
