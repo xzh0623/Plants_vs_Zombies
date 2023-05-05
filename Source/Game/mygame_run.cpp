@@ -261,42 +261,42 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //一般殭屍與index 4 車相撞，車前進
-		if (!z._flag && !z._flag_car_4)
+		if (!z._flag_car_4)
 		{
 			if (CMovingBitmap::IsOverlap(c.car[4], z.zombie[20])) z._flag_car_4 = true;
 		}
 		if (z._flag_car_4) c.car[4].SetTopLeft(c.car[4].GetLeft() + 20, c.car[4].GetTop());
 		
 //一般殭屍2與index 0 車相撞，車前進
-		if (!z._flag3 && !z._flag_car_0)
+		if (!z._flag_car_0)
 		{
 			if (CMovingBitmap::IsOverlap(c.car[0], z.zombie[0])) z._flag_car_0 = true;
 		}
 		if (z._flag_car_0) c.car[0].SetTopLeft(c.car[0].GetLeft() + 20, c.car[0].GetTop());
 
 //一般殭屍3與index 1 車相撞，車前進
-		if (!z._flag4 && !z._flag_car_1)
+		if (!z._flag_car_1)
 		{
 			if (CMovingBitmap::IsOverlap(c.car[1], z.zombie[5])) z._flag_car_1 = true;
 		}
 		if (z._flag_car_1) c.car[1].SetTopLeft(c.car[1].GetLeft() + 20, c.car[1].GetTop());
 
 //鐵桶殭屍與index 3 車相撞，車前進
-		if (!z._flag1 && !z._flag_car_3)
+		if (!z._flag_car_3)
 		{
 			if (CMovingBitmap::IsOverlap(c.car[3], z.zombie[15])) z._flag_car_3 = true;
 		}
 		if (z._flag_car_3) c.car[3].SetTopLeft(c.car[3].GetLeft() + 20, c.car[3].GetTop());
 		
 //三角錐殭屍與index 2 車相撞，車前進
-		if (!z._flag2 && !z._flag_car_2)
+		if (/*!z._flag2 &&*/ !z._flag_car_2)
 		{
 			if (CMovingBitmap::IsOverlap(c.car[2], z.zombie[10])) z._flag_car_2 = true;
 		}
 		if (z._flag_car_2) c.car[2].SetTopLeft(c.car[2].GetLeft() + 20, c.car[2].GetTop());
 
 //三角錐殭屍2與index 0 車相撞，車前進
-		if (!z._flag5 && !z._flag_car_0_1)
+		if (!z._flag_car_0_1)
 		{
 			if (CMovingBitmap::IsOverlap(c.car[0], z.zombie[25])) z._flag_car_0_1 = true;
 		}
@@ -583,6 +583,7 @@ void CGameStateRun::show_text_by_phase() {
 		//CTextDraw::Print(pDC, 700, 250, to_string(z.zombie[7].GetTop()));
 		CTextDraw::Print(pDC, 700, 300, to_string(p[0].delay1));
 		CTextDraw::Print(pDC, 700, 350, to_string(p[1].delay1));
+		CTextDraw::Print(pDC, 300, 350, to_string(z._flag_car_0_1));
 		//CTextDraw::Print(pDC, 700, 350, to_string(p[0].isflag));
 		CTextDraw::Print(pDC, 700, 400, to_string(p[2].delay1));
 		CTextDraw::Print(pDC, 700, 450, to_string(Distance(p[0].plants[4], z.zombie[20])));

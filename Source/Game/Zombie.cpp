@@ -327,7 +327,7 @@ namespace game_framework {
 		{
 			zombie[25].SetTopLeft(zombie[25].GetLeft() - 1, zombie[25].GetTop());
 		}
-		else if (_flag5 &&  hit_count_tri_1 < 333)
+		else if (_flag5 &&  hit_count_tri_1 < 333 && !_flag_car_0_1)
 		{
 			zombie[28].SetTopLeft(zombie[25].GetLeft() - 80, zombie[25].GetTop());
 		}
@@ -448,7 +448,7 @@ namespace game_framework {
 		if ((!_flag5) && (!_flag_car_0_1) && hit_count_tri_1 < 333) {
 			zombie[25].ShowBitmap();
 		}
-		else if (_flag5 && hit_count_tri_1 < 333)
+		else if (_flag5 && hit_count_tri_1 < 333 && !_flag_car_0_1)
 		{
 			zombie[28].ShowBitmap();
 		}
