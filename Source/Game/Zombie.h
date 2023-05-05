@@ -52,7 +52,7 @@ namespace game_framework {
 		int hit_count_tri_1;
 
 		bool ZombieGotBean1;
-		CMovingBitmap zombie[50];
+		CMovingBitmap zombie[100];
 		CMovingBitmap zombiegotbean[2];
 	protected:
 	private:

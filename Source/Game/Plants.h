@@ -10,6 +10,8 @@ namespace game_framework {
 			IsShowBitmap = false;
 			SetPosDone = false;
 			vanish = false;
+			bean_got = 0;
+			clean = false;
 			bean1_show = false;
 			bean1_isoverlap = false;
 			
@@ -35,6 +37,8 @@ namespace game_framework {
 		bool SetPosDone;
 		bool turnToplant[4];
 		bool vanish;
+		int bean_got;//子彈是否打到殭屍
+		int clean;
 		//子彈1參數
 		int bean1_delay;
 		bool bean1_show;
@@ -43,6 +47,7 @@ namespace game_framework {
 		int bean2_delay;
 		bool bean2_show;
 		bool bean2_isoverlap;
+
 	protected:
 
 	private:
