@@ -169,9 +169,9 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 				// 三角錐殭屍與植物相撞
 				z._flag2 = IsOverlap(z._flag2, z._flag_car_2, 10, i);
 				// 三角錐殭屍2與植物相撞
-				z._flag5 = IsOverlap(z._flag5, z._flag_car_0_1, 40, i);
+				z._flag5 = IsOverlap(z._flag5, z._flag_car_0_1, 25, i);
 				
-				if ((z._flag) || (z._flag1) || (z._flag2) || (z._flag3) || (z._flag4) /*|| (z._flag5)*/) {
+				if ((z._flag) || (z._flag1) || (z._flag2) || (z._flag3) || (z._flag4) || (z._flag5)) {
 					p[i].vanish = true;
 				}
 				//設定植物1子彈
@@ -206,9 +206,9 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 					// 三角錐殭屍與植物相撞
 					z._flag2 = IsOverlap(z._flag2, z._flag_car_2, 10, i);
 					// 三角錐殭屍2與植物相撞
-					z._flag5 = IsOverlap(z._flag5, z._flag_car_0_1, 40, i);
+					z._flag5 = IsOverlap(z._flag5, z._flag_car_0_1, 25, i);
 					
-					if ((z._flag) || (z._flag1) || (z._flag2) || (z._flag3) || (z._flag4) /*|| (z._flag5)*/) {
+					if ((z._flag) || (z._flag1) || (z._flag2) || (z._flag3) || (z._flag4) || (z._flag5)) {
 						p[i].vanish = true;
 					}
 
@@ -247,11 +247,11 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 						if (Distance(p[i].plants[k], z.zombie[5]) != 1000) {
 							z._flag4 = false;
 						}
-						/*
+						
 						if (Distance(p[i].plants[k], z.zombie[25]) != 1000) {
 							z._flag5 = false;
 						}
-						*/
+						
 						
 					}
 				}
@@ -300,7 +300,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		{
 			if (CMovingBitmap::IsOverlap(c.car[3], z.zombie[25])) z._flag_car_0_1 = true;
 		}
-		if (z._flag_car_0_1 && !z._flag_car_3) c.car[3].SetTopLeft(c.car[3].GetLeft() + 20, c.car[3].GetTop());
+		if (z._flag_car_0 && !z._flag_car_0_1) c.car[3].SetTopLeft(c.car[3].GetLeft() + 20, c.car[3].GetTop());
 
 
 		z.OnMove();
