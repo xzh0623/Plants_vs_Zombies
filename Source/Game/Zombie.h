@@ -6,12 +6,10 @@ namespace game_framework {
 	class Zombie {
 	public:
 		Zombie() {
-			_flag = false;
-			_flag1 = false;
-			_flag2 = false;
-			_flag3 = false;
-			_flag4 = false;
-			_flag5 = false;
+			for (int i = 0; i < 10; i++)
+			{
+				flag_zom_touch_plant[i] = false;
+			}
 			_flag_car_0 = false;
 			_flag_car_1 = false;
 			_flag_car_2 = false;
@@ -32,12 +30,7 @@ namespace game_framework {
 		void OnShow1();								// 將圖形貼到畫面
 		void OnShow2();
 
-		bool _flag;
-		bool _flag1;
-		bool _flag2;
-		bool _flag3;
-		bool _flag4;
-		bool _flag5;
+		bool flag_zom_touch_plant[10];
 		bool _flag_car_0;
 		bool _flag_car_1;
 		bool _flag_car_2;
