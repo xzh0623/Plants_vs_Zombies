@@ -21,6 +21,7 @@ namespace game_framework {
 				hit_count_bucket[j] = 0;
 				hit_count_tri[j] = 0;
 			}
+			count_last_wave = 0;
 			ZombieGotBean1 = false;
 		}
 		~Zombie() {}
@@ -39,10 +40,9 @@ namespace game_framework {
 		int hit_count_normal[10];
 		int hit_count_bucket[10];
 		int hit_count_tri[10];
-		
-
+		int count_last_wave;
 		bool ZombieGotBean1;
-		CMovingBitmap zombie[50];
+		CMovingBitmap zombie[60];
 		CMovingBitmap zombiegotbean[2];
 	protected:
 	private:

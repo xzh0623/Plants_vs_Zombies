@@ -16,19 +16,31 @@ namespace game_framework {
 
 	void Zombie::OnInit()
 	{
+		//最後一波
+		zombie[57].LoadBitmapByString({ "resources/last_wave.bmp" }, RGB(0, 0, 0));
+		zombie[57].SetTopLeft(425, 300);
+		
+		//殭屍進度條(空)
+		zombie[58].LoadBitmapByString({ "resources/FlagMeterEmpty.bmp"}, RGB(255, 255, 255));
+		zombie[58].SetTopLeft(300, 20);
+
+		//殭屍進度條(滿)
+		zombie[59].LoadBitmapByString({ "resources/FlagMeterFull.bmp"}, RGB(255, 255, 255));
+		zombie[59].SetTopLeft(300, 20);
+
 		//  一般殭屍走路
 		zombie[0].LoadBitmapByString({ "resources/zom_0.bmp", "resources/zom_1.bmp", "resources/zom_2.bmp", "resources/zom_3.bmp", "resources/zom_4.bmp", "resources/zom_5.bmp", "resources/zom_6.bmp", "resources/zom_7.bmp", "resources/zom_8.bmp", "resources/zom_9.bmp", "resources/zom_10.bmp" ,"resources/zom_11.bmp","resources/zom_12.bmp","resources/zom_13.bmp","resources/zom_14.bmp","resources/zom_15.bmp","resources/zom_16.bmp","resources/zom_17.bmp","resources/zom_18.bmp","resources/zom_19.bmp","resources/zom_20.bmp","resources/zom_21.bmp" }, RGB(255, 255, 255));
-		zombie[0].SetTopLeft(1200, 420);
+		zombie[0].SetTopLeft(2200, 420);
 		zombie[0].SetAnimation(100, false);
 
 		//  一般殭屍2走路
 		zombie[15].LoadBitmapByString({ "resources/zom_0.bmp", "resources/zom_1.bmp", "resources/zom_2.bmp", "resources/zom_3.bmp", "resources/zom_4.bmp", "resources/zom_5.bmp", "resources/zom_6.bmp", "resources/zom_7.bmp", "resources/zom_8.bmp", "resources/zom_9.bmp", "resources/zom_10.bmp" ,"resources/zom_11.bmp","resources/zom_12.bmp","resources/zom_13.bmp","resources/zom_14.bmp","resources/zom_15.bmp","resources/zom_16.bmp","resources/zom_17.bmp","resources/zom_18.bmp","resources/zom_19.bmp","resources/zom_20.bmp","resources/zom_21.bmp" }, RGB(255, 255, 255));
-		zombie[15].SetTopLeft(1100, 30);
+		zombie[15].SetTopLeft(2100, 30);
 		zombie[15].SetAnimation(100, false);
 
 		//  一般殭屍3走路
 		zombie[20].LoadBitmapByString({ "resources/zom_0.bmp", "resources/zom_1.bmp", "resources/zom_2.bmp", "resources/zom_3.bmp", "resources/zom_4.bmp", "resources/zom_5.bmp", "resources/zom_6.bmp", "resources/zom_7.bmp", "resources/zom_8.bmp", "resources/zom_9.bmp", "resources/zom_10.bmp" ,"resources/zom_11.bmp","resources/zom_12.bmp","resources/zom_13.bmp","resources/zom_14.bmp","resources/zom_15.bmp","resources/zom_16.bmp","resources/zom_17.bmp","resources/zom_18.bmp","resources/zom_19.bmp","resources/zom_20.bmp","resources/zom_21.bmp" }, RGB(255, 255, 255));
-		zombie[20].SetTopLeft(1300, 120);
+		zombie[20].SetTopLeft(2300, 120);
 		zombie[20].SetAnimation(100, false);
 
 		//  一般殭屍吃
@@ -73,7 +85,7 @@ namespace game_framework {
 
 		//  鐵桶殭屍走路
 		zombie[5].LoadBitmapByString({ "resources/bucket_zom_0.bmp", "resources/bucket_zom_1.bmp", "resources/bucket_zom_2.bmp", "resources/bucket_zom_3.bmp", "resources/bucket_zom_4.bmp", "resources/bucket_zom_5.bmp", "resources/bucket_zom_6.bmp", "resources/bucket_zom_7.bmp", "resources/bucket_zom_8.bmp", "resources/bucket_zom_9.bmp", "resources/bucket_zom_10.bmp", "resources/bucket_zom_11.bmp", "resources/bucket_zom_12.bmp", "resources/bucket_zom_13.bmp", "resources/bucket_zom_14.bmp" }, RGB(255, 255, 255));
-		zombie[5].SetTopLeft(1000, 320);
+		zombie[5].SetTopLeft(2000, 320);
 		zombie[5].SetAnimation(100, false);
 
 		//  鐵桶殭屍吃東西
@@ -82,12 +94,12 @@ namespace game_framework {
 
 		//  三角錐殭屍走路
 		zombie[10].LoadBitmapByString({ "resources/tri_zom_0.bmp", "resources/tri_zom_1.bmp", "resources/tri_zom_2.bmp", "resources/tri_zom_3.bmp", "resources/tri_zom_4.bmp", "resources/tri_zom_5.bmp", "resources/tri_zom_6.bmp", "resources/tri_zom_7.bmp", "resources/tri_zom_8.bmp", "resources/tri_zom_9.bmp", "resources/tri_zom_10.bmp", "resources/tri_zom_11.bmp", "resources/tri_zom_12.bmp", "resources/tri_zom_13.bmp", "resources/tri_zom_14.bmp", "resources/tri_zom_15.bmp", "resources/tri_zom_16.bmp", "resources/tri_zom_17.bmp", "resources/tri_zom_18.bmp", "resources/tri_zom_19.bmp", "resources/tri_zom_20.bmp" }, RGB(255, 255, 255));
-		zombie[10].SetTopLeft(1200, 230);
+		zombie[10].SetTopLeft(2200, 230);
 		zombie[10].SetAnimation(135, false);
 
 		//  三角錐殭屍2走路
 		zombie[25].LoadBitmapByString({ "resources/tri_zom_0.bmp", "resources/tri_zom_1.bmp", "resources/tri_zom_2.bmp", "resources/tri_zom_3.bmp", "resources/tri_zom_4.bmp", "resources/tri_zom_5.bmp", "resources/tri_zom_6.bmp", "resources/tri_zom_7.bmp", "resources/tri_zom_8.bmp", "resources/tri_zom_9.bmp", "resources/tri_zom_10.bmp", "resources/tri_zom_11.bmp", "resources/tri_zom_12.bmp", "resources/tri_zom_13.bmp", "resources/tri_zom_14.bmp", "resources/tri_zom_15.bmp", "resources/tri_zom_16.bmp", "resources/tri_zom_17.bmp", "resources/tri_zom_18.bmp", "resources/tri_zom_19.bmp", "resources/tri_zom_20.bmp" }, RGB(255, 255, 255));
-		zombie[25].SetTopLeft(1400, 320);
+		zombie[25].SetTopLeft(2400, 320);
 		zombie[25].SetAnimation(135, false);
 
 		//  三角錐殭屍吃東西
@@ -347,7 +359,19 @@ namespace game_framework {
 	}
 
 	void Zombie::OnShow2() {
-
+		
+		//進度條切換，中間顯示最後一波
+		if (zombie[6].IsAnimationDone() && zombie[21].IsAnimationDone() && zombie[23].IsAnimationDone() && zombie[7].IsAnimationDone() && zombie[8].IsAnimationDone() && zombie[29].IsAnimationDone())
+		{
+			count_last_wave += 1;
+			if (count_last_wave < 30 || (count_last_wave > 60 && count_last_wave < 90) || (count_last_wave > 120 && count_last_wave < 150)) zombie[57].ShowBitmap();
+			zombie[59].ShowBitmap();
+		}
+		else
+		{
+			zombie[58].ShowBitmap();
+		}
+		
 		// 一般殭屍走路換吃東西的動畫，碰到車掉頭
 		if ((!flag_zom_touch_plant[0]) && (!_flag_car_4[0]) && hit_count_normal[0] < 7) {
 			zombie[0].ShowBitmap();
