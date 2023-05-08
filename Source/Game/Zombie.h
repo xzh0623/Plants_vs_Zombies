@@ -15,13 +15,13 @@ namespace game_framework {
 				_flag_car_3[i] = false;
 				_flag_car_4[i] = false;
 			}
+			for (int j = 0; j < 10; j++)
+			{
+				hit_count_normal[j] = 0;
+				hit_count_bucket[j] = 0;
+				hit_count_tri[j] = 0;
+			}
 			ZombieGotBean1 = false;
-			hit_count_normal = 0;
-			hit_count_normal_1 = 0;
-			hit_count_normal_2 = 0;
-			hit_count_bucket = 0;
-			hit_count_tri = 0;
-			hit_count_tri_1 = 0;
 		}
 		~Zombie() {}
 		void OnInit();  								// 遊戲的初值及圖形設定
@@ -35,12 +35,11 @@ namespace game_framework {
 		bool _flag_car_2[10];
 		bool _flag_car_3[10];
 		bool _flag_car_4[10];
-		int hit_count_normal;
-		int hit_count_normal_1;
-		int hit_count_normal_2;
-		int hit_count_bucket;
-		int hit_count_tri;
-		int hit_count_tri_1;
+		
+		int hit_count_normal[10];
+		int hit_count_bucket[10];
+		int hit_count_tri[10];
+		
 
 		bool ZombieGotBean1;
 		CMovingBitmap zombie[50];

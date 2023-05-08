@@ -190,27 +190,27 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 					}
 					for (int k = 0; k < 50; k++) {
 						if (p[i].plantToZombie[k]) {
-							if ((k == 0) && (z.hit_count_normal >= 7)) {
+							if ((k == 0) && (z.hit_count_normal[0] >= 7)) {
 								p[i].plantToZombie[0] = false;
 								p[i].delay1 = 0;
 							}
-							if ((k == 15) && (z.hit_count_normal_1 >= 7)) {
+							if ((k == 15) && (z.hit_count_normal[1] >= 7)) {
 								p[i].plantToZombie[15] = false;
 								p[i].delay1 = 0;
 							}
-							if ((k == 20) && (z.hit_count_normal_2 >= 7)) {
+							if ((k == 20) && (z.hit_count_normal[2] >= 7)) {
 								p[i].plantToZombie[20] = false;
 								p[i].delay1 = 0;
 							}
-							if ((k == 5) && (z.hit_count_bucket >= 11)) {
+							if ((k == 5) && (z.hit_count_bucket[0] >= 11)) {
 								p[i].plantToZombie[5] = false;
 								p[i].delay1 = 0;
 							}
-							if ((k == 10) && (z.hit_count_tri >= 9)) {
+							if ((k == 10) && (z.hit_count_tri[0] >= 9)) {
 								p[i].plantToZombie[10] = false;
 								p[i].delay1 = 0;
 							}
-							if ((k == 25) && (z.hit_count_tri_1 >= 9)) {
+							if ((k == 25) && (z.hit_count_tri[1] >= 9)) {
 								p[i].plantToZombie[25] = false;
 								p[i].delay1 = 0;
 							}
@@ -424,12 +424,12 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 					if (CMovingBitmap::IsOverlap(p[i].plants[7], z.zombie[k]) && (z.zombie[k].GetTop() < p[i].plants[7].GetTop())&&(!p[i].bean1_isoverlap)) {
 						p[i].bean1_isoverlap = true;
 						p[i].bean1_show = false;
-						if ((!p[i].bean1_show) && k == 0) z.hit_count_normal += 1;
-						if ((!p[i].bean1_show) && k == 5) z.hit_count_bucket += 1;
-						if ((!p[i].bean1_show) && k == 10) z.hit_count_tri += 1;
-						if ((!p[i].bean1_show) && k == 15) z.hit_count_normal_1 += 1;
-						if ((!p[i].bean1_show) && k == 20) z.hit_count_normal_2 += 1;
-						if ((!p[i].bean1_show) && k == 25) z.hit_count_tri_1 += 1;
+						if ((!p[i].bean1_show) && k == 0) z.hit_count_normal[0] += 1;
+						if ((!p[i].bean1_show) && k == 5) z.hit_count_bucket[0] += 1;
+						if ((!p[i].bean1_show) && k == 10) z.hit_count_tri[0] += 1;
+						if ((!p[i].bean1_show) && k == 15) z.hit_count_normal[1] += 1;
+						if ((!p[i].bean1_show) && k == 20) z.hit_count_normal[2] += 1;
+						if ((!p[i].bean1_show) && k == 25) z.hit_count_tri[1] += 1;
 						z.zombiegotbean[0].SetTopLeft(z.zombie[k].GetLeft() + 10, z.zombie[k].GetTop() + 70);
 						z.ZombieGotBean1 = true;
 					}
@@ -454,12 +454,12 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 					if (CMovingBitmap::IsOverlap(p[i].plants[8], z.zombie[k]) && z.zombie[k].GetTop() < p[i].plants[8].GetTop() && (!p[i].bean2_isoverlap)) {
 						p[i].bean2_isoverlap = true;
 						p[i].bean2_show = false;
-						if ((!p[i].bean2_show) && k == 0) z.hit_count_normal += 2;
-						if ((!p[i].bean2_show) && k == 5) z.hit_count_bucket += 2;
-						if ((!p[i].bean2_show) && k == 10) z.hit_count_tri += 2;
-						if ((!p[i].bean2_show) && k == 15) z.hit_count_normal_1 += 2;
-						if ((!p[i].bean2_show) && k == 20) z.hit_count_normal_2 += 2;
-						if ((!p[i].bean2_show) && k == 25) z.hit_count_tri_1 += 2;
+						if ((!p[i].bean2_show) && k == 0) z.hit_count_normal[0] += 2;
+						if ((!p[i].bean2_show) && k == 5) z.hit_count_bucket[0] += 2;
+						if ((!p[i].bean2_show) && k == 10) z.hit_count_tri[0] += 2;
+						if ((!p[i].bean2_show) && k == 15) z.hit_count_normal[1] += 2;
+						if ((!p[i].bean2_show) && k == 20) z.hit_count_normal[2] += 2;
+						if ((!p[i].bean2_show) && k == 25) z.hit_count_tri[1] += 2;
 						z.zombiegotbean[0].SetTopLeft(z.zombie[k].GetLeft() + 10, z.zombie[k].GetTop() + 70);
 						z.ZombieGotBean1 = true;
 					}
@@ -614,7 +614,7 @@ void CGameStateRun::show_text_by_phase() {
 		//CTextDraw::Print(pDC, 700, 450, to_string(p[1].isflag));
 		CTextDraw::Print(pDC, 700, 500, to_string(p[4].delay1));
 
-		CTextDraw::Print(pDC, 0, 500, to_string(z.hit_count_normal));
+		CTextDraw::Print(pDC, 0, 500, to_string(z.hit_count_normal[0]));
 
 	}
 	CDDraw::ReleaseBackCDC();
@@ -723,9 +723,9 @@ void CGameStateRun::show_image_by_phase() {
 						p[i].plants[4].ShowBitmap();
 					}
 					if (p[i].vanish) {//不顯示//秒數也要暫停
-						//if ((z.hit_count_normal >= 333) || (z.hit_count_normal_1 >= 333) || (z.hit_count_normal_2 >= 333)) p[i].delay1 = 0;
-						//if (z.hit_count_bucket >= 333) p[i].delay1 = 0;
-						//if ((z.hit_count_tri >= 333) || (z.hit_count_tri_1 >= 333)) p[i].delay1 = 0;
+						//if ((z.hit_count_normal >= 333) || (z.hit_count_normal[1] >= 333) || (z.hit_count_normal[2] >= 333)) p[i].delay1 = 0;
+						//if (z.hit_count_bucket[0] >= 333) p[i].delay1 = 0;
+						//if ((z.hit_count_tri >= 333) || (z.hit_count_tri[1] >= 333)) p[i].delay1 = 0;
 			
 						if (p[i].delay1 > 1500) {
 							p[i].turnToplant[0] = false;
@@ -780,9 +780,9 @@ void CGameStateRun::show_image_by_phase() {
 							}
 						}
 						if (p[i].vanish) {//不顯示//秒數也要暫停
-							//if ((z.hit_count_normal >= 333)||(z.hit_count_normal_1 >= 333)||(z.hit_count_normal_2 >= 333)) p[i].delay1 = 0;
-							//if (z.hit_count_bucket >= 333) p[i].delay1 = 0;
-							//if ((z.hit_count_tri >= 333)||(z.hit_count_tri_1 >= 333)) p[i].delay1 = 0;
+							//if ((z.hit_count_normal >= 333)||(z.hit_count_normal[1] >= 333)||(z.hit_count_normal[2] >= 333)) p[i].delay1 = 0;
+							//if (z.hit_count_bucket[0] >= 333) p[i].delay1 = 0;
+							//if ((z.hit_count_tri >= 333)||(z.hit_count_tri[1] >= 333)) p[i].delay1 = 0;
 							
 							if (p[i].delay1 > 1500) {
 								p[i].turnToplant[x] = false;
