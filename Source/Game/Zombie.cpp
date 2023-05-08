@@ -221,7 +221,7 @@ namespace game_framework {
 		}
 		else if (flag_zom_touch_plant[0] && hit_count_normal[0] < 7)
 		{
-			zombie[1].SetTopLeft(zombie[0].GetLeft() - 80, zombie[0].GetTop());
+			zombie[1].SetTopLeft(zombie[0].GetLeft() - 75, zombie[0].GetTop());
 		}
 		else if (_flag_car_4[0] || hit_count_normal[0] >= 7)
 		{
@@ -242,7 +242,7 @@ namespace game_framework {
 		}
 		else if (flag_zom_touch_plant[3] && hit_count_normal[1] < 7)
 		{
-			zombie[17].SetTopLeft(zombie[15].GetLeft() - 80, zombie[15].GetTop());
+			zombie[17].SetTopLeft(zombie[15].GetLeft() - 75, zombie[15].GetTop());
 		}
 		else if (_flag_car_0[0] || hit_count_normal[1] >= 7)
 		{
@@ -262,7 +262,7 @@ namespace game_framework {
 		}
 		else if (flag_zom_touch_plant[4] && hit_count_normal[2] < 7)
 		{
-			zombie[22].SetTopLeft(zombie[20].GetLeft() - 80, zombie[20].GetTop());
+			zombie[22].SetTopLeft(zombie[20].GetLeft() - 75, zombie[20].GetTop());
 		}
 		else if (_flag_car_1[0] || hit_count_normal[2] >= 7)
 		{
@@ -283,7 +283,7 @@ namespace game_framework {
 		}
 		else if (flag_zom_touch_plant[1] && hit_count_bucket[0] < 11)
 		{
-			zombie[9].SetTopLeft(zombie[5].GetLeft() - 80, zombie[5].GetTop());
+			zombie[9].SetTopLeft(zombie[5].GetLeft() - 75, zombie[5].GetTop());
 		}
 		else if (_flag_car_3[0] || hit_count_bucket[0] >= 11)
 		{
@@ -303,7 +303,7 @@ namespace game_framework {
 		}
 		else if (flag_zom_touch_plant[2] && hit_count_tri[0] < 9)
 		{
-			zombie[11].SetTopLeft(zombie[10].GetLeft() - 80, zombie[10].GetTop());
+			zombie[11].SetTopLeft(zombie[10].GetLeft() - 75, zombie[10].GetTop());
 		}
 		else if (_flag_car_2[0] || hit_count_tri[0] >= 9)
 		{
@@ -322,7 +322,7 @@ namespace game_framework {
 		}
 		else if (flag_zom_touch_plant[5] &&  hit_count_tri[1] < 9 && !_flag_car_3[1])
 		{
-			zombie[28].SetTopLeft(zombie[25].GetLeft() - 80, zombie[25].GetTop());
+			zombie[28].SetTopLeft(zombie[25].GetLeft() - 75, zombie[25].GetTop());
 		}
 		else if (_flag_car_3[1] || hit_count_tri[1] >= 9)
 		{
