@@ -347,7 +347,7 @@ bool CGameStateRun::IsOverlap(bool flag_1,bool flag_2,int zombie_num,int i) {
 		{
 			if (p[i].turnToplant[j])
 			{
-				if (CMovingBitmap::IsOverlap(p[i].plants[j], z.zombie[zombie_num]) && z.zombie[zombie_num].GetTop() < p[i].plants[j].GetTop()&& (p[i].plants[j].GetTop()+ p[i].plants[j].GetHeight()) <= (z.zombie[zombie_num].GetTop() + z.zombie[zombie_num].GetHeight()))
+				if (CMovingBitmap::IsOverlap(p[i].plants[j], z.zombie[zombie_num]) && z.zombie[zombie_num].GetTop() < p[i].plants[j].GetTop()&&(p[i].plants[j].GetTop()+ p[i].plants[j].GetHeight()) <= (z.zombie[zombie_num].GetTop() + z.zombie[zombie_num].GetHeight())&& z.zombie[zombie_num].GetLeft()+10 > p[i].plants[j].GetLeft())
 				{
 					if(p[i].delay1<1000) p[i].delay1 = 1000;
 					p[i].plantToZombie[zombie_num] = true;
