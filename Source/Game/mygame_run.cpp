@@ -411,7 +411,7 @@ int CGameStateRun::Distance(CMovingBitmap bmp1, CMovingBitmap bmp2) {
 void CGameStateRun::SetBean(int i,int bean_index) {
 	if (bean_index == 1) {
 		for (int k = 0; k < 26; k = k + 5) {
-			if (p[i].bean1_delay >= 0) {
+			if ((p[i].bean1_delay >= 0) && (z.zombie[k].GetLeft()<=970)) {
 				if ((Distance(p[i].plants[1], z.zombie[k]) < 600) && (!p[i].bean1_show) && (p[i].bean1_delay>=800)) {
 					p[i].bean1_delay = 0;
 					p[i].bean1_show = true;
@@ -441,7 +441,7 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 	}
 	if (bean_index == 3) {
 		for (int k = 0; k < 26; k = k + 5) {
-			if (p[i].bean2_delay >= 0) {
+			if (p[i].bean2_delay >= 0 && (z.zombie[k].GetLeft() <= 970)) {
 				if ((Distance(p[i].plants[3], z.zombie[k]) < 600) && (!p[i].bean2_show) && (p[i].bean2_delay >= 800)) {
 					p[i].bean2_delay = 0;
 					p[i].bean2_show = true;
