@@ -9,13 +9,12 @@ namespace game_framework {
 			for (int i = 0; i < 10; i++)
 			{
 				flag_zom_touch_plant[i] = false;
+				_flag_car_0[i] = false;
+				_flag_car_1[i] = false;
+				_flag_car_2[i] = false;
+				_flag_car_3[i] = false;
+				_flag_car_4[i] = false;
 			}
-			_flag_car_0 = false;
-			_flag_car_1 = false;
-			_flag_car_2 = false;
-			_flag_car_3 = false;
-			_flag_car_3_1 = false;
-			_flag_car_4 = false;
 			ZombieGotBean1 = false;
 			hit_count_normal = 0;
 			hit_count_normal_1 = 0;
@@ -31,12 +30,11 @@ namespace game_framework {
 		void OnShow2();
 
 		bool flag_zom_touch_plant[10];
-		bool _flag_car_0;
-		bool _flag_car_1;
-		bool _flag_car_2;
-		bool _flag_car_3;
-		bool _flag_car_3_1;
-		bool _flag_car_4;
+		bool _flag_car_0[10];
+		bool _flag_car_1[10];
+		bool _flag_car_2[10];
+		bool _flag_car_3[10];
+		bool _flag_car_4[10];
 		int hit_count_normal;
 		int hit_count_normal_1;
 		int hit_count_normal_2;
