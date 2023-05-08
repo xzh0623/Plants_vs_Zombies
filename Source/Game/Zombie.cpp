@@ -215,17 +215,17 @@ namespace game_framework {
 			for (int j = 0; j < 5000; j++) {}
 		}
 		// 一般殭屍換狀態
-		if ((!_flag) && (!_flag_car_4) && hit_count_normal < 333)
+		if ((!flag_zom_touch_plant[0]) && (!_flag_car_4[0]) && hit_count_normal[0] < 7)
 		{
 			zombie[0].SetTopLeft(zombie[0].GetLeft() - 1, zombie[0].GetTop());
 		}
-		else if (_flag && hit_count_normal < 333)
+		else if (flag_zom_touch_plant[0] && hit_count_normal[0] < 7)
 		{
-			zombie[1].SetTopLeft(zombie[0].GetLeft() - 80, zombie[0].GetTop());
+			zombie[1].SetTopLeft(zombie[0].GetLeft() - 75, zombie[0].GetTop());
 		}
-		else if (_flag_car_4 || hit_count_normal >= 333)
+		else if (_flag_car_4[0] || hit_count_normal[0] >= 7)
 		{
-			if ((!_flag_car_4) && hit_count_normal >= 333)
+			if ((!_flag_car_4[0]) && hit_count_normal[0] >= 7)
 			{
 				zombie[13].SetTopLeft(zombie[0].GetLeft() - 25, zombie[0].GetTop());
 			}
@@ -236,17 +236,17 @@ namespace game_framework {
 
 
 		// 一般殭屍2換狀態
-		if ((!_flag3) && (!_flag_car_0) && hit_count_normal_1 < 333)
+		if ((!flag_zom_touch_plant[3]) && (!_flag_car_0[0]) && hit_count_normal[1] < 7)
 		{
 			zombie[15].SetTopLeft(zombie[15].GetLeft() - 1, zombie[15].GetTop());
 		}
-		else if (_flag3 && hit_count_normal_1 < 333)
+		else if (flag_zom_touch_plant[3] && hit_count_normal[1] < 7)
 		{
-			zombie[17].SetTopLeft(zombie[15].GetLeft() - 80, zombie[15].GetTop());
+			zombie[17].SetTopLeft(zombie[15].GetLeft() - 75, zombie[15].GetTop());
 		}
-		else if (_flag_car_0 || hit_count_normal_1 >= 333)
+		else if (_flag_car_0[0] || hit_count_normal[1] >= 7)
 		{
-			if ((!_flag_car_0) && hit_count_normal_1 >= 333)
+			if ((!_flag_car_0[0]) && hit_count_normal[1] >= 7)
 			{
 				zombie[19].SetTopLeft(zombie[15].GetLeft() - 25, zombie[15].GetTop());
 			}
@@ -256,17 +256,17 @@ namespace game_framework {
 		}
 
 		// 一般殭屍3換狀態
-		if ((!_flag4) && (!_flag_car_1) && hit_count_normal_2 < 333)
+		if ((!flag_zom_touch_plant[4]) && (!_flag_car_1[0]) && hit_count_normal[2] < 7)
 		{
 			zombie[20].SetTopLeft(zombie[20].GetLeft() - 1, zombie[20].GetTop());
 		}
-		else if (_flag4 && hit_count_normal_2 < 333)
+		else if (flag_zom_touch_plant[4] && hit_count_normal[2] < 7)
 		{
-			zombie[22].SetTopLeft(zombie[20].GetLeft() - 80, zombie[20].GetTop());
+			zombie[22].SetTopLeft(zombie[20].GetLeft() - 75, zombie[20].GetTop());
 		}
-		else if (_flag_car_1 || hit_count_normal_2 >= 333)
+		else if (_flag_car_1[0] || hit_count_normal[2] >= 7)
 		{
-			if ((!_flag_car_1) && hit_count_normal_2 >= 333)
+			if ((!_flag_car_1[0]) && hit_count_normal[2] >= 7)
 			{
 				zombie[24].SetTopLeft(zombie[20].GetLeft() - 25, zombie[20].GetTop());
 			}
@@ -277,17 +277,17 @@ namespace game_framework {
 
 
 		//鐵桶殭屍換狀態
-		if ((!_flag1) && (!_flag_car_3) && hit_count_bucket < 333)
+		if ((!flag_zom_touch_plant[1]) && (!_flag_car_3[0]) && hit_count_bucket[0] < 11)
 		{
 			zombie[5].SetTopLeft(zombie[5].GetLeft() - 1, zombie[5].GetTop());
 		}
-		else if (_flag1 && hit_count_bucket < 333)
+		else if (flag_zom_touch_plant[1] && hit_count_bucket[0] < 11)
 		{
-			zombie[9].SetTopLeft(zombie[5].GetLeft() - 80, zombie[5].GetTop());
+			zombie[9].SetTopLeft(zombie[5].GetLeft() - 75, zombie[5].GetTop());
 		}
-		else if (_flag_car_3 || hit_count_bucket >= 333)
+		else if (_flag_car_3[0] || hit_count_bucket[0] >= 11)
 		{
-			if ((!_flag_car_3) && hit_count_bucket >= 333)
+			if ((!_flag_car_3[0]) && hit_count_bucket[0] >= 11)
 			{
 				zombie[14].SetTopLeft(zombie[5].GetLeft() - 25, zombie[5].GetTop());
 			}
@@ -297,17 +297,17 @@ namespace game_framework {
 		}
 
 		//三角錐殭屍換狀態
-		if ((!_flag2) && (!_flag_car_2) && hit_count_tri < 333)
+		if ((!flag_zom_touch_plant[2]) && (!_flag_car_2[0]) && hit_count_tri[0] < 9)
 		{
 			zombie[10].SetTopLeft(zombie[10].GetLeft() - 1, zombie[10].GetTop());
 		}
-		else if (_flag2 && hit_count_tri < 333)
+		else if (flag_zom_touch_plant[2] && hit_count_tri[0] < 9)
 		{
-			zombie[11].SetTopLeft(zombie[10].GetLeft() - 80, zombie[10].GetTop());
+			zombie[11].SetTopLeft(zombie[10].GetLeft() - 75, zombie[10].GetTop());
 		}
-		else if (_flag_car_2 || hit_count_tri >= 333)
+		else if (_flag_car_2[0] || hit_count_tri[0] >= 9)
 		{
-			if ((!_flag_car_2) && hit_count_tri >= 333)
+			if ((!_flag_car_2[0]) && hit_count_tri[0] >= 9)
 			{
 				zombie[16].SetTopLeft(zombie[10].GetLeft() - 25, zombie[10].GetTop());
 			}
@@ -316,17 +316,17 @@ namespace game_framework {
 		}
 
 		//三角錐殭屍2換狀態
-		if ((!_flag5) && (!_flag_car_3_1) && hit_count_tri_1 < 333)
+		if ((!flag_zom_touch_plant[5]) && (!_flag_car_3[1]) && hit_count_tri[1] < 9)
 		{
 			zombie[25].SetTopLeft(zombie[25].GetLeft() - 1, zombie[25].GetTop());
 		}
-		else if (_flag5 &&  hit_count_tri_1 < 333)
+		else if (flag_zom_touch_plant[5] &&  hit_count_tri[1] < 9 && !_flag_car_3[1])
 		{
-			zombie[28].SetTopLeft(zombie[25].GetLeft() - 80, zombie[25].GetTop());
+			zombie[28].SetTopLeft(zombie[25].GetLeft() - 75, zombie[25].GetTop());
 		}
-		else if (_flag_car_3_1 || hit_count_tri_1 >= 333)
+		else if (_flag_car_3[1] || hit_count_tri[1] >= 9)
 		{
-			if ((!_flag_car_3_1) && hit_count_tri_1 >= 333)
+			if ((!_flag_car_3[1]) && hit_count_tri[1] >= 9)
 			{
 				zombie[31].SetTopLeft(zombie[25].GetLeft() - 25, zombie[25].GetTop());
 			}
@@ -349,16 +349,16 @@ namespace game_framework {
 	void Zombie::OnShow2() {
 
 		// 一般殭屍走路換吃東西的動畫，碰到車掉頭
-		if ((!_flag) && (!_flag_car_4) && hit_count_normal < 333) {
+		if ((!flag_zom_touch_plant[0]) && (!_flag_car_4[0]) && hit_count_normal[0] < 7) {
 			zombie[0].ShowBitmap();
 		}
-		else if (_flag && hit_count_normal < 333)
+		else if (flag_zom_touch_plant[0] && hit_count_normal[0] < 7)
 		{
 			zombie[1].ShowBitmap();
 		}
-		else if ((_flag_car_4 || hit_count_normal >= 333))
+		else if ((_flag_car_4[0] || hit_count_normal[0] >= 7))
 		{
-			if ((!_flag_car_4) && hit_count_normal >= 333)
+			if ((!_flag_car_4[0]) && hit_count_normal[0] >= 7)
 			{
 				zombie[13].ShowBitmap();
 			}
@@ -366,16 +366,16 @@ namespace game_framework {
 		}
 
 		// 一般殭屍2走路換吃東西的動畫，碰到車掉頭
-		if ((!_flag3) && (!_flag_car_0) && hit_count_normal_1 < 333) {
+		if ((!flag_zom_touch_plant[3]) && (!_flag_car_0[0]) && hit_count_normal[1] < 7) {
 			zombie[15].ShowBitmap();
 		}
-		else if (_flag3 && hit_count_normal_1 < 333)
+		else if (flag_zom_touch_plant[3] && hit_count_normal[1] < 7)
 		{
 			zombie[17].ShowBitmap();
 		}
-		else if ((_flag_car_0 || hit_count_normal_1 >= 333))
+		else if ((_flag_car_0[0] || hit_count_normal[1] >= 7))
 		{
-			if ((!_flag_car_0) && hit_count_normal_1 >= 333)
+			if ((!_flag_car_0[0]) && hit_count_normal[1] >= 7)
 			{
 				zombie[19].ShowBitmap();
 			}
@@ -383,16 +383,16 @@ namespace game_framework {
 		}
 
 		// 一般殭屍3走路換吃東西的動畫，碰到車掉頭
-		if ((!_flag4) && (!_flag_car_1) && hit_count_normal_2 < 333) {
+		if ((!flag_zom_touch_plant[4]) && (!_flag_car_1[0]) && hit_count_normal[2] < 7) {
 			zombie[20].ShowBitmap();
 		}
-		else if (_flag4 && hit_count_normal_2 < 333)
+		else if (flag_zom_touch_plant[4] && hit_count_normal[2] < 7)
 		{
 			zombie[22].ShowBitmap();
 		}
-		else if ((_flag_car_1 || hit_count_normal_2 >= 333))
+		else if ((_flag_car_1[0] || hit_count_normal[2] >= 7))
 		{
-			if ((!_flag_car_1) && hit_count_normal_2 >= 333)
+			if ((!_flag_car_1[0]) && hit_count_normal[2] >= 7)
 			{
 				zombie[24].ShowBitmap();
 			}
@@ -401,16 +401,16 @@ namespace game_framework {
 
 
 		// 鐵桶殭屍走路換吃東西的動畫，碰到車掉頭
-		if ((!_flag1) && (!_flag_car_3) && hit_count_bucket < 333) {
+		if ((!flag_zom_touch_plant[1]) && (!_flag_car_3[0]) && hit_count_bucket[0] < 11) {
 			zombie[5].ShowBitmap();
 		}
-		else if (_flag1 && hit_count_bucket < 333)
+		else if (flag_zom_touch_plant[1] && hit_count_bucket[0] < 11)
 		{
 			zombie[9].ShowBitmap();
 		}
-		else if (_flag_car_3 || hit_count_bucket >= 333)
+		else if (_flag_car_3[0] || hit_count_bucket[0] >= 11)
 		{
-			if ((!_flag_car_3) && hit_count_bucket >= 333)
+			if ((!_flag_car_3[0]) && hit_count_bucket[0] >= 11)
 			{
 				zombie[14].ShowBitmap();
 			}
@@ -419,16 +419,16 @@ namespace game_framework {
 
 
 		// 三角錐殭屍走路換吃東西的動畫，碰到車掉頭
-		if ((!_flag2) && (!_flag_car_2) && hit_count_tri < 333) {
+		if ((!flag_zom_touch_plant[2]) && (!_flag_car_2[0]) && hit_count_tri[0] < 9) {
 			zombie[10].ShowBitmap();
 		}
-		else if (_flag2 && hit_count_tri < 333)
+		else if (flag_zom_touch_plant[2] && hit_count_tri[0] < 9)
 		{
 			zombie[11].ShowBitmap();
 		}
-		else if (_flag_car_2 || hit_count_tri >= 333)
+		else if (_flag_car_2[0] || hit_count_tri[0] >= 9)
 		{
-			if ((!_flag_car_2) && hit_count_tri >= 333)
+			if ((!_flag_car_2[0]) && hit_count_tri[0] >= 9)
 			{
 				zombie[16].ShowBitmap();
 			}
@@ -436,16 +436,16 @@ namespace game_framework {
 		}
 
 		// 三角錐殭屍2走路換吃東西的動畫，碰到車掉頭
-		if ((!_flag5) && (!_flag_car_3_1) && hit_count_tri_1 < 333) {
+		if ((!flag_zom_touch_plant[5]) && (!_flag_car_3[1]) && hit_count_tri[1] < 9) {
 			zombie[25].ShowBitmap();
 		}
-		else if (_flag5 && hit_count_tri_1 < 333)
+		else if (flag_zom_touch_plant[5] && hit_count_tri[1] < 9 && !_flag_car_3[1])
 		{
 			zombie[28].ShowBitmap();
 		}
-		else if (_flag_car_3_1 || hit_count_tri_1 >= 333)
+		else if (_flag_car_3[1] || hit_count_tri[1] >= 9 )
 		{
-			if ((!_flag_car_3_1) && hit_count_tri_1 >= 333)
+			if ((!_flag_car_3[1]) && hit_count_tri[1] >= 9)
 			{
 				zombie[31].ShowBitmap();
 			}
