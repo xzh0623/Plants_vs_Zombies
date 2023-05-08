@@ -411,13 +411,13 @@ int CGameStateRun::Distance(CMovingBitmap bmp1, CMovingBitmap bmp2) {
 void CGameStateRun::SetBean(int i,int bean_index) {
 	if (bean_index == 1) {
 		for (int k = 0; k < 26; k = k + 5) {
-			if (p[i].bean1_delay >= 0) {
-				if ((Distance(p[i].plants[1], z.zombie[k]) < 600) && (!p[i].bean1_show) && (p[i].bean1_delay>=700)) {
+			if ((p[i].bean1_delay >= 0) && (z.zombie[k].GetLeft()<=970)) {
+				if ((Distance(p[i].plants[1], z.zombie[k]) < 600) && (!p[i].bean1_show) && (p[i].bean1_delay>=800)) {
 					p[i].bean1_delay = 0;
 					p[i].bean1_show = true;
 					p[i].bean1_isoverlap = false;
 				}
-				if (p[i].bean1_delay<700) {
+				if ((p[i].bean1_delay<800)) {
 					p[i].bean1_delay += 2;
 					p[i].plants[7].SetTopLeft(p[i].plants[1].GetLeft() + 40 + p[i].bean1_delay, p[i].plants[1].GetTop() + 2);
 					
@@ -441,13 +441,13 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 	}
 	if (bean_index == 3) {
 		for (int k = 0; k < 26; k = k + 5) {
-			if (p[i].bean2_delay >= 0) {
-				if ((Distance(p[i].plants[3], z.zombie[k]) < 600) && (!p[i].bean2_show) && (p[i].bean2_delay >= 700)) {
+			if (p[i].bean2_delay >= 0 && (z.zombie[k].GetLeft() <= 970)) {
+				if ((Distance(p[i].plants[3], z.zombie[k]) < 600) && (!p[i].bean2_show) && (p[i].bean2_delay >= 800)) {
 					p[i].bean2_delay = 0;
 					p[i].bean2_show = true;
 					p[i].bean2_isoverlap = false;
 				}
-				if (p[i].bean2_delay < 700) {
+				if (p[i].bean2_delay < 800) {
 					p[i].bean2_delay += 2;
 					p[i].plants[8].SetTopLeft(p[i].plants[3].GetLeft() + 40 + p[i].bean2_delay, p[i].plants[3].GetTop() + 2);
 					p[i].plants[9].SetTopLeft(p[i].plants[8].GetLeft() - 50, p[i].plants[8].GetTop());
@@ -601,14 +601,16 @@ void CGameStateRun::show_text_by_phase() {
 	if ((phase == 1)&&(background.GetLeft() == -9)) {
 		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
 		CTextDraw::Print(pDC, 700, 19, to_string(p[0].turnToplant[2]));
-		//CTextDraw::Print(pDC, 700, 50, to_string(z.flag_zom_touch_plant[0]));
+		CTextDraw::Print(pDC, 700, 50, to_string(p[0].plants[7].GetLeft()));
 		CTextDraw::Print(pDC, 700, 100, to_string(z.flag_zom_touch_plant[1]));
 		CTextDraw::Print(pDC, 700, 150, to_string(p[1].plantToZombie[0]));
 		CTextDraw::Print(pDC, 700, 200, to_string(p[0].vanish));
 		CTextDraw::Print(pDC, 700, 250, to_string(p[0].plantToZombie[0]));
 		CTextDraw::Print(pDC, 700, 300, to_string(p[0].delay1));
 		CTextDraw::Print(pDC, 700, 350, to_string(p[1].delay1));
-		//CTextDraw::Print(pDC, 700, 350, to_string(p[0].isflag));
+		
+		CTextDraw::Print(pDC, 400, 350, to_string(z.hit_count_bucket[0]));
+		
 		CTextDraw::Print(pDC, 700, 400, to_string(p[2].delay1));
 		CTextDraw::Print(pDC, 700, 450, to_string(p[3].delay1));
 		//CTextDraw::Print(pDC, 700, 450, to_string(p[1].isflag));
