@@ -529,6 +529,14 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			if (MouseIsOverlap(shovel[1])) {
 				shovel_flag = !shovel_flag;
 			}
+			for (int i = 0; i < 100; i++) {
+				for (int k = 0; k < 10; k++) {
+					if (MouseIsOverlap(shovel[1]) && MouseIsOverlap(p[i].plants[k])) {
+						p[i].vanish = true;
+						p[i].delay1 = 1501;
+					}
+				}
+			}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			for (int i = 0; i < 100; i++) {
 				if (MouseIsOverlap(p[i].plants[6]) && (p[i].IsShowBitmap)) {
