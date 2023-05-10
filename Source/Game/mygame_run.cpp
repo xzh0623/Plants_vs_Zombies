@@ -478,7 +478,10 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 		"resources/phase2_background_1.bmp",
 	});
 	background.SetTopLeft(0, 0);
-
+	shovel[0].LoadBitmapByString({ "resources/ShovelBack.bmp" });
+	shovel[0].SetTopLeft(304, 14);
+	shovel[1].LoadBitmapByString({ "resources/Shovel1.bmp" }, RGB(0, 0, 0));
+	shovel[1].SetTopLeft(304, 14);
 	//////////////////////////////////
 	c.OnInit();
 	z.OnInit();
@@ -522,6 +525,17 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			if (MouseIsOverlap(s.sun[0])) {
 				s.flag2 = TRUE;
 				p_c.score += 50;
+			}
+			if (MouseIsOverlap(shovel[1])) {
+				shovel_flag = !shovel_flag;
+			}
+			for (int i = 0; i < 100; i++) {
+				for (int k = 0; k < 10; k++) {
+					if (MouseIsOverlap(shovel[1]) && MouseIsOverlap(p[i].plants[k])) {
+						p[i].vanish = true;
+						p[i].delay1 = 1501;
+					}
+				}
 			}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			for (int i = 0; i < 100; i++) {
@@ -633,6 +647,11 @@ void CGameStateRun::show_image_by_phase() {
 		}
 		else if ((phase == 1) && (background.GetLeft() == -9)) {
 			Sleep(1);
+			for (int p = 0; p < 2; p++) shovel[p].ShowBitmap();
+			if (shovel_flag) shovel[1].SetTopLeft(mouse_x - 40, mouse_y - 10);
+			else {
+				shovel[1].SetTopLeft(304, 14);
+			}
 			p_c.OnShow();
 			s_c.OnShow();
 			c.OnShow();
