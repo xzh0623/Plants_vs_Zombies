@@ -22,6 +22,8 @@ namespace game_framework {
 				hit_count_tri[j] = 0;
 			}
 			wave2 = false;
+			win = false;
+			lose = false;
 			count_last_wave = 0;
 			ZombieGotBean1 = false;
 		}
@@ -38,6 +40,8 @@ namespace game_framework {
 		bool _flag_car_3[10];
 		bool _flag_car_4[10];
 		bool wave2;
+		bool win;
+		bool lose;
 		
 		int hit_count_normal[10];
 		int hit_count_bucket[10];

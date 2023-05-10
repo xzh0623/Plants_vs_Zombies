@@ -35,7 +35,7 @@ namespace game_framework {
 
 		//  一般殭屍2走路
 		zombie[15].LoadBitmapByString({ "resources/zom_0.bmp", "resources/zom_1.bmp", "resources/zom_2.bmp", "resources/zom_3.bmp", "resources/zom_4.bmp", "resources/zom_5.bmp", "resources/zom_6.bmp", "resources/zom_7.bmp", "resources/zom_8.bmp", "resources/zom_9.bmp", "resources/zom_10.bmp" ,"resources/zom_11.bmp","resources/zom_12.bmp","resources/zom_13.bmp","resources/zom_14.bmp","resources/zom_15.bmp","resources/zom_16.bmp","resources/zom_17.bmp","resources/zom_18.bmp","resources/zom_19.bmp","resources/zom_20.bmp","resources/zom_21.bmp" }, RGB(255, 255, 255));
-		zombie[15].SetTopLeft(1400, 30);
+		zombie[15].SetTopLeft(1200, 30);
 		zombie[15].SetAnimation(100, false);
 
 		//  一般殭屍3走路
@@ -94,7 +94,7 @@ namespace game_framework {
 
 		//  三角錐殭屍走路
 		zombie[10].LoadBitmapByString({ "resources/tri_zom_0.bmp", "resources/tri_zom_1.bmp", "resources/tri_zom_2.bmp", "resources/tri_zom_3.bmp", "resources/tri_zom_4.bmp", "resources/tri_zom_5.bmp", "resources/tri_zom_6.bmp", "resources/tri_zom_7.bmp", "resources/tri_zom_8.bmp", "resources/tri_zom_9.bmp", "resources/tri_zom_10.bmp", "resources/tri_zom_11.bmp", "resources/tri_zom_12.bmp", "resources/tri_zom_13.bmp", "resources/tri_zom_14.bmp", "resources/tri_zom_15.bmp", "resources/tri_zom_16.bmp", "resources/tri_zom_17.bmp", "resources/tri_zom_18.bmp", "resources/tri_zom_19.bmp", "resources/tri_zom_20.bmp" }, RGB(255, 255, 255));
-		zombie[10].SetTopLeft(2200, 230);
+		zombie[10].SetTopLeft(1300, 230);
 		zombie[10].SetAnimation(135, false);
 
 		//  三角錐殭屍2走路
@@ -378,6 +378,12 @@ namespace game_framework {
 		else
 		{
 			zombie[58].ShowBitmap();
+		}
+
+		// 遊戲獲勝
+		if (zombie[21].IsAnimationDone() && zombie[8].IsAnimationDone())
+		{
+			win = true;
 		}
 		
 		// 一般殭屍走路換吃東西的動畫，碰到車掉頭

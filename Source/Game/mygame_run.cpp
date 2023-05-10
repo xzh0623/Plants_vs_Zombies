@@ -335,6 +335,12 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		p_c.OnMove(1, 100);
 		p_c.OnMove(2, 50);
 		p_c.OnMove(3, 200);
+
+		if (z.win)
+		{
+			GotoGameState(GAME_STATE_INIT);
+		}
+
 	}
 
 }
