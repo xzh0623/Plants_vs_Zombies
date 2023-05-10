@@ -16,9 +16,13 @@ namespace game_framework {
 
 	void Zombie::OnInit()
 	{
+		//殭屍吃掉你的腦子了
+		zombie[56].LoadBitmapByString({ "resources/gameover.bmp" }, RGB(255, 255, 255));
+		zombie[56].SetTopLeft(425, 250);
+
 		//最後一波
 		zombie[57].LoadBitmapByString({ "resources/last_wave.bmp" }, RGB(0, 0, 0));
-		zombie[57].SetTopLeft(425, 300);
+		zombie[57].SetTopLeft(425, 280);
 		
 		//殭屍進度條(空)
 		zombie[58].LoadBitmapByString({ "resources/FlagMeterEmpty.bmp"}, RGB(255, 255, 255));
@@ -340,10 +344,8 @@ namespace game_framework {
 		{
 			if ((!flag_zom_touch_plant[6]) && (!_flag_car_4[1]) && hit_count_bucket[1] < 11)
 			{
-				
-				if (zombie[30].GetLeft() > 80) zombie[30].SetTopLeft(zombie[30].GetLeft() - 10, zombie[30].GetTop());
-				if (zombie[30].GetLeft() == 80 && zombie[30].GetTop() != 250) zombie[30].SetTopLeft(zombie[30].GetLeft(), zombie[30].GetTop() - 10);
-				//if (zombie[30].GetLeft() <= 80 && zombie[30].GetTop() == 300)zombie[30].SetTopLeft(zombie[30].GetLeft()-1, zombie[30].GetTop());
+				if (zombie[30].GetLeft() > 80) zombie[30].SetTopLeft(zombie[30].GetLeft() - 1, zombie[30].GetTop());
+				if (zombie[30].GetLeft() == 80 && zombie[30].GetTop() != 250) zombie[30].SetTopLeft(zombie[30].GetLeft(), zombie[30].GetTop() - 5);
 			}
 			else if (flag_zom_touch_plant[6] && hit_count_bucket[1] < 11)
 			{
@@ -435,9 +437,18 @@ namespace game_framework {
 		{
 			win = true;
 		}
+
+		// 遊戲敗北
 		for (int i = 0; i < 31; i+=5)
 		{
-			if (zombie[i].GetLeft() == 80 && zombie[i].GetTop() == 250) lose = true;
+			if (zombie[i].GetLeft() == 80 && zombie[i].GetTop() == 250)
+			{
+				count_gameover += 1;
+				zombie[56].ShowBitmap();
+				if(count_gameover > 90)lose = true;
+			}
+				
+				
 		}
 		
 

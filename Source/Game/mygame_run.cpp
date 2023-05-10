@@ -347,8 +347,9 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		p_c.OnMove(3, 200);
 
 		if (z.win) GotoGameState(GAME_STATE_INIT);
+			
 		if (z.lose) GotoGameState(GAME_STATE_INIT);
-
+		
 	}
 
 }
