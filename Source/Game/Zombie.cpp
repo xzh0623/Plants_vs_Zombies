@@ -18,7 +18,7 @@ namespace game_framework {
 	{
 		//殭屍吃掉你的腦子了
 		zombie[56].LoadBitmapByString({ "resources/gameover.bmp" }, RGB(255, 255, 255));
-		zombie[56].SetTopLeft(425, 250);
+		zombie[56].SetTopLeft(200, 10);
 
 		//最後一波
 		zombie[57].LoadBitmapByString({ "resources/last_wave.bmp" }, RGB(0, 0, 0));

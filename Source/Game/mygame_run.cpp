@@ -96,6 +96,7 @@ CGameStateRun::CGameStateRun(CGame *g) : CGameState(g)
 
 CGameStateRun::~CGameStateRun()
 {
+	delete[] p;
 }
 
 void CGameStateRun::OnBeginState()
@@ -192,28 +193,32 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 					}
 					for (int k = 0; k < 50; k++) {
 						if (p[i].plantToZombie[k]) {
-							if ((k == 0) && (z.hit_count_normal[0] >= 7)) {
+							if ((k == 0) && (z.zombie[0].GetTop() == 1500)) {
 								p[i].plantToZombie[0] = false;
 								p[i].delay1 = 0;
 							}
-							if ((k == 15) && (z.hit_count_normal[1] >= 7)) {
+							if ((k == 15) && (z.zombie[15].GetTop() == 1500)) {
 								p[i].plantToZombie[15] = false;
 								p[i].delay1 = 0;
 							}
-							if ((k == 20) && (z.hit_count_normal[2] >= 7)) {
+							if ((k == 20) && (z.zombie[20].GetTop() == 1500)) {
 								p[i].plantToZombie[20] = false;
 								p[i].delay1 = 0;
 							}
-							if ((k == 5) && (z.hit_count_bucket[0] >= 11)) {
+							if ((k == 5) && (z.zombie[5].GetTop() == 1500)) {
 								p[i].plantToZombie[5] = false;
 								p[i].delay1 = 0;
 							}
-							if ((k == 10) && (z.hit_count_tri[0] >= 9)) {
+							if ((k == 10) && (z.zombie[10].GetTop() == 1500)) {
 								p[i].plantToZombie[10] = false;
 								p[i].delay1 = 0;
 							}
-							if ((k == 25) && (z.hit_count_tri[1] >= 9)) {
+							if ((k == 25) && (z.zombie[25].GetTop() == 1500)) {
 								p[i].plantToZombie[25] = false;
+								p[i].delay1 = 0;
+							}
+							if ((k == 30) && (z.zombie[30].GetTop() == 1500)) {
+								p[i].plantToZombie[30] = false;
 								p[i].delay1 = 0;
 							}
 						}
@@ -427,7 +432,7 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 	if (bean_index == 1) {
 		for (int k = 0; k < 31; k = k + 5) {
 			if ((p[i].bean1_delay >= 0) && (z.zombie[k].GetLeft()<=970)) {
-				if ((Distance(p[i].plants[1], z.zombie[k]) < 600) && (!p[i].bean1_show) && (p[i].bean1_delay>=800)) {
+				if ((Distance(p[i].plants[1], z.zombie[k]) < 800) && (!p[i].bean1_show) && (p[i].bean1_delay>=800)) {
 					p[i].bean1_delay = 0;
 					p[i].bean1_show = true;
 					p[i].bean1_isoverlap = false;
@@ -458,7 +463,7 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 	if (bean_index == 3) {
 		for (int k = 0; k < 31; k = k + 5) {
 			if (p[i].bean2_delay >= 0 && (z.zombie[k].GetLeft() <= 970)) {
-				if ((Distance(p[i].plants[3], z.zombie[k]) < 600) && (!p[i].bean2_show) && (p[i].bean2_delay >= 800)) {
+				if ((Distance(p[i].plants[3], z.zombie[k]) < 800) && (!p[i].bean2_show) && (p[i].bean2_delay >= 800)) {
 					p[i].bean2_delay = 0;
 					p[i].bean2_show = true;
 					p[i].bean2_isoverlap = false;
@@ -777,6 +782,7 @@ void CGameStateRun::show_image_by_phase() {
 									if (k == 15) z.flag_zom_touch_plant[3] = !z.flag_zom_touch_plant[3];
 									if (k == 20) z.flag_zom_touch_plant[4] = !z.flag_zom_touch_plant[4];
 									if (k == 25) z.flag_zom_touch_plant[5] = !z.flag_zom_touch_plant[5];
+									if (k == 30) z.flag_zom_touch_plant[6] = !z.flag_zom_touch_plant[6];
 									p[i].plantToZombie[k] = false;
 								}
 							}
@@ -832,6 +838,7 @@ void CGameStateRun::show_image_by_phase() {
 										if (k == 15) z.flag_zom_touch_plant[3] = !z.flag_zom_touch_plant[3];
 										if (k == 20) z.flag_zom_touch_plant[4] = !z.flag_zom_touch_plant[4];
 										if (k == 25) z.flag_zom_touch_plant[5] = !z.flag_zom_touch_plant[5];
+										if (k == 30) z.flag_zom_touch_plant[6] = !z.flag_zom_touch_plant[6];
 										p[i].plantToZombie[k] = false;
 									}
 								}
