@@ -14,6 +14,17 @@
 
 
 namespace game_framework {
+	void PlantsCard::OnBeginState() {
+		for (int i = 0; i < 4; i++) {
+			count[i] = 0;
+			iscount[i] = false;
+			scorecost[i] = false;
+		}
+		score = 50;
+		for (int i = 0; i < 4; i++) {
+			plantscard[i].SetTopLeft(0, 65 * i);
+		}
+	}
 	void PlantsCard::OnInit() {
 		plantscard[0].LoadBitmapByString({ "card/SunFlower_1.bmp","card/SunFlower_2.bmp" }, RGB(182, 185, 184));
 		plantscard[1].LoadBitmapByString({ "card/PlantsCard_1.bmp","card/PlantsCard_2.bmp" }, RGB(182, 185, 184));

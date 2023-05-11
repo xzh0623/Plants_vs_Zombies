@@ -13,6 +13,26 @@
 #include "Plants.h"
 
 namespace game_framework {
+	void Plants::OnBeginState() {
+		twiceflag = false;
+		flag_sun = true;
+		IsShowBitmap = false;
+		SetPosDone = false;
+		vanish = false;
+		clean = false;
+		bean1_show = false;
+		bean1_isoverlap = false;
+
+		bean2_delay = 0;
+		bean2_show = false;
+		bean2_isoverlap = false;
+
+		isflag = 0;
+		delay1 = 0;
+		bean1_delay = 0;
+		for (int i = 0; i < 4; i++) turnToplant[i] = false;
+		for (int i = 0; i < 50; i++) plantToZombie[i] = false;
+	}
 	void Plants::OnInit() {
 
 

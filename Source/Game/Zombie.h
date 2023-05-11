@@ -21,10 +21,15 @@ namespace game_framework {
 				hit_count_bucket[j] = 0;
 				hit_count_tri[j] = 0;
 			}
+			wave2 = false;
+			win = false;
+			lose = false;
 			count_last_wave = 0;
+			count_gameover = 0;
 			ZombieGotBean1 = false;
 		}
 		~Zombie() {}
+		void OnBeginState();							// 設定每次重玩所需的變數
 		void OnInit();  								// 遊戲的初值及圖形設定
 		void OnMove();								// 移動
 		void OnShow1();								// 將圖形貼到畫面
@@ -36,7 +41,10 @@ namespace game_framework {
 		bool _flag_car_2[10];
 		bool _flag_car_3[10];
 		bool _flag_car_4[10];
-		
+		bool wave2;
+		bool win;
+		bool lose;
+		int count_gameover;
 		int hit_count_normal[10];
 		int hit_count_bucket[10];
 		int hit_count_tri[10];

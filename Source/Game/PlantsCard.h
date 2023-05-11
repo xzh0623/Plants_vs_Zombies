@@ -10,9 +10,10 @@ namespace game_framework {
 				iscount[i] = false;
 				scorecost[i] = false;
 			}
-			score = 500;
+			score = 50;
 		};
 		~PlantsCard(){}
+		void OnBeginState();							// 設定每次重玩所需的變數
 		void OnInit();  							// 遊戲的初值及圖形設定
 		void OnMove(int index, int scorelimit);								// 移動
 		void OnShow();								// 將圖形貼到畫面

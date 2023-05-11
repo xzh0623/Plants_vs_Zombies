@@ -13,6 +13,9 @@
 #include "Car.h"
 
 namespace game_framework {
+	void Car::OnBeginState() {
+
+	}
 	void Car::OnInit() {
 		// ²Ä¤@½ø¨®
 		car[0].LoadBitmapByString({ "resources/car.bmp" }, RGB(255, 255, 255));
@@ -40,6 +43,9 @@ namespace game_framework {
 		for (int i = 0; i < 5; i++)
 		{
 			car[i].ShowBitmap();
+			if (car[i].GetLeft() > 1000)car[i].SetTopLeft(2000, 2000);
 		}
+		
+		
 	}
 }
