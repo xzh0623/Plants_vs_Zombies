@@ -602,12 +602,13 @@ void CGameStateRun::show_text_by_phase() {
 	CDC *pDC = CDDraw::GetBackCDC();
 	CTextDraw::ChangeFontLog(pDC, 21, "微軟正黑體", RGB(0, 0, 0), 800);
 
-	CTextDraw::Print(pDC, 0, 0, to_string(mouse_x));
-	CTextDraw::Print(pDC, 50, 0, to_string(mouse_y));
+	//CTextDraw::Print(pDC, 0, 0, to_string(mouse_x));
+	//CTextDraw::Print(pDC, 50, 0, to_string(mouse_y));
 
-	CTextDraw::Print(pDC, 100, 0, to_string(background.GetLeft()));
+	//CTextDraw::Print(pDC, 100, 0, to_string(background.GetLeft()));
 	if ((phase == 1)&&(background.GetLeft() == -9)) {
 		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
+		/*
 		CTextDraw::Print(pDC, 700, 19, to_string(p[0].turnToplant[2]));
 		CTextDraw::Print(pDC, 700, 50, to_string(p[0].plants[7].GetLeft()));
 		CTextDraw::Print(pDC, 700, 100, to_string(z.flag_zom_touch_plant[1]));
@@ -621,7 +622,7 @@ void CGameStateRun::show_text_by_phase() {
 		CTextDraw::Print(pDC, 700, 450, to_string(p[3].delay1));
 		CTextDraw::Print(pDC, 700, 500, to_string(p[4].delay1));
 		CTextDraw::Print(pDC, 0, 500, to_string(z.hit_count_normal[0]));
-
+		*/
 	}
 	CDDraw::ReleaseBackCDC();
 }
