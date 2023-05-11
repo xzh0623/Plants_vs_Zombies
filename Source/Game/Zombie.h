@@ -6,26 +6,27 @@ namespace game_framework {
 	class Zombie {
 	public:
 		Zombie() {
-			_flag = false;
-			_flag1 = false;
-			_flag2 = false;
-			_flag3 = false;
-			_flag4 = false;
-			_flag5 = false;
-			_flag_car_0 = false;
-			_flag_car_0_1 = false;
-			_flag_car_1 = false;
-			_flag_car_2 = false;
-			_flag_car_3 = false;
-			_flag_car_0_1 = false;
-			_flag_car_4 = false;
+			for (int i = 0; i < 10; i++)
+			{
+				flag_zom_touch_plant[i] = false;
+				_flag_car_0[i] = false;
+				_flag_car_1[i] = false;
+				_flag_car_2[i] = false;
+				_flag_car_3[i] = false;
+				_flag_car_4[i] = false;
+			}
+			for (int j = 0; j < 10; j++)
+			{
+				hit_count_normal[j] = 0;
+				hit_count_bucket[j] = 0;
+				hit_count_tri[j] = 0;
+			}
+			wave2 = false;
+			win = false;
+			lose = false;
+			count_last_wave = 0;
+			count_gameover = 0;
 			ZombieGotBean1 = false;
-			hit_count_normal = 0;
-			hit_count_normal_1 = 0;
-			hit_count_normal_2 = 0;
-			hit_count_bucket = 0;
-			hit_count_tri = 0;
-			hit_count_tri_1 = 0;
 		}
 		~Zombie() {}
 		void OnInit();  								// 遊戲的初值及圖形設定
@@ -33,27 +34,22 @@ namespace game_framework {
 		void OnShow1();								// 將圖形貼到畫面
 		void OnShow2();
 
-		bool _flag;
-		bool _flag1;
-		bool _flag2;
-		bool _flag3;
-		bool _flag4;
-		bool _flag5;
-		bool _flag_car_0;
-		bool _flag_car_0_1;
-		bool _flag_car_1;
-		bool _flag_car_2;
-		bool _flag_car_3;
-		bool _flag_car_4;
-		int hit_count_normal;
-		int hit_count_normal_1;
-		int hit_count_normal_2;
-		int hit_count_bucket;
-		int hit_count_tri;
-		int hit_count_tri_1;
-
+		bool flag_zom_touch_plant[10];
+		bool _flag_car_0[10];
+		bool _flag_car_1[10];
+		bool _flag_car_2[10];
+		bool _flag_car_3[10];
+		bool _flag_car_4[10];
+		bool wave2;
+		bool win;
+		bool lose;
+		int count_gameover;
+		int hit_count_normal[10];
+		int hit_count_bucket[10];
+		int hit_count_tri[10];
+		int count_last_wave;
 		bool ZombieGotBean1;
-		CMovingBitmap zombie[100];
+		CMovingBitmap zombie[60];
 		CMovingBitmap zombiegotbean[2];
 	protected:
 	private:

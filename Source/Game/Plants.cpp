@@ -63,6 +63,7 @@ namespace game_framework {
 		character.SetTopLeft(150, 265);
 		character.SetAnimation(135, false);
 		*/
+		for (int i = 0; i < 50; i++) plantToZombie[i] = false;
 	}
 	void Plants::OnShow(int index) {
 
