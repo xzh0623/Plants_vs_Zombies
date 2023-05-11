@@ -13,7 +13,29 @@
 #include "Zombie.h"
 namespace game_framework {
 
-
+	void Zombie::OnBeginState() {
+		for (int i = 0; i < 10; i++)
+		{
+			flag_zom_touch_plant[i] = false;
+			_flag_car_0[i] = false;
+			_flag_car_1[i] = false;
+			_flag_car_2[i] = false;
+			_flag_car_3[i] = false;
+			_flag_car_4[i] = false;
+		}
+		for (int j = 0; j < 10; j++)
+		{
+			hit_count_normal[j] = 0;
+			hit_count_bucket[j] = 0;
+			hit_count_tri[j] = 0;
+		}
+		wave2 = false;
+		win = false;
+		lose = false;
+		count_last_wave = 0;
+		count_gameover = 0;
+		ZombieGotBean1 = false;
+	}
 	void Zombie::OnInit()
 	{
 		//殭屍吃掉你的腦子了

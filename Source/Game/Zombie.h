@@ -29,6 +29,7 @@ namespace game_framework {
 			ZombieGotBean1 = false;
 		}
 		~Zombie() {}
+		void OnBeginState();							// 設定每次重玩所需的變數
 		void OnInit();  								// 遊戲的初值及圖形設定
 		void OnMove();								// 移動
 		void OnShow1();								// 將圖形貼到畫面

@@ -13,6 +13,9 @@
 #include "SunCard.h"
 
 namespace game_framework {
+	void SunCard::OnBeginState() {
+
+	}
 	void SunCard::OnInit() {
 		suncard[0].LoadBitmapByString({ "resources/Sun.bmp" }, RGB(182, 185, 184));
 		suncard[0].SetTopLeft(112, 11);

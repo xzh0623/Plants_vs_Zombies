@@ -126,6 +126,7 @@ namespace game_framework {
 		int phase = 1;
 		int mouse_x, mouse_y;
 		CMovingBitmap background;
+		CMovingBitmap gametype[2];
 		CMovingBitmap shovel[2];
 		bool shovel_flag = false;
 		//bool validate_phase_1();
