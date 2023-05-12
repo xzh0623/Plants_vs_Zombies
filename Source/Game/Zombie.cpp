@@ -13,7 +13,29 @@
 #include "Zombie.h"
 namespace game_framework {
 
-
+	void Zombie::OnBeginState() {
+		for (int i = 0; i < 10; i++)
+		{
+			flag_zom_touch_plant[i] = false;
+			_flag_car_0[i] = false;
+			_flag_car_1[i] = false;
+			_flag_car_2[i] = false;
+			_flag_car_3[i] = false;
+			_flag_car_4[i] = false;
+		}
+		for (int j = 0; j < 10; j++)
+		{
+			hit_count_normal[j] = 0;
+			hit_count_bucket[j] = 0;
+			hit_count_tri[j] = 0;
+		}
+		wave2 = false;
+		win = false;
+		lose = false;
+		count_last_wave = 0;
+		count_gameover = 0;
+		ZombieGotBean1 = false;
+	}
 	void Zombie::OnInit()
 	{
 		//殭屍吃掉你的腦子了
@@ -34,7 +56,7 @@ namespace game_framework {
 
 		//  一般殭屍走路
 		zombie[0].LoadBitmapByString({ "resources/zom_0.bmp", "resources/zom_1.bmp", "resources/zom_2.bmp", "resources/zom_3.bmp", "resources/zom_4.bmp", "resources/zom_5.bmp", "resources/zom_6.bmp", "resources/zom_7.bmp", "resources/zom_8.bmp", "resources/zom_9.bmp", "resources/zom_10.bmp" ,"resources/zom_11.bmp","resources/zom_12.bmp","resources/zom_13.bmp","resources/zom_14.bmp","resources/zom_15.bmp","resources/zom_16.bmp","resources/zom_17.bmp","resources/zom_18.bmp","resources/zom_19.bmp","resources/zom_20.bmp","resources/zom_21.bmp" }, RGB(255, 255, 255));
-		zombie[0].SetTopLeft(1200, 420);
+		zombie[0].SetTopLeft(1700, 420);
 		zombie[0].SetAnimation(100, false);
 		//2200
 
@@ -45,7 +67,7 @@ namespace game_framework {
 
 		//  一般殭屍3走路
 		zombie[20].LoadBitmapByString({ "resources/zom_0.bmp", "resources/zom_1.bmp", "resources/zom_2.bmp", "resources/zom_3.bmp", "resources/zom_4.bmp", "resources/zom_5.bmp", "resources/zom_6.bmp", "resources/zom_7.bmp", "resources/zom_8.bmp", "resources/zom_9.bmp", "resources/zom_10.bmp" ,"resources/zom_11.bmp","resources/zom_12.bmp","resources/zom_13.bmp","resources/zom_14.bmp","resources/zom_15.bmp","resources/zom_16.bmp","resources/zom_17.bmp","resources/zom_18.bmp","resources/zom_19.bmp","resources/zom_20.bmp","resources/zom_21.bmp" }, RGB(255, 255, 255));
-		zombie[20].SetTopLeft(1300, 120);
+		zombie[20].SetTopLeft(1800, 120);
 		zombie[20].SetAnimation(100, false);
 		//2300
 
@@ -91,7 +113,7 @@ namespace game_framework {
 
 		//  鐵桶殭屍走路
 		zombie[5].LoadBitmapByString({ "resources/bucket_zom_0.bmp", "resources/bucket_zom_1.bmp", "resources/bucket_zom_2.bmp", "resources/bucket_zom_3.bmp", "resources/bucket_zom_4.bmp", "resources/bucket_zom_5.bmp", "resources/bucket_zom_6.bmp", "resources/bucket_zom_7.bmp", "resources/bucket_zom_8.bmp", "resources/bucket_zom_9.bmp", "resources/bucket_zom_10.bmp", "resources/bucket_zom_11.bmp", "resources/bucket_zom_12.bmp", "resources/bucket_zom_13.bmp", "resources/bucket_zom_14.bmp" }, RGB(255, 255, 255));
-		zombie[5].SetTopLeft(1000, 320);
+		zombie[5].SetTopLeft(1500, 320);
 		zombie[5].SetAnimation(100, false);
 		//2000
 
@@ -115,7 +137,7 @@ namespace game_framework {
 
 		//  三角錐殭屍2走路
 		zombie[25].LoadBitmapByString({ "resources/tri_zom_0.bmp", "resources/tri_zom_1.bmp", "resources/tri_zom_2.bmp", "resources/tri_zom_3.bmp", "resources/tri_zom_4.bmp", "resources/tri_zom_5.bmp", "resources/tri_zom_6.bmp", "resources/tri_zom_7.bmp", "resources/tri_zom_8.bmp", "resources/tri_zom_9.bmp", "resources/tri_zom_10.bmp", "resources/tri_zom_11.bmp", "resources/tri_zom_12.bmp", "resources/tri_zom_13.bmp", "resources/tri_zom_14.bmp", "resources/tri_zom_15.bmp", "resources/tri_zom_16.bmp", "resources/tri_zom_17.bmp", "resources/tri_zom_18.bmp", "resources/tri_zom_19.bmp", "resources/tri_zom_20.bmp" }, RGB(255, 255, 255));
-		zombie[25].SetTopLeft(1400, 320);
+		zombie[25].SetTopLeft(1900, 320);
 		zombie[25].SetAnimation(135, false);
 		//2400
 
@@ -373,7 +395,7 @@ namespace game_framework {
 			}
 			else if (flag_zom_touch_plant[2] && hit_count_tri[0] < 9)
 			{
-				zombie[11].SetTopLeft(zombie[10].GetLeft() - 75, zombie[10].GetTop());
+				zombie[11].SetTopLeft(zombie[10].GetLeft() - 80, zombie[10].GetTop());
 			}
 			else if (_flag_car_2[0] || hit_count_tri[0] >= 9)
 			{
@@ -393,7 +415,7 @@ namespace game_framework {
 		}
 		else if (flag_zom_touch_plant[5] &&  hit_count_tri[1] < 9 && !_flag_car_3[1])
 		{
-			zombie[28].SetTopLeft(zombie[25].GetLeft() - 75, zombie[25].GetTop());
+			zombie[28].SetTopLeft(zombie[25].GetLeft() - 80, zombie[25].GetTop());
 		}
 		else if (_flag_car_3[1] || hit_count_tri[1] >= 9)
 		{

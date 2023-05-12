@@ -24,6 +24,7 @@ namespace game_framework {
 			for (int i = 0; i < 4; i++) turnToplant[i] = false;
 		};
 		~Plants(){}
+		void OnBeginState();							// 設定每次重玩所需的變數
 		void OnInit();
 		void OnShow(int index);
 		//void OnLButtonDown();

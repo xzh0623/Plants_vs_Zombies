@@ -8,6 +8,7 @@ namespace game_framework {
 		
 		};
 		~SunCard() {}
+		void OnBeginState();							// 設定每次重玩所需的變數
 		void OnInit();
 		void OnShow();
 		CMovingBitmap suncard[1];

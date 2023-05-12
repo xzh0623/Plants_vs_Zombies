@@ -14,6 +14,17 @@ using namespace game_framework;
 
 CGameStateInit::CGameStateInit(CGame *g) : CGameState(g)
 {
+	phase = 1;
+	help_show = false;
+	option_show = false;
+	picture_show = false;
+	plant_picture_show = false;
+	zombie_picture_show = false;
+	level_show = false;
+	for (int i = 0; i < 10; i++) {
+		plantIntro[i] = false;
+		zombieIntro[i] = false;
+	}
 }
 void CGameStateInit::OnMove()							// 移動遊戲元素
 {
@@ -152,10 +163,6 @@ void CGameStateInit::OnInit()
 	zombie_intro[6].SetTopLeft(450, 113);
 	zombie_intro[7].LoadBitmapByString({ "zombiecard/zombie4_1.bmp" }, RGB(128, 128, 128));
 	zombie_intro[7].SetTopLeft(449, 111);
-	for (int i = 0; i < 10; i++) {
-		plantIntro[i] = false;
-		zombieIntro[i] = false;
-	}
 }
 
 void CGameStateInit::OnBeginState()
@@ -181,7 +188,6 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 		else if (phase == 2) {
 			if ((MouseIsOverlap(one[0]))) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
 				GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
-				//phase += 1;
 			}
 			else if ((MouseIsOverlap(one[4]))) {
 				help_show = !help_show;
