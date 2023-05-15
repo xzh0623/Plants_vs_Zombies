@@ -417,7 +417,9 @@ namespace game_framework {
 		{
 			if ((!flag_zom_touch_plant[7]) && (!_flag_car_2[1]) && hit_count_flag[0] < 9)
 			{
-				zombie[35].SetTopLeft(zombie[35].GetLeft() - 1, zombie[35].GetTop());
+				if (zombie[35].GetLeft() > 100) zombie[35].SetTopLeft(zombie[35].GetLeft() - 1, zombie[35].GetTop());
+				if (zombie[35].GetLeft() == 100 && zombie[35].GetTop() != 250) zombie[35].SetTopLeft(zombie[35].GetLeft(), zombie[35].GetTop() + 5);
+				if (zombie[35].GetLeft() != 80 && zombie[35].GetTop() == 250) zombie[35].SetTopLeft(zombie[35].GetLeft()-5, zombie[35].GetTop());
 			}
 			else if (flag_zom_touch_plant[7] && hit_count_flag[0] < 9 && !_flag_car_2[1])
 			{
