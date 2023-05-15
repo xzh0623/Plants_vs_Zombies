@@ -20,6 +20,7 @@ namespace game_framework {
 				hit_count_normal[j] = 0;
 				hit_count_bucket[j] = 0;
 				hit_count_tri[j] = 0;
+				hit_count_flag[j] = 0;
 			}
 			wave2 = false;
 			wave3 = false;
@@ -52,6 +53,7 @@ namespace game_framework {
 		int hit_count_normal[10];
 		int hit_count_bucket[10];
 		int hit_count_tri[10];
+		int hit_count_flag[10];
 		int count_last_wave;
 		bool ZombieGotBean1;
 		CMovingBitmap zombie[60];
