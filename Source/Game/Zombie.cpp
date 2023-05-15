@@ -28,8 +28,11 @@ namespace game_framework {
 			hit_count_normal[j] = 0;
 			hit_count_bucket[j] = 0;
 			hit_count_tri[j] = 0;
+			hit_count_flag[j] = 0;
 		}
 		wave2 = false;
+		wave3 = false;
+		wave4 = false;
 		win = false;
 		lose = false;
 		count_last_wave = 0;
