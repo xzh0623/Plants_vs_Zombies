@@ -338,24 +338,28 @@ namespace game_framework {
 
 
 		//臟表鞮传篈
-		if ((!flag_zom_touch_plant[1]) && (!_flag_car_3[0]) && hit_count_bucket[0] < 11)
+		if (wave3)
 		{
-			zombie[5].SetTopLeft(zombie[5].GetLeft() - 1, zombie[5].GetTop());
-		}
-		else if (flag_zom_touch_plant[1] && hit_count_bucket[0] < 11)
-		{
-			zombie[9].SetTopLeft(zombie[5].GetLeft() - 75, zombie[5].GetTop());
-		}
-		else if (_flag_car_3[0] || hit_count_bucket[0] >= 11)
-		{
-			if ((!_flag_car_3[0]) && hit_count_bucket[0] >= 11)
+			if ((!flag_zom_touch_plant[1]) && (!_flag_car_3[0]) && hit_count_bucket[0] < 11)
 			{
-				zombie[14].SetTopLeft(zombie[5].GetLeft() - 25, zombie[5].GetTop());
+				zombie[5].SetTopLeft(zombie[5].GetLeft() - 1, zombie[5].GetTop());
 			}
-			zombie[7].SetTopLeft(zombie[5].GetLeft() + 20, zombie[5].GetTop() - 25);
+			else if (flag_zom_touch_plant[1] && hit_count_bucket[0] < 11)
+			{
+				zombie[9].SetTopLeft(zombie[5].GetLeft() - 75, zombie[5].GetTop());
+			}
+			else if (_flag_car_3[0] || hit_count_bucket[0] >= 11)
+			{
+				if ((!_flag_car_3[0]) && hit_count_bucket[0] >= 11)
+				{
+					zombie[14].SetTopLeft(zombie[5].GetLeft() - 25, zombie[5].GetTop());
+				}
+				zombie[7].SetTopLeft(zombie[5].GetLeft() + 20, zombie[5].GetTop() - 25);
 
-			if (zombie[7].IsAnimationDone())zombie[5].SetTopLeft(1500, 1500);
+				if (zombie[7].IsAnimationDone())zombie[5].SetTopLeft(1500, 1500);
+			}
 		}
+		
 
 		//臟表鞮2传篈
 		if (wave2)
@@ -405,24 +409,28 @@ namespace game_framework {
 		}
 		
 		//à繞鞮2传篈
-		if ((!flag_zom_touch_plant[5]) && (!_flag_car_3[1]) && hit_count_tri[1] < 9)
+		if (wave3)
 		{
-			zombie[25].SetTopLeft(zombie[25].GetLeft() - 1, zombie[25].GetTop());
-		}
-		else if (flag_zom_touch_plant[5] &&  hit_count_tri[1] < 9 && !_flag_car_3[1])
-		{
-			zombie[28].SetTopLeft(zombie[25].GetLeft() - 80, zombie[25].GetTop());
-		}
-		else if (_flag_car_3[1] || hit_count_tri[1] >= 9)
-		{
-			if ((!_flag_car_3[1]) && hit_count_tri[1] >= 9)
+			if ((!flag_zom_touch_plant[5]) && (!_flag_car_3[1]) && hit_count_tri[1] < 9)
 			{
-				zombie[31].SetTopLeft(zombie[25].GetLeft() - 25, zombie[25].GetTop());
+				zombie[25].SetTopLeft(zombie[25].GetLeft() - 1, zombie[25].GetTop());
 			}
-			zombie[29].SetTopLeft(zombie[25].GetLeft() + 20, zombie[25].GetTop() - 25);
+			else if (flag_zom_touch_plant[5] &&  hit_count_tri[1] < 9 && !_flag_car_3[1])
+			{
+				zombie[28].SetTopLeft(zombie[25].GetLeft() - 80, zombie[25].GetTop());
+			}
+			else if (_flag_car_3[1] || hit_count_tri[1] >= 9)
+			{
+				if ((!_flag_car_3[1]) && hit_count_tri[1] >= 9)
+				{
+					zombie[31].SetTopLeft(zombie[25].GetLeft() - 25, zombie[25].GetTop());
+				}
+				zombie[29].SetTopLeft(zombie[25].GetLeft() + 20, zombie[25].GetTop() - 25);
 
-			if (zombie[29].IsAnimationDone())zombie[25].SetTopLeft(1500, 1500);
+				if (zombie[29].IsAnimationDone())zombie[25].SetTopLeft(1500, 1500);
+			}
 		}
+		
 	}
 
 	void Zombie::OnShow1() {
@@ -438,7 +446,7 @@ namespace game_framework {
 	void Zombie::OnShow2() {
 		
 		//秈兵ち传礶い丁陪ボ程猧
-		if (zombie[6].IsAnimationDone() && zombie[23].IsAnimationDone() && zombie[7].IsAnimationDone() && zombie[29].IsAnimationDone())
+		if (zombie[6].IsAnimationDone() && zombie[23].IsAnimationDone())
 		{
 			count_last_wave += 1;
 			//程猧
@@ -450,6 +458,12 @@ namespace game_framework {
 			{
 				zombie[59].SetFrameIndexOfBitmap(2);
 				wave3 = true;
+			}
+
+			if (zombie[7].IsAnimationDone() && zombie[29].IsAnimationDone())
+			{
+				zombie[59].SetFrameIndexOfBitmap(3);
+				wave4 = true;
 			}
 		}
 		else
@@ -536,21 +550,26 @@ namespace game_framework {
 
 
 		// 臟表鞮ǐ隔传狥﹁笆礶窱ó奔繷
-		if ((!flag_zom_touch_plant[1]) && (!_flag_car_3[0]) && hit_count_bucket[0] < 11) {
-			zombie[5].ShowBitmap();
-		}
-		else if (flag_zom_touch_plant[1] && hit_count_bucket[0] < 11)
+		if (wave3)
 		{
-			zombie[9].ShowBitmap();
-		}
-		else if (_flag_car_3[0] || hit_count_bucket[0] >= 11)
-		{
-			if ((!_flag_car_3[0]) && hit_count_bucket[0] >= 11)
+			if ((!flag_zom_touch_plant[1]) && (!_flag_car_3[0]) && hit_count_bucket[0] < 11) 
 			{
-				zombie[14].ShowBitmap();
+				zombie[5].ShowBitmap();
 			}
-			zombie[7].ShowBitmap();
+			else if (flag_zom_touch_plant[1] && hit_count_bucket[0] < 11)
+			{
+				zombie[9].ShowBitmap();
+			}
+			else if (_flag_car_3[0] || hit_count_bucket[0] >= 11)
+			{
+				if ((!_flag_car_3[0]) && hit_count_bucket[0] >= 11)
+				{
+					zombie[14].ShowBitmap();
+				}
+				zombie[7].ShowBitmap();
+			}
 		}
+		
 
 		// 臟表鞮2ǐ隔传狥﹁笆礶窱ó奔繷
 		if (wave2)

@@ -23,6 +23,7 @@ namespace game_framework {
 			}
 			wave2 = false;
 			wave3 = false;
+			wave4 = false;
 			win = false;
 			lose = false;
 			count_last_wave = 0;
@@ -44,6 +45,7 @@ namespace game_framework {
 		bool _flag_car_4[10];
 		bool wave2;
 		bool wave3;
+		bool wave4;
 		bool win;
 		bool lose;
 		int count_gameover;
