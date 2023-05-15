@@ -45,14 +45,10 @@ namespace game_framework {
 		//最後一波
 		zombie[57].LoadBitmapByString({ "resources/last_wave.bmp" }, RGB(0, 0, 0));
 		zombie[57].SetTopLeft(425, 280);
-		
-		//殭屍進度條(空)
-		zombie[58].LoadBitmapByString({ "resources/FlagMeterEmpty.bmp"}, RGB(255, 255, 255));
-		zombie[58].SetTopLeft(500, 20);
-
-		//殭屍進度條(滿)
-		zombie[59].LoadBitmapByString({ "resources/FlagMeterFull.bmp"}, RGB(255, 255, 255));
-		zombie[59].SetTopLeft(500, 20);
+	
+		//殭屍進度條
+		zombie[59].LoadBitmapByString({ "resources/game_bar_0.bmp","resources/game_bar_1.bmp","resources/game_bar_2.bmp","resources/game_bar_3.bmp" }, RGB(128, 128, 128));
+		zombie[59].SetTopLeft(400, 10);
 
 		//  一般殭屍走路
 		zombie[0].LoadBitmapByString({ "resources/zom_0.bmp", "resources/zom_1.bmp", "resources/zom_2.bmp", "resources/zom_3.bmp", "resources/zom_4.bmp", "resources/zom_5.bmp", "resources/zom_6.bmp", "resources/zom_7.bmp", "resources/zom_8.bmp", "resources/zom_9.bmp", "resources/zom_10.bmp" ,"resources/zom_11.bmp","resources/zom_12.bmp","resources/zom_13.bmp","resources/zom_14.bmp","resources/zom_15.bmp","resources/zom_16.bmp","resources/zom_17.bmp","resources/zom_18.bmp","resources/zom_19.bmp","resources/zom_20.bmp","resources/zom_21.bmp" }, RGB(255, 255, 255));
@@ -445,19 +441,28 @@ namespace game_framework {
 		if (zombie[6].IsAnimationDone() && zombie[23].IsAnimationDone() && zombie[7].IsAnimationDone() && zombie[29].IsAnimationDone())
 		{
 			count_last_wave += 1;
-			if (count_last_wave < 30 || (count_last_wave > 60 && count_last_wave < 90) || (count_last_wave > 120 && count_last_wave < 150)) zombie[57].ShowBitmap();
-			zombie[59].ShowBitmap();
+			//最後一波
+			//if (count_last_wave < 30 || (count_last_wave > 60 && count_last_wave < 90) || (count_last_wave > 120 && count_last_wave < 150)) zombie[57].ShowBitmap();
+			zombie[59].SetFrameIndexOfBitmap(1);
 			wave2 = true;
+
+			if (zombie[21].IsAnimationDone() && zombie[8].IsAnimationDone() && zombie[34].IsAnimationDone())
+			{
+				zombie[59].SetFrameIndexOfBitmap(2);
+				wave3 = true;
+			}
 		}
 		else
 		{
-			zombie[58].ShowBitmap();
+			zombie[59].SetFrameIndexOfBitmap(0);
 		}
+		zombie[59].ShowBitmap();
+
 
 		// 遊戲獲勝
 		if (zombie[21].IsAnimationDone() && zombie[8].IsAnimationDone() && zombie[34].IsAnimationDone())
 		{
-			win = true;
+			//win = true;
 		}
 
 		// 遊戲敗北
