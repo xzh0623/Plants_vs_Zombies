@@ -14,17 +14,6 @@ using namespace game_framework;
 
 CGameStateInit::CGameStateInit(CGame *g) : CGameState(g)
 {
-	phase = 1;
-	help_show = false;
-	option_show = false;
-	picture_show = false;
-	plant_picture_show = false;
-	zombie_picture_show = false;
-	level_show = false;
-	for (int i = 0; i < 10; i++) {
-		plantIntro[i] = false;
-		zombieIntro[i] = false;
-	}
 }
 void CGameStateInit::OnMove()							// 移動遊戲元素
 {
@@ -58,7 +47,17 @@ void CGameStateInit::OnMove()							// 移動遊戲元素
 }
 void CGameStateInit::OnInit()
 {
-
+	phase = 1;
+	help_show = false;
+	option_show = false;
+	picture_show = false;
+	plant_picture_show = false;
+	zombie_picture_show = false;
+	level_show = false;
+	for (int i = 0; i < 10; i++) {
+		plantIntro[i] = false;
+		zombieIntro[i] = false;
+	}
 	background.LoadBitmapByString({ "resources/initialize_background.bmp" });
 	background.SetTopLeft(0, 0);
 	//載入遊戲背景

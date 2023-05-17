@@ -123,10 +123,10 @@ namespace game_framework {
 		void OnMove();									// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
-		int phase = 1;
+		int index = 0;
+		int phase=1;
 		int mouse_x, mouse_y;
 		CMovingBitmap background;
-		CMovingBitmap gametype[2];
 		CMovingBitmap shovel[2];
 		bool shovel_flag = false;
 		//bool validate_phase_1();
