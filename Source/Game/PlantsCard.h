@@ -17,7 +17,7 @@ namespace game_framework {
 		void OnInit();  							// 遊戲的初值及圖形設定
 		void OnMove(int index, int scorelimit);								// 移動
 		void OnShow1();
-		void OnShow2();								// 將圖形貼到畫面
+		void OnShow2(int n);								// 將圖形貼到畫面
 		void OnLButtonDown(int index, int scorelimit);
 		CMovingBitmap plantscard[4];
 		int count[4];

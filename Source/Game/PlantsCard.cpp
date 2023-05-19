@@ -63,8 +63,8 @@ namespace game_framework {
 		plantscard[1].SetTopLeft(0, 0);
 		plantscard[1].ShowBitmap();
 	}
-	void PlantsCard::OnShow2() {
-		for (int i = 0; i < 4; i++) {
+	void PlantsCard::OnShow2(int n) {
+		for (int i = 0; i < n; i++) {
 			plantscard[i].SetTopLeft(0, 65 * i);
 			plantscard[i].ShowBitmap();
 		}

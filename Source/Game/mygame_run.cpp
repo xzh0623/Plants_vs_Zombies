@@ -491,7 +491,8 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 {
 	//載入遊戲背景
 	if(game_phase==1) background.LoadBitmapByString({"resources/phase1_background.bmp"});
-	else if (game_phase==2) background.LoadBitmapByString({"resources/phase2_background_1.bmp"});
+	else if (game_phase <= 4) background.LoadBitmapByString({ "resources/phase2_background.bmp" });
+	else if (game_phase==5) background.LoadBitmapByString({"resources/phase3_background.bmp"});
 	background.SetTopLeft(0, 0);
 	shovel[0].LoadBitmapByString({ "resources/ShovelBack.bmp" });
 	shovel[0].SetTopLeft(304, 14);
@@ -564,7 +565,76 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			}
 		}
 	}
-	if (game_phase ==2) {
+	else if (game_phase == 2) {
+		if (nFlags == VK_LBUTTON) {
+			if (MouseIsOverlap(p_c.plantscard[0])) {
+				p_c.OnLButtonDown(0, 50);
+			}
+
+			if (MouseIsOverlap(p_c.plantscard[1])) {
+				p_c.OnLButtonDown(1, 100);
+			}
+			///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			for (int i = 0; i < 100; i++) {
+				if (MouseIsOverlap(p[i].plants[6]) && (p[i].IsShowBitmap)) {
+					p[i].flag_sun = TRUE;
+					p_c.score += 50;
+				}
+			}
+			for (int i = 0; i < 2; i++) {
+				if (p_c.scorecost[i]) {
+					p[index].turnToplant[i] = true;
+					if ((nFlags == VK_LBUTTON) && ((MouseIsOverlap(p_c.plantscard[i])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 74) && ((mouse_y) <= 564)))) {
+						p[index].isflag += 1;
+						if (p[index].isflag == 2) {
+							p[index].twiceflag = true;
+							p[index].isflag = 0;
+							p_c.scorecost[i] = false;
+
+						}
+					}
+				}
+			}
+			///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		}
+	}
+	else if (game_phase == 3) {
+		if (nFlags == VK_LBUTTON) {
+			if (MouseIsOverlap(p_c.plantscard[0])) {
+				p_c.OnLButtonDown(0, 50);
+			}
+
+			if (MouseIsOverlap(p_c.plantscard[1])) {
+				p_c.OnLButtonDown(1, 100);
+			}
+			if (MouseIsOverlap(p_c.plantscard[2])) {
+				p_c.OnLButtonDown(2, 50);
+			}
+			///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			for (int i = 0; i < 100; i++) {
+				if (MouseIsOverlap(p[i].plants[6]) && (p[i].IsShowBitmap)) {
+					p[i].flag_sun = TRUE;
+					p_c.score += 50;
+				}
+			}
+			for (int i = 0; i < 3; i++) {
+				if (p_c.scorecost[i]) {
+					p[index].turnToplant[i] = true;
+					if ((nFlags == VK_LBUTTON) && ((MouseIsOverlap(p_c.plantscard[i])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 74) && ((mouse_y) <= 564)))) {
+						p[index].isflag += 1;
+						if (p[index].isflag == 2) {
+							p[index].twiceflag = true;
+							p[index].isflag = 0;
+							p_c.scorecost[i] = false;
+
+						}
+					}
+				}
+			}
+			///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		}
+	}
+	else{
 		if (nFlags == VK_LBUTTON) {
 			if (MouseIsOverlap(p_c.plantscard[0])) {
 				p_c.OnLButtonDown(0,50);
@@ -651,7 +721,7 @@ void CGameStateRun::show_text_by_phase() {
 	//CTextDraw::Print(pDC, 50, 0, to_string(mouse_y));
 
 	//CTextDraw::Print(pDC, 100, 0, to_string(background.GetLeft()));
-	if ((game_phase == 1)&&(background.GetLeft() == -9)) {
+	if (background.GetLeft() == -9) {
 		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
 		/*
 		CTextDraw::Print(pDC, 700, 19, to_string(p[0].turnToplant[2]));
@@ -676,7 +746,7 @@ void CGameStateRun::show_text_by_phase() {
 	
 void CGameStateRun::show_image_by_phase() {
 	if (game_phase <= 6) {
-		background.SetFrameIndexOfBitmap(game_phase - 1);
+		//background.SetFrameIndexOfBitmap(game_phase - 1);
 		background.ShowBitmap();
 		if (background.GetLeft() != -9) {
 			z.OnShow1();
@@ -833,7 +903,135 @@ void CGameStateRun::show_image_by_phase() {
 			}
 		}
 		else if ((game_phase == 2) && (background.GetLeft() == -9)) {
-			p_c.OnShow2();
+			p_c.OnShow2(2);
+			for (int k = 0; k < 2; k++) {
+				if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
+					if (p[index].turnToplant[0]) {
+						for (int j = 0; j < 45; j++) {
+							if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
+								if (map[j] == -1) {
+									p[index].plants[4].SetTopLeft(x[j], y[j]);
+									p[index].plants[5].SetTopLeft(p[index].plants[4].GetLeft(), p[index].plants[4].GetTop());
+									p[index].plants[6].SetTopLeft(p[index].plants[4].GetLeft() + 5, p[index].plants[4].GetTop() + 7);
+									map[j] = index;
+									p[index].SetPosDone = true;
+									index += 1;
+
+								}
+								else {
+									p[index].twiceflag = false;
+									p[index].isflag = 1;
+									p_c.scorecost[0] = true;
+									p[index].delay1 = 0;
+								}
+
+
+							}
+
+						}
+
+					}
+					for (int i = 1; i < 2; i++) {
+						if (p[index].turnToplant[i]) {
+							for (int j = 0; j < 45; j++) {
+								if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
+									if (map[j] == -1) {
+										p[index].plants[i].SetTopLeft(x[j], y[j]);
+										if (i != 2) p[index].plants[7].SetTopLeft(p[index].plants[1].GetLeft() + 60, p[index].plants[1].GetTop() + 2);//豆豆位置//顯示時間用殭屍判斷
+										map[j] = index;
+										p[index].SetPosDone = true;
+										index += 1;
+									}
+									else {
+										p[index].twiceflag = false;
+										p[index].isflag = 1;
+										p_c.scorecost[i] = true;
+										p[index].delay1 = 0;
+									}
+
+								}
+
+
+							}
+
+
+						}
+					}
+
+				}
+				if (p_c.scorecost[k] && (p[index].isflag == 1)) {
+					p[index].plants[k].SetTopLeft(mouse_x - 30, mouse_y - 30);
+					p[index].OnShow(k);
+				}
+
+			}
+		}
+		else if ((game_phase == 3) && (background.GetLeft() == -9)) {
+			p_c.OnShow2(3);
+			for (int k = 0; k < 3; k++) {
+				if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
+					if (p[index].turnToplant[0]) {
+						for (int j = 0; j < 45; j++) {
+							if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
+								if (map[j] == -1) {
+									p[index].plants[4].SetTopLeft(x[j], y[j]);
+									p[index].plants[5].SetTopLeft(p[index].plants[4].GetLeft(), p[index].plants[4].GetTop());
+									p[index].plants[6].SetTopLeft(p[index].plants[4].GetLeft() + 5, p[index].plants[4].GetTop() + 7);
+									map[j] = index;
+									p[index].SetPosDone = true;
+									index += 1;
+
+								}
+								else {
+									p[index].twiceflag = false;
+									p[index].isflag = 1;
+									p_c.scorecost[0] = true;
+									p[index].delay1 = 0;
+								}
+
+
+							}
+
+						}
+
+					}
+					for (int i = 1; i < 3; i++) {
+						if (p[index].turnToplant[i]) {
+							for (int j = 0; j < 45; j++) {
+								if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
+									if (map[j] == -1) {
+										p[index].plants[i].SetTopLeft(x[j], y[j]);
+										if (i != 2) p[index].plants[7].SetTopLeft(p[index].plants[1].GetLeft() + 60, p[index].plants[1].GetTop() + 2);//豆豆位置//顯示時間用殭屍判斷
+										map[j] = index;
+										p[index].SetPosDone = true;
+										index += 1;
+									}
+									else {
+										p[index].twiceflag = false;
+										p[index].isflag = 1;
+										p_c.scorecost[i] = true;
+										p[index].delay1 = 0;
+									}
+
+								}
+
+
+							}
+
+
+						}
+					}
+
+				}
+				if (p_c.scorecost[k] && (p[index].isflag == 1)) {
+					p[index].plants[k].SetTopLeft(mouse_x - 30, mouse_y - 30);
+					p[index].OnShow(k);
+				}
+
+			}
+		}
+		else if ((background.GetLeft() == -9)) {
+			p_c.OnShow2(4);
 /////////////////////////////////////////////////////////////////////////
 			for (int k = 0; k < 4; k++) {
 				if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
