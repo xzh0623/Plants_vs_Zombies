@@ -51,7 +51,7 @@ namespace game_framework {
 		}
 		if (flag2) {
 			delay += 1;
-			if (delay > 300) {
+			if (delay > 200) {
 				flag2 = false;
 				delay = 0;
 				sun[0].SetTopLeft(random(250, 900), 0);

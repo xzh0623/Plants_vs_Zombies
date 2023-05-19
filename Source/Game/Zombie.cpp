@@ -48,7 +48,7 @@ namespace game_framework {
 		//最後一波
 		zombie[57].LoadBitmapByString({ "resources/last_wave.bmp" }, RGB(0, 0, 0));
 		zombie[57].SetTopLeft(425, 280);
-	
+
 		//殭屍進度條
 		zombie[59].LoadBitmapByString({ "resources/game_bar_0.bmp","resources/game_bar_1.bmp","resources/game_bar_2.bmp","resources/game_bar_3.bmp" }, RGB(128, 128, 128));
 		zombie[59].SetTopLeft(400, 10);
@@ -573,6 +573,7 @@ namespace game_framework {
 				}
 				zombie[7].ShowBitmap();
 			}
+
 		}
 		
 
@@ -595,6 +596,7 @@ namespace game_framework {
 				}
 				zombie[34].ShowBitmap();
 			}
+	
 		}
 		
 
@@ -618,6 +620,7 @@ namespace game_framework {
 				}
 				zombie[8].ShowBitmap();
 			}
+	
 		}
 
 
@@ -638,6 +641,7 @@ namespace game_framework {
 			zombie[29].ShowBitmap();
 		}
 
+
 		// 旗幟殭屍走路換吃東西的動畫，碰到車掉頭
 		if (wave4)
 		{
@@ -656,6 +660,7 @@ namespace game_framework {
 				}
 				zombie[38].ShowBitmap();
 			}
+
 		}
 
 

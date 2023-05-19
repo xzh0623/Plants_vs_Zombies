@@ -30,10 +30,7 @@ namespace game_framework {
 		plantscard[1].LoadBitmapByString({ "card/PlantsCard_1.bmp","card/PlantsCard_2.bmp" }, RGB(182, 185, 184));
 		plantscard[2].LoadBitmapByString({ "card/WallNut_1.bmp","card/WallNut_2.bmp" }, RGB(182, 185, 184));
 		plantscard[3].LoadBitmapByString({ "card/Repeater_1.bmp","card/Repeater_2.bmp"}, RGB(182, 185, 184));
-
-		for (int i = 0; i < 4; i++) {
-			plantscard[i].SetTopLeft(0, 65 * i);
-		}
+		
 	}
 	void PlantsCard::OnMove(int index,int scorelimit) {
 		
@@ -62,8 +59,13 @@ namespace game_framework {
 		}
 		
 	}
-	void PlantsCard::OnShow() {
-		for (int i = 0; i < 4; i++) {
+	void PlantsCard::OnShow1() {
+		plantscard[1].SetTopLeft(0, 0);
+		plantscard[1].ShowBitmap();
+	}
+	void PlantsCard::OnShow2(int n) {
+		for (int i = 0; i < n; i++) {
+			plantscard[i].SetTopLeft(0, 65 * i);
 			plantscard[i].ShowBitmap();
 		}
 	}

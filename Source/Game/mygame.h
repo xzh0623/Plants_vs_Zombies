@@ -44,6 +44,8 @@
 #include "Plants.h"
 #include "PlantsCard.h"
 #include "SunCard.h"
+
+
 namespace game_framework {
 	/////////////////////////////////////////////////////////////////////////////
 	// Constants
@@ -54,12 +56,11 @@ namespace game_framework {
 		AUDIO_LAKE,				// 1
 		AUDIO_NTUT				// 2
 	};
-
+	//int game_phase;
 	/////////////////////////////////////////////////////////////////////////////
 	// 這個class為遊戲的遊戲開頭畫面物件
 	// 每個Member function的Implementation都要弄懂
 	/////////////////////////////////////////////////////////////////////////////
-
 	class CGameStateInit : public CGameState {
 	public:
 		CGameStateInit(CGame *g);
@@ -77,7 +78,7 @@ namespace game_framework {
 		CMovingBitmap background;
 		CMovingBitmap background1;
 		int mouse_x, mouse_y;
-		int phase = 1;
+		int menu_phase = 1;
 		bool help_show = false;
 		bool option_show = false;
 		bool picture_show = false;
@@ -101,7 +102,28 @@ namespace game_framework {
 	// 這個class為遊戲的遊戲執行物件，主要的遊戲程式都在這裡
 	// 每個Member function的Implementation都要弄懂
 	/////////////////////////////////////////////////////////////////////////////
+	class CGameStateChoose : public CGameState {
+	public:
+		CGameStateChoose(CGame *g);
+		void OnInit();  								// 遊戲的初值及圖形設定
+		void OnBeginState();							// 設定每次重玩所需的變數
+		void OnKeyUp(UINT, UINT, UINT); 				// 處理鍵盤Up的動作
+		void OnMouseMove(UINT nFlags, CPoint point);	// 處理滑鼠的動作
+		void OnLButtonDown(UINT nFlags, CPoint point);  // 處理滑鼠的動作
 
+	protected:
+		void OnMove();
+		void OnShow();									// 顯示這個狀態的遊戲畫面
+	private:
+		
+
+	};
+
+
+	/////////////////////////////////////////////////////////////////////////////
+	// 這個class為遊戲的遊戲執行物件，主要的遊戲程式都在這裡
+	// 每個Member function的Implementation都要弄懂
+	/////////////////////////////////////////////////////////////////////////////
 	class CGameStateRun : public CGameState {
 	public:
 		CGameStateRun(CGame *g);
@@ -123,10 +145,10 @@ namespace game_framework {
 		void OnMove();									// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
-		int phase = 1;
+		int game_phase=1;
+		int index = 0;
 		int mouse_x, mouse_y;
 		CMovingBitmap background;
-		CMovingBitmap gametype[2];
 		CMovingBitmap shovel[2];
 		bool shovel_flag = false;
 		//bool validate_phase_1();
