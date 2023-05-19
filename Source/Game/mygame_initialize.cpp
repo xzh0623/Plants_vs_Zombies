@@ -19,25 +19,25 @@ void CGameStateInit::OnMove()							// 移動遊戲元素
 {
 
 	//判斷第一關且滑鼠是否碰到圖片
-	if ((phase == 2) && (MouseIsOverlap(one[0]))) {
+	if ((menu_phase == 2) && (MouseIsOverlap(one[0]))) {
 		one[0].SetFrameIndexOfBitmap(1);
 	}
 	else {
 		one[0].SetFrameIndexOfBitmap(0);
 	}
-	if ((phase == 2) && (MouseIsOverlap(one[1]))) {
+	if ((menu_phase == 2) && (MouseIsOverlap(one[1]))) {
 		one[1].SetFrameIndexOfBitmap(1);
 	}
 	else {
 		one[1].SetFrameIndexOfBitmap(0);
 	}
-	if ((phase == 2) && (MouseIsOverlap(one[2]))) {
+	if ((menu_phase == 2) && (MouseIsOverlap(one[2]))) {
 		one[2].SetFrameIndexOfBitmap(1);
 	}
 	else {
 		one[2].SetFrameIndexOfBitmap(0);
 	}
-	if ((phase == 2) && (MouseIsOverlap(one[9]))) {
+	if ((menu_phase == 2) && (MouseIsOverlap(one[9]))) {
 		one[9].SetFrameIndexOfBitmap(1);
 	}
 	else {
@@ -47,7 +47,7 @@ void CGameStateInit::OnMove()							// 移動遊戲元素
 }
 void CGameStateInit::OnInit()
 {
-	phase = 1;
+	//menu_phase = 1;
 	help_show = false;
 	option_show = false;
 	picture_show = false;
@@ -183,9 +183,10 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 {
 
 	if (nFlags == VK_LBUTTON) {
-		if (phase==1) phase += 1;
-		else if (phase == 2) {
+		if (menu_phase==1) menu_phase += 1;
+		else if (menu_phase == 2) {
 			if ((MouseIsOverlap(one[0]))) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
+				//game_phase = 1;
 				GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
 			}
 			else if ((MouseIsOverlap(one[4]))) {
@@ -194,7 +195,7 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 
 			else if ((MouseIsOverlap(one[5])) || ((MouseIsOverlap(menu[3])) && (option_show))|| ((MouseIsOverlap(menu[4])) && (option_show))) {
 				option_show = false;
-				phase = 1;
+				menu_phase = 1;
 				help_show = false;
 				picture_show = false;
 				plant_picture_show = false;
@@ -268,8 +269,8 @@ void CGameStateInit::OnShow()
 {
 	
 
-	if (phase == 1) background.ShowBitmap();
-	if (phase == 2) {
+	if (menu_phase == 1) background.ShowBitmap();
+	if (menu_phase == 2) {
 		background1.ShowBitmap();
 		one[0].ShowBitmap();
 		one[1].ShowBitmap();

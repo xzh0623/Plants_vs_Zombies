@@ -173,7 +173,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 	}
 	if (background.GetLeft() == -9) s.OnMove();
 
-	if (phase == 1 && background.GetLeft() == -9)
+	if (game_phase == 1 && background.GetLeft() == -9)
 	{
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		for (int i = 0; i < 100; i++) {
@@ -490,8 +490,8 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 {
 	//載入遊戲背景
-	if(phase==1) background.LoadBitmapByString({"resources/phase1_background.bmp"});
-	else if (phase==2) background.LoadBitmapByString({"resources/phase2_background_1.bmp"});
+	if(game_phase==1) background.LoadBitmapByString({"resources/phase1_background.bmp"});
+	else if (game_phase==2) background.LoadBitmapByString({"resources/phase2_background_1.bmp"});
 	background.SetTopLeft(0, 0);
 	shovel[0].LoadBitmapByString({ "resources/ShovelBack.bmp" });
 	shovel[0].SetTopLeft(304, 14);
@@ -518,15 +518,15 @@ void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
-	
+	if (nChar == VK_RETURN) {
+		game_phase += 1;
+		GotoGameState(GAME_STATE_RUN);
+	}
 }
 
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
 {
-	if (nFlags == VK_LBUTTON) {
-		phase += 1;
-		GotoGameState(GAME_STATE_INIT);
-	}
+	
 	if (nFlags == VK_LBUTTON) {
 		if (MouseIsOverlap(s.sun[0])) {
 			s.flag2 = TRUE;
@@ -544,7 +544,7 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			}
 		}
 	}
-	if (phase == 1) {
+	if (game_phase == 1) {
 		if (nFlags == VK_LBUTTON) {
 			if (MouseIsOverlap(p_c.plantscard[1])) {
 				p_c.OnLButtonDown(1, 100);
@@ -564,7 +564,7 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			}
 		}
 	}
-	if (phase ==2) {
+	if (game_phase ==2) {
 		if (nFlags == VK_LBUTTON) {
 			if (MouseIsOverlap(p_c.plantscard[0])) {
 				p_c.OnLButtonDown(0,50);
@@ -651,7 +651,7 @@ void CGameStateRun::show_text_by_phase() {
 	//CTextDraw::Print(pDC, 50, 0, to_string(mouse_y));
 
 	//CTextDraw::Print(pDC, 100, 0, to_string(background.GetLeft()));
-	if ((phase == 1)&&(background.GetLeft() == -9)) {
+	if ((game_phase == 1)&&(background.GetLeft() == -9)) {
 		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
 		/*
 		CTextDraw::Print(pDC, 700, 19, to_string(p[0].turnToplant[2]));
@@ -675,8 +675,8 @@ void CGameStateRun::show_text_by_phase() {
 
 	
 void CGameStateRun::show_image_by_phase() {
-	if (phase <= 6) {
-		background.SetFrameIndexOfBitmap(phase - 1);
+	if (game_phase <= 6) {
+		background.SetFrameIndexOfBitmap(game_phase - 1);
 		background.ShowBitmap();
 		if (background.GetLeft() != -9) {
 			z.OnShow1();
@@ -803,7 +803,7 @@ void CGameStateRun::show_image_by_phase() {
 			}
 ///////////////////////////////////////////////////////////////////////////
 		}
-		if ((phase == 1) && (background.GetLeft() == -9)) {
+		if ((game_phase == 1) && (background.GetLeft() == -9)) {
 			p_c.OnShow1();
 			if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
 				if (p[index].turnToplant[1]) {
@@ -832,7 +832,7 @@ void CGameStateRun::show_image_by_phase() {
 				p[index].OnShow(1);
 			}
 		}
-		else if ((phase == 2) && (background.GetLeft() == -9)) {
+		else if ((game_phase == 2) && (background.GetLeft() == -9)) {
 			p_c.OnShow2();
 /////////////////////////////////////////////////////////////////////////
 			for (int k = 0; k < 4; k++) {
