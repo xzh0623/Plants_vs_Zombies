@@ -105,9 +105,11 @@ namespace game_framework {
 	class CGameStateChoose : public CGameState {
 	public:
 		CGameStateChoose(CGame *g);
+		~CGameStateChoose();
 		void OnInit();  								// 遊戲的初值及圖形設定
 		void OnBeginState();							// 設定每次重玩所需的變數
 		void OnKeyUp(UINT, UINT, UINT); 				// 處理鍵盤Up的動作
+		void OnKeyDown(UINT, UINT, UINT);
 		void OnMouseMove(UINT nFlags, CPoint point);	// 處理滑鼠的動作
 		void OnLButtonDown(UINT nFlags, CPoint point);  // 處理滑鼠的動作
 
@@ -145,7 +147,7 @@ namespace game_framework {
 		void OnMove();									// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
-		int game_phase=1;
+		//int game_phase=1;
 		int index = 0;
 		int mouse_x, mouse_y;
 		CMovingBitmap background;

@@ -186,7 +186,7 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 		if (menu_phase==1) menu_phase += 1;
 		else if (menu_phase == 2) {
 			if ((MouseIsOverlap(one[0]))) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
-				//game_phase = 1;
+				game_phase = 1;
 				GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
 			}
 			else if ((MouseIsOverlap(one[4]))) {

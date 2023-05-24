@@ -76,6 +76,127 @@ int y[45] = {
 87, 181, 296, 380, 483,
 87, 181, 296, 380, 483 };
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+int mouse1_x1[45] =
+{ 240,
+ 329,
+ 400,
+ 488,
+ 571,
+645,
+ 732,
+ 805,
+ 893 };
+int mouse1_x2[45] =
+{ 317,
+ 392,
+478,
+ 559,
+ 636,
+ 723,
+ 795,
+ 880,
+ 972 };
+int mouse1_y1[9] =
+{ 267,
+ 279,
+ 276,
+ 274,
+ 279,
+ 278,
+ 227,
+ 281,
+283 };
+int mouse1_y2[9] =
+{ 365,
+ 365,
+ 374,
+ 372,
+ 371,
+ 376,
+ 376,
+ 373,
+ 372 };
+int x_1[9] = {
+249,
+327,
+404,
+492,
+568,
+655,
+732,
+811,
+893 };
+int y_1[9] = {
+296,
+296, 
+296, 
+296,
+296,
+296, 
+296,
+296,
+ 296 };
+///////////////////////////////////
+int mouse2_x1[27] =
+{ 243,240,240,
+ 324,329,327,
+ 401,400,405,
+ 485,488,490,
+ 567,571,571,
+ 648,645,647,
+ 730,732,729,
+ 802,805,801,
+ 885,893,890 };
+int mouse2_x2[27] =
+{ 317,317,317,
+ 389,392,394,
+ 476,478,480,
+ 556,559,556,
+ 635,636,638,
+ 719,723,718,
+ 790,795,799,
+ 872,880,878,
+ 972,972,975, };
+int mouse2_y1[27] =
+{ 185,267,374,
+ 180,279,379,
+ 178,276,383,
+ 177,274,383,
+182,279,386,
+ 175,278,385,
+ 182,227,382,
+ 179,281,382,
+ 183,283,385 };
+int mouse2_y2[27] =
+{ 268,365,463,
+ 267,365,454,
+ 264,374,460,
+ 263,372,463,
+268,371,460,
+ 267,376,460,
+ 268,376,460,
+ 267,373,458,
+ 267,372,462 };
+int x_2[27] = {
+249,249,249,
+327,327,327,
+404,404,404,
+492,492,492,
+568,568,568,
+655,655,655,
+732,732,732,
+811,811,811,
+893,893,893 };
+int y_2[27] = {
+181,296,380,
+181, 296, 380,
+181, 296, 380,
+181, 296, 380,
+181, 296, 380,
+181, 296, 380,
+181, 296, 380,
+181, 296, 380,
+181, 296, 380 };
 /*
 void   Delay(int   time)//time*1000為秒數
 {
@@ -101,12 +222,15 @@ CGameStateRun::~CGameStateRun()
 
 void CGameStateRun::OnBeginState()
 {
-	/*index = 0;
-	//phase = 1;
+	index = 0;
 	shovel_flag = false;
 	backgroundmove = false;
 	flag_delay = false;
 	for (int i = 0; i < 45; i++) map[i] = -1;
+	for (int i = 0; i < 100; i++) {
+		p[i].OnInit();
+		p[i].OnBeginState();
+	}
 	z.OnBeginState();
 	z.OnInit();
 	c.OnBeginState();
@@ -124,7 +248,7 @@ void CGameStateRun::OnBeginState()
 	p_c.OnBeginState();
 	p_c.OnInit();
 	s_c.OnBeginState();
-	s_c.OnInit();*/
+	s_c.OnInit();
 }
 
 void CGameStateRun::OnMove()							// 移動遊戲元素
@@ -173,7 +297,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 	}
 	if (background.GetLeft() == -9) s.OnMove();
 
-	if (game_phase == 1 && background.GetLeft() == -9)
+	if (game_phase <= 5 && background.GetLeft() == -9)
 	{
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		for (int i = 0; i < 100; i++) {
@@ -354,6 +478,10 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		p_c.OnMove(3, 200);
 
 		/*if (z.win) {
+			game_phase += 1;
+			GotoGameState(GAME_STATE_CHOOSE);
+		}*/
+		/*if (z.win) {
 			Sleep(10);
 			z.win = false;
 			if (phase==2) GotoGameState(GAME_STATE_INIT);
@@ -490,9 +618,7 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 {
 	//載入遊戲背景
-	if(game_phase==1) background.LoadBitmapByString({"resources/phase1_background.bmp"});
-	else if (game_phase <= 4) background.LoadBitmapByString({ "resources/phase2_background.bmp" });
-	else if (game_phase==5) background.LoadBitmapByString({"resources/phase3_background.bmp"});
+	background.LoadBitmapByString({"resources/phase1_background.bmp","resources/phase2_background.bmp" ,"resources/phase3_background.bmp" });
 	background.SetTopLeft(0, 0);
 	shovel[0].LoadBitmapByString({ "resources/ShovelBack.bmp" });
 	shovel[0].SetTopLeft(304, 14);
@@ -501,7 +627,7 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 
 	//////////////////////////////////
 	c.OnInit();
-	z.OnInit();
+	//z.OnInit();
 	s.OnInit();
 	for(int i=0;i<100;i++) p[i].OnInit();
 	for (int i = 0; i < 45; i++) map[i] = -1;
@@ -514,15 +640,15 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 
 void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
-	
+	if (nChar == VK_RETURN) {
+		game_phase += 1;
+		GotoGameState(GAME_STATE_CHOOSE);
+	}
 }
 
 void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
-	if (nChar == VK_RETURN) {
-		game_phase += 1;
-		GotoGameState(GAME_STATE_RUN);
-	}
+	
 }
 
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
@@ -553,7 +679,7 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			/////////////////////////////////////////////////
 			if (p_c.scorecost[1]) {
 				p[index].turnToplant[1] = true;
-				if ((nFlags == VK_LBUTTON) && ((MouseIsOverlap(p_c.plantscard[1])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 74) && ((mouse_y) <= 564)))) {
+				if ((nFlags == VK_LBUTTON) && ((MouseIsOverlap(p_c.plantscard[1])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 275) && ((mouse_y) <= 386)))) {
 					p[index].isflag += 1;
 					if (p[index].isflag == 2) {
 						p[index].twiceflag = true;
@@ -584,7 +710,7 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			for (int i = 0; i < 2; i++) {
 				if (p_c.scorecost[i]) {
 					p[index].turnToplant[i] = true;
-					if ((nFlags == VK_LBUTTON) && ((MouseIsOverlap(p_c.plantscard[i])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 74) && ((mouse_y) <= 564)))) {
+					if ((nFlags == VK_LBUTTON) && ((MouseIsOverlap(p_c.plantscard[i])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 160) && ((mouse_y) <= 497)))) {
 						p[index].isflag += 1;
 						if (p[index].isflag == 2) {
 							p[index].twiceflag = true;
@@ -620,7 +746,7 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			for (int i = 0; i < 3; i++) {
 				if (p_c.scorecost[i]) {
 					p[index].turnToplant[i] = true;
-					if ((nFlags == VK_LBUTTON) && ((MouseIsOverlap(p_c.plantscard[i])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 74) && ((mouse_y) <= 564)))) {
+					if ((nFlags == VK_LBUTTON) && ((MouseIsOverlap(p_c.plantscard[i])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 160) && ((mouse_y) <= 497)))) {
 						p[index].isflag += 1;
 						if (p[index].isflag == 2) {
 							p[index].twiceflag = true;
@@ -717,15 +843,15 @@ void CGameStateRun::show_text_by_phase() {
 	CDC *pDC = CDDraw::GetBackCDC();
 	CTextDraw::ChangeFontLog(pDC, 21, "微軟正黑體", RGB(0, 0, 0), 800);
 
-	//CTextDraw::Print(pDC, 0, 0, to_string(mouse_x));
-	//CTextDraw::Print(pDC, 50, 0, to_string(mouse_y));
+	CTextDraw::Print(pDC, 0, 0, to_string(mouse_x));
+	CTextDraw::Print(pDC, 50, 0, to_string(mouse_y));
 
 	//CTextDraw::Print(pDC, 100, 0, to_string(background.GetLeft()));
 	if (background.GetLeft() == -9) {
 		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
-		/*
-		CTextDraw::Print(pDC, 700, 19, to_string(p[0].turnToplant[2]));
-		CTextDraw::Print(pDC, 700, 50, to_string(p[0].plants[7].GetLeft()));
+		
+		CTextDraw::Print(pDC, 700, 19, to_string(game_phase));
+		/*CTextDraw::Print(pDC, 700, 50, to_string(p[0].plants[7].GetLeft()));
 		CTextDraw::Print(pDC, 700, 100, to_string(z.flag_zom_touch_plant[1]));
 		CTextDraw::Print(pDC, 700, 150, to_string(p[1].plantToZombie[0]));
 		CTextDraw::Print(pDC, 700, 200, to_string(p[0].vanish));
@@ -746,7 +872,9 @@ void CGameStateRun::show_text_by_phase() {
 	
 void CGameStateRun::show_image_by_phase() {
 	if (game_phase <= 6) {
-		//background.SetFrameIndexOfBitmap(game_phase - 1);
+		if (game_phase == 1) background.SetFrameIndexOfBitmap(0);
+		else if (game_phase <= 4) background.SetFrameIndexOfBitmap(1);
+		else if (game_phase == 5) background.SetFrameIndexOfBitmap(2);
 		background.ShowBitmap();
 		if (background.GetLeft() != -9) {
 			z.OnShow1();
@@ -877,10 +1005,10 @@ void CGameStateRun::show_image_by_phase() {
 			p_c.OnShow1();
 			if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
 				if (p[index].turnToplant[1]) {
-					for (int j = 0; j < 45; j++) {
-						if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
+					for (int j = 0; j < 9; j++) {
+						if (((mouse_x) >= mouse1_x1[j]) && ((mouse_x) <= mouse1_x2[j]) && ((mouse_y) >= mouse1_y1[j]) && ((mouse_y) <= mouse1_y2[j])) {
 							if (map[j] == -1) {
-								p[index].plants[1].SetTopLeft(x[j], y[j]);
+								p[index].plants[1].SetTopLeft(x_1[j], y_1[j]);
 								map[j] = index;
 								p[index].SetPosDone = true;
 								index += 1;
@@ -907,10 +1035,10 @@ void CGameStateRun::show_image_by_phase() {
 			for (int k = 0; k < 2; k++) {
 				if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
 					if (p[index].turnToplant[0]) {
-						for (int j = 0; j < 45; j++) {
-							if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
+						for (int j = 0; j < 27; j++) {
+							if (((mouse_x) >= mouse2_x1[j]) && ((mouse_x) <= mouse2_x2[j]) && ((mouse_y) >= mouse2_y1[j]) && ((mouse_y) <= mouse2_y2[j])) {
 								if (map[j] == -1) {
-									p[index].plants[4].SetTopLeft(x[j], y[j]);
+									p[index].plants[4].SetTopLeft(x_2[j], y_2[j]);
 									p[index].plants[5].SetTopLeft(p[index].plants[4].GetLeft(), p[index].plants[4].GetTop());
 									p[index].plants[6].SetTopLeft(p[index].plants[4].GetLeft() + 5, p[index].plants[4].GetTop() + 7);
 									map[j] = index;
@@ -971,10 +1099,10 @@ void CGameStateRun::show_image_by_phase() {
 			for (int k = 0; k < 3; k++) {
 				if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
 					if (p[index].turnToplant[0]) {
-						for (int j = 0; j < 45; j++) {
-							if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
+						for (int j = 0; j < 27; j++) {
+							if (((mouse_x) >= mouse2_x1[j]) && ((mouse_x) <= mouse2_x2[j]) && ((mouse_y) >= mouse2_y1[j]) && ((mouse_y) <= mouse2_y2[j])) {
 								if (map[j] == -1) {
-									p[index].plants[4].SetTopLeft(x[j], y[j]);
+									p[index].plants[4].SetTopLeft(x_2[j], y_2[j]);
 									p[index].plants[5].SetTopLeft(p[index].plants[4].GetLeft(), p[index].plants[4].GetTop());
 									p[index].plants[6].SetTopLeft(p[index].plants[4].GetLeft() + 5, p[index].plants[4].GetTop() + 7);
 									map[j] = index;
