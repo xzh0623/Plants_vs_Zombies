@@ -27,6 +27,7 @@ namespace game_framework {
 			wave4 = false;
 			win = false;
 			lose = false;
+			level = 0;
 			count_last_wave = 0;
 			count_gameover = 0;
 			ZombieGotBean1 = false;
@@ -49,6 +50,7 @@ namespace game_framework {
 		bool wave4;
 		bool win;
 		bool lose;
+		int level;
 		int count_gameover;
 		int hit_count_normal[10];
 		int hit_count_bucket[10];

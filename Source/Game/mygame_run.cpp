@@ -253,7 +253,11 @@ void CGameStateRun::OnBeginState()
 
 void CGameStateRun::OnMove()							// 移動遊戲元素
 {
-
+	if (game_phase == 1) z.level = 1;
+	if (game_phase == 2) z.level = 2;
+	if (game_phase == 3) z.level = 3;
+	if (game_phase == 4) z.level = 4;
+	if (game_phase == 5) z.level = 5;
 
 	
 	//第二關遊戲背景移動
@@ -851,6 +855,7 @@ void CGameStateRun::show_text_by_phase() {
 		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
 		
 		CTextDraw::Print(pDC, 700, 19, to_string(game_phase));
+		CTextDraw::Print(pDC, 700, 30, to_string(z.level));
 		/*CTextDraw::Print(pDC, 700, 50, to_string(p[0].plants[7].GetLeft()));
 		CTextDraw::Print(pDC, 700, 100, to_string(z.flag_zom_touch_plant[1]));
 		CTextDraw::Print(pDC, 700, 150, to_string(p[1].plantToZombie[0]));
