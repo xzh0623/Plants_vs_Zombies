@@ -430,7 +430,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			}
 			if (z._flag_car_4[0]) c.car[4].SetTopLeft(c.car[4].GetLeft() + 20, c.car[4].GetTop());
 		}
-		else if (z.level == 1 || z.level == 2)
+		else if (z.level == 1 )
 		{
 			//一般殭屍與index 2 車相撞，車前進
 			if (!z.flag_zom_touch_plant[0] && !z._flag_car_2[0])
@@ -439,7 +439,15 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			}
 			if (z._flag_car_2[0]) c.car[2].SetTopLeft(c.car[2].GetLeft() + 20, c.car[2].GetTop());
 		}
-
+		else if (z.level == 2)
+		{
+			//一般殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[0] && !z._flag_car_2[0])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[2], z.zombie[0])) z._flag_car_2[0] = true;
+			}
+			if (z._flag_car_2[0]) c.car[2].SetTopLeft(c.car[2].GetLeft() + 5, c.car[2].GetTop());
+		}
 
 
 		
