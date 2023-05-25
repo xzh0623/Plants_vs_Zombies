@@ -430,11 +430,9 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			}
 			if (z._flag_car_4[0]) c.car[4].SetTopLeft(c.car[4].GetLeft() + 20, c.car[4].GetTop());
 		}
-
-
-		if (z.level == 1)
+		else if (z.level == 1 || z.level == 2)
 		{
-			//一般殭屍與index 4 車相撞，車前進
+			//一般殭屍與index 2 車相撞，車前進
 			if (!z.flag_zom_touch_plant[0] && !z._flag_car_2[0])
 			{
 				if (CMovingBitmap::IsOverlap(c.car[2], z.zombie[0])) z._flag_car_2[0] = true;
@@ -466,7 +464,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		}
 		if (z._flag_car_3[0]) c.car[3].SetTopLeft(c.car[3].GetLeft() + 20, c.car[3].GetTop());
 		
-//鐵桶殭屍與index 3 車相撞，車前進
+//鐵桶殭屍2與index 4 車相撞，車前進
 		if (!z.flag_zom_touch_plant[6] && !z._flag_car_4[1])
 		{
 			if (CMovingBitmap::IsOverlap(c.car[4], z.zombie[30])) z._flag_car_4[1] = true;
@@ -480,7 +478,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		}
 		if (z._flag_car_2[0]) c.car[2].SetTopLeft(c.car[2].GetLeft() + 20, c.car[2].GetTop());
 
-//三角錐殭屍與index 2 車相撞，車前進
+//三角錐殭屍2與index 3 車相撞，車前進
 		if (!z._flag_car_3[1])
 		{
 			if (CMovingBitmap::IsOverlap(c.car[3], z.zombie[25])) z._flag_car_3[1] = true;
@@ -873,8 +871,9 @@ void CGameStateRun::show_text_by_phase() {
 	if (background.GetLeft() == -9) {
 		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
 		
-		CTextDraw::Print(pDC, 700, 19, to_string(game_phase));
-		CTextDraw::Print(pDC, 700, 30, to_string(z.level));
+		CTextDraw::Print(pDC, 700, 20, to_string(game_phase));
+
+		CTextDraw::Print(pDC, 700, 50, to_string(z.wave4));
 		/*CTextDraw::Print(pDC, 700, 50, to_string(p[0].plants[7].GetLeft()));
 		CTextDraw::Print(pDC, 700, 100, to_string(z.flag_zom_touch_plant[1]));
 		CTextDraw::Print(pDC, 700, 150, to_string(p[1].plantToZombie[0]));
