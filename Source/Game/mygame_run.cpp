@@ -506,10 +506,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		p_c.OnMove(2, 50);
 		p_c.OnMove(3, 200);
 
-		/*if (z.win) {
-			game_phase += 1;
-			GotoGameState(GAME_STATE_CHOOSE);
-		}*/
+		
 		/*if (z.win) {
 			Sleep(10);
 			z.win = false;
@@ -669,10 +666,16 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 
 void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
-	if (nChar == VK_RETURN) {
-		game_phase += 1;
+	if (nChar == VK_RETURN && z.win1) {
+		game_phase = 2;
 		GotoGameState(GAME_STATE_CHOOSE);
 	}
+
+	if (nChar == VK_RETURN && z.win2) {
+		game_phase = 3;
+		GotoGameState(GAME_STATE_CHOOSE);
+	}
+
 }
 
 void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)

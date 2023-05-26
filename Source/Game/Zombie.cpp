@@ -482,7 +482,7 @@ namespace game_framework {
 				}
 			}
 		}
-		else if (!win2 &&level == 2)
+		else if (!win2 && level == 2)
 		{
 			// ¤@¯ëíL«Í´«ª¬ºA
 			if ((!flag_zom_touch_plant[0]) && (!_flag_car_2[0]) && hit_count_normal[0] < 2)
