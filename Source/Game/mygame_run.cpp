@@ -882,6 +882,10 @@ void CGameStateRun::show_text_by_phase() {
 		CTextDraw::Print(pDC, 700, 20, to_string(game_phase));
 
 		CTextDraw::Print(pDC, 700, 50, to_string(z.wave4));
+		
+		CTextDraw::Print(pDC, 600, 20, to_string(z.win1));
+		CTextDraw::Print(pDC, 600, 50, to_string(z.win2));
+		CTextDraw::Print(pDC, 600, 80, to_string(z.win5));
 		/*CTextDraw::Print(pDC, 700, 50, to_string(p[0].plants[7].GetLeft()));
 		CTextDraw::Print(pDC, 700, 100, to_string(z.flag_zom_touch_plant[1]));
 		CTextDraw::Print(pDC, 700, 150, to_string(p[1].plantToZombie[0]));

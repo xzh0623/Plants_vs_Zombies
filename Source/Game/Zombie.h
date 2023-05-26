@@ -25,8 +25,12 @@ namespace game_framework {
 			wave2 = false;
 			wave3 = false;
 			wave4 = false;
-			win = false;
-			lose = false;
+			win1 = false;
+			lose1 = false;
+			win2 = false;
+			lose2 = false;
+			win5 = false;
+			lose5 = false;
 			level = 0;
 			count_last_wave = 0;
 			count_gameover = 0;
@@ -48,8 +52,14 @@ namespace game_framework {
 		bool wave2;
 		bool wave3;
 		bool wave4;
-		bool win;
-		bool lose;
+
+		bool win1;
+		bool lose1;
+		bool win2;
+		bool lose2;
+		bool win5;
+		bool lose5;
+
 		int level;
 		int count_gameover;
 		int hit_count_normal[10];

@@ -33,8 +33,12 @@ namespace game_framework {
 		wave2 = false;
 		wave3 = false;
 		wave4 = false;
-		win = false;
-		lose = false;
+		win1 = false;
+		lose1 = false;
+		win2 = false;
+		lose2 = false;
+		win5 = false;
+		lose5 = false;
 		count_last_wave = 0;
 		count_gameover = 0;
 		ZombieGotBean1 = false;
@@ -431,7 +435,7 @@ namespace game_framework {
 			for (int j = 0; j < 5000; j++) {}
 		}
 
-		if (level == 1)
+		if (!win1 && level == 1)
 		{
 			// 一般殭屍換狀態
 			if ((!flag_zom_touch_plant[0]) && (!_flag_car_2[0]) && hit_count_normal[0] < 2)
@@ -478,7 +482,7 @@ namespace game_framework {
 				}
 			}
 		}
-		else if (level == 2)
+		else if (!win2 &&level == 2)
 		{
 			// 一般殭屍換狀態
 			if ((!flag_zom_touch_plant[0]) && (!_flag_car_2[0]) && hit_count_normal[0] < 2)
@@ -547,7 +551,7 @@ namespace game_framework {
 			}
 		}
 
-		else if (level == 5)
+		else if (!win5 && level == 5)
 		{
 			// 一般殭屍換狀態
 			if ((!flag_zom_touch_plant[0]) && (!_flag_car_4[0]) && hit_count_normal[0] < 7)
@@ -752,7 +756,7 @@ namespace game_framework {
 
 	void Zombie::OnShow2() {
 		
-		if (level == 1)
+		if (!win1 && level == 1)
 		{
 			if (zombie[41].IsAnimationDone())
 			{
@@ -771,10 +775,10 @@ namespace game_framework {
 			// 遊戲獲勝
 			if (zombie[43].IsAnimationDone())
 			{
+				win1 = true;
 				wave2 = false;
 				wave3 = false;
 				wave4 = false;
-				win = true;
 			}
 
 			// 遊戲敗北
@@ -784,7 +788,7 @@ namespace game_framework {
 				{
 					count_gameover += 1;
 					zombie[56].ShowBitmap();
-					if (count_gameover > 90)lose = true;
+					if (count_gameover > 90)lose1 = true;
 				}
 
 
@@ -828,7 +832,7 @@ namespace game_framework {
 
 			}
 		}
-		else if (level == 2)
+		else if (!win2 && level == 2)
 		{
 			if (zombie[46].IsAnimationDone() && zombie[51].IsAnimationDone())
 			{
@@ -847,7 +851,7 @@ namespace game_framework {
 			// 遊戲獲勝
 			if (zombie[48].IsAnimationDone())
 			{
-				win = true;
+				win2 = true;
 				wave2 = false;
 				wave3 = false;
 				wave4 = false;
@@ -860,7 +864,7 @@ namespace game_framework {
 				{
 					count_gameover += 1;
 					zombie[56].ShowBitmap();
-					if (count_gameover > 90)lose = true;
+					if (count_gameover > 90)lose2 = true;
 				}
 
 			}
@@ -922,7 +926,7 @@ namespace game_framework {
 			}
 		}
 
-		else if (level == 5)
+		else if (!win5 && level == 5)
 		{
 			//進度條切換，畫面中間顯示最後一波
 			if (zombie[6].IsAnimationDone() && zombie[23].IsAnimationDone())
@@ -954,7 +958,7 @@ namespace game_framework {
 			// 遊戲獲勝
 			if (zombie[38].IsAnimationDone())
 			{
-				win = true;
+				win5 = true;
 				wave2 = false;
 				wave3 = false;
 				wave4 = false;
@@ -967,7 +971,7 @@ namespace game_framework {
 				{
 					count_gameover += 1;
 					zombie[56].ShowBitmap();
-					if (count_gameover > 90)lose = true;
+					if (count_gameover > 90)lose5 = true;
 				}
 
 
