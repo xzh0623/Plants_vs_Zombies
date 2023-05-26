@@ -771,6 +771,9 @@ namespace game_framework {
 			// 遊戲獲勝
 			if (zombie[43].IsAnimationDone())
 			{
+				wave2 = false;
+				wave3 = false;
+				wave4 = false;
 				win = true;
 			}
 
@@ -783,6 +786,7 @@ namespace game_framework {
 					zombie[56].ShowBitmap();
 					if (count_gameover > 90)lose = true;
 				}
+
 
 			}
 
@@ -844,6 +848,9 @@ namespace game_framework {
 			if (zombie[48].IsAnimationDone())
 			{
 				win = true;
+				wave2 = false;
+				wave3 = false;
+				wave4 = false;
 			}
 
 			// 遊戲敗北
@@ -948,6 +955,9 @@ namespace game_framework {
 			if (zombie[38].IsAnimationDone())
 			{
 				win = true;
+				wave2 = false;
+				wave3 = false;
+				wave4 = false;
 			}
 
 			// 遊戲敗北
