@@ -29,6 +29,10 @@ namespace game_framework {
 			lose1 = false;
 			win2 = false;
 			lose2 = false;
+			win3 = false;
+			lose3 = false;
+			win4 = false;
+			lose4 = false;
 			win5 = false;
 			lose5 = false;
 			level = 0;
@@ -57,6 +61,10 @@ namespace game_framework {
 		bool lose1;
 		bool win2;
 		bool lose2;
+		bool win3;
+		bool lose3;
+		bool win4;
+		bool lose4;
 		bool win5;
 		bool lose5;
 
