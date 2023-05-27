@@ -76,7 +76,7 @@ namespace game_framework {
 		int hit_count_flag[10];
 		int count_last_wave;
 		bool ZombieGotBean1;
-		CMovingBitmap zombie[60];
+		CMovingBitmap zombie[100];
 		CMovingBitmap zombiegotbean[2];
 	protected:
 	private:

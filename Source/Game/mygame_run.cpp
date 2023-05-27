@@ -718,10 +718,17 @@ void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 		GotoGameState(GAME_STATE_CHOOSE);
 	}
 
-	if (nChar == VK_RETURN) {
+	if (nChar == VK_RETURN && z.win3) {
+		game_phase = 4;
+		GotoGameState(GAME_STATE_CHOOSE);
+	}
+	
+	if (nChar == VK_TAB) {
 		game_phase += 1;
 		GotoGameState(GAME_STATE_CHOOSE);
 	}
+	
+	
 
 }
 
