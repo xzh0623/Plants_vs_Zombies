@@ -310,8 +310,9 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 				// 一般殭屍與植物相撞
 				z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_4[0], 0, i);
 				if(z.level == 1)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_2[0], 0, i);
-				if (z.level == 3 || z.level ==4)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_1[0], 0, i);
-
+				if (z.level == 3 )z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_1[0], 0, i);
+				if (z.level == 4)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_3[0], 0, i);
+				
 				// 一般殭屍2與植物相撞
 				z.flag_zom_touch_plant[3] = IsOverlap(z.flag_zom_touch_plant[3], z._flag_car_0[0], 15, i);
 				// 一般殭屍3與植物相撞
@@ -327,8 +328,9 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 				z.flag_zom_touch_plant[5] = IsOverlap(z.flag_zom_touch_plant[5], z._flag_car_3[1], 25, i);
 				// 旗幟殭屍與植物相撞
 				z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_2[1], 35, i);
-				if (z.level == 3 || z.level == 4)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_3[1], 35, i);
-				
+				if (z.level == 3)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_3[1], 35, i);
+				if (z.level == 4)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_1[0], 35, i);
+
 				if ((z.flag_zom_touch_plant[0]) || (z.flag_zom_touch_plant[1]) || (z.flag_zom_touch_plant[2]) || (z.flag_zom_touch_plant[3]) || (z.flag_zom_touch_plant[4]) || (z.flag_zom_touch_plant[5]) || (z.flag_zom_touch_plant[6]) || (z.flag_zom_touch_plant[7])) {
 					p[i].vanish = true;
 					
@@ -392,6 +394,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 						z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_4[0], 0, i);
 						if (z.level == 1)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_2[0], 0, i);
 						if (z.level == 3 || z.level == 4)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_1[0], 0, i);
+						if (z.level == 4)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_3[0], 0, i);
 						// 一般殭屍2與植物相撞
 						z.flag_zom_touch_plant[3] = IsOverlap(z.flag_zom_touch_plant[3], z._flag_car_0[0], 15, i);
 						// 一般殭屍3與植物相撞
@@ -407,7 +410,8 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 						z.flag_zom_touch_plant[5] = IsOverlap(z.flag_zom_touch_plant[5], z._flag_car_3[1], 25, i);
 						// 旗幟殭屍與植物相撞
 						z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_2[1], 35, i);
-						if (z.level == 3 || z.level == 4)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_3[1], 35, i);
+						if (z.level == 3)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_3[1], 35, i);
+						if (z.level == 4)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_1[0], 35, i);
 
 						if ((z.flag_zom_touch_plant[0]) || (z.flag_zom_touch_plant[1]) || (z.flag_zom_touch_plant[2]) || (z.flag_zom_touch_plant[3]) || (z.flag_zom_touch_plant[4]) || (z.flag_zom_touch_plant[5]) || (z.flag_zom_touch_plant[6]) || (z.flag_zom_touch_plant[7])) {
 							p[i].vanish = true;
@@ -467,11 +471,11 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		else if (z.level == 4)
 		{
 			//一般殭屍與index 2 車相撞，車前進
-			if (!z.flag_zom_touch_plant[0] && !z._flag_car_1[0])
+			if (!z.flag_zom_touch_plant[0] && !z._flag_car_3[0])
 			{
-				if (CMovingBitmap::IsOverlap(c.car[1], z.zombie[0])) z._flag_car_1[0] = true;
+				if (CMovingBitmap::IsOverlap(c.car[3], z.zombie[0])) z._flag_car_3[0] = true;
 			}
-			if (z._flag_car_1[0]) c.car[1].SetTopLeft(c.car[1].GetLeft() + 5, c.car[1].GetTop());
+			if (z._flag_car_3[0]) c.car[3].SetTopLeft(c.car[3].GetLeft() + 5, c.car[3].GetTop());
 		}
 
 
@@ -562,11 +566,11 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		else if (z.level == 4)
 		{
 			//旗幟殭屍與index 2 車相撞，車前進
-			if (!z.flag_zom_touch_plant[7] && !z._flag_car_3[1])
+			if (!z.flag_zom_touch_plant[7] && !z._flag_car_1[0])
 			{
-				if (CMovingBitmap::IsOverlap(c.car[3], z.zombie[35])) z._flag_car_3[1] = true;
+				if (CMovingBitmap::IsOverlap(c.car[1], z.zombie[35])) z._flag_car_1[0] = true;
 			}
-			if (z._flag_car_3[1]) c.car[3].SetTopLeft(c.car[3].GetLeft() + 20, c.car[3].GetTop());
+			if (z._flag_car_1[0]) c.car[1].SetTopLeft(c.car[1].GetLeft() + 20, c.car[1].GetTop());
 		}
 		
 		z.OnMove();
