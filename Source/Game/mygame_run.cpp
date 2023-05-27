@@ -310,7 +310,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 				// 一般殭屍與植物相撞
 				z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_4[0], 0, i);
 				if(z.level == 1)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_2[0], 0, i);
-				if (z.level == 3)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_1[0], 0, i);
+				if (z.level == 3 || z.level ==4)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_1[0], 0, i);
 
 				// 一般殭屍2與植物相撞
 				z.flag_zom_touch_plant[3] = IsOverlap(z.flag_zom_touch_plant[3], z._flag_car_0[0], 15, i);
@@ -318,7 +318,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 				z.flag_zom_touch_plant[4] = IsOverlap(z.flag_zom_touch_plant[4], z._flag_car_1[0], 20, i);
 				// 鐵桶殭屍與植物相撞
 				z.flag_zom_touch_plant[1] = IsOverlap(z.flag_zom_touch_plant[1], z._flag_car_3[0], 5, i);
-				if (z.level == 3)z.flag_zom_touch_plant[1] = IsOverlap(z.flag_zom_touch_plant[1], z._flag_car_2[0], 5, i);
+				if (z.level == 3 || z.level == 4)z.flag_zom_touch_plant[1] = IsOverlap(z.flag_zom_touch_plant[1], z._flag_car_2[0], 5, i);
 				// 鐵桶殭屍2與植物相撞
 				z.flag_zom_touch_plant[6] = IsOverlap(z.flag_zom_touch_plant[6], z._flag_car_4[1], 30, i);
 				// 三角錐殭屍與植物相撞
@@ -327,7 +327,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 				z.flag_zom_touch_plant[5] = IsOverlap(z.flag_zom_touch_plant[5], z._flag_car_3[1], 25, i);
 				// 旗幟殭屍與植物相撞
 				z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_2[1], 35, i);
-				if (z.level == 3)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_3[1], 35, i);
+				if (z.level == 3 || z.level == 4)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_3[1], 35, i);
 				
 				if ((z.flag_zom_touch_plant[0]) || (z.flag_zom_touch_plant[1]) || (z.flag_zom_touch_plant[2]) || (z.flag_zom_touch_plant[3]) || (z.flag_zom_touch_plant[4]) || (z.flag_zom_touch_plant[5]) || (z.flag_zom_touch_plant[6]) || (z.flag_zom_touch_plant[7])) {
 					p[i].vanish = true;
@@ -391,14 +391,14 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 						// 一般殭屍與植物相撞
 						z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_4[0], 0, i);
 						if (z.level == 1)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_2[0], 0, i);
-						if (z.level == 3)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_1[0], 0, i);
+						if (z.level == 3 || z.level == 4)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_1[0], 0, i);
 						// 一般殭屍2與植物相撞
 						z.flag_zom_touch_plant[3] = IsOverlap(z.flag_zom_touch_plant[3], z._flag_car_0[0], 15, i);
 						// 一般殭屍3與植物相撞
 						z.flag_zom_touch_plant[4] = IsOverlap(z.flag_zom_touch_plant[4], z._flag_car_1[0], 20, i);
 						// 鐵桶殭屍與植物相撞
 						z.flag_zom_touch_plant[1] = IsOverlap(z.flag_zom_touch_plant[1], z._flag_car_3[0], 5, i);
-						if (z.level == 3)z.flag_zom_touch_plant[1] = IsOverlap(z.flag_zom_touch_plant[1], z._flag_car_2[0], 5, i);
+						if (z.level == 3 || z.level == 4)z.flag_zom_touch_plant[1] = IsOverlap(z.flag_zom_touch_plant[1], z._flag_car_2[0], 5, i);
 						// 鐵桶殭屍2與植物相撞
 						z.flag_zom_touch_plant[6] = IsOverlap(z.flag_zom_touch_plant[6], z._flag_car_4[1], 30, i);
 						// 三角錐殭屍與植物相撞
@@ -407,7 +407,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 						z.flag_zom_touch_plant[5] = IsOverlap(z.flag_zom_touch_plant[5], z._flag_car_3[1], 25, i);
 						// 旗幟殭屍與植物相撞
 						z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_2[1], 35, i);
-						if (z.level == 3)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_3[1], 35, i);
+						if (z.level == 3 || z.level == 4)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_3[1], 35, i);
 
 						if ((z.flag_zom_touch_plant[0]) || (z.flag_zom_touch_plant[1]) || (z.flag_zom_touch_plant[2]) || (z.flag_zom_touch_plant[3]) || (z.flag_zom_touch_plant[4]) || (z.flag_zom_touch_plant[5]) || (z.flag_zom_touch_plant[6]) || (z.flag_zom_touch_plant[7])) {
 							p[i].vanish = true;
@@ -464,6 +464,15 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			}
 			if (z._flag_car_1[0]) c.car[1].SetTopLeft(c.car[1].GetLeft() + 5, c.car[1].GetTop());
 		}
+		else if (z.level == 4)
+		{
+			//一般殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[0] && !z._flag_car_1[0])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[1], z.zombie[0])) z._flag_car_1[0] = true;
+			}
+			if (z._flag_car_1[0]) c.car[1].SetTopLeft(c.car[1].GetLeft() + 5, c.car[1].GetTop());
+		}
 
 
 		
@@ -492,6 +501,15 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			if (z._flag_car_3[0]) c.car[3].SetTopLeft(c.car[3].GetLeft() + 20, c.car[3].GetTop());
 		}
 		else if (z.level == 3)
+		{
+			//鐵桶殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[1] && !z._flag_car_2[0])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[2], z.zombie[5])) z._flag_car_2[0] = true;
+			}
+			if (z._flag_car_2[0]) c.car[2].SetTopLeft(c.car[2].GetLeft() + 20, c.car[2].GetTop());
+		}
+		else if (z.level == 4)
 		{
 			//鐵桶殭屍與index 2 車相撞，車前進
 			if (!z.flag_zom_touch_plant[1] && !z._flag_car_2[0])
@@ -533,6 +551,15 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			if (z._flag_car_2[1]) c.car[2].SetTopLeft(c.car[2].GetLeft() + 20, c.car[2].GetTop());
 		}
 		else if (z.level == 3)
+		{
+			//旗幟殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[7] && !z._flag_car_3[1])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[3], z.zombie[35])) z._flag_car_3[1] = true;
+			}
+			if (z._flag_car_3[1]) c.car[3].SetTopLeft(c.car[3].GetLeft() + 20, c.car[3].GetTop());
+		}
+		else if (z.level == 4)
 		{
 			//旗幟殭屍與index 2 車相撞，車前進
 			if (!z.flag_zom_touch_plant[7] && !z._flag_car_3[1])
@@ -720,6 +747,11 @@ void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 	if (nChar == VK_RETURN && z.win3) {
 		game_phase = 4;
+		GotoGameState(GAME_STATE_CHOOSE);
+	}
+
+	if (nChar == VK_RETURN && z.win4) {
+		game_phase = 5;
 		GotoGameState(GAME_STATE_CHOOSE);
 	}
 	
