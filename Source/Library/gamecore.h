@@ -6,6 +6,7 @@
 
 enum GAME_STATES {
 	GAME_STATE_INIT,
+	GAME_STATE_CHOOSE,
 	GAME_STATE_RUN,
 	GAME_STATE_OVER
 };
@@ -119,8 +120,10 @@ namespace game_framework {
 
 	class CGame;
 	class CGameStateInit;
+	class CGameStateChoose;
 	class CGameStateRun;
 	class CGameStateOver;
+
 
 	/////////////////////////////////////////////////////////////////////////////
 	// 這個class為遊戲的各種狀態之Base class(是一個abstract class)
@@ -145,6 +148,7 @@ namespace game_framework {
 		virtual void OnMouseMove(UINT nFlags, CPoint point) {}  // 處理滑鼠的動作 
 		virtual void OnRButtonDown(UINT nFlags, CPoint point) {}// 處理滑鼠的動作
 		virtual void OnRButtonUp(UINT nFlags, CPoint point) {}	// 處理滑鼠的動作
+		int game_phase=1;
 	protected:
 		void GotoGameState(int state);							// 跳躍至指定的state
 		void ShowInitProgress(int percent, string message);						// 顯示初始化的進度
@@ -190,7 +194,7 @@ namespace game_framework {
 		bool            suspended;			// 遊戲是否被suspended
 		const int		NUM_GAME_STATES;	// 遊戲的狀態數(3個狀態)
 		CGameState		*gameState;			// pointer指向目前的遊戲狀態
-		CGameState		*gameStateTable[3];	// 遊戲狀態物件的pointer
+		CGameState		*gameStateTable[4];	// 遊戲狀態物件的pointer
 		static CGame	instance;			// 遊戲唯一的instance
 	};
 }

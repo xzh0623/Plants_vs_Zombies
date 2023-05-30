@@ -25,8 +25,17 @@ namespace game_framework {
 			wave2 = false;
 			wave3 = false;
 			wave4 = false;
-			win = false;
-			lose = false;
+			win1 = false;
+			lose1 = false;
+			win2 = false;
+			lose2 = false;
+			win3 = false;
+			lose3 = false;
+			win4 = false;
+			lose4 = false;
+			win5 = false;
+			lose5 = false;
+			level = 0;
 			count_last_wave = 0;
 			count_gameover = 0;
 			ZombieGotBean1 = false;
@@ -47,8 +56,19 @@ namespace game_framework {
 		bool wave2;
 		bool wave3;
 		bool wave4;
-		bool win;
-		bool lose;
+
+		bool win1;
+		bool lose1;
+		bool win2;
+		bool lose2;
+		bool win3;
+		bool lose3;
+		bool win4;
+		bool lose4;
+		bool win5;
+		bool lose5;
+
+		int level;
 		int count_gameover;
 		int hit_count_normal[10];
 		int hit_count_bucket[10];
@@ -56,7 +76,7 @@ namespace game_framework {
 		int hit_count_flag[10];
 		int count_last_wave;
 		bool ZombieGotBean1;
-		CMovingBitmap zombie[60];
+		CMovingBitmap zombie[100];
 		CMovingBitmap zombiegotbean[2];
 	protected:
 	private:
