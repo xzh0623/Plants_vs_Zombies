@@ -612,7 +612,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 bool CGameStateRun::IsOverlap(bool flag_1,bool flag_2,int zombie_num,int i) {
 	if (!flag_1 && !flag_2)
 	{
-		for (int j = 0; j < 4; j++)
+		for (int j = 0; j < 6; j++)
 		{
 			if (p[i].turnToplant[j])
 			{
