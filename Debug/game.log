@@ -1,375 +1,5 @@
 ﻿cl : 命令列 warning D9035: 選項 'Gm' 已被取代，在未來的發行版本中將會移除
-  Zombie.cpp
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3cb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3cc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3cd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x433 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x435 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x436 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x439 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x43c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5db 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5dd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5de 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5e1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5e2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5e4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5e5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x786 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x788 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x789 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x78c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x78d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x78f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x790 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x931 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x933 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x934 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x937 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x93a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xa76 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xa78 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xa79 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xa7c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xa7d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xa7f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xa80 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xbbe 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xbc0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xbc1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xbc2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xbc4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xbc9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xd33 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xd35 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xd36 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xd37 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xd39 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xd3c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xd3e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xd3f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xea9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xeaf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xeb0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xeb1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xeb3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xeb4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xeb5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xeb6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xeb7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xeb9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xf36 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xf39 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xf3c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xfb5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xfbb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0xfbe 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x10a8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x10aa 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x10ab 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x10ae 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x10b1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x10b2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x10b3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1347 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1349 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x134a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x134d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x15f3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x15f4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x15f5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x15f8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x15fa 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x15fb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x17d9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x17e2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x17e4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x17e5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x19ac 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x19ae 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x19b0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x19b3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1b97 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1b99 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1b9b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1ba1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1ba3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1ba4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1d71 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1d72 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1d73 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1d76 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1d78 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1d7a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1d7d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1f5b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1f64 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1f66 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1f68 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x1f6b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x212d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x212f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2131 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2133 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2135 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x213d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x213f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2141 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2143 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2145 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x214d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x214f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2151 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2153 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2155 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2160 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2162 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2163 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2166 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2167 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2169 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x216a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x216b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x216c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x23fa 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x23fc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x23fd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2400 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2401 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2403 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2404 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2405 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2406 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x269e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x26a0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x26a1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x26a4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x26a7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x26a8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x26a9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2909 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x290b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x290c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x290f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2910 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2912 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2913 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2914 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2915 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2b6e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2b70 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2b71 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2b72 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2b74 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2b79 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2b7a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2b7b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2e4f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2e51 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2e52 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2e53 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2e55 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2e58 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2e5a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2e5b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2e5c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x2e5d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x315a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x315c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x315d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3160 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3163 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3164 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3165 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x33f9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x33fb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x33fc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x33ff 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x36a5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x36a6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x36a7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x36aa 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x36ac 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x36ad 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x388b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3894 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3896 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3897 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3a5b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3a5d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3a5e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3a61 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3a64 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3a65 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3a66 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3cbb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3cbd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3cbe 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3cc1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3cc5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3cc7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3cc8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3ea9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3eaa 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3eab 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3eae 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3eb0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x3eb1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x408f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4098 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x409a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x409b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4261 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4263 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4265 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4268 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x444c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x444e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4450 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4456 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4458 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4459 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4626 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4627 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4628 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x462b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x462d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x462f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4632 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4810 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4819 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x481b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x481d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4820 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x49e2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x49e4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x49e6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x49e8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x49ea 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x49f2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x49f4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x49f6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x49f8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x49fa 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a02 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a04 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a06 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a08 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a0a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a15 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a17 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a18 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a1b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a1c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a1e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a1f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a20 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4a21 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4caf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4cb1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4cb2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4cb5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4cb6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4cb8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4cb9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4cba 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4cbb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4f53 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4f55 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4f56 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4f59 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4f5a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4f5c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4f5d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4f5e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x4f5f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x51b8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x51ba 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x51bb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x51bc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x51be 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x51c3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x51c4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x51c5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5499 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x549b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x549c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x549d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x549f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x54a2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x54a4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x54a5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x54a6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x54a7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x57a3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x57a5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x57a6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x57a9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x57ac 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x57ad 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x57ae 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5a3d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5a3f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5a40 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5a43 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5ce6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5ce7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5ce8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5ceb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5ced 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5cee 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5ec8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5ed1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5ed3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x5ed4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6094 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6096 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6097 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x609a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x609d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x609e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x609f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x62f0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x62f2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x62f3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x62f6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x62fa 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x62fc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x62fd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x64db 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x64dc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x64dd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x64e0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x64e2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x64e3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x66bd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x66c6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x66c8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x66c9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x688b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x688d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x688f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6892 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6a72 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6a74 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6a76 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6a7c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6a7e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6a7f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6c49 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6c4a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6c4b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6c4e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6c50 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6c52 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6c55 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6e2f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6e38 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6e3a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6e3c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6e3f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6ffd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1): warning C4828: 檔案包含起始於位移 0x6fff 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+  mygame_run.cpp
 c:\users\user\git\some-adventure\source\game\zombie.h : warning C4828: 檔案包含起始於位移 0x355 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
 c:\users\user\git\some-adventure\source\game\zombie.h : warning C4828: 檔案包含起始於位移 0x357 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
 c:\users\user\git\some-adventure\source\game\zombie.h : warning C4828: 檔案包含起始於位移 0x359 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
@@ -403,922 +33,147 @@ c:\users\user\git\some-adventure\source\game\zombie.h : warning C4828: 檔案包
 c:\users\user\git\some-adventure\source\game\zombie.h : warning C4828: 檔案包含起始於位移 0x3e3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
 c:\users\user\git\some-adventure\source\game\zombie.h : warning C4828: 檔案包含起始於位移 0x3e6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
 c:\users\user\git\some-adventure\source\game\zombie.h : warning C4828: 檔案包含起始於位移 0x3e7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7001 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7003 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7005 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x700c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x700e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7010 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7012 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7014 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x701b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x701d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x701f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7021 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7023 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x702d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x702f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7030 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7033 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7034 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7036 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7037 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7038 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7039 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x72c3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x72c5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x72c6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x72c9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x72ca 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x72cc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x72cd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x72ce 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x72cf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7562 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7564 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7565 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7568 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7569 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x756b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x756c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x756d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x756e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x77c3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x77c5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x77c6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x77c7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x77c9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x77ce 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x77cf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x77d0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7aa0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7aa2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7aa3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7aa4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7aa6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7aa9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7aab 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7aac 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7aad 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7aae 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7da5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7da7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7da8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7dab 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7dae 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7daf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x7db0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x803f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8041 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8042 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8045 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x82e8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x82e9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x82ea 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x82ed 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x82ef 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x82f0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x84ca 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x84d3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x84d5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x84d6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8696 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8698 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8699 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x869c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x869f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x86a0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x86a1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x88f2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x88f4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x88f5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x88f8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x88fc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x88fe 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x88ff 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8add 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8ade 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8adf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8ae2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8ae4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8ae5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8cbf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8cc8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8cca 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8ccb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8e8d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8e8f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8e91 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x8e94 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9074 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9076 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9078 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x907e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9080 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9081 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x924b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x924c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x924d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9250 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9252 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9254 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9257 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9431 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x943a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x943c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x943e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9441 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x95ff 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9601 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9603 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9605 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9607 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x960e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9610 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9612 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9614 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9616 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x961d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x961f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9621 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9623 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9625 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x962f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9631 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9632 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9635 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9636 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9638 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9639 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x963a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x963b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x98c5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x98c7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x98c8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x98cb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x98cc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x98ce 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x98cf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x98d0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x98d1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9b64 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9b66 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9b67 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9b6a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9b6b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9b6d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9b6e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9b6f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9b70 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9dc5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9dc7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9dc8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9dc9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9dcb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9dd0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9dd1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0x9dd2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa0a2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa0a4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa0a5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa0a6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa0a8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa0ab 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa0ad 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa0ae 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa0af 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa0b0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa3a8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa3aa 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa3ab 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa3ae 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa3b1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa3b2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa3b3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa647 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa649 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa64a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa64d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa64e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa650 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa651 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa652 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa653 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa8df 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa8e1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa8e2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa8e5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa8e6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa8e8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa8e9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa8ea 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xa8eb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xab82 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xab84 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xab85 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xab88 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xae2e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xae30 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xae31 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xae34 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xae35 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xae37 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb0dd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb0df 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb0e0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb0e3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb0e4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb0e6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb38c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb38e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb38f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb392 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb395 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb396 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb397 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb5f6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb5f8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb5f9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb5fc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb5fd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb5ff 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb600 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb601 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb602 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb85a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb85c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb85d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb860 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb864 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb866 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xb867 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xba48 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xba4a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xba4b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xba4e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xba4f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xba51 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xba53 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xba55 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xba56 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbc39 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbc3b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbc3c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbc3d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbc3f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbc44 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbc45 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbc46 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbf19 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbf1b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbf1c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbf1d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbf1f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbf22 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbf24 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbf25 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbf26 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xbf27 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc204 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc206 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc207 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc208 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc20a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc210 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc212 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc213 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc3d5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc3d7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc3d8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc3d9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc3db 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc3de 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc3e0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc3e2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc3e4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc3e5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc5a7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc5a8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc5a9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc5ac 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc5ae 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc5af 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc78a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc78b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc78c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc78f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc791 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc792 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc971 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc972 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc973 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc976 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc978 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xc979 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcb58 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcb59 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcb5a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcb5d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcb5f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcb60 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcd3b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcd3c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcd3d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcd40 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcd42 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcd43 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcf22 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcf23 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcf24 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcf27 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcf29 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcf2a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xcf2b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd107 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd108 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd109 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd10c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd10e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd10f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd110 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd2f0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd2f9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd2fb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd2fc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd4c0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd4c9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd4cb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd4cc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd691 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd69a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd69c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd69d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd862 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd86b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd86d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xd86e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xda32 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xda3b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xda3d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xda3e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xdc02 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xdc0b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xdc0d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xdc0e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xddd2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xdddb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xdddd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xddde 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xdfa6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xdfa8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xdfaa 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(322): warning C4828: 檔案包含起始於位移 0xdfad 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe191 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe193 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe195 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe19b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe19d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe19e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe36b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe36c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe36d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe370 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe372 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe374 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe377 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe555 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe55e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe560 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe562 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe565 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe7c4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe7c6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe7c7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe7ca 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe7cd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe7ce 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe7cf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xe7d0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xea74 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xea76 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xea78 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xea7d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xea7e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xea7f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xea80 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xeebe 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xeec0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xeec1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xeec4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xeec7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xeec8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xeec9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xeeca 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf16e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf170 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf171 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf174 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf177 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf178 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf179 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf17a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf422 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf424 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf426 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf42b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf42c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf42d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf42e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf86c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf86e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf86f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf872 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf875 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf876 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf877 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xf878 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfb0a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfb0c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfb0d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfb10 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfb13 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfb14 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfb15 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfb16 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfda9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfdab 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfdad 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfdb2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfdb3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfdb4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0xfdb5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x101dc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x101de 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x101df 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x101e2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x101e5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x101e6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x101e7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x101e8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1047a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1047c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1047d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10480 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10483 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10484 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10485 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10486 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10719 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1071b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1071d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10722 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10723 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10724 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10725 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10b4d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10b4f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10b50 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10b53 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10b56 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10b57 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10b58 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10b59 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10dfc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10dfe 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10dff 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10e02 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10e03 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10e05 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10e06 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10e07 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10e08 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x10e09 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x110e3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x110e5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x110e6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x110e9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x110ea 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x110ec 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x110ed 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x110ee 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x110ef 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x110f0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x113a0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x113a2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x113a3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x113a6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x113a9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x113aa 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x113ab 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x113ac 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1167c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1167e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1167f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11682 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11683 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11685 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11686 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11687 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11688 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11689 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11a0e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11a10 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11a11 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11a12 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11a14 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11a19 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11a1a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11a1b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11a1c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11cdb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11cdd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11cde 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11cdf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11ce1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11ce4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11ce6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11ce7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11ce8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11ce9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11cea 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11fc9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11fcb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11fcd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11fd2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11fd3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11fd4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x11fd5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12689 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1268b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1268c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1268d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1268e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12712 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12714 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12715 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12716 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12800 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12802 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12803 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12806 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12809 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1280a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1280b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12810 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12812 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12816 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1281a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1281c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1281e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12822 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12823 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12824 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129cc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129ce 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129d0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129d5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129d6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129d7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129dc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129de 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129e2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129e6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129e8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129ea 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129ee 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129ef 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x129f0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12d8c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12d8e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12d8f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12d90 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12d91 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12e15 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12e17 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12e18 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12e19 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f02 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f04 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f05 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f08 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f0b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f0c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f0d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f12 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f14 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f18 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f1c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f1e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f20 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f24 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f25 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x12f26 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130ce 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130d0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130d1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130d4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130d7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130d8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130d9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130de 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130e0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130e4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130e8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130ea 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130ec 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130f0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130f1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x130f2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1329b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1329d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1329f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x132a4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x132a5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x132a6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x132ab 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x132ad 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x132b1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x132b5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x132b7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x132b9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x132bd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x132be 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x132bf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1364f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13651 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13652 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13653 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13654 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x136d0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x136d2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x136d3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x136d4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137b3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137b5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137b6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137b9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137bc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137bd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137be 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137c3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137c5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137c9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137cd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137cf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137d1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137d5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137d6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x137d7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1396f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13971 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13972 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13975 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13978 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13979 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1397a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1397f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13981 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13985 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13989 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1398b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1398d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13991 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13992 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13993 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b2b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b2d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b2f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b34 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b35 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b36 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b3b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b3d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b41 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b45 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b47 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b49 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b4d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b4e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13b4f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13ecc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13ece 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13ecf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13ed0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13ed1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13f4d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13f4f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13f50 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x13f51 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14030 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14032 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14033 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14036 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14039 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1403a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1403b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14040 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14042 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14046 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1404a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1404c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1404e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14052 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14053 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14054 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x141ec 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x141ee 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x141ef 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x141f2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x141f5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x141f6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x141f7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x141fc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x141fe 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14202 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14206 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14208 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1420a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1420e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x1420f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14210 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143a8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143aa 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143ac 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143b1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143b2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143b3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143b8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143ba 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143be 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143c2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143c4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143c6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143ca 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143cb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x143cc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145bb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145bd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145c0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145c1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145c2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145c3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145c4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145c5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145c7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145c9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145ca 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145cb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145cc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145cd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145ce 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145cf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145d1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145d6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x145d9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x148bb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x148bd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x148be 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x148bf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x148c0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14944 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14946 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14947 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14948 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a33 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a35 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a36 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a39 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a3c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a3d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a3e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a43 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a45 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a49 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a4d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a4f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a51 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a55 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a56 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14a57 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14bfe 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c00 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c01 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c04 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c05 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c07 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c08 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c09 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c0a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c0f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c11 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c15 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c19 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c1b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c1d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c21 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c22 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14c23 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14df5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14df7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14df8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14dfb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14dfc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14dfe 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14dff 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14e00 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14e01 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14e06 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14e08 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14e0c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14e10 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14e12 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14e14 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14e18 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14e19 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14e1a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fc5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fc7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fc8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fcb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fce 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fcf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fd0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fd5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fd7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fdb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fdf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fe1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fe3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fe7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fe8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(585): warning C4828: 檔案包含起始於位移 0x14fe9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151bf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151c1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151c2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151c5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151c6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151c8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151c9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151ca 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151cb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151d0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151d2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151d6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151da 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151dc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151de 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151e2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151e3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x151e4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153be 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153c0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153c1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153c2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153c4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153c9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153ca 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153cb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153d0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153d2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153d6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153da 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153dc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153de 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153e2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153e3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x153e4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155ac 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155ae 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155af 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155b0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155b2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155b5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155b7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155b8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155b9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155ba 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155bf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155c1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155c5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155c9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155cb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155cd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155d1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155d2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x155d3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x15783 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x15785 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x15787 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x1578c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x1578d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x1578e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x15793 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x15795 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x15799 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x1579d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x1579f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x157a1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x157a5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x157a6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
-c:\users\user\git\some-adventure\source\game\zombie.cpp(1543): warning C4828: 檔案包含起始於位移 0x157a7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x94 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x96 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x98 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x9a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x9b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x9c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x9d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x9e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x9f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xa0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xa5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xa6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xa8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xa9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xc8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xca 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xcb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xcc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xcd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xce 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xcf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xd2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xda 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xfa 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xfb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xfc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0xfd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x11a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x11c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x122 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x123 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x126 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\car.h : warning C4828: 檔案包含起始於位移 0x127 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xb7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xb9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xbb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xbd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xbe 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xbf 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xc0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xc1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xc2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xc3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xc8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xc9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xcb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xcc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xea 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xec 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xed 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xee 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xef 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xf0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xf1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xf4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0xfc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0x11a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0x11b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0x11c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0x11d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0x14d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0x14f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0x155 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0x156 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0x159 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\sun.h : warning C4828: 檔案包含起始於位移 0x15a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x208 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x20a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x20c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x20e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x20f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x210 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x211 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x212 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x213 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x214 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x219 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x21a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x21c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x21d 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x31e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x320 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x323 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x326 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x36a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x36c 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x36f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x372 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x3b6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x3b7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x3b8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x3b9 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x3bc 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x3c0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plants.h : warning C4828: 檔案包含起始於位移 0x3c3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x12e 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x130 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x132 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x134 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x135 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x136 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x137 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x138 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x139 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x13a 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x13f 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x140 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x142 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x143 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x161 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x163 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x164 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x165 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x166 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x167 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x168 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x16b 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x173 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x1aa 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x1ab 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x1ac 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x1ad 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x1e2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x1e4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x1ea 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x1eb 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x1ee 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\plantscard.h : warning C4828: 檔案包含起始於位移 0x1ef 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xac 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xae 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xb0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xb2 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xb3 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xb4 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xb5 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xb6 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xb7 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xb8 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xbd 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xbe 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xc0 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\suncard.h : warning C4828: 檔案包含起始於位移 0xc1 的字元，在目前的來源字元集 (字碼頁 65001) 中不是合法的字元。
+c:\users\user\git\some-adventure\source\game\mygame_run.cpp(659): warning C4715: 'game_framework::CGameStateRun::Distance': 不是所有控制路徑都傳回值
   game.vcxproj -> C:\Users\User\git\some-adventure\.\Debug\game.exe

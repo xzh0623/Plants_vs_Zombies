@@ -330,6 +330,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 				z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_2[1], 35, i);
 				if (z.level == 3)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_3[1], 35, i);
 				if (z.level == 4)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_1[0], 35, i);
+				if (z.level == 5)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_1[1], 35, i);
 
 				if ((z.flag_zom_touch_plant[0]) || (z.flag_zom_touch_plant[1]) || (z.flag_zom_touch_plant[2]) || (z.flag_zom_touch_plant[3]) || (z.flag_zom_touch_plant[4]) || (z.flag_zom_touch_plant[5]) || (z.flag_zom_touch_plant[6]) || (z.flag_zom_touch_plant[7])) {
 					p[i].vanish = true;
@@ -412,6 +413,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 						z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_2[1], 35, i);
 						if (z.level == 3)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_3[1], 35, i);
 						if (z.level == 4)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_1[0], 35, i);
+						if (z.level == 5)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_1[1], 35, i);
 
 						if ((z.flag_zom_touch_plant[0]) || (z.flag_zom_touch_plant[1]) || (z.flag_zom_touch_plant[2]) || (z.flag_zom_touch_plant[3]) || (z.flag_zom_touch_plant[4]) || (z.flag_zom_touch_plant[5]) || (z.flag_zom_touch_plant[6]) || (z.flag_zom_touch_plant[7])) {
 							p[i].vanish = true;
@@ -545,7 +547,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		}
 		if (!z._flag_car_3[0] && z._flag_car_3[1]) c.car[3].SetTopLeft(c.car[3].GetLeft() + 20, c.car[3].GetTop());
 
-		if (z.level == 1 || z.level == 2 || z.level == 5)
+		if (z.level == 1 || z.level == 2 )
 		{
 			//旗幟殭屍與index 2 車相撞，車前進
 			if (!z.flag_zom_touch_plant[7] && !z._flag_car_2[1])
@@ -571,6 +573,15 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 				if (CMovingBitmap::IsOverlap(c.car[1], z.zombie[35])) z._flag_car_1[0] = true;
 			}
 			if (z._flag_car_1[0]) c.car[1].SetTopLeft(c.car[1].GetLeft() + 20, c.car[1].GetTop());
+		}
+		else if (z.level == 5)
+		{
+			//旗幟殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[7] && !z._flag_car_1[1])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[1], z.zombie[35])) z._flag_car_1[1] = true;
+			}
+			if (z._flag_car_1[1]) c.car[1].SetTopLeft(c.car[1].GetLeft() + 20, c.car[1].GetTop());
 		}
 		
 		z.OnMove();
