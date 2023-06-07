@@ -45,7 +45,6 @@
 #include "PlantsCard.h"
 #include "SunCard.h"
 
-
 namespace game_framework {
 	/////////////////////////////////////////////////////////////////////////////
 	// Constants
@@ -56,7 +55,6 @@ namespace game_framework {
 		AUDIO_LAKE,				// 1
 		AUDIO_NTUT				// 2
 	};
-	//int game_phase;
 	/////////////////////////////////////////////////////////////////////////////
 	// 這個class為遊戲的遊戲開頭畫面物件
 	// 每個Member function的Implementation都要弄懂
@@ -70,11 +68,11 @@ namespace game_framework {
 		void OnMouseMove(UINT nFlags, CPoint point);	// 處理滑鼠的動作
 		void OnLButtonDown(UINT nFlags, CPoint point);  // 處理滑鼠的動作
 		bool MouseIsOverlap(CMovingBitmap bmp1);
-
 	protected:
 		void OnMove();
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
+		//int game_phase = 1;
 		CMovingBitmap background;
 		CMovingBitmap background1;
 		int mouse_x, mouse_y;
@@ -93,8 +91,10 @@ namespace game_framework {
 		CMovingBitmap plant_intro[10];
 		CMovingBitmap zombie_picture[10];
 		CMovingBitmap zombie_intro[10];
+		CMovingBitmap stage[5];
 		bool level_show=false;
 		CMovingBitmap level_select[10];
+
 		
 	};
 
@@ -117,7 +117,6 @@ namespace game_framework {
 		void OnMove();
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
-		
 
 	};
 
@@ -147,11 +146,13 @@ namespace game_framework {
 		void OnMove();									// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
-		//int game_phase=1;
+		//int game_phase;
 		int index = 0;
 		int mouse_x, mouse_y;
 		CMovingBitmap background;
 		CMovingBitmap shovel[2];
+		CMovingBitmap changestage;
+		CMovingBitmap changestage1;
 		bool shovel_flag = false;
 		//bool validate_phase_1();
 		void show_image_by_phase();

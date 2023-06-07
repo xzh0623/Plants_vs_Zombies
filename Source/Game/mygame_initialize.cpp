@@ -2,6 +2,7 @@
 #include "../Core/Resource.h"
 #include <mmsystem.h>
 #include <ddraw.h>
+#include <string>
 #include "../Library/audio.h"
 #include "../Library/gameutil.h"
 #include "../Library/gamecore.h"
@@ -89,15 +90,15 @@ void CGameStateInit::OnInit()
 	one[9].SetTopLeft(420, 400);
 	//菜單
 	menu[0].LoadBitmapByString({ "resources/option1_1.bmp" }, RGB(128, 128, 128));
-	menu[0].SetTopLeft(405, 230);
-	menu[1].LoadBitmapByString({ "resources/option1_2.bmp" }, RGB(128, 128, 128));
-	menu[1].SetTopLeft(405, 270);
+	menu[0].SetTopLeft(405, 190);
+	//menu[1].LoadBitmapByString({ "resources/option1_2.bmp" }, RGB(128, 128, 128));
+	//menu[1].SetTopLeft(405, 270);
 	menu[2].LoadBitmapByString({ "resources/option1_3.bmp" }, RGB(128, 128, 128));
-	menu[2].SetTopLeft(405, 310);
+	menu[2].SetTopLeft(405, 250);
 	menu[3].LoadBitmapByString({ "resources/option1_4.bmp" }, RGB(128, 128, 128));
-	menu[3].SetTopLeft(405, 350);
+	menu[3].SetTopLeft(405, 310);
 	menu[4].LoadBitmapByString({ "resources/option1_5.bmp" }, RGB(128, 128, 128));
-	menu[4].SetTopLeft(405, 390);
+	menu[4].SetTopLeft(405, 370);
 	//選關
 	level_select[0].LoadBitmapByString({ "resources/option1_1_1.bmp" }, RGB(128, 128, 128));
 	level_select[0].SetTopLeft(10, 10);
@@ -129,11 +130,11 @@ void CGameStateInit::OnInit()
 	//植物介紹
 	plant_intro[0].LoadBitmapByString({ "card/SunFlower_1.bmp" }, RGB(182, 185, 184));
 	plant_intro[0].SetTopLeft(80, 100);
-	plant_intro[1].LoadBitmapByString({ "card/PlantsCard_1.bmp"}, RGB(182, 185, 184));
+	plant_intro[1].LoadBitmapByString({ "card/PlantsCard_1.bmp" }, RGB(182, 185, 184));
 	plant_intro[1].SetTopLeft(180, 100);
-	plant_intro[2].LoadBitmapByString({ "card/WallNut_1.bmp"}, RGB(182, 185, 184));
+	plant_intro[2].LoadBitmapByString({ "card/WallNut_1.bmp" }, RGB(182, 185, 184));
 	plant_intro[2].SetTopLeft(280, 100);
-	plant_intro[3].LoadBitmapByString({ "card/Repeater_1.bmp"}, RGB(182, 185, 184));
+	plant_intro[3].LoadBitmapByString({ "card/Repeater_1.bmp" }, RGB(182, 185, 184));
 	plant_intro[3].SetTopLeft(80, 170);
 	//殭屍介紹
 	zombie_intro[0].LoadBitmapByString({ "zombiecard/zombie1.bmp" }, RGB(128, 128, 128));
@@ -155,17 +156,31 @@ void CGameStateInit::OnInit()
 	plant_intro[7].SetTopLeft(450, 95);
 	//介紹卡(殭屍)
 	zombie_intro[4].LoadBitmapByString({ "zombiecard/zombie1_1.bmp" }, RGB(128, 128, 128));
-	zombie_intro[4].SetTopLeft(450,110);
+	zombie_intro[4].SetTopLeft(450, 110);
 	zombie_intro[5].LoadBitmapByString({ "zombiecard/zombie2_1.bmp" }, RGB(128, 128, 128));
 	zombie_intro[5].SetTopLeft(450, 111);
 	zombie_intro[6].LoadBitmapByString({ "zombiecard/zombie3_1.bmp" }, RGB(128, 128, 128));
 	zombie_intro[6].SetTopLeft(450, 113);
 	zombie_intro[7].LoadBitmapByString({ "zombiecard/zombie4_1.bmp" }, RGB(128, 128, 128));
 	zombie_intro[7].SetTopLeft(449, 111);
+
+
+	//關卡
+	stage[0].LoadBitmapByString({ "resources/Stage1.bmp" }, RGB(255, 255, 255));
+	stage[0].SetTopLeft(95, 180);
+	stage[1].LoadBitmapByString({ "resources/Stage1.bmp" });
+	stage[1].SetTopLeft(304, 175);
+	stage[2].LoadBitmapByString({ "resources/Stage1.bmp" });
+	stage[2].SetTopLeft(514, 178);
+	stage[3].LoadBitmapByString({ "resources/Stage1.bmp" });
+	stage[3].SetTopLeft(198, 355);
+	stage[4].LoadBitmapByString({ "resources/Stage1.bmp" });
+	stage[4].SetTopLeft(406, 355);
 }
 
 void CGameStateInit::OnBeginState()
 {
+
 }
 
 void CGameStateInit::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
@@ -183,17 +198,14 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 {
 
 	if (nFlags == VK_LBUTTON) {
-		if (menu_phase==1) menu_phase += 1;
+		if (menu_phase == 1) menu_phase += 1;
 		else if (menu_phase == 2) {
-			if ((MouseIsOverlap(one[0]))) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
-				game_phase = 1;
-				GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
-			}
-			else if ((MouseIsOverlap(one[4]))) {
+			
+			if ((MouseIsOverlap(one[4]))) {
 				help_show = !help_show;
 			}
 
-			else if ((MouseIsOverlap(one[5])) || ((MouseIsOverlap(menu[3])) && (option_show))|| ((MouseIsOverlap(menu[4])) && (option_show))) {
+			else if ((MouseIsOverlap(one[5])) || ((MouseIsOverlap(menu[3])) && (option_show)) || ((MouseIsOverlap(menu[4])) && (option_show))) {
 				option_show = false;
 				menu_phase = 1;
 				help_show = false;
@@ -206,17 +218,17 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 				}
 				level_show = false;
 			}
-			else if ((MouseIsOverlap(one[3]))||((MouseIsOverlap(one[8]))&&(option_show))) {
+			else if ((MouseIsOverlap(one[3])) || ((MouseIsOverlap(one[8])) && (option_show))) {
 				option_show = !option_show;
 			}
-			else if ((MouseIsOverlap(one[9]))&&(!picture_show)&&(!option_show)) {
+			else if ((MouseIsOverlap(one[9])) && (!picture_show) && (!option_show) && (!level_show)) {
 				picture_show = !picture_show;
 			}
 			else if (MouseIsOverlap(menu[2]) && (option_show)) {
 				option_show = !option_show;
 				picture_show = !picture_show;
 			}
-			else if (MouseIsOverlap(picture[3])&&(picture_show)) picture_show = !picture_show;
+			else if (MouseIsOverlap(picture[3]) && (picture_show)) picture_show = !picture_show;
 			else if (MouseIsOverlap(picture[1]) && (picture_show) || ((MouseIsOverlap(plant_picture[1]) && (plant_picture_show)))) {
 				plant_picture_show = !plant_picture_show;
 				picture_show = !picture_show;
@@ -228,7 +240,7 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 				if ((MouseIsOverlap(plant_intro[i])) && (plant_picture_show)) {
 					plantIntro[i] = true;
 					for (int j = 0; j < 4; j++) {
-						if (j!=i) plantIntro[j] = false;
+						if (j != i) plantIntro[j] = false;
 					}
 				}
 			}
@@ -247,17 +259,43 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 			}
 			//////////////選關
 			if (MouseIsOverlap(menu[0]) && (option_show)) {
-				option_show = !option_show;
-				level_show = !level_show;
+				option_show = false;
+				level_show = true;
 			}
 			if ((MouseIsOverlap(level_select[1])) && (level_show)) {
 				level_show = !level_show;
 			}
+
+			if ((level_show) && (!option_show)) {
+				if ((MouseIsOverlap(stage[0]))) {
+					game_phase = 1;						//第一關
+				}
+				/*else if (MouseIsOverlap(stage[1])) {
+					game_phase = 2;						//第二關
+				}*/
+				else if (MouseIsOverlap(stage[2])) {
+					game_phase = 3;						//第三關
+				}
+				else if (MouseIsOverlap(stage[3])) {
+					game_phase = 4;						//第四關
+				}
+				else if (MouseIsOverlap(stage[4])) {
+					game_phase = 5;						//第五關
+				}
+				level_show = !level_show;
+				GotoGameState(GAME_STATE_RUN);
+			}
+			else if ((MouseIsOverlap(one[0])) && (!option_show) && (!level_show)) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
+				game_phase = 1;
+				GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
+			}
 			
+
 		}
 	}
 
 }
+
 bool CGameStateInit::MouseIsOverlap(CMovingBitmap bmp1) { //判斷滑鼠是否在物件範圍內
 	if ((mouse_x < bmp1.GetLeft() + bmp1.GetWidth()) && (mouse_x > bmp1.GetLeft()) &&
 		(mouse_y < bmp1.GetTop() + bmp1.GetHeight()) && (mouse_y > bmp1.GetTop())) {
@@ -265,9 +303,9 @@ bool CGameStateInit::MouseIsOverlap(CMovingBitmap bmp1) { //判斷滑鼠是否�
 	}
 	return FALSE;
 }
+
 void CGameStateInit::OnShow()
 {
-	
 
 	if (menu_phase == 1) background.ShowBitmap();
 	if (menu_phase == 2) {
@@ -279,12 +317,12 @@ void CGameStateInit::OnShow()
 		one[4].ShowBitmap();
 		one[5].ShowBitmap();
 		one[9].ShowBitmap();
-		
+
 		if (option_show) {
 			one[7].ShowBitmap();
 			one[8].ShowBitmap();
 			menu[0].ShowBitmap();
-			menu[1].ShowBitmap();
+			//menu[1].ShowBitmap();
 			menu[2].ShowBitmap();
 			menu[3].ShowBitmap();
 			menu[4].ShowBitmap();
@@ -293,6 +331,11 @@ void CGameStateInit::OnShow()
 		if (level_show) {
 			level_select[0].ShowBitmap();
 			level_select[1].ShowBitmap();
+			stage[0].ShowBitmap();
+			stage[1].ShowBitmap();
+			stage[2].ShowBitmap();
+			stage[3].ShowBitmap();
+			stage[4].ShowBitmap();
 		}
 		if (picture_show) {
 			picture[0].ShowBitmap();
@@ -311,11 +354,11 @@ void CGameStateInit::OnShow()
 
 			if (plantIntro[0]) {
 				plant_intro[4].ShowBitmap();
-				
+
 			}
 			if (plantIntro[1]) {
 				plant_intro[5].ShowBitmap();
-				
+
 			}
 			if (plantIntro[2]) {
 				plant_intro[6].ShowBitmap();

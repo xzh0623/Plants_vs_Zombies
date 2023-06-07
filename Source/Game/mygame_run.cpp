@@ -734,7 +734,10 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	shovel[0].SetTopLeft(304, 14);
 	shovel[1].LoadBitmapByString({ "resources/Shovel1.bmp" }, RGB(0, 0, 0));
 	shovel[1].SetTopLeft(304, 14);
-
+	changestage.LoadBitmapByString({ "resources/NextStage.bmp" }, RGB(100, 86, 82));
+	changestage.SetTopLeft(400, 200);
+	changestage1.LoadBitmapByString({ "resources/NextStage1.bmp" }, RGB(100, 86, 82));
+	changestage1.SetTopLeft(400, 200);
 	//////////////////////////////////
 	c.OnInit();
 	//z.OnInit();
@@ -750,29 +753,17 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 
 void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
-	if (nChar == VK_RETURN && z.win1) {
-		game_phase = 2;
-		GotoGameState(GAME_STATE_CHOOSE);
-	}
-
-	if (nChar == VK_RETURN && z.win2) {
-		game_phase = 3;
-		GotoGameState(GAME_STATE_CHOOSE);
-	}
-
-	if (nChar == VK_RETURN && z.win3) {
-		game_phase = 4;
-		GotoGameState(GAME_STATE_CHOOSE);
-	}
-
-	if (nChar == VK_RETURN && z.win4) {
-		game_phase = 5;
-		GotoGameState(GAME_STATE_CHOOSE);
-	}
+	
 	
 	if (nChar == VK_TAB) {
-		game_phase += 1;
-		GotoGameState(GAME_STATE_CHOOSE);
+		if (game_phase == 5) {
+			game_phase = 1;
+			GotoGameState(GAME_STATE_INIT);
+		}
+		else {
+			game_phase += 1;
+			GotoGameState(GAME_STATE_CHOOSE);
+		}
 	}
 	
 	
@@ -786,7 +777,55 @@ void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
 {
-	
+	//關卡切換(win)
+	if (nFlags == VK_LBUTTON && z.win1 && MouseIsOverlap(changestage) && game_phase==1) {
+		game_phase = 2;
+		GotoGameState(GAME_STATE_CHOOSE);
+	}
+
+	if (nFlags == VK_LBUTTON && z.win2 && MouseIsOverlap(changestage) && game_phase == 2) {
+		game_phase = 3;
+		GotoGameState(GAME_STATE_CHOOSE);
+	}
+
+	if (nFlags == VK_LBUTTON && z.win3 && MouseIsOverlap(changestage) && game_phase == 3) {
+		game_phase = 4;
+		GotoGameState(GAME_STATE_CHOOSE);
+	}
+
+	if (nFlags == VK_LBUTTON && z.win4 && MouseIsOverlap(changestage) && game_phase == 4) {
+		game_phase = 5;
+		GotoGameState(GAME_STATE_CHOOSE);
+	}
+	if (nFlags == VK_LBUTTON && z.win5 && MouseIsOverlap(changestage1) && game_phase == 5) {
+		game_phase = 1;
+		GotoGameState(GAME_STATE_INIT);
+	}
+	//關卡切換(lose)
+	if (nFlags == VK_LBUTTON && z.lose1 && MouseIsOverlap(changestage1) && game_phase == 1) {
+		game_phase = 1;
+		GotoGameState(GAME_STATE_INIT);
+	}
+
+	if (nFlags == VK_LBUTTON && z.lose2 && MouseIsOverlap(changestage1) && game_phase == 2) {
+		game_phase = 1;
+		GotoGameState(GAME_STATE_INIT);
+	}
+
+	if (nFlags == VK_LBUTTON && z.lose3 && MouseIsOverlap(changestage1) && game_phase == 3) {
+		game_phase = 1;
+		GotoGameState(GAME_STATE_INIT);
+	}
+
+	if (nFlags == VK_LBUTTON && z.lose4 && MouseIsOverlap(changestage1) && game_phase == 4) {
+		game_phase = 1;
+		GotoGameState(GAME_STATE_INIT);
+	}
+	if (nFlags == VK_LBUTTON && z.lose5 && MouseIsOverlap(changestage1) && game_phase == 5) {
+		game_phase = 1;
+		GotoGameState(GAME_STATE_INIT);
+	}
+
 	if (nFlags == VK_LBUTTON) {
 		if (MouseIsOverlap(s.sun[0])) {
 			s.flag2 = TRUE;
@@ -989,9 +1028,11 @@ void CGameStateRun::show_text_by_phase() {
 		
 		CTextDraw::Print(pDC, 600, 20, to_string(z.win1));
 		CTextDraw::Print(pDC, 600, 50, to_string(z.win2));
-		CTextDraw::Print(pDC, 600, 80, to_string(z.win5));
-		/*CTextDraw::Print(pDC, 700, 50, to_string(p[0].plants[7].GetLeft()));
-		CTextDraw::Print(pDC, 700, 100, to_string(z.flag_zom_touch_plant[1]));
+		CTextDraw::Print(pDC, 600, 80, to_string(z.win3));
+		CTextDraw::Print(pDC, 600, 110, to_string(z.win4));
+		CTextDraw::Print(pDC, 600, 140, to_string(z.win5));
+		CTextDraw::Print(pDC, 700, 170, to_string(z.level));
+		/*CTextDraw::Print(pDC, 700, 100, to_string(z.flag_zom_touch_plant[1]));
 		CTextDraw::Print(pDC, 700, 150, to_string(p[1].plantToZombie[0]));
 		CTextDraw::Print(pDC, 700, 200, to_string(p[0].vanish));
 		CTextDraw::Print(pDC, 700, 250, to_string(p[0].plantToZombie[0]));
@@ -1001,8 +1042,8 @@ void CGameStateRun::show_text_by_phase() {
 		CTextDraw::Print(pDC, 700, 400, to_string(p[2].delay1));
 		CTextDraw::Print(pDC, 700, 450, to_string(p[3].delay1));
 		CTextDraw::Print(pDC, 700, 500, to_string(p[4].delay1));
-		CTextDraw::Print(pDC, 0, 500, to_string(z.hit_count_normal[0]));
-		*/
+		CTextDraw::Print(pDC, 0, 500, to_string(z.hit_count_normal[0]));*/
+		
 	}
 	CDDraw::ReleaseBackCDC();
 }
@@ -1142,6 +1183,8 @@ void CGameStateRun::show_image_by_phase() {
 		}
 		if ((game_phase == 1) && (background.GetLeft() == -9)) {
 			p_c.OnShow1();
+			if (z.win1) changestage.ShowBitmap();
+			if (z.lose1) changestage1.ShowBitmap();
 			if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
 				if (p[index].turnToplant[1]) {
 					for (int j = 0; j < 9; j++) {
@@ -1171,6 +1214,8 @@ void CGameStateRun::show_image_by_phase() {
 		}
 		else if ((game_phase == 2) && (background.GetLeft() == -9)) {
 			p_c.OnShow2(2);
+			if (z.win2) changestage.ShowBitmap();
+			if (z.lose2) changestage1.ShowBitmap();
 			for (int k = 0; k < 2; k++) {
 				if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
 					if (p[index].turnToplant[0]) {
@@ -1235,6 +1280,8 @@ void CGameStateRun::show_image_by_phase() {
 		}
 		else if ((game_phase == 3) && (background.GetLeft() == -9)) {
 			p_c.OnShow2(3);
+			if (z.win3) changestage.ShowBitmap();
+			if (z.lose3) changestage1.ShowBitmap();
 			for (int k = 0; k < 3; k++) {
 				if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
 					if (p[index].turnToplant[0]) {
@@ -1299,6 +1346,9 @@ void CGameStateRun::show_image_by_phase() {
 		}
 		else if ((background.GetLeft() == -9)) {
 			p_c.OnShow2(4);
+			if ((game_phase == 4) && (z.win4)) changestage.ShowBitmap();
+			if ((game_phase == 4) && (z.lose1)) changestage1.ShowBitmap();
+			if ((game_phase == 5) && ((z.win5)||z.lose5)) changestage1.ShowBitmap();
 /////////////////////////////////////////////////////////////////////////
 			for (int k = 0; k < 4; k++) {
 				if ((p[index].twiceflag) && (!p[index].SetPosDone)) {

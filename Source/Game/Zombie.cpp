@@ -42,6 +42,8 @@ namespace game_framework {
 		count_last_wave = 0;
 		count_gameover = 0;
 		ZombieGotBean1 = false;
+
+
 	}
 	void Zombie::OnInit()
 	{

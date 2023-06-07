@@ -148,7 +148,7 @@ namespace game_framework {
 		virtual void OnMouseMove(UINT nFlags, CPoint point) {}  // 處理滑鼠的動作 
 		virtual void OnRButtonDown(UINT nFlags, CPoint point) {}// 處理滑鼠的動作
 		virtual void OnRButtonUp(UINT nFlags, CPoint point) {}	// 處理滑鼠的動作
-		int game_phase=1;
+		int game_phase = 1;
 	protected:
 		void GotoGameState(int state);							// 跳躍至指定的state
 		void ShowInitProgress(int percent, string message);						// 顯示初始化的進度
@@ -159,8 +159,8 @@ namespace game_framework {
 		virtual void OnShow() = 0;								// 顯示這個狀態的遊戲畫面
 		CGame *game;
 		CMovingBitmap loadingBitmap;
+		
 	};
-
 	/////////////////////////////////////////////////////////////////////////////
 	// 這個class是遊戲的核心，控制遊戲的進行
 	// 一般的遊戲並不需直接操作這個物件，因此可以不管這個class的使用方法
