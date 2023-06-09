@@ -1015,24 +1015,22 @@ void CGameStateRun::show_text_by_phase() {
 	CDC *pDC = CDDraw::GetBackCDC();
 	CTextDraw::ChangeFontLog(pDC, 21, "微軟正黑體", RGB(0, 0, 0), 800);
 
-	CTextDraw::Print(pDC, 0, 0, to_string(mouse_x));
-	CTextDraw::Print(pDC, 50, 0, to_string(mouse_y));
+	//CTextDraw::Print(pDC, 0, 0, to_string(mouse_x));
+	//CTextDraw::Print(pDC, 50, 0, to_string(mouse_y));
 
 	//CTextDraw::Print(pDC, 100, 0, to_string(background.GetLeft()));
 	if (background.GetLeft() == -9) {
 		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
 		
 		CTextDraw::Print(pDC, 700, 20, to_string(game_phase));
-
-		CTextDraw::Print(pDC, 700, 50, to_string(z.wave4));
-		
+		/*
 		CTextDraw::Print(pDC, 600, 20, to_string(z.win1));
 		CTextDraw::Print(pDC, 600, 50, to_string(z.win2));
 		CTextDraw::Print(pDC, 600, 80, to_string(z.win3));
 		CTextDraw::Print(pDC, 600, 110, to_string(z.win4));
 		CTextDraw::Print(pDC, 600, 140, to_string(z.win5));
 		CTextDraw::Print(pDC, 700, 170, to_string(z.level));
-		/*CTextDraw::Print(pDC, 700, 100, to_string(z.flag_zom_touch_plant[1]));
+		CTextDraw::Print(pDC, 700, 100, to_string(z.flag_zom_touch_plant[1]));
 		CTextDraw::Print(pDC, 700, 150, to_string(p[1].plantToZombie[0]));
 		CTextDraw::Print(pDC, 700, 200, to_string(p[0].vanish));
 		CTextDraw::Print(pDC, 700, 250, to_string(p[0].plantToZombie[0]));
