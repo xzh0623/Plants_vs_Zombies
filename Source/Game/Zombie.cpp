@@ -35,6 +35,10 @@ namespace game_framework {
 		wave4 = false;
 		win1 = false;
 		lose1 = false;
+		win3 = false;
+		lose3 = false;
+		win4 = false;
+		lose4 = false;
 		win2 = false;
 		lose2 = false;
 		win5 = false;
@@ -89,6 +93,8 @@ namespace game_framework {
 		//íL«Í¶i«×±ø
 		zombie[59].LoadBitmapByString({ "resources/game_bar_0.bmp","resources/game_bar_1.bmp","resources/game_bar_2.bmp","resources/game_bar_3.bmp" }, RGB(128, 128, 128));
 		zombie[59].SetTopLeft(400, 10);
+
+		
 		
 		if (level == 0)
 		{
@@ -1106,8 +1112,10 @@ namespace game_framework {
 			{
 				if (zombie[i].GetLeft() == 80 && zombie[i].GetTop() == 250)
 				{
+					//CAudio::Instance()->Play(2, false);
 					count_gameover += 1;
 					zombie[56].ShowBitmap();
+					CAudio::Instance()->Stop(0);
 					if (count_gameover > 90)lose1 = true;
 				}
 
@@ -1182,9 +1190,13 @@ namespace game_framework {
 			{
 				if (zombie[i].GetLeft() == 80 && zombie[i].GetTop() == 250)
 				{
+					CAudio::Instance()->Play(2, true);
 					count_gameover += 1;
 					zombie[56].ShowBitmap();
+					CAudio::Instance()->Stop(0);
 					if (count_gameover > 90)lose2 = true;
+					
+					
 				}
 
 			}
@@ -1276,8 +1288,10 @@ namespace game_framework {
 		{
 			if (zombie[i].GetLeft() == 80 && zombie[i].GetTop() == 250)
 			{
+				CAudio::Instance()->Play(2, true);
 				count_gameover += 1;
 				zombie[56].ShowBitmap();
+				CAudio::Instance()->Stop(0);
 				if (count_gameover > 90)lose3 = true;
 			}
 
@@ -1369,8 +1383,10 @@ namespace game_framework {
 		{
 			if (zombie[i].GetLeft() == 80 && zombie[i].GetTop() == 250)
 			{
+				CAudio::Instance()->Play(2, true);
 				count_gameover += 1;
 				zombie[56].ShowBitmap();
+				CAudio::Instance()->Stop(0);
 				if (count_gameover > 90)lose4 = true;
 			}
 
@@ -1475,8 +1491,10 @@ namespace game_framework {
 			{
 				if (zombie[i].GetLeft() == 80 && zombie[i].GetTop() == 250)
 				{
+					CAudio::Instance()->Play(2, true);
 					count_gameover += 1;
 					zombie[56].ShowBitmap();
+					CAudio::Instance()->Stop(0);
 					if (count_gameover > 90)lose5 = true;
 				}
 

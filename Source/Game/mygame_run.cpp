@@ -597,12 +597,8 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			if (phase==2) GotoGameState(GAME_STATE_INIT);
 			phase += 1;
 			//GotoGameState(GAME_STATE_RUN);
-		}	
-		else if (z.lose) {
-			Sleep(10);
-			z.lose = false;
-			GotoGameState(GAME_STATE_INIT);
-		}*/
+		}	*/
+		
 		
 	}
 
@@ -747,7 +743,7 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	//////////////////////////////////
 	p_c.OnInit();
 	s_c.OnInit();
-
+	CAudio::Instance()->Load(2, "Audio/suck.mp3");
 	
 }
 
@@ -803,25 +799,35 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 	}
 	//關卡切換(lose)
 	if (nFlags == VK_LBUTTON && z.lose1 && MouseIsOverlap(changestage1) && game_phase == 1) {
+		//CAudio::Instance()->Stop(0);
+		CAudio::Instance()->Play(1,true);
 		game_phase = 1;
 		GotoGameState(GAME_STATE_INIT);
 	}
 
 	if (nFlags == VK_LBUTTON && z.lose2 && MouseIsOverlap(changestage1) && game_phase == 2) {
+		//CAudio::Instance()->Stop(0);
+		CAudio::Instance()->Play(1, true);
 		game_phase = 1;
 		GotoGameState(GAME_STATE_INIT);
 	}
 
 	if (nFlags == VK_LBUTTON && z.lose3 && MouseIsOverlap(changestage1) && game_phase == 3) {
+		//CAudio::Instance()->Stop(0);
+		CAudio::Instance()->Play(1, true);
 		game_phase = 1;
 		GotoGameState(GAME_STATE_INIT);
 	}
 
 	if (nFlags == VK_LBUTTON && z.lose4 && MouseIsOverlap(changestage1) && game_phase == 4) {
+		//CAudio::Instance()->Stop(0);
+		CAudio::Instance()->Play(1, true);
 		game_phase = 1;
 		GotoGameState(GAME_STATE_INIT);
 	}
 	if (nFlags == VK_LBUTTON && z.lose5 && MouseIsOverlap(changestage1) && game_phase == 5) {
+		//CAudio::Instance()->Stop(0);
+		CAudio::Instance()->Play(1, true);
 		game_phase = 1;
 		GotoGameState(GAME_STATE_INIT);
 	}
@@ -1182,7 +1188,11 @@ void CGameStateRun::show_image_by_phase() {
 		if ((game_phase == 1) && (background.GetLeft() == -9)) {
 			p_c.OnShow1();
 			if (z.win1) changestage.ShowBitmap();
-			if (z.lose1) changestage1.ShowBitmap();
+			if (z.lose1)
+			{
+				CAudio::Instance()->Play(2, false);
+				changestage1.ShowBitmap();
+			}
 			if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
 				if (p[index].turnToplant[1]) {
 					for (int j = 0; j < 9; j++) {

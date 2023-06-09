@@ -15,6 +15,7 @@ using namespace game_framework;
 
 CGameStateInit::CGameStateInit(CGame *g) : CGameState(g)
 {
+
 }
 void CGameStateInit::OnMove()							// 移動遊戲元素
 {
@@ -66,6 +67,10 @@ void CGameStateInit::OnInit()
 		"resources/menu_background.bmp"
 		});
 	background1.SetTopLeft(0, 0);
+	CAudio::Instance()->Load(0, "Audio/flower.mp3");
+	CAudio::Instance()->Load(1, "Audio/Faster.wav");
+	CAudio::Instance()->Play(1, true);
+	
 
 	//載入遊戲圖片
 	one[0].LoadBitmapByString({ "resources/menu_title1.bmp","resources/menu_title1_1.bmp" }, RGB(0, 0, 0));
@@ -191,6 +196,7 @@ void CGameStateInit::OnMouseMove(UINT nFlags, CPoint point)	// 處理滑鼠的�
 {
 	mouse_x = point.x;
 	mouse_y = point.y;
+	
 
 
 }
@@ -200,7 +206,8 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 	if (nFlags == VK_LBUTTON) {
 		if (menu_phase == 1) menu_phase += 1;
 		else if (menu_phase == 2) {
-			
+			CAudio::Instance()->Stop(1);
+			CAudio::Instance()->Play(0, true);
 			if ((MouseIsOverlap(one[4]))) {
 				help_show = !help_show;
 			}
@@ -306,7 +313,7 @@ bool CGameStateInit::MouseIsOverlap(CMovingBitmap bmp1) { //判斷滑鼠是否�
 
 void CGameStateInit::OnShow()
 {
-
+	
 	if (menu_phase == 1) background.ShowBitmap();
 	if (menu_phase == 2) {
 		background1.ShowBitmap();
