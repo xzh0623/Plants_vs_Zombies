@@ -20,12 +20,14 @@ CGameStateChoose::~CGameStateChoose()
 }
 void CGameStateChoose::OnInit() 
 {
-
+	//game_phase += 1;
 }
 void CGameStateChoose::OnBeginState() 
 {
-	//game_phase += 1;
+	
+	
 	GotoGameState(GAME_STATE_RUN);		// ¤Á´«¦ÜGAME_STATE_RUN
+
 }
 void CGameStateChoose::OnKeyUp(UINT, UINT, UINT)
 {

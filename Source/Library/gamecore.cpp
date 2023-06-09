@@ -959,7 +959,6 @@ namespace game_framework {
 	{
 		game = g; 	// 設定game的pointer
 	}
-
 	void CGameState::GotoGameState(int state)
 	{
 		game->SetGameState(state);
