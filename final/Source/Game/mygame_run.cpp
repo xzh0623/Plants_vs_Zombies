@@ -1,0 +1,1436 @@
+#include "stdafx.h"
+#include "../Core/Resource.h"
+#include <mmsystem.h>
+#include <ddraw.h>
+#include "../Library/audio.h"
+#include "../Library/gameutil.h"
+#include "../Library/gamecore.h"
+#include "mygame.h"
+#include <string>
+#include <random>
+#include <iostream>
+#include <ctime> 
+#include <Windows.h>
+
+using namespace game_framework;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+int index=0;
+int mouse_x1[45] =
+{ 246,243,240,240,230,
+ 327,324,329,327,328,
+ 408,401,400,405,406,
+ 488,485,488,490,492,
+ 565,567,571,571,568,
+ 651,648,645,647,654,
+ 731,730,732,729,730,
+ 811,802,805,801,807,
+ 888,885,893,890,890 };
+int mouse_x2[45] =
+{ 314,317,317,317,321,
+ 387,389,392,394,395,
+ 477,476,478,480,485,
+ 559,556,559,556,560,
+ 641,635,636,638,644,
+ 718,719,723,718,722,
+ 794,790,795,799,801,
+ 872,872,880,878,880,
+ 962,972,972,975,984 };
+int mouse_y1[45] =
+{ 84,185,267,374,469,
+ 70,180,279,379,467,
+ 68,178,276,383,472,
+ 62,177,274,383,474,
+ 62,182,279,386,471,
+ 63,175,278,385,471,
+ 68,182,227,382,471,
+ 72,179,281,382,470,
+ 83,183,283,385,470 };
+int mouse_y2[45] =
+{ 161,268,365,463,562,
+ 166,267,365,454,564,
+ 165,264,374,460,564,
+ 169,263,372,463,563,
+ 165,268,371,460,559,
+ 166,267,376,460,559,
+ 171,268,376,460,562,
+ 168,267,373,458,561,
+ 175,267,372,462,564 };
+int x[45] = {
+249,249,249,249,249,
+327,327,327,327,327,
+404,404,404,404,404,
+492,492,492,492,492,
+568,568,568,568,568,
+655,655,655,655,655,
+732,732,732,732,732,
+811,811,811,811,811,
+893,893,893,893,893 };
+int y[45] = {
+87,181,296,380,483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483,
+87, 181, 296, 380, 483 };
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+int mouse1_x1[45] =
+{ 240,
+ 329,
+ 400,
+ 488,
+ 571,
+645,
+ 732,
+ 805,
+ 893 };
+int mouse1_x2[45] =
+{ 317,
+ 392,
+478,
+ 559,
+ 636,
+ 723,
+ 795,
+ 880,
+ 972 };
+int mouse1_y1[9] =
+{ 267,
+ 279,
+ 276,
+ 274,
+ 279,
+ 278,
+ 227,
+ 281,
+283 };
+int mouse1_y2[9] =
+{ 365,
+ 365,
+ 374,
+ 372,
+ 371,
+ 376,
+ 376,
+ 373,
+ 372 };
+int x_1[9] = {
+249,
+327,
+404,
+492,
+568,
+655,
+732,
+811,
+893 };
+int y_1[9] = {
+296,
+296, 
+296, 
+296,
+296,
+296, 
+296,
+296,
+ 296 };
+///////////////////////////////////
+int mouse2_x1[27] =
+{ 243,240,240,
+ 324,329,327,
+ 401,400,405,
+ 485,488,490,
+ 567,571,571,
+ 648,645,647,
+ 730,732,729,
+ 802,805,801,
+ 885,893,890 };
+int mouse2_x2[27] =
+{ 317,317,317,
+ 389,392,394,
+ 476,478,480,
+ 556,559,556,
+ 635,636,638,
+ 719,723,718,
+ 790,795,799,
+ 872,880,878,
+ 972,972,975, };
+int mouse2_y1[27] =
+{ 185,267,374,
+ 180,279,379,
+ 178,276,383,
+ 177,274,383,
+182,279,386,
+ 175,278,385,
+ 182,227,382,
+ 179,281,382,
+ 183,283,385 };
+int mouse2_y2[27] =
+{ 268,365,463,
+ 267,365,454,
+ 264,374,460,
+ 263,372,463,
+268,371,460,
+ 267,376,460,
+ 268,376,460,
+ 267,373,458,
+ 267,372,462 };
+int x_2[27] = {
+249,249,249,
+327,327,327,
+404,404,404,
+492,492,492,
+568,568,568,
+655,655,655,
+732,732,732,
+811,811,811,
+893,893,893 };
+int y_2[27] = {
+181,296,380,
+181, 296, 380,
+181, 296, 380,
+181, 296, 380,
+181, 296, 380,
+181, 296, 380,
+181, 296, 380,
+181, 296, 380,
+181, 296, 380 };
+/*
+void   Delay(int   time)//time*1000為秒數
+{
+	clock_t now = clock();
+	while (clock() - now < time);
+}
+*/
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 這個class為遊戲的遊戲執行物件，主要的遊戲程式都在這裡
+/////////////////////////////////////////////////////////////////////////////
+
+CGameStateRun::CGameStateRun(CGame *g) : CGameState(g)
+{
+}
+
+CGameStateRun::~CGameStateRun()
+{
+	delete[] p;
+}
+
+void CGameStateRun::OnBeginState()
+{
+	index = 0;
+	shovel_flag = false;
+	backgroundmove = false;
+	flag_delay = false;
+	for (int i = 0; i < 45; i++) map[i] = -1;
+	for (int i = 0; i < 100; i++) {
+		p[i].OnInit();
+		p[i].OnBeginState();
+	}
+	z.OnBeginState();
+	z.OnInit();
+	c.OnBeginState();
+	c.OnInit();
+	s.OnBeginState();
+	s.OnInit();
+	p0.OnBeginState();
+	p0.OnInit();
+	p1.OnBeginState();
+	p1.OnInit();
+	p2.OnBeginState();
+	p2.OnInit();
+	p3.OnBeginState();
+	p3.OnInit();
+	p_c.OnBeginState();
+	p_c.OnInit();
+	s_c.OnBeginState();
+	s_c.OnInit();
+	CAudio::Instance()->Play(0, true);
+}
+
+void CGameStateRun::OnMove()							// 移動遊戲元素
+{
+	if (CAudio::Instance()->game_phase == 1) z.level = 1;
+	if (CAudio::Instance()->game_phase == 2) z.level = 2;
+	if (CAudio::Instance()->game_phase == 3) z.level = 3;
+	if (CAudio::Instance()->game_phase == 4) z.level = 4;
+	if (CAudio::Instance()->game_phase == 5) z.level = 5;
+
+	//第二關遊戲背景移動
+	if (backgroundmove) {
+
+		if (background.GetLeft() > -10) {
+			background.SetTopLeft(background.GetLeft(), 0);
+			z.zombie[2].SetTopLeft(background.GetLeft() + 1100, 100);
+			z.zombie[3].SetTopLeft(background.GetLeft() + 1000, 200);
+			z.zombie[4].SetTopLeft(background.GetLeft() + 1050, 300);
+			z.zombie[18].SetTopLeft(background.GetLeft() + 1025, 400);
+			z.zombie[26].SetTopLeft(background.GetLeft() + 975, 10);
+			z.zombie[27].SetTopLeft(background.GetLeft() + 1075, 400);
+			z.zombie[32].SetTopLeft(background.GetLeft() + 1150, 300);
+		}
+		else {
+			background.SetTopLeft(background.GetLeft() + 3, 0);
+			z.zombie[2].SetTopLeft(background.GetLeft() + 1100, 100);
+			z.zombie[3].SetTopLeft(background.GetLeft() + 1000, 200);
+			z.zombie[4].SetTopLeft(background.GetLeft() + 1050, 300);
+			z.zombie[18].SetTopLeft(background.GetLeft() + 1025, 400);
+			z.zombie[26].SetTopLeft(background.GetLeft() + 975, 10);
+			z.zombie[27].SetTopLeft(background.GetLeft() + 1075, 400);
+			z.zombie[32].SetTopLeft(background.GetLeft() + 1150, 300);
+		}
+	}
+	else {
+		background.SetTopLeft(background.GetLeft() - 3, 0);
+		z.zombie[2].SetTopLeft(background.GetLeft() + 1100, 100);
+		z.zombie[3].SetTopLeft(background.GetLeft() + 1000, 200);
+		z.zombie[4].SetTopLeft(background.GetLeft() + 1050, 300);
+		z.zombie[18].SetTopLeft(background.GetLeft() + 1025, 400);
+		z.zombie[26].SetTopLeft(background.GetLeft() + 975, 10);
+		z.zombie[27].SetTopLeft(background.GetLeft() + 1075, 400);
+		z.zombie[32].SetTopLeft(background.GetLeft() + 1150, 300);
+
+		if (background.GetLeft() < -300) {
+			backgroundmove = true;
+		}
+
+	}
+	if (background.GetLeft() == -9) s.OnMove();
+
+	if (CAudio::Instance()->game_phase <= 5 && background.GetLeft() == -9)
+	{
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		for (int i = 0; i < 100; i++) {
+			//殭屍碰撞
+			if (p[i].SetPosDone) {
+				// 一般殭屍與植物相撞
+				z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_4[0], 0, i);
+				if(z.level == 1)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_2[0], 0, i);
+				if (z.level == 3 )z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_1[0], 0, i);
+				if (z.level == 4)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_3[0], 0, i);
+				
+				// 一般殭屍2與植物相撞
+				z.flag_zom_touch_plant[3] = IsOverlap(z.flag_zom_touch_plant[3], z._flag_car_0[0], 15, i);
+				// 一般殭屍3與植物相撞
+				z.flag_zom_touch_plant[4] = IsOverlap(z.flag_zom_touch_plant[4], z._flag_car_1[0], 20, i);
+				// 鐵桶殭屍與植物相撞
+				z.flag_zom_touch_plant[1] = IsOverlap(z.flag_zom_touch_plant[1], z._flag_car_3[0], 5, i);
+				if (z.level == 3 || z.level == 4)z.flag_zom_touch_plant[1] = IsOverlap(z.flag_zom_touch_plant[1], z._flag_car_2[0], 5, i);
+				// 鐵桶殭屍2與植物相撞
+				z.flag_zom_touch_plant[6] = IsOverlap(z.flag_zom_touch_plant[6], z._flag_car_4[1], 30, i);
+				// 三角錐殭屍與植物相撞
+				z.flag_zom_touch_plant[2] = IsOverlap(z.flag_zom_touch_plant[2], z._flag_car_2[0], 10, i);
+				// 三角錐殭屍2與植物相撞
+				z.flag_zom_touch_plant[5] = IsOverlap(z.flag_zom_touch_plant[5], z._flag_car_3[1], 25, i);
+				// 旗幟殭屍與植物相撞
+				z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_2[1], 35, i);
+				if (z.level == 3)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_3[1], 35, i);
+				if (z.level == 4)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_1[0], 35, i);
+				if (z.level == 5)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_1[1], 35, i);
+
+				if ((z.flag_zom_touch_plant[0]) || (z.flag_zom_touch_plant[1]) || (z.flag_zom_touch_plant[2]) || (z.flag_zom_touch_plant[3]) || (z.flag_zom_touch_plant[4]) || (z.flag_zom_touch_plant[5]) || (z.flag_zom_touch_plant[6]) || (z.flag_zom_touch_plant[7])) {
+					p[i].vanish = true;
+					
+				}
+				//設定植物1子彈
+				if (p[i].turnToplant[1]) {
+					SetBean(i, 1);
+				}
+				//設定植物3子彈
+				if (p[i].turnToplant[3]) {
+					SetBean(i, 3);
+				}
+				if (p[i].delay1 >= 1000) {
+					p[i].delay1 += 1;
+					if ((p[i].delay1 == 1420) || (p[i].delay1 == 1840)) {//當到1420秒時太陽出現
+						p[i].flag_sun = false;
+					}
+					for (int k = 0; k < 50; k++) {
+						if (p[i].plantToZombie[k]) {
+							if ((k == 0) && (z.zombie[0].GetTop() == 1500)) {
+								p[i].plantToZombie[0] = false;
+								p[i].delay1 = 0;
+							}
+							if ((k == 15) && (z.zombie[15].GetTop() == 1500)) {
+								p[i].plantToZombie[15] = false;
+								p[i].delay1 = 0;
+							}
+							if ((k == 20) && (z.zombie[20].GetTop() == 1500)) {
+								p[i].plantToZombie[20] = false;
+								p[i].delay1 = 0;
+							}
+							if ((k == 5) && (z.zombie[5].GetTop() == 1500)) {
+								p[i].plantToZombie[5] = false;
+								p[i].delay1 = 0;
+							}
+							if ((k == 10) && (z.zombie[10].GetTop() == 1500)) {
+								p[i].plantToZombie[10] = false;
+								p[i].delay1 = 0;
+							}
+							if ((k == 25) && (z.zombie[25].GetTop() == 1500)) {
+								p[i].plantToZombie[25] = false;
+								p[i].delay1 = 0;
+							}
+							if ((k == 30) && (z.zombie[30].GetTop() == 1500)) {
+								p[i].plantToZombie[30] = false;
+								p[i].delay1 = 0;
+							}
+							if ((k == 35) && (z.zombie[35].GetTop() == 1500)) {
+								p[i].plantToZombie[35] = false;
+								p[i].delay1 = 0;
+							}
+						}
+					}
+				}
+				else if (((p[i].flag_sun) && (p[i].twiceflag) || (p[i].turnToplant[1]) || (p[i].turnToplant[2]) || (p[i].turnToplant[3])) && (p[i].delay1 != -1)) {
+					p[i].delay1 += 1;
+					if ((p[i].delay1 == 420)) {//當到420秒時太陽出現
+						p[i].flag_sun = false;
+
+						// 一般殭屍與植物相撞
+						z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_4[0], 0, i);
+						if (z.level == 1)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_2[0], 0, i);
+						if (z.level == 3 || z.level == 4)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_1[0], 0, i);
+						if (z.level == 4)z.flag_zom_touch_plant[0] = IsOverlap(z.flag_zom_touch_plant[0], z._flag_car_3[0], 0, i);
+						// 一般殭屍2與植物相撞
+						z.flag_zom_touch_plant[3] = IsOverlap(z.flag_zom_touch_plant[3], z._flag_car_0[0], 15, i);
+						// 一般殭屍3與植物相撞
+						z.flag_zom_touch_plant[4] = IsOverlap(z.flag_zom_touch_plant[4], z._flag_car_1[0], 20, i);
+						// 鐵桶殭屍與植物相撞
+						z.flag_zom_touch_plant[1] = IsOverlap(z.flag_zom_touch_plant[1], z._flag_car_3[0], 5, i);
+						if (z.level == 3 || z.level == 4)z.flag_zom_touch_plant[1] = IsOverlap(z.flag_zom_touch_plant[1], z._flag_car_2[0], 5, i);
+						// 鐵桶殭屍2與植物相撞
+						z.flag_zom_touch_plant[6] = IsOverlap(z.flag_zom_touch_plant[6], z._flag_car_4[1], 30, i);
+						// 三角錐殭屍與植物相撞
+						z.flag_zom_touch_plant[2] = IsOverlap(z.flag_zom_touch_plant[2], z._flag_car_2[0], 10, i);
+						// 三角錐殭屍2與植物相撞
+						z.flag_zom_touch_plant[5] = IsOverlap(z.flag_zom_touch_plant[5], z._flag_car_3[1], 25, i);
+						// 旗幟殭屍與植物相撞
+						z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_2[1], 35, i);
+						if (z.level == 3)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_3[1], 35, i);
+						if (z.level == 4)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_1[0], 35, i);
+						if (z.level == 5)z.flag_zom_touch_plant[7] = IsOverlap(z.flag_zom_touch_plant[7], z._flag_car_1[1], 35, i);
+
+						if ((z.flag_zom_touch_plant[0]) || (z.flag_zom_touch_plant[1]) || (z.flag_zom_touch_plant[2]) || (z.flag_zom_touch_plant[3]) || (z.flag_zom_touch_plant[4]) || (z.flag_zom_touch_plant[5]) || (z.flag_zom_touch_plant[6]) || (z.flag_zom_touch_plant[7])) {
+							p[i].vanish = true;
+							
+						}
+
+
+					}
+					if (p[i].delay1 == 600) {
+						p[i].delay1 = 0;
+					}
+
+
+				}
+			}
+			
+			
+		}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		if (z.level == 5)
+		{
+		//一般殭屍與index 4 車相撞，車前進
+			if (!z.flag_zom_touch_plant[0] && !z._flag_car_4[0])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[4], z.zombie[0])) z._flag_car_4[0] = true;
+			}
+			if (z._flag_car_4[0]) c.car[4].SetTopLeft(c.car[4].GetLeft() + 20, c.car[4].GetTop());
+		}
+		else if (z.level == 1 )
+		{
+			//一般殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[0] && !z._flag_car_2[0])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[2], z.zombie[0])) z._flag_car_2[0] = true;
+			}
+			if (z._flag_car_2[0]) c.car[2].SetTopLeft(c.car[2].GetLeft() + 20, c.car[2].GetTop());
+		}
+		else if (z.level == 2)
+		{
+			//一般殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[0] && !z._flag_car_2[0])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[2], z.zombie[0])) z._flag_car_2[0] = true;
+			}
+			if (z._flag_car_2[0]) c.car[2].SetTopLeft(c.car[2].GetLeft() + 5, c.car[2].GetTop());
+		}
+		else if (z.level == 3)
+		{
+			//一般殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[0] && !z._flag_car_1[0])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[1], z.zombie[0])) z._flag_car_1[0] = true;
+			}
+			if (z._flag_car_1[0]) c.car[1].SetTopLeft(c.car[1].GetLeft() + 5, c.car[1].GetTop());
+		}
+		else if (z.level == 4)
+		{
+			//一般殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[0] && !z._flag_car_3[0])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[3], z.zombie[0])) z._flag_car_3[0] = true;
+			}
+			if (z._flag_car_3[0]) c.car[3].SetTopLeft(c.car[3].GetLeft() + 5, c.car[3].GetTop());
+		}
+
+
+		
+//一般殭屍2與index 0 車相撞，車前進
+		if (!z.flag_zom_touch_plant[3] && !z._flag_car_0[0])
+		{
+			if (CMovingBitmap::IsOverlap(c.car[0], z.zombie[15])) z._flag_car_0[0] = true;
+		}
+		if (z._flag_car_0[0]) c.car[0].SetTopLeft(c.car[0].GetLeft() + 20, c.car[0].GetTop());
+
+//一般殭屍3與index 1 車相撞，車前進
+		if (!z.flag_zom_touch_plant[4] && !z._flag_car_1[0])
+		{
+			if (CMovingBitmap::IsOverlap(c.car[1], z.zombie[20])) z._flag_car_1[0] = true;
+		}
+		if (z._flag_car_1[0]) c.car[1].SetTopLeft(c.car[1].GetLeft() + 20, c.car[1].GetTop());
+
+		
+		if (z.level == 1 || z.level == 2 || z.level == 5)
+		{
+			//鐵桶殭屍與index 3 車相撞，車前進
+			if (!z.flag_zom_touch_plant[1] && !z._flag_car_3[0])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[3], z.zombie[5])) z._flag_car_3[0] = true;
+			}
+			if (z._flag_car_3[0]) c.car[3].SetTopLeft(c.car[3].GetLeft() + 20, c.car[3].GetTop());
+		}
+		else if (z.level == 3)
+		{
+			//鐵桶殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[1] && !z._flag_car_2[0])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[2], z.zombie[5])) z._flag_car_2[0] = true;
+			}
+			if (z._flag_car_2[0]) c.car[2].SetTopLeft(c.car[2].GetLeft() + 20, c.car[2].GetTop());
+		}
+		else if (z.level == 4)
+		{
+			//鐵桶殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[1] && !z._flag_car_2[0])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[2], z.zombie[5])) z._flag_car_2[0] = true;
+			}
+			if (z._flag_car_2[0]) c.car[2].SetTopLeft(c.car[2].GetLeft() + 20, c.car[2].GetTop());
+		}
+		
+		
+//鐵桶殭屍2與index 4 車相撞，車前進
+		if (!z.flag_zom_touch_plant[6] && !z._flag_car_4[1])
+		{
+			if (CMovingBitmap::IsOverlap(c.car[4], z.zombie[30])) z._flag_car_4[1] = true;
+		}
+		if (!z._flag_car_4[0] && z._flag_car_4[1]) c.car[4].SetTopLeft(c.car[4].GetLeft() + 20, c.car[4].GetTop());
+
+//三角錐殭屍與index 2 車相撞，車前進
+		if (!z.flag_zom_touch_plant[2] && !z._flag_car_2[0])
+		{
+			if (CMovingBitmap::IsOverlap(c.car[2], z.zombie[10])) z._flag_car_2[0] = true;
+		}
+		if (z._flag_car_2[0]) c.car[2].SetTopLeft(c.car[2].GetLeft() + 20, c.car[2].GetTop());
+
+//三角錐殭屍2與index 3 車相撞，車前進
+		if (!z._flag_car_3[1])
+		{
+			if (CMovingBitmap::IsOverlap(c.car[3], z.zombie[25])) z._flag_car_3[1] = true;
+		}
+		if (!z._flag_car_3[0] && z._flag_car_3[1]) c.car[3].SetTopLeft(c.car[3].GetLeft() + 20, c.car[3].GetTop());
+
+		if (z.level == 1 || z.level == 2 )
+		{
+			//旗幟殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[7] && !z._flag_car_2[1])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[2], z.zombie[35])) z._flag_car_2[1] = true;
+			}
+			if (z._flag_car_2[1]) c.car[2].SetTopLeft(c.car[2].GetLeft() + 20, c.car[2].GetTop());
+		}
+		else if (z.level == 3)
+		{
+			//旗幟殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[7] && !z._flag_car_3[1])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[3], z.zombie[35])) z._flag_car_3[1] = true;
+			}
+			if (z._flag_car_3[1]) c.car[3].SetTopLeft(c.car[3].GetLeft() + 20, c.car[3].GetTop());
+		}
+		else if (z.level == 4)
+		{
+			//旗幟殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[7] && !z._flag_car_1[0])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[1], z.zombie[35])) z._flag_car_1[0] = true;
+			}
+			if (z._flag_car_1[0]) c.car[1].SetTopLeft(c.car[1].GetLeft() + 20, c.car[1].GetTop());
+		}
+		else if (z.level == 5)
+		{
+			//旗幟殭屍與index 2 車相撞，車前進
+			if (!z.flag_zom_touch_plant[7] && !z._flag_car_1[1])
+			{
+				if (CMovingBitmap::IsOverlap(c.car[1], z.zombie[35])) z._flag_car_1[1] = true;
+			}
+			if (z._flag_car_1[1]) c.car[1].SetTopLeft(c.car[1].GetLeft() + 20, c.car[1].GetTop());
+		}
+		
+		z.OnMove();
+		p_c.OnMove(0,50);
+		p_c.OnMove(1, 100);
+		p_c.OnMove(2, 50);
+		p_c.OnMove(3, 200);
+
+		
+		/*if (z.win) {
+			Sleep(10);
+			z.win = false;
+			if (phase==2) GotoGameState(GAME_STATE_INIT);
+			phase += 1;
+			//GotoGameState(GAME_STATE_RUN);
+		}	*/
+		//if(z.lose1) CAudio::Instance()->Play(2, false);
+		
+	}
+
+}
+
+//植物跟殭屍碰撞
+bool CGameStateRun::IsOverlap(bool flag_1,bool flag_2,int zombie_num,int i) {
+	if (!flag_1 && !flag_2)
+	{
+		for (int j = 0; j < 6; j++)
+		{
+			if (p[i].turnToplant[j])
+			{
+				if (CMovingBitmap::IsOverlap(p[i].plants[j], z.zombie[zombie_num]) && z.zombie[zombie_num].GetTop() < p[i].plants[j].GetTop()&&(p[i].plants[j].GetTop()+ p[i].plants[j].GetHeight()) <= (z.zombie[zombie_num].GetTop() + z.zombie[zombie_num].GetHeight())&& z.zombie[zombie_num].GetLeft()+10 > p[i].plants[j].GetLeft())
+				{
+					if(p[i].delay1<1000) p[i].delay1 = 1000;
+					p[i].plantToZombie[zombie_num] = true;
+					return true;
+				}
+				
+				
+			}
+		
+		}
+	}
+	return flag_1;
+}
+//兩物件平行距離
+int CGameStateRun::Distance(CMovingBitmap bmp1, CMovingBitmap bmp2) {
+	if ((bmp2.GetTop() == 30) && (bmp1.GetTop() == 87)) {
+		if (bmp1.GetLeft() > bmp2.GetLeft()) return 1000;
+		return bmp2.GetLeft() - bmp1.GetLeft();
+	}
+	else if ((bmp2.GetTop() == 120) && (bmp1.GetTop() == 181)) {
+		if (bmp1.GetLeft() > bmp2.GetLeft()) return 1000;
+		return bmp2.GetLeft() - bmp1.GetLeft();
+	}
+	else if ((bmp2.GetTop() == 230) && (bmp1.GetTop() == 296)) {
+		if (bmp1.GetLeft() > bmp2.GetLeft()) return 1000;
+		return bmp2.GetLeft() - bmp1.GetLeft();
+	}
+	else if ((bmp2.GetTop() == 320) && (bmp1.GetTop() == 380)) {
+		if (bmp1.GetLeft() > bmp2.GetLeft()) return 1000;
+		return bmp2.GetLeft() - bmp1.GetLeft();
+	}
+	else if ((bmp2.GetTop() == 420) && (bmp1.GetTop() == 483)) {
+		if (bmp1.GetLeft() > bmp2.GetLeft()) return 1000;
+		return bmp2.GetLeft() - bmp1.GetLeft();
+	}
+	
+
+	
+
+}
+//子彈設定
+void CGameStateRun::SetBean(int i,int bean_index) {
+	if (bean_index == 1) {
+		for (int k = 0; k < 36; k = k + 5) {
+			if ((p[i].bean1_delay >= 0) && (z.zombie[k].GetLeft()<=970)) {
+				if ((Distance(p[i].plants[1], z.zombie[k]) < 800) && (!p[i].bean1_show) && (p[i].bean1_delay>=800)) {
+					p[i].bean1_delay = 0;
+					p[i].bean1_show = true;
+					p[i].bean1_isoverlap = false;
+				}
+				if ((p[i].bean1_delay<800)) {
+					p[i].bean1_delay += 2;
+					p[i].plants[7].SetTopLeft(p[i].plants[1].GetLeft() + 40 + p[i].bean1_delay, p[i].plants[1].GetTop() + 2);
+					
+					if (CMovingBitmap::IsOverlap(p[i].plants[7], z.zombie[k]) && (z.zombie[k].GetTop() < p[i].plants[7].GetTop())&&(!p[i].bean1_isoverlap)) {
+						p[i].bean1_isoverlap = true;
+						p[i].bean1_show = false;
+						if ((!p[i].bean1_show) && k == 0) z.hit_count_normal[0] += 1;
+						if ((!p[i].bean1_show) && k == 5) z.hit_count_bucket[0] += 1;
+						if ((!p[i].bean1_show) && k == 30) z.hit_count_bucket[1] += 1;
+						if ((!p[i].bean1_show) && k == 10) z.hit_count_tri[0] += 1;
+						if ((!p[i].bean1_show) && k == 15) z.hit_count_normal[1] += 1;
+						if ((!p[i].bean1_show) && k == 20) z.hit_count_normal[2] += 1;
+						if ((!p[i].bean1_show) && k == 25) z.hit_count_tri[1] += 1;
+						if ((!p[i].bean1_show) && k == 35) z.hit_count_flag[0] += 1;
+						z.zombiegotbean[0].SetTopLeft(z.zombie[k].GetLeft() + 10, z.zombie[k].GetTop() + 70);
+						z.ZombieGotBean1 = true;
+						CAudio::Instance()->Play(3, false);
+					}
+				}
+
+			}
+
+		}
+	}
+	if (bean_index == 3) {
+		for (int k = 0; k < 36; k = k + 5) {
+			if (p[i].bean2_delay >= 0 && (z.zombie[k].GetLeft() <= 970)) {
+				if ((Distance(p[i].plants[3], z.zombie[k]) < 800) && (!p[i].bean2_show) && (p[i].bean2_delay >= 800)) {
+					p[i].bean2_delay = 0;
+					p[i].bean2_show = true;
+					p[i].bean2_isoverlap = false;
+				}
+				if (p[i].bean2_delay < 800) {
+					p[i].bean2_delay += 2;
+					p[i].plants[8].SetTopLeft(p[i].plants[3].GetLeft() + 40 + p[i].bean2_delay, p[i].plants[3].GetTop() + 2);
+					p[i].plants[9].SetTopLeft(p[i].plants[8].GetLeft() - 50, p[i].plants[8].GetTop());
+					if (CMovingBitmap::IsOverlap(p[i].plants[8], z.zombie[k]) && z.zombie[k].GetTop() < p[i].plants[8].GetTop() && (!p[i].bean2_isoverlap)) {
+						p[i].bean2_isoverlap = true;
+						p[i].bean2_show = false;
+						if ((!p[i].bean2_show) && k == 0) z.hit_count_normal[0] += 2;
+						if ((!p[i].bean2_show) && k == 5) z.hit_count_bucket[0] += 2;
+						if ((!p[i].bean2_show) && k == 30) z.hit_count_bucket[1] += 2;
+						if ((!p[i].bean2_show) && k == 10) z.hit_count_tri[0] += 2;
+						if ((!p[i].bean2_show) && k == 15) z.hit_count_normal[1] += 2;
+						if ((!p[i].bean2_show) && k == 20) z.hit_count_normal[2] += 2;
+						if ((!p[i].bean2_show) && k == 25) z.hit_count_tri[1] += 2;
+						if ((!p[i].bean2_show) && k == 35) z.hit_count_flag[0] += 2;
+						z.zombiegotbean[0].SetTopLeft(z.zombie[k].GetLeft() + 10, z.zombie[k].GetTop() + 70);
+						z.ZombieGotBean1 = true;
+						CAudio::Instance()->Play(3, false);
+					}
+				}
+
+			}
+			
+		}
+	}
+
+}
+void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
+{
+	//載入遊戲背景
+	background.LoadBitmapByString({"resources/phase1_background.bmp","resources/phase2_background.bmp" ,"resources/phase3_background.bmp" });
+	background.SetTopLeft(0, 0);
+	shovel[0].LoadBitmapByString({ "resources/ShovelBack.bmp" });
+	shovel[0].SetTopLeft(304, 14);
+	shovel[1].LoadBitmapByString({ "resources/Shovel1.bmp" }, RGB(0, 0, 0));
+	shovel[1].SetTopLeft(304, 14);
+	changestage.LoadBitmapByString({ "resources/NextStage.bmp" }, RGB(100, 86, 82));
+	changestage.SetTopLeft(400, 200);
+	changestage1.LoadBitmapByString({ "resources/NextStage1.bmp" }, RGB(100, 86, 82));
+	changestage1.SetTopLeft(400, 200);
+	//////////////////////////////////
+	c.OnInit();
+	s.OnInit();
+	for(int i=0;i<100;i++) p[i].OnInit();
+	for (int i = 0; i < 45; i++) map[i] = -1;
+	//////////////////////////////////
+	p_c.OnInit();
+	s_c.OnInit();
+	CAudio::Instance()->Load(2, "Audio/suck.mp3");
+	CAudio::Instance()->Load(0, "Audio/flower.mp3");
+	CAudio::Instance()->Load(3, "Audio/splat1.mp3");
+	
+}
+
+void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
+{
+	
+	
+	if (nChar == VK_TAB) {
+		if (CAudio::Instance()->game_phase == 5) {
+			CAudio::Instance()->game_phase = 1;
+			GotoGameState(GAME_STATE_INIT);
+		}
+		else {
+			CAudio::Instance()->game_phase += 1;
+			GotoGameState(GAME_STATE_CHOOSE);
+		}
+	}
+	
+	
+
+}
+
+void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
+{
+	
+}
+
+void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
+{
+	//關卡切換(win)
+	if (nFlags == VK_LBUTTON && z.win1 && MouseIsOverlap(changestage) && CAudio::Instance()->game_phase==1) {
+		CAudio::Instance()->game_phase = 2;
+		GotoGameState(GAME_STATE_CHOOSE);
+	}
+
+	if (nFlags == VK_LBUTTON && z.win2 && MouseIsOverlap(changestage) && CAudio::Instance()->game_phase == 2) {
+		CAudio::Instance()->game_phase = 3;
+		GotoGameState(GAME_STATE_CHOOSE);
+	}
+
+	if (nFlags == VK_LBUTTON && z.win3 && MouseIsOverlap(changestage) && CAudio::Instance()->game_phase == 3) {
+		CAudio::Instance()->game_phase = 4;
+		GotoGameState(GAME_STATE_CHOOSE);
+	}
+
+	if (nFlags == VK_LBUTTON && z.win4 && MouseIsOverlap(changestage) && CAudio::Instance()->game_phase == 4) {
+		CAudio::Instance()->game_phase = 5;
+		GotoGameState(GAME_STATE_CHOOSE);
+	}
+	if (nFlags == VK_LBUTTON && z.win5 && MouseIsOverlap(changestage1) && CAudio::Instance()->game_phase == 5) {
+		CAudio::Instance()->game_phase = 1;
+		GotoGameState(GAME_STATE_INIT);
+	}
+	//關卡切換(lose)
+	if (nFlags == VK_LBUTTON && z.lose1 && MouseIsOverlap(changestage1) && CAudio::Instance()->game_phase == 1) {
+		//CAudio::Instance()->Stop(0);
+		CAudio::Instance()->Play(2, false);
+		CAudio::Instance()->Play(1,true);
+		CAudio::Instance()->game_phase = 1;
+		GotoGameState(GAME_STATE_INIT);
+	}
+
+	if (nFlags == VK_LBUTTON && z.lose2 && MouseIsOverlap(changestage1) && CAudio::Instance()->game_phase == 2) {
+		CAudio::Instance()->Play(2, false);
+		CAudio::Instance()->Play(1, true);
+		CAudio::Instance()->game_phase = 1;
+		GotoGameState(GAME_STATE_INIT);
+	}
+
+	if (nFlags == VK_LBUTTON && z.lose3 && MouseIsOverlap(changestage1) && CAudio::Instance()->game_phase == 3) {
+		CAudio::Instance()->Play(2, false);
+		CAudio::Instance()->Play(1, true);
+		CAudio::Instance()->game_phase = 1;
+		GotoGameState(GAME_STATE_INIT);
+	}
+
+	if (nFlags == VK_LBUTTON && z.lose4 && MouseIsOverlap(changestage1) && CAudio::Instance()->game_phase == 4) {
+		CAudio::Instance()->Play(2, false);
+		CAudio::Instance()->Play(1, true);
+		CAudio::Instance()->game_phase = 1;
+		GotoGameState(GAME_STATE_INIT);
+	}
+	if (nFlags == VK_LBUTTON && z.lose5 && MouseIsOverlap(changestage1) && CAudio::Instance()->game_phase == 5) {
+		CAudio::Instance()->Play(2, false);
+		CAudio::Instance()->Play(1, true);
+		CAudio::Instance()->game_phase = 1;
+		GotoGameState(GAME_STATE_INIT);
+	}
+
+	if (nFlags == VK_LBUTTON) {
+		if (MouseIsOverlap(s.sun[0])) {
+			s.flag2 = TRUE;
+			p_c.score += 50;
+		}
+		if (MouseIsOverlap(shovel[1])) {
+			shovel_flag = !shovel_flag;
+		}
+		for (int i = 0; i < 100; i++) {
+			for (int k = 0; k < 10; k++) {
+				if (MouseIsOverlap(shovel[1]) && MouseIsOverlap(p[i].plants[k])) {
+					p[i].vanish = true;
+					p[i].delay1 = 1501;
+				}
+			}
+		}
+	}
+	if (CAudio::Instance()->game_phase == 1) {
+		if (nFlags == VK_LBUTTON) {
+			if (MouseIsOverlap(p_c.plantscard[1])) {
+				p_c.OnLButtonDown(1, 100);
+			}
+			/////////////////////////////////////////////////
+			if (p_c.scorecost[1]) {
+				p[index].turnToplant[1] = true;
+				if (nFlags == VK_LBUTTON) {
+					if (MouseIsOverlap(p_c.plantscard[1])) p[index].isflag = 1;
+					else if (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 275) && ((mouse_y) <= 386)) p[index].isflag = 2;
+					if (p[index].isflag == 2) {
+						p[index].twiceflag = true;
+						p[index].isflag = 0;
+						p_c.scorecost[1] = false;
+
+					}
+				}
+			}
+		}
+	}
+	else if (CAudio::Instance()->game_phase == 2) {
+		if (nFlags == VK_LBUTTON) {
+			if (MouseIsOverlap(p_c.plantscard[0])) {
+				p_c.OnLButtonDown(0, 50);
+			}
+
+			if (MouseIsOverlap(p_c.plantscard[1])) {
+				p_c.OnLButtonDown(1, 100);
+			}
+			///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			for (int i = 0; i < 100; i++) {
+				if (MouseIsOverlap(p[i].plants[6]) && (p[i].IsShowBitmap)) {
+					p[i].flag_sun = TRUE;
+					p_c.score += 50;
+				}
+			}
+			for (int i = 0; i < 2; i++) {
+				if (p_c.scorecost[i]) {
+					p[index].turnToplant[i] = true;
+					if (nFlags == VK_LBUTTON) {
+						if (MouseIsOverlap(p_c.plantscard[i])) p[index].isflag = 1;
+						else if (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 160) && ((mouse_y) <= 497)) p[index].isflag = 2;
+						if (p[index].isflag == 2) {
+							p[index].twiceflag = true;
+							p[index].isflag = 0;
+							p_c.scorecost[i] = false;
+
+						}
+
+					}
+				}
+			}
+			///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		}
+	}
+	else if (CAudio::Instance()->game_phase == 3) {
+		if (nFlags == VK_LBUTTON) {
+			if (MouseIsOverlap(p_c.plantscard[0])) {
+				p_c.OnLButtonDown(0, 50);
+			}
+
+			if (MouseIsOverlap(p_c.plantscard[1])) {
+				p_c.OnLButtonDown(1, 100);
+			}
+			if (MouseIsOverlap(p_c.plantscard[2])) {
+				p_c.OnLButtonDown(2, 50);
+			}
+			///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			for (int i = 0; i < 100; i++) {
+				if (MouseIsOverlap(p[i].plants[6]) && (p[i].IsShowBitmap)) {
+					p[i].flag_sun = TRUE;
+					p_c.score += 50;
+				}
+			}
+			for (int i = 0; i < 3; i++) {
+				if (p_c.scorecost[i]) {
+					p[index].turnToplant[i] = true;
+					if (nFlags == VK_LBUTTON) {
+						if (MouseIsOverlap(p_c.plantscard[i])) p[index].isflag = 1;
+						else if (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 160) && ((mouse_y) <= 497)) p[index].isflag = 2;
+						if (p[index].isflag == 2) {
+							p[index].twiceflag = true;
+							p[index].isflag = 0;
+							p_c.scorecost[i] = false;
+
+						}
+					}
+				}
+			}
+			///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		}
+	}
+	else{
+		if (nFlags == VK_LBUTTON) {
+			if (MouseIsOverlap(p_c.plantscard[0])) {
+				p_c.OnLButtonDown(0,50);
+			}
+			
+			if (MouseIsOverlap(p_c.plantscard[1])) {
+				p_c.OnLButtonDown(1,100);
+			}
+			if (MouseIsOverlap(p_c.plantscard[2])) {
+				p_c.OnLButtonDown(2,50);
+			}
+			if (MouseIsOverlap(p_c.plantscard[3])) {
+				p_c.OnLButtonDown(3,200);
+			}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			for (int i = 0; i < 100; i++) {
+				if (MouseIsOverlap(p[i].plants[6]) && (p[i].IsShowBitmap)) {
+					p[i].flag_sun = TRUE;
+					p_c.score += 50;
+				}
+			}
+			for (int i = 0; i < 4; i++) {
+				if (p_c.scorecost[i]) {
+					p[index].turnToplant[i] = true;
+					if (nFlags == VK_LBUTTON) {
+						if (MouseIsOverlap(p_c.plantscard[i])) p[index].isflag = 1;
+						else if (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 74) && ((mouse_y) <= 564)) p[index].isflag = 2;
+						if (p[index].isflag == 2) {
+							p[index].twiceflag = true;
+							p[index].isflag = 0;
+							p_c.scorecost[i] = false;
+
+						}
+					}
+				}
+			}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		}
+	}
+	
+}
+
+void CGameStateRun::OnLButtonUp(UINT nFlags, CPoint point)	// 處理滑鼠的動作
+{
+
+}
+
+void CGameStateRun::OnMouseMove(UINT nFlags, CPoint point)	// 處理滑鼠的動作
+{
+	mouse_x = point.x;
+	mouse_y = point.y;
+
+
+}
+
+void CGameStateRun::OnRButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
+{
+}
+
+void CGameStateRun::OnRButtonUp(UINT nFlags, CPoint point)	// 處理滑鼠的動作
+{
+}
+
+
+bool CGameStateRun::MouseIsOverlap(CMovingBitmap bmp1) { //判斷滑鼠是否在物件範圍內
+	
+	if ((mouse_x < bmp1.GetLeft() + bmp1.GetWidth()) && (mouse_x > bmp1.GetLeft()) &&
+		(mouse_y < bmp1.GetTop() + bmp1.GetHeight()) && (mouse_y > bmp1.GetTop())) {
+		return TRUE;
+	}
+	return FALSE;
+}
+
+void CGameStateRun::OnShow()
+{
+	show_image_by_phase();
+	show_text_by_phase();
+}
+
+void CGameStateRun::show_text_by_phase() {
+	CDC *pDC = CDDraw::GetBackCDC();
+	CTextDraw::ChangeFontLog(pDC, 21, "微軟正黑體", RGB(0, 0, 0), 800);
+
+	//CTextDraw::Print(pDC, 0, 0, to_string(mouse_x));
+	//CTextDraw::Print(pDC, 50, 0, to_string(mouse_y));
+
+	//CTextDraw::Print(pDC, 100, 0, to_string(background.GetLeft()));
+	if (background.GetLeft() == -9) {
+		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
+		//CTextDraw::Print(pDC, 650, 20, "Level:");
+		CTextDraw::Print(pDC, 700, 20, "Level: "+to_string(CAudio::Instance()->game_phase));
+		
+		//CTextDraw::Print(pDC, 800, 20, to_string(z.lose1));
+		/*CTextDraw::Print(pDC, 600, 50, to_string(z.win2));
+		CTextDraw::Print(pDC, 600, 80, to_string(z.win3));
+		CTextDraw::Print(pDC, 600, 110, to_string(z.win4));
+		CTextDraw::Print(pDC, 600, 140, to_string(z.win5));
+		CTextDraw::Print(pDC, 700, 170, to_string(z.level));
+		CTextDraw::Print(pDC, 700, 100, to_string(z.flag_zom_touch_plant[1]));
+		CTextDraw::Print(pDC, 700, 150, to_string(p[1].plantToZombie[0]));
+		CTextDraw::Print(pDC, 700, 200, to_string(p[0].vanish));
+		CTextDraw::Print(pDC, 700, 250, to_string(p[0].plantToZombie[0]));
+		CTextDraw::Print(pDC, 700, 300, to_string(p[0].delay1));
+		CTextDraw::Print(pDC, 700, 350, to_string(p[1].delay1));
+		CTextDraw::Print(pDC, 400, 350, to_string(z.hit_count_bucket[0]));
+		CTextDraw::Print(pDC, 700, 400, to_string(p[2].delay1));
+		CTextDraw::Print(pDC, 700, 450, to_string(p[3].delay1));
+		CTextDraw::Print(pDC, 700, 500, to_string(p[4].delay1));
+		CTextDraw::Print(pDC, 0, 500, to_string(z.hit_count_normal[0]));*/
+		
+	}
+	CDDraw::ReleaseBackCDC();
+}
+
+
+	
+void CGameStateRun::show_image_by_phase() {
+	if (CAudio::Instance()->game_phase <= 6) {
+		CAudio::Instance()->Stop(1);
+		if (CAudio::Instance()->game_phase == 1) background.SetFrameIndexOfBitmap(0);
+		else if (CAudio::Instance()->game_phase <= 4) background.SetFrameIndexOfBitmap(1);
+		else if (CAudio::Instance()->game_phase == 5) background.SetFrameIndexOfBitmap(2);
+		background.ShowBitmap();
+		if (background.GetLeft() != -9) {
+			z.OnShow1();
+		}
+		else{
+			Sleep(1);
+			for (int p = 0; p < 2; p++) shovel[p].ShowBitmap();
+			if (shovel_flag) shovel[1].SetTopLeft(mouse_x - 40, mouse_y - 10);
+			else {
+				shovel[1].SetTopLeft(304, 14);
+			}
+			s_c.OnShow();
+			c.OnShow();
+			z.OnShow2();
+			s.OnShow2();
+//////////////////////////////////////////////////////////////////////////
+			for (int i = 0; i < 100; i++) {
+				if (p[i].turnToplant[0]) {
+					//太陽花起始顏色，過幾秒太陽花變色，再過幾秒太陽花產太陽，同時變回起始顏色//OnMove2
+					if (p[i].delay1 > 0 && p[i].delay1 <= 210)
+					{
+						p[i].plants[4].ShowBitmap();
+
+					}
+					else if ((p[i].delay1 > 210 && p[i].delay1 <= 420) || (p[i].delay1 > 1210 && p[i].delay1 < 1420) || (p[i].delay1 > 1630 && p[i].delay1 < 1840))
+					{
+
+
+						p[i].plants[5].ShowBitmap();
+						if ((!p[i].flag_sun)) {
+							p[i].plants[6].ShowBitmap();
+							p[i].IsShowBitmap = true;
+						}
+						else {
+							p[i].IsShowBitmap = false;
+						}
+					}
+					else if (p[i].delay1 > 420)
+					{
+						p[i].plants[4].ShowBitmap();
+					}
+					if (p[i].vanish) {//不顯示//秒數也要暫停
+
+						if (p[i].delay1 > 1500) {
+							p[i].turnToplant[0] = false;
+							p[i].delay1 = -1;
+							p[i].plants[4].SetTopLeft(1000, 1000);
+							p[i].plants[5].SetTopLeft(1000, 1000);
+							p[i].plants[6].SetTopLeft(1000, 1000);
+							for (int k = 0; k < 50; k++) {
+								if (p[i].plantToZombie[k]) {
+									if (k == 0) z.flag_zom_touch_plant[0] = !z.flag_zom_touch_plant[0];
+									if (k == 5) z.flag_zom_touch_plant[1] = !z.flag_zom_touch_plant[1];
+									if (k == 10) z.flag_zom_touch_plant[2] = !z.flag_zom_touch_plant[2];
+									if (k == 15) z.flag_zom_touch_plant[3] = !z.flag_zom_touch_plant[3];
+									if (k == 20) z.flag_zom_touch_plant[4] = !z.flag_zom_touch_plant[4];
+									if (k == 25) z.flag_zom_touch_plant[5] = !z.flag_zom_touch_plant[5];
+									if (k == 30) z.flag_zom_touch_plant[6] = !z.flag_zom_touch_plant[6];
+									if (k == 35) z.flag_zom_touch_plant[7] = !z.flag_zom_touch_plant[7];
+									p[i].plantToZombie[k] = false;
+								}
+							}
+							for (int j = 0; j < 45; j++) {
+								if (map[j] == i) map[j] = -1;
+							}
+							//p[i].vanish = false;
+						}
+					}
+					if ((!p[i].flag_sun)) {
+						p[i].plants[6].ShowBitmap();
+						p[i].IsShowBitmap = true;
+					}
+					else {
+						p[i].IsShowBitmap = false;
+					}
+				}
+				for (int x = 1; x < 4; x++) {
+					if (p[i].turnToplant[x]) {
+						if (p[i].delay1 > 0) {
+							p[i].plants[x].ShowBitmap();
+							if ((x == 1) && (p[i].bean1_show))p[i].plants[7].ShowBitmap();
+							if (z.ZombieGotBean1) {
+								z.zombiegotbean[0].ShowBitmap();
+								z.ZombieGotBean1 = false;
+							}
+							if ((x == 3) && (p[i].bean2_show)) {
+								p[i].plants[8].ShowBitmap();
+								if ((p[i].plants[9].GetLeft() > p[i].plants[3].GetLeft() + 60)) p[i].plants[9].ShowBitmap();
+							}
+						}
+						if (p[i].vanish) {//不顯示//秒數也要暫停
+
+							if (p[i].delay1 > 1500) {
+								p[i].turnToplant[x] = false;
+								p[i].delay1 = -1;
+								p[i].plants[x].SetTopLeft(1000, 1000);
+								for (int k = 0; k < 50; k++) {
+									if (p[i].plantToZombie[k]) {
+										if (k == 0) z.flag_zom_touch_plant[0] = !z.flag_zom_touch_plant[0];
+										if (k == 5) z.flag_zom_touch_plant[1] = !z.flag_zom_touch_plant[1];
+										if (k == 10) z.flag_zom_touch_plant[2] = !z.flag_zom_touch_plant[2];
+										if (k == 15) z.flag_zom_touch_plant[3] = !z.flag_zom_touch_plant[3];
+										if (k == 20) z.flag_zom_touch_plant[4] = !z.flag_zom_touch_plant[4];
+										if (k == 25) z.flag_zom_touch_plant[5] = !z.flag_zom_touch_plant[5];
+										if (k == 30) z.flag_zom_touch_plant[6] = !z.flag_zom_touch_plant[6];
+										if (k == 35) z.flag_zom_touch_plant[7] = !z.flag_zom_touch_plant[7];
+										p[i].plantToZombie[k] = false;
+									}
+								}
+								if (x == 1) p[i].plants[7].SetTopLeft(1000, 1000);
+								if (x == 3) {
+									p[i].plants[8].SetTopLeft(1000, 1000);
+									p[i].plants[9].SetTopLeft(1000, 1000);
+								}
+								for (int j = 0; j < 45; j++) {
+									if (map[j] == i) map[j] = -1;
+								}
+								//p[i].vanish = false;
+							}
+						}
+					}
+				}
+
+			}
+///////////////////////////////////////////////////////////////////////////
+		}
+		if ((CAudio::Instance()->game_phase == 1) && (background.GetLeft() == -9)) {
+			p_c.OnShow1();
+			if (z.win1) changestage.ShowBitmap();
+			if (z.lose1) changestage1.ShowBitmap();
+			if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
+				if (p[index].turnToplant[1]) {
+					for (int j = 0; j < 9; j++) {
+						if (((mouse_x) >= mouse1_x1[j]) && ((mouse_x) <= mouse1_x2[j]) && ((mouse_y) >= mouse1_y1[j]) && ((mouse_y) <= mouse1_y2[j])) {
+							if (map[j] == -1) {
+								p[index].plants[1].SetTopLeft(x_1[j], y_1[j]);
+								map[j] = index;
+								p[index].SetPosDone = true;
+								index += 1;
+							}
+							else {
+								p[index].twiceflag = false;
+								p[index].isflag = 1;
+								p_c.scorecost[1] = true;
+								p[index].delay1 = 0;
+							}
+
+						}
+					}
+				}
+
+			}
+			if (p_c.scorecost[1] && (p[index].isflag == 1)) {
+				p[index].plants[1].SetTopLeft(mouse_x - 30, mouse_y - 30);
+				p[index].OnShow(1);
+			}
+		}
+		else if ((CAudio::Instance()->game_phase == 2) && (background.GetLeft() == -9)) {
+			p_c.OnShow2(2);
+			if (z.win2) changestage.ShowBitmap();
+			if (z.lose2) changestage1.ShowBitmap();
+			for (int k = 0; k < 2; k++) {
+				if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
+					if (p[index].turnToplant[0]) {
+						for (int j = 0; j < 27; j++) {
+							if (((mouse_x) >= mouse2_x1[j]) && ((mouse_x) <= mouse2_x2[j]) && ((mouse_y) >= mouse2_y1[j]) && ((mouse_y) <= mouse2_y2[j])) {
+								if (map[j] == -1) {
+									p[index].plants[4].SetTopLeft(x_2[j], y_2[j]);
+									p[index].plants[5].SetTopLeft(p[index].plants[4].GetLeft(), p[index].plants[4].GetTop());
+									p[index].plants[6].SetTopLeft(p[index].plants[4].GetLeft() + 5, p[index].plants[4].GetTop() + 7);
+									map[j] = index;
+									p[index].SetPosDone = true;
+									index += 1;
+
+								}
+								else {
+									p[index].twiceflag = false;
+									p[index].isflag = 1;
+									p_c.scorecost[0] = true;
+									p[index].delay1 = 0;
+								}
+
+
+							}
+
+						}
+
+					}
+					for (int i = 1; i < 2; i++) {
+						if (p[index].turnToplant[i]) {
+							for (int j = 0; j < 45; j++) {
+								if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
+									if (map[j] == -1) {
+										p[index].plants[i].SetTopLeft(x[j], y[j]);
+										if (i != 2) p[index].plants[7].SetTopLeft(p[index].plants[1].GetLeft() + 60, p[index].plants[1].GetTop() + 2);//豆豆位置//顯示時間用殭屍判斷
+										map[j] = index;
+										p[index].SetPosDone = true;
+										index += 1;
+									}
+									else {
+										p[index].twiceflag = false;
+										p[index].isflag = 1;
+										p_c.scorecost[i] = true;
+										p[index].delay1 = 0;
+									}
+
+								}
+
+
+							}
+
+
+						}
+					}
+
+				}
+				if (p_c.scorecost[k] && (p[index].isflag == 1)) {
+					p[index].plants[k].SetTopLeft(mouse_x - 30, mouse_y - 30);
+					p[index].OnShow(k);
+				}
+
+			}
+		}
+		else if ((CAudio::Instance()->game_phase == 3) && (background.GetLeft() == -9)) {
+			p_c.OnShow2(3);
+			if (z.win3) changestage.ShowBitmap();
+			if (z.lose3) changestage1.ShowBitmap();
+			for (int k = 0; k < 3; k++) {
+				if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
+					if (p[index].turnToplant[0]) {
+						for (int j = 0; j < 27; j++) {
+							if (((mouse_x) >= mouse2_x1[j]) && ((mouse_x) <= mouse2_x2[j]) && ((mouse_y) >= mouse2_y1[j]) && ((mouse_y) <= mouse2_y2[j])) {
+								if (map[j] == -1) {
+									p[index].plants[4].SetTopLeft(x_2[j], y_2[j]);
+									p[index].plants[5].SetTopLeft(p[index].plants[4].GetLeft(), p[index].plants[4].GetTop());
+									p[index].plants[6].SetTopLeft(p[index].plants[4].GetLeft() + 5, p[index].plants[4].GetTop() + 7);
+									map[j] = index;
+									p[index].SetPosDone = true;
+									index += 1;
+
+								}
+								else {
+									p[index].twiceflag = false;
+									p[index].isflag = 1;
+									p_c.scorecost[0] = true;
+									p[index].delay1 = 0;
+								}
+
+
+							}
+
+						}
+
+					}
+					for (int i = 1; i < 3; i++) {
+						if (p[index].turnToplant[i]) {
+							for (int j = 0; j < 45; j++) {
+								if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
+									if (map[j] == -1) {
+										p[index].plants[i].SetTopLeft(x[j], y[j]);
+										if (i != 2) p[index].plants[7].SetTopLeft(p[index].plants[1].GetLeft() + 60, p[index].plants[1].GetTop() + 2);//豆豆位置//顯示時間用殭屍判斷
+										map[j] = index;
+										p[index].SetPosDone = true;
+										index += 1;
+									}
+									else {
+										p[index].twiceflag = false;
+										p[index].isflag = 1;
+										p_c.scorecost[i] = true;
+										p[index].delay1 = 0;
+									}
+
+								}
+
+
+							}
+
+
+						}
+					}
+
+				}
+				if (p_c.scorecost[k] && (p[index].isflag == 1)) {
+					p[index].plants[k].SetTopLeft(mouse_x - 30, mouse_y - 30);
+					p[index].OnShow(k);
+				}
+
+			}
+		}
+		else if ((background.GetLeft() == -9)) {
+			p_c.OnShow2(4);
+			if ((CAudio::Instance()->game_phase == 4) && (z.win4)) changestage.ShowBitmap();
+			if ((CAudio::Instance()->game_phase == 4) && (z.lose1)) changestage1.ShowBitmap();
+			if ((CAudio::Instance()->game_phase == 5) && ((z.win5)||z.lose5)) changestage1.ShowBitmap();
+/////////////////////////////////////////////////////////////////////////
+			for (int k = 0; k < 4; k++) {
+				if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
+					if (p[index].turnToplant[0]) {
+						for (int j = 0; j < 45; j++) {
+							if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
+								if (map[j] == -1) {
+									p[index].plants[4].SetTopLeft(x[j], y[j]);
+									p[index].plants[5].SetTopLeft(p[index].plants[4].GetLeft(), p[index].plants[4].GetTop());
+									p[index].plants[6].SetTopLeft(p[index].plants[4].GetLeft() + 5, p[index].plants[4].GetTop() + 7);
+									map[j] = index;
+									p[index].SetPosDone = true;
+									index += 1;
+
+								}
+								else {
+									p[index].twiceflag = false;
+									p[index].isflag = 1;
+									p_c.scorecost[0] = true;
+									p[index].delay1 = 0;
+								}
+
+
+							}
+
+						}
+
+					}
+					for (int i = 1; i < 4; i++) {
+						if (p[index].turnToplant[i]) {
+							for (int j = 0; j < 45; j++) {
+								if (((mouse_x) >= mouse_x1[j]) && ((mouse_x) <= mouse_x2[j]) && ((mouse_y) >= mouse_y1[j]) && ((mouse_y) <= mouse_y2[j])) {
+									if (map[j] == -1) {
+										p[index].plants[i].SetTopLeft(x[j], y[j]);
+										if (i != 2) p[index].plants[7].SetTopLeft(p[index].plants[1].GetLeft() + 60, p[index].plants[1].GetTop() + 2);//豆豆位置//顯示時間用殭屍判斷
+										map[j] = index;
+										p[index].SetPosDone = true;
+										index += 1;
+									}
+									else {
+										p[index].twiceflag = false;
+										p[index].isflag = 1;
+										p_c.scorecost[i] = true;
+										p[index].delay1 = 0;
+									}
+
+								}
+
+
+							}
+
+
+						}
+					}
+
+				}
+				if (p_c.scorecost[k] && (p[index].isflag == 1)) {
+					p[index].plants[k].SetTopLeft(mouse_x - 30, mouse_y - 30);
+					p[index].OnShow(k);
+				}
+
+			}
+/////////////////////////////////////////////////////////////////////////
+		}
+	}
+}
+/*
+bool CGameStateRun::validate_phase_1() {
+	//return character.GetImageFilename() == "resources/giraffe.bmp";
+	return 1;
+}*/
