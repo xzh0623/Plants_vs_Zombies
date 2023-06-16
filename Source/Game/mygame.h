@@ -72,7 +72,7 @@ namespace game_framework {
 		void OnMove();
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
-		//int game_phase = 1;
+		//int CAudio::Instance()->game_phase = 1;
 		CMovingBitmap background;
 		CMovingBitmap background1;
 		int mouse_x, mouse_y;
@@ -146,7 +146,7 @@ namespace game_framework {
 		void OnMove();									// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
-		//int game_phase;
+		//int CAudio::Instance()->game_phase;
 		int index = 0;
 		int mouse_x, mouse_y;
 		CMovingBitmap background;

@@ -249,17 +249,17 @@ void CGameStateRun::OnBeginState()
 	p_c.OnInit();
 	s_c.OnBeginState();
 	s_c.OnInit();
+	CAudio::Instance()->Play(0, true);
 }
 
 void CGameStateRun::OnMove()							// 移動遊戲元素
 {
-	if (game_phase == 1) z.level = 1;
-	if (game_phase == 2) z.level = 2;
-	if (game_phase == 3) z.level = 3;
-	if (game_phase == 4) z.level = 4;
-	if (game_phase == 5) z.level = 5;
+	if (CAudio::Instance()->game_phase == 1) z.level = 1;
+	if (CAudio::Instance()->game_phase == 2) z.level = 2;
+	if (CAudio::Instance()->game_phase == 3) z.level = 3;
+	if (CAudio::Instance()->game_phase == 4) z.level = 4;
+	if (CAudio::Instance()->game_phase == 5) z.level = 5;
 
-	
 	//第二關遊戲背景移動
 	if (backgroundmove) {
 
@@ -301,7 +301,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 	}
 	if (background.GetLeft() == -9) s.OnMove();
 
-	if (game_phase <= 5 && background.GetLeft() == -9)
+	if (CAudio::Instance()->game_phase <= 5 && background.GetLeft() == -9)
 	{
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		for (int i = 0; i < 100; i++) {
@@ -598,7 +598,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 			phase += 1;
 			//GotoGameState(GAME_STATE_RUN);
 		}	*/
-		
+		//if(z.lose1) CAudio::Instance()->Play(2, false);
 		
 	}
 
@@ -680,6 +680,7 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 						if ((!p[i].bean1_show) && k == 35) z.hit_count_flag[0] += 1;
 						z.zombiegotbean[0].SetTopLeft(z.zombie[k].GetLeft() + 10, z.zombie[k].GetTop() + 70);
 						z.ZombieGotBean1 = true;
+						CAudio::Instance()->Play(3, false);
 					}
 				}
 
@@ -712,6 +713,7 @@ void CGameStateRun::SetBean(int i,int bean_index) {
 						if ((!p[i].bean2_show) && k == 35) z.hit_count_flag[0] += 2;
 						z.zombiegotbean[0].SetTopLeft(z.zombie[k].GetLeft() + 10, z.zombie[k].GetTop() + 70);
 						z.ZombieGotBean1 = true;
+						CAudio::Instance()->Play(3, false);
 					}
 				}
 
@@ -736,7 +738,6 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	changestage1.SetTopLeft(400, 200);
 	//////////////////////////////////
 	c.OnInit();
-	//z.OnInit();
 	s.OnInit();
 	for(int i=0;i<100;i++) p[i].OnInit();
 	for (int i = 0; i < 45; i++) map[i] = -1;
@@ -744,6 +745,8 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	p_c.OnInit();
 	s_c.OnInit();
 	CAudio::Instance()->Load(2, "Audio/suck.mp3");
+	CAudio::Instance()->Load(0, "Audio/flower.mp3");
+	CAudio::Instance()->Load(3, "Audio/splat1.mp3");
 	
 }
 
@@ -752,12 +755,12 @@ void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	
 	
 	if (nChar == VK_TAB) {
-		if (game_phase == 5) {
-			game_phase = 1;
+		if (CAudio::Instance()->game_phase == 5) {
+			CAudio::Instance()->game_phase = 1;
 			GotoGameState(GAME_STATE_INIT);
 		}
 		else {
-			game_phase += 1;
+			CAudio::Instance()->game_phase += 1;
 			GotoGameState(GAME_STATE_CHOOSE);
 		}
 	}
@@ -774,61 +777,62 @@ void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
 {
 	//關卡切換(win)
-	if (nFlags == VK_LBUTTON && z.win1 && MouseIsOverlap(changestage) && game_phase==1) {
-		game_phase = 2;
+	if (nFlags == VK_LBUTTON && z.win1 && MouseIsOverlap(changestage) && CAudio::Instance()->game_phase==1) {
+		CAudio::Instance()->game_phase = 2;
 		GotoGameState(GAME_STATE_CHOOSE);
 	}
 
-	if (nFlags == VK_LBUTTON && z.win2 && MouseIsOverlap(changestage) && game_phase == 2) {
-		game_phase = 3;
+	if (nFlags == VK_LBUTTON && z.win2 && MouseIsOverlap(changestage) && CAudio::Instance()->game_phase == 2) {
+		CAudio::Instance()->game_phase = 3;
 		GotoGameState(GAME_STATE_CHOOSE);
 	}
 
-	if (nFlags == VK_LBUTTON && z.win3 && MouseIsOverlap(changestage) && game_phase == 3) {
-		game_phase = 4;
+	if (nFlags == VK_LBUTTON && z.win3 && MouseIsOverlap(changestage) && CAudio::Instance()->game_phase == 3) {
+		CAudio::Instance()->game_phase = 4;
 		GotoGameState(GAME_STATE_CHOOSE);
 	}
 
-	if (nFlags == VK_LBUTTON && z.win4 && MouseIsOverlap(changestage) && game_phase == 4) {
-		game_phase = 5;
+	if (nFlags == VK_LBUTTON && z.win4 && MouseIsOverlap(changestage) && CAudio::Instance()->game_phase == 4) {
+		CAudio::Instance()->game_phase = 5;
 		GotoGameState(GAME_STATE_CHOOSE);
 	}
-	if (nFlags == VK_LBUTTON && z.win5 && MouseIsOverlap(changestage1) && game_phase == 5) {
-		game_phase = 1;
+	if (nFlags == VK_LBUTTON && z.win5 && MouseIsOverlap(changestage1) && CAudio::Instance()->game_phase == 5) {
+		CAudio::Instance()->game_phase = 1;
 		GotoGameState(GAME_STATE_INIT);
 	}
 	//關卡切換(lose)
-	if (nFlags == VK_LBUTTON && z.lose1 && MouseIsOverlap(changestage1) && game_phase == 1) {
+	if (nFlags == VK_LBUTTON && z.lose1 && MouseIsOverlap(changestage1) && CAudio::Instance()->game_phase == 1) {
 		//CAudio::Instance()->Stop(0);
+		CAudio::Instance()->Play(2, false);
 		CAudio::Instance()->Play(1,true);
-		game_phase = 1;
+		CAudio::Instance()->game_phase = 1;
 		GotoGameState(GAME_STATE_INIT);
 	}
 
-	if (nFlags == VK_LBUTTON && z.lose2 && MouseIsOverlap(changestage1) && game_phase == 2) {
-		//CAudio::Instance()->Stop(0);
+	if (nFlags == VK_LBUTTON && z.lose2 && MouseIsOverlap(changestage1) && CAudio::Instance()->game_phase == 2) {
+		CAudio::Instance()->Play(2, false);
 		CAudio::Instance()->Play(1, true);
-		game_phase = 1;
+		CAudio::Instance()->game_phase = 1;
 		GotoGameState(GAME_STATE_INIT);
 	}
 
-	if (nFlags == VK_LBUTTON && z.lose3 && MouseIsOverlap(changestage1) && game_phase == 3) {
-		//CAudio::Instance()->Stop(0);
+	if (nFlags == VK_LBUTTON && z.lose3 && MouseIsOverlap(changestage1) && CAudio::Instance()->game_phase == 3) {
+		CAudio::Instance()->Play(2, false);
 		CAudio::Instance()->Play(1, true);
-		game_phase = 1;
+		CAudio::Instance()->game_phase = 1;
 		GotoGameState(GAME_STATE_INIT);
 	}
 
-	if (nFlags == VK_LBUTTON && z.lose4 && MouseIsOverlap(changestage1) && game_phase == 4) {
-		//CAudio::Instance()->Stop(0);
+	if (nFlags == VK_LBUTTON && z.lose4 && MouseIsOverlap(changestage1) && CAudio::Instance()->game_phase == 4) {
+		CAudio::Instance()->Play(2, false);
 		CAudio::Instance()->Play(1, true);
-		game_phase = 1;
+		CAudio::Instance()->game_phase = 1;
 		GotoGameState(GAME_STATE_INIT);
 	}
-	if (nFlags == VK_LBUTTON && z.lose5 && MouseIsOverlap(changestage1) && game_phase == 5) {
-		//CAudio::Instance()->Stop(0);
+	if (nFlags == VK_LBUTTON && z.lose5 && MouseIsOverlap(changestage1) && CAudio::Instance()->game_phase == 5) {
+		CAudio::Instance()->Play(2, false);
 		CAudio::Instance()->Play(1, true);
-		game_phase = 1;
+		CAudio::Instance()->game_phase = 1;
 		GotoGameState(GAME_STATE_INIT);
 	}
 
@@ -849,7 +853,7 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			}
 		}
 	}
-	if (game_phase == 1) {
+	if (CAudio::Instance()->game_phase == 1) {
 		if (nFlags == VK_LBUTTON) {
 			if (MouseIsOverlap(p_c.plantscard[1])) {
 				p_c.OnLButtonDown(1, 100);
@@ -857,8 +861,9 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			/////////////////////////////////////////////////
 			if (p_c.scorecost[1]) {
 				p[index].turnToplant[1] = true;
-				if ((nFlags == VK_LBUTTON) && ((MouseIsOverlap(p_c.plantscard[1])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 275) && ((mouse_y) <= 386)))) {
-					p[index].isflag += 1;
+				if (nFlags == VK_LBUTTON) {
+					if (MouseIsOverlap(p_c.plantscard[1])) p[index].isflag = 1;
+					else if (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 275) && ((mouse_y) <= 386)) p[index].isflag = 2;
 					if (p[index].isflag == 2) {
 						p[index].twiceflag = true;
 						p[index].isflag = 0;
@@ -869,7 +874,7 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			}
 		}
 	}
-	else if (game_phase == 2) {
+	else if (CAudio::Instance()->game_phase == 2) {
 		if (nFlags == VK_LBUTTON) {
 			if (MouseIsOverlap(p_c.plantscard[0])) {
 				p_c.OnLButtonDown(0, 50);
@@ -888,21 +893,23 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			for (int i = 0; i < 2; i++) {
 				if (p_c.scorecost[i]) {
 					p[index].turnToplant[i] = true;
-					if ((nFlags == VK_LBUTTON) && ((MouseIsOverlap(p_c.plantscard[i])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 160) && ((mouse_y) <= 497)))) {
-						p[index].isflag += 1;
+					if (nFlags == VK_LBUTTON) {
+						if (MouseIsOverlap(p_c.plantscard[i])) p[index].isflag = 1;
+						else if (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 160) && ((mouse_y) <= 497)) p[index].isflag = 2;
 						if (p[index].isflag == 2) {
 							p[index].twiceflag = true;
 							p[index].isflag = 0;
 							p_c.scorecost[i] = false;
 
 						}
+
 					}
 				}
 			}
 			///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		}
 	}
-	else if (game_phase == 3) {
+	else if (CAudio::Instance()->game_phase == 3) {
 		if (nFlags == VK_LBUTTON) {
 			if (MouseIsOverlap(p_c.plantscard[0])) {
 				p_c.OnLButtonDown(0, 50);
@@ -924,8 +931,9 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			for (int i = 0; i < 3; i++) {
 				if (p_c.scorecost[i]) {
 					p[index].turnToplant[i] = true;
-					if ((nFlags == VK_LBUTTON) && ((MouseIsOverlap(p_c.plantscard[i])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 160) && ((mouse_y) <= 497)))) {
-						p[index].isflag += 1;
+					if (nFlags == VK_LBUTTON) {
+						if (MouseIsOverlap(p_c.plantscard[i])) p[index].isflag = 1;
+						else if (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 160) && ((mouse_y) <= 497)) p[index].isflag = 2;
 						if (p[index].isflag == 2) {
 							p[index].twiceflag = true;
 							p[index].isflag = 0;
@@ -963,8 +971,9 @@ void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的
 			for (int i = 0; i < 4; i++) {
 				if (p_c.scorecost[i]) {
 					p[index].turnToplant[i] = true;
-					if ((nFlags == VK_LBUTTON) && ((MouseIsOverlap(p_c.plantscard[i])) || (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 74) && ((mouse_y) <= 564)))) {
-						p[index].isflag += 1;
+					if (nFlags == VK_LBUTTON) {
+						if (MouseIsOverlap(p_c.plantscard[i])) p[index].isflag = 1;
+						else if (((mouse_x) >= 241) && ((mouse_x) <= 983) && ((mouse_y) >= 74) && ((mouse_y) <= 564)) p[index].isflag = 2;
 						if (p[index].isflag == 2) {
 							p[index].twiceflag = true;
 							p[index].isflag = 0;
@@ -1027,11 +1036,11 @@ void CGameStateRun::show_text_by_phase() {
 	//CTextDraw::Print(pDC, 100, 0, to_string(background.GetLeft()));
 	if (background.GetLeft() == -9) {
 		CTextDraw::Print(pDC, 185, 19, to_string(p_c.score));
+		//CTextDraw::Print(pDC, 650, 20, "Level:");
+		CTextDraw::Print(pDC, 700, 20, "Level: "+to_string(CAudio::Instance()->game_phase));
 		
-		CTextDraw::Print(pDC, 700, 20, to_string(game_phase));
-		/*
-		CTextDraw::Print(pDC, 600, 20, to_string(z.win1));
-		CTextDraw::Print(pDC, 600, 50, to_string(z.win2));
+		//CTextDraw::Print(pDC, 800, 20, to_string(z.lose1));
+		/*CTextDraw::Print(pDC, 600, 50, to_string(z.win2));
 		CTextDraw::Print(pDC, 600, 80, to_string(z.win3));
 		CTextDraw::Print(pDC, 600, 110, to_string(z.win4));
 		CTextDraw::Print(pDC, 600, 140, to_string(z.win5));
@@ -1055,10 +1064,11 @@ void CGameStateRun::show_text_by_phase() {
 
 	
 void CGameStateRun::show_image_by_phase() {
-	if (game_phase <= 6) {
-		if (game_phase == 1) background.SetFrameIndexOfBitmap(0);
-		else if (game_phase <= 4) background.SetFrameIndexOfBitmap(1);
-		else if (game_phase == 5) background.SetFrameIndexOfBitmap(2);
+	if (CAudio::Instance()->game_phase <= 6) {
+		CAudio::Instance()->Stop(1);
+		if (CAudio::Instance()->game_phase == 1) background.SetFrameIndexOfBitmap(0);
+		else if (CAudio::Instance()->game_phase <= 4) background.SetFrameIndexOfBitmap(1);
+		else if (CAudio::Instance()->game_phase == 5) background.SetFrameIndexOfBitmap(2);
 		background.ShowBitmap();
 		if (background.GetLeft() != -9) {
 			z.OnShow1();
@@ -1185,14 +1195,10 @@ void CGameStateRun::show_image_by_phase() {
 			}
 ///////////////////////////////////////////////////////////////////////////
 		}
-		if ((game_phase == 1) && (background.GetLeft() == -9)) {
+		if ((CAudio::Instance()->game_phase == 1) && (background.GetLeft() == -9)) {
 			p_c.OnShow1();
 			if (z.win1) changestage.ShowBitmap();
-			if (z.lose1)
-			{
-				CAudio::Instance()->Play(2, false);
-				changestage1.ShowBitmap();
-			}
+			if (z.lose1) changestage1.ShowBitmap();
 			if ((p[index].twiceflag) && (!p[index].SetPosDone)) {
 				if (p[index].turnToplant[1]) {
 					for (int j = 0; j < 9; j++) {
@@ -1220,7 +1226,7 @@ void CGameStateRun::show_image_by_phase() {
 				p[index].OnShow(1);
 			}
 		}
-		else if ((game_phase == 2) && (background.GetLeft() == -9)) {
+		else if ((CAudio::Instance()->game_phase == 2) && (background.GetLeft() == -9)) {
 			p_c.OnShow2(2);
 			if (z.win2) changestage.ShowBitmap();
 			if (z.lose2) changestage1.ShowBitmap();
@@ -1286,7 +1292,7 @@ void CGameStateRun::show_image_by_phase() {
 
 			}
 		}
-		else if ((game_phase == 3) && (background.GetLeft() == -9)) {
+		else if ((CAudio::Instance()->game_phase == 3) && (background.GetLeft() == -9)) {
 			p_c.OnShow2(3);
 			if (z.win3) changestage.ShowBitmap();
 			if (z.lose3) changestage1.ShowBitmap();
@@ -1354,9 +1360,9 @@ void CGameStateRun::show_image_by_phase() {
 		}
 		else if ((background.GetLeft() == -9)) {
 			p_c.OnShow2(4);
-			if ((game_phase == 4) && (z.win4)) changestage.ShowBitmap();
-			if ((game_phase == 4) && (z.lose1)) changestage1.ShowBitmap();
-			if ((game_phase == 5) && ((z.win5)||z.lose5)) changestage1.ShowBitmap();
+			if ((CAudio::Instance()->game_phase == 4) && (z.win4)) changestage.ShowBitmap();
+			if ((CAudio::Instance()->game_phase == 4) && (z.lose1)) changestage1.ShowBitmap();
+			if ((CAudio::Instance()->game_phase == 5) && ((z.win5)||z.lose5)) changestage1.ShowBitmap();
 /////////////////////////////////////////////////////////////////////////
 			for (int k = 0; k < 4; k++) {
 				if ((p[index].twiceflag) && (!p[index].SetPosDone)) {

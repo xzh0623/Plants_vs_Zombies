@@ -90,6 +90,7 @@ public:
 	void		   Resume();					// 復原暫停播放的音效
 	void           SetPowerResume();			// 電源恢復
 	void           Stop(unsigned);				// 停止撥放編號i的聲音
+	int game_phase;
 private:
 	class Info {
 	public:

@@ -67,9 +67,9 @@ void CGameStateInit::OnInit()
 		"resources/menu_background.bmp"
 		});
 	background1.SetTopLeft(0, 0);
-	CAudio::Instance()->Load(0, "Audio/flower.mp3");
 	CAudio::Instance()->Load(1, "Audio/Faster.wav");
 	CAudio::Instance()->Play(1, true);
+	CAudio::Instance()->Load(4, "Audio/button.mp3");
 	
 
 	//載入遊戲圖片
@@ -94,19 +94,19 @@ void CGameStateInit::OnInit()
 	one[9].LoadBitmapByString({ "resources/book1.bmp","resources/book2.bmp" }, RGB(128, 128, 128));
 	one[9].SetTopLeft(420, 400);
 	//菜單
-	menu[0].LoadBitmapByString({ "resources/option1_1.bmp" }, RGB(128, 128, 128));
-	menu[0].SetTopLeft(405, 190);
+	//menu[0].LoadBitmapByString({ "resources/option1_1.bmp" }, RGB(128, 128, 128));
+	//menu[0].SetTopLeft(405, 190);
 	//menu[1].LoadBitmapByString({ "resources/option1_2.bmp" }, RGB(128, 128, 128));
 	//menu[1].SetTopLeft(405, 270);
 	menu[2].LoadBitmapByString({ "resources/option1_3.bmp" }, RGB(128, 128, 128));
-	menu[2].SetTopLeft(405, 250);
+	menu[2].SetTopLeft(405, 190);
 	menu[3].LoadBitmapByString({ "resources/option1_4.bmp" }, RGB(128, 128, 128));
-	menu[3].SetTopLeft(405, 310);
+	menu[3].SetTopLeft(405, 280);
 	menu[4].LoadBitmapByString({ "resources/option1_5.bmp" }, RGB(128, 128, 128));
 	menu[4].SetTopLeft(405, 370);
 	//選關
-	level_select[0].LoadBitmapByString({ "resources/option1_1_1.bmp" }, RGB(128, 128, 128));
-	level_select[0].SetTopLeft(10, 10);
+	/*level_select[0].LoadBitmapByString({ "resources/option1_1_1.bmp" }, RGB(128, 128, 128));
+	level_select[0].SetTopLeft(10, 10);*/
 	level_select[1].LoadBitmapByString({ "resources/option1_3_7.bmp" }, RGB(212, 161, 116));
 	level_select[1].SetTopLeft(620, 542);
 	//圖鑑
@@ -185,7 +185,6 @@ void CGameStateInit::OnInit()
 
 void CGameStateInit::OnBeginState()
 {
-
 }
 
 void CGameStateInit::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
@@ -204,10 +203,12 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 {
 
 	if (nFlags == VK_LBUTTON) {
-		if (menu_phase == 1) menu_phase += 1;
+		if (menu_phase == 1) {
+			menu_phase += 1;
+			CAudio::Instance()->Play(4, false);
+		}
 		else if (menu_phase == 2) {
-			CAudio::Instance()->Stop(1);
-			CAudio::Instance()->Play(0, true);
+			
 			if ((MouseIsOverlap(one[4]))) {
 				help_show = !help_show;
 			}
@@ -265,37 +266,44 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 				}
 			}
 			//////////////選關
-			if (MouseIsOverlap(menu[0]) && (option_show)) {
+			/*if (MouseIsOverlap(menu[0]) && (option_show)) {
 				option_show = false;
 				level_show = true;
-			}
-			if ((MouseIsOverlap(level_select[1])) && (level_show)) {
-				level_show = !level_show;
-			}
-
-			if ((level_show) && (!option_show)) {
-				if ((MouseIsOverlap(stage[0]))) {
-					game_phase = 1;						//第一關
+			}*/
+			/*if (level_show) {
+				if (MouseIsOverlap(level_select[1])) level_show = !level_show;
+				else if ((MouseIsOverlap(stage[0]))&& (nFlags==VK_LBUTTON)) {
+					CAudio::Instance()->game_phase = 1;						//第一關
+					level_show = !level_show;
+					GotoGameState(GAME_STATE_CHOOSE);
 				}
-				/*else if (MouseIsOverlap(stage[1])) {
-					game_phase = 2;						//第二關
-				}*/
+				else if (MouseIsOverlap(stage[1])) {
+					CAudio::Instance()->game_phase = 2;						//第二關
+				}
 				else if (MouseIsOverlap(stage[2])) {
-					game_phase = 3;						//第三關
+					CAudio::Instance()->game_phase = 3;						//第三關
 				}
 				else if (MouseIsOverlap(stage[3])) {
-					game_phase = 4;						//第四關
+					CAudio::Instance()->game_phase = 4;						//第四關
 				}
 				else if (MouseIsOverlap(stage[4])) {
-					game_phase = 5;						//第五關
+					CAudio::Instance()->game_phase = 5;						//第五關
 				}
-				level_show = !level_show;
-				GotoGameState(GAME_STATE_RUN);
-			}
-			else if ((MouseIsOverlap(one[0])) && (!option_show) && (!level_show)) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
-				game_phase = 1;
+			}*/
+			
+			if ((MouseIsOverlap(one[0])) && (!option_show) && (!level_show)) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
+				CAudio::Instance()->game_phase = 1;
 				GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
 			}
+			if ((MouseIsOverlap(one[1])) && (!option_show) && (!level_show)) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
+				CAudio::Instance()->game_phase = 1;
+				GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
+			}
+			if ((MouseIsOverlap(one[2])) && (!option_show) && (!level_show)) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
+				CAudio::Instance()->game_phase = 1;
+				GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
+			}
+
 			
 
 		}
@@ -328,7 +336,7 @@ void CGameStateInit::OnShow()
 		if (option_show) {
 			one[7].ShowBitmap();
 			one[8].ShowBitmap();
-			menu[0].ShowBitmap();
+			//menu[0].ShowBitmap();
 			//menu[1].ShowBitmap();
 			menu[2].ShowBitmap();
 			menu[3].ShowBitmap();
@@ -336,13 +344,13 @@ void CGameStateInit::OnShow()
 		}
 		if (help_show) one[6].ShowBitmap();
 		if (level_show) {
-			level_select[0].ShowBitmap();
+			//level_select[0].ShowBitmap();
 			level_select[1].ShowBitmap();
-			stage[0].ShowBitmap();
-			stage[1].ShowBitmap();
-			stage[2].ShowBitmap();
-			stage[3].ShowBitmap();
-			stage[4].ShowBitmap();
+			//stage[0].ShowBitmap();
+			//stage[1].ShowBitmap();
+			//stage[2].ShowBitmap();
+			//stage[3].ShowBitmap();
+			//stage[4].ShowBitmap();
 		}
 		if (picture_show) {
 			picture[0].ShowBitmap();

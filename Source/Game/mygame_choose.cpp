@@ -20,7 +20,7 @@ CGameStateChoose::~CGameStateChoose()
 }
 void CGameStateChoose::OnInit() 
 {
-	//game_phase += 1;
+	//CAudio::Instance()->game_phase += 1;
 }
 void CGameStateChoose::OnBeginState() 
 {

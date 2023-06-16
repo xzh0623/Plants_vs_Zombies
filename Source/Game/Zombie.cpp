@@ -1112,7 +1112,6 @@ namespace game_framework {
 			{
 				if (zombie[i].GetLeft() == 80 && zombie[i].GetTop() == 250)
 				{
-					//CAudio::Instance()->Play(2, false);
 					count_gameover += 1;
 					zombie[56].ShowBitmap();
 					CAudio::Instance()->Stop(0);
@@ -1190,7 +1189,7 @@ namespace game_framework {
 			{
 				if (zombie[i].GetLeft() == 80 && zombie[i].GetTop() == 250)
 				{
-					CAudio::Instance()->Play(2, true);
+					//CAudio::Instance()->Play(2, true);
 					count_gameover += 1;
 					zombie[56].ShowBitmap();
 					CAudio::Instance()->Stop(0);
@@ -1288,7 +1287,7 @@ namespace game_framework {
 		{
 			if (zombie[i].GetLeft() == 80 && zombie[i].GetTop() == 250)
 			{
-				CAudio::Instance()->Play(2, true);
+				//CAudio::Instance()->Play(2, true);
 				count_gameover += 1;
 				zombie[56].ShowBitmap();
 				CAudio::Instance()->Stop(0);
@@ -1383,7 +1382,7 @@ namespace game_framework {
 		{
 			if (zombie[i].GetLeft() == 80 && zombie[i].GetTop() == 250)
 			{
-				CAudio::Instance()->Play(2, true);
+				//CAudio::Instance()->Play(2, true);
 				count_gameover += 1;
 				zombie[56].ShowBitmap();
 				CAudio::Instance()->Stop(0);
@@ -1491,7 +1490,7 @@ namespace game_framework {
 			{
 				if (zombie[i].GetLeft() == 80 && zombie[i].GetTop() == 250)
 				{
-					CAudio::Instance()->Play(2, true);
+					//CAudio::Instance()->Play(2, true);
 					count_gameover += 1;
 					zombie[56].ShowBitmap();
 					CAudio::Instance()->Stop(0);
