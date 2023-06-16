@@ -291,15 +291,15 @@ void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 				}
 			}*/
 			
-			if ((MouseIsOverlap(one[0])) && (!option_show) && (!level_show)) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
+			if ((MouseIsOverlap(one[0])) && (!option_show) && (!level_show) && (!picture_show)) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
 				CAudio::Instance()->game_phase = 1;
 				GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
 			}
-			if ((MouseIsOverlap(one[1])) && (!option_show) && (!level_show)) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
+			if ((MouseIsOverlap(one[1])) && (!option_show) && (!level_show) && (!picture_show)) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
 				CAudio::Instance()->game_phase = 1;
 				GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
 			}
-			if ((MouseIsOverlap(one[2])) && (!option_show) && (!level_show)) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
+			if ((MouseIsOverlap(one[2])) && (!option_show) && (!level_show) && (!picture_show)) {	//判斷第一關且滑鼠左鍵且滑鼠與圖片重疊 到下一關
 				CAudio::Instance()->game_phase = 1;
 				GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
 			}
